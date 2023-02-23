@@ -10,7 +10,7 @@ Este repositório contém os meus estudos e projetos relacionados a ciência da 
 
 ## Como utilizar este repositório
 
-atualizar essa seção.
+Esse repositório pode ser usado para acessar os mesmos conteúdos disponíveis no [site do projeto](https://brunoruas2.github.io/CC_site/). Se preferir acessar o conteúdo offline ou ter uma cópia do projeto. Para rodar localmente, basta ter o module mkdocs instalado e rodar o comando mkdocs serve.
 
 ## Contribuindo
 

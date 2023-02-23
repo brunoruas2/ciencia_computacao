@@ -1,0 +1,1 @@
+C:\Users\bruno\Documentos\GitHub\ciencia_computacao\docs\nav\PUC\eixo1\algoritmos_e_abstracao.md

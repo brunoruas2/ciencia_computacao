@@ -1,25 +1,20 @@
 site_name: Ciência da Computação
 repo_name: brunoruas2/ciencia_computacao
 repo_url: https://github.com/brunoruas2/ciencia_computacao
-site_url: https://www.google.com
-copyright: Bruno de M. Ruas
+site_url: https://brunoruas2.github.io/CC_site/
+copyright: Bruno de Melo Ruas
 
 nav:
-    - Home: index.md
-    # - Getting Started: nav/getting-started.md
-    # - Setup:
-    #   - nav/setup/components.md
-    #   - nav/setup/colors.md
-    #   - nav/setup/fonts.md
-    #   - nav/setup/logo.md
-    #   - nav/setup/favicon.md
-    # - Development:
-    #   - nav/development/development-guide.md
-    #   - nav/development/release-notes.md
+    - Bem Vindos: index.md
+    - Tech Info: nav/tech.md
+    - PUC:
+      - Eixo 1:
+        - Algoritmo e Abstração: nav\PUC\eixo1\algoritmos_e_abstracao.md
+        - Algoritmo e Lógica: nav\PUC\eixo1\algoritmos_e_abstracao.md
 
 theme:
   name: simple-blog
-  favicon: assets/favicon.ico
+  favicon: assets/logo.png
   logo: assets/logo.png
   theme_style: light
   site_name_style: normal
@@ -35,3 +30,17 @@ theme:
     menu: true
     preview: true
     footer: true
+
+extra_css:
+  - css/custom.css
+
+markdown_extensions:
+  # tab content block
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  # check list
+  - pymdownx.tabbed
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
