@@ -6,11 +6,18 @@ copyright: Bruno de Melo Ruas
 
 nav:
     - Bem Vindos: index.md
-    - Tech Info: nav/tech.md
     - PUC:
       - Eixo 1:
         - Algoritmo e Abstração: nav\PUC\eixo1\algoritmos_e_abstracao.md
-        - Algoritmo e Lógica: nav\PUC\eixo1\algoritmos_e_abstracao.md
+        - Algoritmo e Lógica: nav\PUC\eixo1\algoritmos_e_logica.md
+        - Desenvolvimento Web Frontend: nav\PUC\eixo1\desenvolvimento_web.md
+        - Matemática Básica: nav\PUC\eixo1\matematica_basica.md
+        - Organização de Computadores: nav\PUC\eixo1\organizacao_computadores.md
+        - Fundamentos de Eng. de Software: nav\PUC\eixo1\fundamentos_eng_soft.md
+        - Pensamento Computacional: nav\PUC\eixo1\pensamento_comp.md
+        - Lógica Computacional: nav\PUC\eixo1\logica_comp.md
+        - Projeto 1 - Web Fron-End: nav\PUC\eixo1\projeto_dev_web_frontend.md
+    - Tech: nav/tech.md
 
 theme:
   name: simple-blog
@@ -34,6 +41,11 @@ theme:
 extra_css:
   - css/custom.css
 
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 markdown_extensions:
   # tab content block
   - attr_list
@@ -44,3 +56,8 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+  # latex syntax
+  - pymdownx.arithmatex:
+      generic: true
+  # footnote
+  - footnotes

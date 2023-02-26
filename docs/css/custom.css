@@ -1,3 +1,7 @@
 pre code {
     background-color: black !important;
 }
+
+body {
+    text-align: justify !important;
+}

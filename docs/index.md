@@ -2,7 +2,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-
 Eu me chamo Bruno de Melo Ruas. Sou Economista pela Universidade do Estado do Amazonas (UEA). Especialista em Gestão Financeira pela Fundação Getúlio Vargas (FGV). Atualmente curso o tecnólogo de Análise e Desenvolvimento de Sistemas da Pontifícia Universidade Católica de Minas Gerais (PUC-MG).
 
 Minhas Redes:
@@ -11,7 +10,9 @@ Minhas Redes:
  - [Twitter](https://twitter.com/bruno_ruas2)
  - [Github](https://github.com/brunoruas2)
 
-Eu tenho um método de estudar: **fingindo que estou dando aula**. Ao longo dos anos, percebi que eu havia escrito tanto material, que poderia ajudar outras pessoas com meus textos. Esse site é justamente o repositório público dos conteúdos que venho estudando sobre Ciência da Computação seguindo duas fontes:
+Eu tenho um método de estudar: **fingindo que estou dando aula**. Ao longo dos anos, percebi que eu havia escrito tanto material, que poderia ajudar outras pessoas com meus textos.
+
+Esse site é justamente o repositório público dos conteúdos que venho estudando sobre Ciência da Computação seguindo duas fontes:
 
  - O conteúdo da formação em Tecnólogo em Análise e Desenvolvimento de Sistemas pela **PUC Minas Gerais**.
  - Os cursos da Open **Source Society University - OSSU**.
@@ -22,7 +23,7 @@ Originalmente, eu escrevia minhas notas de estudos em [LaTeX](https://www.latex-
 
 O Tecnólogo foi iniciado em 2022/01 e deve terminar em 2024/2. Ao todo, o curso é divido em 3 ciclos e 5 semestres (chamados de Eixos Temáticos).
 
-As matérias técnicas que serão estudas (e terão as minhas anotações salvas aqui) são essas:
+As matérias técnicas que serão estudas (e terão as minhas anotações salvas aqui) são essas.
 
 Ciclo 1: Concepção e Implementação de Sistemas de Software
 
