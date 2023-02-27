@@ -28,15 +28,15 @@ As matérias técnicas que serão estudas (e terão as minhas anotações salvas
 Ciclo 1: Concepção e Implementação de Sistemas de Software
 
   - [x] Implementação de Sistemas de Software
-      - [x] Algoritmos e Abstração de Dados
+      - [x] [Algoritmos e Abstração de Dados](/CC_site/nav/PUC/eixo1/algoritmos_e_abstracao/)
       - [x] Algoritmos e Lógica de Programação
       - [x] Desenvolvimento Web Front-End
       - [x] Matemática Básica
       - [x] Organização de Computadores
-      - [x] Fundamentos de Engenharia de Sofware
+      - [x] Fundamentos de Engenharia de Software
       - [x] Pensamento Computacional
       - [x] Lógica Computacional
-      - [x] Projeto: Desenvolvimento de Uma Aplicação Web Fron-End
+      - [x] Projeto: Desenvolvimento de Uma Aplicação Web Front-End
 
   - [ ] Análise e Projeto de Sistemas de Software
       - [ ] Algoritmos e Estruturas de Dados

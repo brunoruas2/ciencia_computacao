@@ -2,6 +2,18 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
+
+## Assuntos
+- **Estrutura de Dados Homogêneas e Heterogêneas**
+    -  [Estrutura de Dados Homogêneas](#estrutura-de-dados-homogeneas) 
+    -  [Estrutura de Dados Heterogêneas](#estrutura-de-dados-heterogeneas) 
+- **Tipos Abstratos de Dados, Classes e Implementação** 
+    - [Definição de um TAD - Classes e Objetos](#definicao-de-um-tad-classes-e-objetos) 
+    - [Atributos, Propriedades e Métodos de Classe](#atributos-propriedades-e-metodos-de-classe) 
+    - [Mecanismos de Visibilidade/Acessibilidade](#mecanismos-de-visibilidadeacessibilidade) 
+    - [Construtores e Destrutores de Classe](#construtores-e-destrutores-de-classe) 
+- [**Bibliografia**](#bibliografia)
+
 ## Introdução
 
 Durante o processo de construção de software, a manipulação de informação em memória é tarefa fundamental para que a solução de software seja útil e satisfatória. As linguagens de programação possuem especificações sobre as características que cada grupo de variáveis pode ter, esse controle de propriedade das variáveis e das limitações relacionadas a cada tipo é chamado de **Tipo de Dado**.
@@ -937,5 +949,5 @@ Em c\# nós não precisamos explicitamente eliminar um objeto porque o próprio 
 - DEITEL, Harvey M; DEITEL, Paul J. **Java - como programar**. 8. ed. São Paulo: Pearson, 2010. ISBN 9788576055631
 - GRIFFITHS, Ian. **Programming C# 8.0**. O'Reilly Media, Inc. 2019. ISBN 9781492056812
 - MANZANO, José Augusto N. G; OLIVEIRA, Jayr Figueiredo de. **Algoritmos: lógica para desenvolvimento de programação de computadores**. 28. ed. rev. e atual. São Paulo, SP: Érica, 2016. E-book. ISBN 9788536518657
-- PRICE, Mark J. **C# 8.0 and .NET Core 3.0 - Modern Cross - Platform Development**. O'Reilly Media; 2019. ISBN 9781788478120
+- PRICE, Mark J. **C# 8.0 and T Core 3.0 - Modern Cross - Platform Development**. O'Reilly Media; 2019. ISBN 9781788478120
 - PUGA, Sandra; RISSETTI, Gerson. **Lógica de programação e estruturas de dados com aplicações em Java**. 2. ed. São Paulo: Prentice Hall, 2009. ISBN 9788576052074
