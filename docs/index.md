@@ -17,7 +17,9 @@ Esse site é justamente o repositório público dos conteúdos que venho estudan
  - O conteúdo da formação em Tecnólogo em Análise e Desenvolvimento de Sistemas pela **PUC Minas Gerais**.
  - Os cursos da Open **Source Society University - OSSU**.
 
-Originalmente, eu escrevia minhas notas de estudos em [LaTeX](https://www.latex-project.org/#:~:text=LaTeX%20is%20a%20high%2Dquality,is%20available%20as%20free%20software.) mas o eu percebi que [Markdown](https://www.markdownguide.org/) era uma maneira mais simples de manter o projeto a medida que a quantidade de páginas foram se aproximando das centenas. Dessa feita, os repositórios antigos em pdf vão ser todos migrados para esse projeto.
+Originalmente, eu escrevia minhas notas de estudos em [LaTeX](https://www.latex-project.org/#:~:text=LaTeX%20is%20a%20high%2Dquality,is%20available%20as%20free%20software.) mas o eu percebi que [Markdown](https://www.markdownguide.org/) aliado ao mkdocs e github pages era uma maneira mais simples de manter o projeto a medida que a quantidade de páginas foram se aproximando das centenas. Dessa feita, os repositórios antigos em pdf vão ser todos migrados para esse projeto.
+
+Cada palavra que você ler nesse projeto foi escrita por mim. Espero que esse material sirva a vocês tanto quanto serviu para mim. O conjunto de tecnologias usadas para construção desse site está na aba `Tech` no menu superior. O link para o repositório desse projeto também.
 
 ## Pontifícia Universidade Católica (PUC-MG)
 
@@ -29,13 +31,13 @@ Ciclo 1: Concepção e Implementação de Sistemas de Software
 
   - [x] Implementação de Sistemas de Software
       - [x] [Algoritmos e Abstração de Dados](/CC_site/nav/PUC/eixo1/algoritmos_e_abstracao/)
-      - [x] Algoritmos e Lógica de Programação
-      - [x] Desenvolvimento Web Front-End
-      - [x] Matemática Básica
-      - [x] Organização de Computadores
-      - [x] Fundamentos de Engenharia de Software
+      - [x] [Algoritmos e Lógica de Programação](/CC_site/nav/PUC/eixo1/algoritmos_e_logica/)
+      - [x] [Desenvolvimento Web Front-End](/CC_site/nav/PUC/eixo1/desenvolvimento_web/)
+      - [x] [Matemática Básica](/CC_site/nav/PUC/eixo1/matematica_basica/)
+      - [x] [Organização de Computadores](/CC_site/nav/PUC/eixo1/organizacao_computadores/)
+      - [x] [Fundamentos de Engenharia de Software](/CC_site/nav/PUC/eixo1/fundamentos_eng_soft/)
       - [x] Pensamento Computacional
-      - [x] Lógica Computacional
+      - [x] [Lógica Computacional](/CC_site/nav/PUC/eixo1/logica_comp/)
       - [x] Projeto: Desenvolvimento de Uma Aplicação Web Front-End
 
   - [ ] Análise e Projeto de Sistemas de Software

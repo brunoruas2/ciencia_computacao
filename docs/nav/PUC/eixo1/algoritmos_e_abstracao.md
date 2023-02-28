@@ -41,7 +41,7 @@ Como todos os valores de um vetor possuem o mesmo nome (o nome da variável), pa
 Para criarmos um vetor em c\#, usamos a declaração da variável com um par de colchetes vazio e a definição da quantidade de posições (ou lugares) que o nosso vetor terá. Abaixo podemos ver um exemplo disso.
 
 ``` c#
-# c sharp
+// c#
 int[] Idades = new int[100]; // Vetor de int com 100 places
 double[] Alt = new double[20]; // Vetor de double com 20
 string[] Nomes = new string[10]; // Vetor de string com 10
@@ -52,7 +52,7 @@ No exemplo acima, podemos ver que criamos um vetor denominado Idades que receber
 **Comentário:** Existe uma classe que permite a criação de um tipo de vetor genérico sem tamanho definido em c\# chamado Lista. O curso não entrou nesse assunto mas eu vou deixar esse exemplo de lista aqui.
 
 ``` c#
-# c sharp
+// c#
 using System.Collections.Generic;
 
 List<int> lista = new List<int>();
@@ -64,7 +64,7 @@ List.remove(2);
 Agora que sabemos como criar um vetor. O próximo passo é aprendermos como inserir informação nele. Para a nossa sorte, é bem simples. Basta colocarmos o nome do vetor seguido da posição a ser preenchida entre colchetes.
 
 ``` c#
-# c sharp
+// c#
 Idades[20] =  10; // Valor 10 na posição 19
 Alt[0] = 1.2; // Valor 1.2 na posição 1
 ```
@@ -74,7 +74,7 @@ Só temos que ter cuidado com uma coisa. Existem linguagens (como C\#, Java, Pyt
 Com base no que aprendemos em **Algoritmos e Lógica da Programação**, somos capazes de entender o código abaixo a respeito do uso de um laço de repetição para preenchimento de um vetor de 5 posições.
 
 ``` c#
-# c sharp
+// c#
 int i;
 
 int[] Valores = new int[5];
@@ -94,7 +94,7 @@ O professor propõe o seguinte desafio para fixação do conceito de vetor: "Cri
 Minha resolução desse problema segue abaixo.
 
 ``` c#
-# c sharp
+// c#
 int[] vetor = new int[5];
 int somaPar = 0;
 int contaImpar = 0;
@@ -137,13 +137,13 @@ Que produz o seguinte resultado para o input ``(1,2,1,2,1)``.
 Como dito no início dessa seção. Podemos pensar que matrizes são vetores de duas dimensões. Por causa disso, a declaração da variável é um pouco diferente.
 
 ``` c#
-# c sharp
+// c#
 double[,] Notas = new double[4,5]; // 4 linhas e 5 colunas 
 ```
 Por ser uma variável de duas dimensões, a maneira como atribuímos valores à cada posição é um pouco diferente do caso com vetor. Para cada atribuição de valor, temos que indicar a **linha e coluna** que nosso dado será salvo.
 
 ``` c#
-# c sharp
+// c#
 Notas[0,0] = 1; // Linha 1 coluna 1
 Notas[0,1] = 1; // Linha 1 coluna 2
 Notas[2,3] = 1; // Linha 3 coluna 4
@@ -155,7 +155,7 @@ Devemos sempre lembrar que c\# usa a posição de numeral 0 para o index inicial
 Agora vamos ver um programa simples que exemplifica o que acabamos de aprender. A leitura dele não deve ser difícil. Se está tendo dificuldade, volte no microfundamento de lógica da programação.
 
 ``` c#
-# c sharp
+// c#
 int i, j;
 
 int[,] Valor = new int[10,3];
@@ -176,7 +176,7 @@ for (i = 0; i < 10; i++) // Loop para linhas
 Para a fixação do conceito de matrizes, o professor faz o seguinte desafio: "Vamos fazer um programa que irá ler os dados de uma matriz de inteiros de ordem 5, ou seja, de dimensões 5x5. Matematicamente ela é chama de matriz quadrada, porque o número de “linhas” é igual ao número de “colunas”. Depois de darmos entrada nos valores da matriz chamaremos uma função que, tomando essa matriz como parâmetro, retornará um vetor composto pelos elementos da diagonal principal dessa matriz quando, então, os listaremos."
 
 ``` c#
-# c sharp
+// c#
 // Aqui vai ficar o cogido da solução do desafio
 // quando eu tiver vontade de fazer
 ```
@@ -197,7 +197,7 @@ Nós já estamos familiarizados com as definições de variáveis em c\# para os
 
 
 ``` c#
-# c sharp
+// c#
 int x;
 
 double Result;
@@ -208,7 +208,7 @@ string Name;
 A essa altura do aprendizado, as linhas acima são simples de serem compreendidas. São apenas declarações do tipos de 3 variáveis simples. Mas vejam só o que podemos fazer abaixo.
 
 ``` c#
-# c sharp
+// c#
 Aluno xAlu;
 ```
 
@@ -227,7 +227,7 @@ O comando `struct` é pensado para o encapsulamento de pequenos conjuntos de var
 A criação de um tipo de dado é simples. Basta definirmos o nome do tipo de dado e declararmos o conjunto de variáveis que farão parte dele. No exemplo abaixo, nós criamos o tipo "Funcionário" com as informações que serão usadas.
 
 ``` c#
-# c sharp
+// c#
 struct Funcionario
 {
 	public string CPF;
@@ -242,7 +242,7 @@ Podemos ver que a declaração das variáveis dentro do bloco de código estão 
 Agora que temos o nosso novo tipo de dado criado, podemos usar esse recurso para a definição de novas variáveis.
 
 ``` c#
-# c sharp
+// c#
 static void Main(string[]) args)
 {
 	Funcionario xFunc;
@@ -265,7 +265,7 @@ Pois bem, podemos usar a mesma lógica e criar um vetor do tipo que acabamos de 
 [^1]: Isso é muito legal!
 
 ``` c#
-# c sharp
+// c#
 Funcionario[] xFunc = new Funcionario[5];
 
 for (int i = 0; i < 5; i++)
@@ -294,7 +294,7 @@ Estamos começando a nos aproximar do conceito de banco de dados. Mas não verem
 Não precisamos parar por aqui, é plenamente possível criarmos um tipo de dados que use outro tipo de dados criado fora dele. Por exemplo, ao invés de salvarmos a data de nascimento como uma string, podemos criar um tipo de dados chamado `Data` que recebe 3 informações: dia, mês e ano.
 
 ``` c#
-# c sharp
+// c#
 struct Funcionario
 {
 	public string CPF;
@@ -316,7 +316,7 @@ Dentro do tipo funcionário, temos a declaração de um variável do tipo data.
 Para aproveitarmos o código de criação de um vetor Funcionario. Podemos fazer apenas uma pequena alteração.
 
 ``` c#
-# c sharp
+// c#
 Funcionario[] xFunc = new Funcionario[5];
 
 for (int i = 0; i < 5; i++)
@@ -370,7 +370,7 @@ Até agora, nós temos definido os nossos TADs através da definição de sua **
 Já aprendemos a implementar um TAD por estrutura.
 
 ``` c#
-# c sharp
+// c#
 // Definindo o TAD
 struct Produto
 {
@@ -389,7 +389,7 @@ xProd.PrecoUnd = 8000.99;
 Podemos construir uma solução análoga a essa pelo token de criação de classes.
 
 ``` c#
-# c sharp
+// c#
 // Definindo o TAD
 class Produto
 {
@@ -427,7 +427,7 @@ Os valores do tipo class são alocados no heap. Essa é a parte da memória usad
 Cadastrar objetos em um vetor usando uma classe.
 
 ``` c#
-# c sharp
+// c#
 using System;
 
 namespace WorkSpace
@@ -499,7 +499,7 @@ Alguns de vocês podem estar questionando o motivo desse aviso. Sabendo que cadC
 Abaixo temos um programa simples que usa essa relação de referência.
 
 ``` c#
-# c sharp
+// c#
 using System;
 
 class Program
@@ -556,7 +556,7 @@ Ao construir um tipo abstrato de dados, nos perguntamos quais informações ser�
 Vejamos o seguinte TAD criado apenas com a definição da estrutura de dados:
 
 ``` c#
-# c sharp
+// c#
 class pessoa
 {
 	public string name;
@@ -569,7 +569,7 @@ Dizemos que as informações sobre nome e salário são **atributos** do nosso o
 Mesmo que o exemplo acima funcione. Uma maneira mais apropriada de reconstruir essa solução pode ser vista abaixo.
 
 ``` c#
-# c sharp
+// c#
 class pessoa
 {
 	private string _name;
@@ -595,7 +595,7 @@ Os nomes das funções deixam claro o que cada uma faz. `set` é usado para atri
 Vamos ver um programa simples que utiliza esses conceitos.
 
 ``` c#
-# c sharp
+// c#
 namespace WorkSpace
 {
 	class pessoa
@@ -637,7 +637,7 @@ Quando definimos um atributo privado e funções (`get` e `set`) que manipulam e
 Já temos os conceitos de objeto, atributo e propriedade bem definidos. Agora vamos aprender sobre as funções dentro de um objeto. A essas funções, damos o nome de **métodos ou serviços do objeto**.
 
 ``` c#
-# c sharp
+// c#
 class circulo
 {
 	private double _raio;
@@ -658,7 +658,7 @@ class circulo
 Aqui temos um atributo chamado `_raio`. Uma propriedade chamada `raio`. E, por fim, temos também um método chamado `calcArea`. Abaixo temos um exemplo de como usar esses conceitos na prática.
 
 ``` c#
-# c sharp
+// c#
 namespace WorkSpace
 {
 	class circulo
@@ -699,7 +699,7 @@ Quando encapsulamos as propriedades e os métodos dentro de um objeto, estamos o
 Podemos definir a lógica também dentro das funções de `set` e `get`.
 
 ``` c#
-# c sharp
+// c#
 namespace WorkSpace
 {
 	class circulo
@@ -746,7 +746,7 @@ Os **modificadores de acesso** ou **mecanismos de visibilidade** são os método
 Observemos novamente o código da última seção com algumas anotações adicionais.
 
 ``` c#
-# c sharp
+// c#
 // Bloco contendo todo o programa
 namespace WorkSpace
 {
@@ -819,7 +819,7 @@ Se um construtor não for declarado explicitamente, o c\# cria a classe usando a
 Para não usarmos as convenções padrão do CLR. Podemos, nós mesmo, atribuir os construtores dos atributos dos nossos objetos. Para isso, usamos um método (ou seja, uma função interna do objeto) com **o mesmo nome do objeto**. Esse método não possui retorno e são declarados como `public`.
 
 ``` c#
-# c sharp
+// c#
 [...] // Código com o namespasce
 
 class circulo
@@ -846,7 +846,7 @@ class circulo
 A partir de agora, sempre que executarmos um instanciamento através do comando
 
 ``` c#
-# c sharp
+// c#
 circulo xcir = new circulo(); 
 ```
 
@@ -855,7 +855,7 @@ O construtor será chamado e executará as instruções contidas no construtor. 
 Não é difícil pensar em situações onde precisaríamos usar diferentes métodos de construção em um objeto. Para isso, podemos ter mais de um construtor no mesmo objeto, chamamos isso de **sobrecarregamento**. A condição é que esses construtores sejam diferentes em termos de parâmetros ou ordem dos parâmetros.
 
 ``` c#
-# c sharp
+// c#
 [...] // Código com o namespasce
 
 class circulo
@@ -887,7 +887,7 @@ class circulo
 Para executar o segundo construtor, basta passarmos um parâmetro no momento do instanciamento do nosso novo objeto.
 
 ``` c#
-# c sharp
+// c#
 circulo xcirc = new circulo(2.3); 
 ```
 
@@ -902,7 +902,7 @@ Não precisam ser chamados ou referenciados pois são invocados automaticamente.
 Diferente dos construtores, uma classe pode ter **apenas um destrutor**. E a sua criação é parecida com a do construtor, uma vez que são métodos sem retorno. A única diferença é que sua notação começa com o til.
 
 ``` c#
-# c sharp
+// c#
 [...] // Código com o namespasce
 
 class circulo
