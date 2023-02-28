@@ -3,7 +3,7 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 ## Assuntos
-- **Fundamentos de Organização de Computadores**
+- [**Fundamentos de Organização de Computadores**](#fundamentos-de-organizacao-de-computadores)
     - [Representação de Dados e Sistemas Binário](#representacao-de-dados-e-sistemas-binario)
     - [Conceitos de Lógica Digital](#conceitos-de-logica-digital)
     - [Circuitos Lógicos Digitais Básicos](#circuitos-logicos-digitais-basicos)
@@ -11,7 +11,7 @@
     - [Unidade Central de Processamento - UCP](#unidade-central-de-processamento-ucp)
     - [Memória](#memoria)
     - [Entrada e Saída](#entrada-e-saida)
-- **Arquitetura de Computadores**
+- [**Arquitetura de Computadores**](#arquitetura-de-computadores)
     - [Arquiteturas RISC e CISC](#arquiteturas-risc-e-cisc)
     - [Arquitetura do Conjunto de Instruções: Exemplo do MIPS](#arquitetura-do-conjunto-de-instrucoes-exemplo-do-mips)
     - [Linguagem de Montagem](#linguagem-de-montagem)

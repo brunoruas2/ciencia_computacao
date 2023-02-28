@@ -3,7 +3,7 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 ## Assuntos
-- **Pensamento Lógico**
+- [**Pensamento Lógico**](#pensamento-logico)
     - [Definições](#definicoes)
     - [Subconjuntos](#subconjuntos)
     - [Operações sobre Conjuntos](#operacoes-sobre-conjuntos)
@@ -13,7 +13,7 @@
     - [Predicados e Quantificadores](#predicados-e-quantificadores)
     - [Ligando Variáveis](#ligando-variaveis)
     - [Negações](#negacoes)
-- **Pensamento Analítico**
+- [**Pensamento Analítico**](#pensamento-analitico)
     - [Provas de Teoremas](#provas-de-teoremas)
     - [Regras de Inferência](#regras-de-inferencia)
     - [Argumentos Válidos](#argumentos-validos)

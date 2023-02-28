@@ -4,15 +4,17 @@
 
 
 ## Assuntos
-- **Estrutura de Dados Homogêneas e Heterogêneas**
+- [**Estrutura de Dados Homogêneas e Heterogêneas**](#estrutura-de-dados-heterogeneas)
     -  [Estrutura de Dados Homogêneas](#estrutura-de-dados-homogeneas) 
     -  [Estrutura de Dados Heterogêneas](#estrutura-de-dados-heterogeneas) 
-- **Tipos Abstratos de Dados, Classes e Implementação** 
+- [**Tipos Abstratos de Dados, Classes e Implementação** ](#tad-classes-e-implementacao)
     - [Definição de um TAD - Classes e Objetos](#definicao-de-um-tad-classes-e-objetos) 
     - [Atributos, Propriedades e Métodos de Classe](#atributos-propriedades-e-metodos-de-classe) 
     - [Mecanismos de Visibilidade/Acessibilidade](#mecanismos-de-visibilidadeacessibilidade) 
     - [Construtores e Destrutores de Classe](#construtores-e-destrutores-de-classe) 
 - [**Bibliografia**](#bibliografia)
+
+
 
 ## Introdução
 

@@ -3,18 +3,20 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 ## Assuntos
-- **Lógica de Programação e Estrutura de Controle, Funções e Procedimentos**
+- [**Lógica de Programação e Estrutura de Controle, Funções e Procedimentos**](#logica-de-programacao-e-estrutura-de-controle-funcoes-e-procedimentos)
     - [Conceito de Algoritmo](#conceito-de-algoritmo)
     - [Variáveis](#variaveis)
     - [Etapas de um Algoritmo e Operador de Atribuição](#etapas-de-um-algoritmo-e-operador-de-atribuicao)
     - [Estrutura Sequencial](#estrutura-sequencial)
     - [Estrutura Condicional](#estrutura-condicional)
     - [Estrutura de Repetição](#estrutura-de-repeticao)
-- **Manipulação de Dados em Memória Primária e Secundária**
+- [**Manipulação de Dados em Memória Primária e Secundária**](#manipulacao-de-dados-em-memoria-primaria-e-secundaria)
     - [Criando e Usando Funções e Procedimentos](#criando-e-usando-funcoes-e-procedimentos)
     - [Passagem de Parâmetros](#passagem-de-parametros)
     - [Manipulação de Arquivos em C#](#manipulacao-de-arquivos-em-c)
 - [**Bibliografia**](#bibliografia)
+
+
 
 ## Lógica de Programação e Estrutura de Controle, Funções e Procedimentos
 

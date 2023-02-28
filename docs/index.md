@@ -25,57 +25,46 @@ Cada palavra que você ler nesse projeto foi escrita por mim. Espero que esse ma
 
 O Tecnólogo foi iniciado em 2022/01 e deve terminar em 2024/2. Ao todo, o curso é divido em 3 ciclos e 5 semestres (chamados de Eixos Temáticos).
 
-As matérias técnicas que serão estudas (e terão as minhas anotações salvas aqui) são essas.
+O conteúdo do curso está abaixo. A medida que vou terminando de produzir os materiais eu vou marcando no checklist sinalizando que a matéria (também chamada de microfundamento) está completa.
 
-Ciclo 1: Concepção e Implementação de Sistemas de Software
+- [x] **Período 1: Implementação de Sistemas de Software**
+    - [x] [Algoritmos e Abstração de Dados](/CC_site/nav/PUC/periodo1/algoritmos_e_abstracao/)
+    - [x] [Algoritmos e Lógica de Programação](/CC_site/nav/PUC/periodo1/algoritmos_e_logica/)
+    - [x] [Desenvolvimento Web Front-End](/CC_site/nav/PUC/periodo1/desenvolvimento_web/)
+    - [x] [Matemática Básica](/CC_site/nav/PUC/periodo1/matematica_basica/)
+    - [x] [Organização de Computadores](/CC_site/nav/PUC/periodo1/organizacao_computadores/)
+    - [x] [Fundamentos de Engenharia de Software](/CC_site/nav/PUC/periodo1/fundamentos_eng_soft/)
+    - [x] [Pensamento Computacional](/CC_site/nav/PUC/periodo1/pensamento_comp/)
+    - [x] [Lógica Computacional](/CC_site/nav/PUC/periodo1/logica_comp/)
 
-  - [x] Implementação de Sistemas de Software
-      - [x] [Algoritmos e Abstração de Dados](/CC_site/nav/PUC/eixo1/algoritmos_e_abstracao/)
-      - [x] [Algoritmos e Lógica de Programação](/CC_site/nav/PUC/eixo1/algoritmos_e_logica/)
-      - [x] [Desenvolvimento Web Front-End](/CC_site/nav/PUC/eixo1/desenvolvimento_web/)
-      - [x] [Matemática Básica](/CC_site/nav/PUC/eixo1/matematica_basica/)
-      - [x] [Organização de Computadores](/CC_site/nav/PUC/eixo1/organizacao_computadores/)
-      - [x] [Fundamentos de Engenharia de Software](/CC_site/nav/PUC/eixo1/fundamentos_eng_soft/)
-      - [x] Pensamento Computacional
-      - [x] [Lógica Computacional](/CC_site/nav/PUC/eixo1/logica_comp/)
-      - [x] Projeto: Desenvolvimento de Uma Aplicação Web Front-End
+- [ ] **Período 2: Análise e Projeto de Sistemas de Software**
+    - [ ] [Algoritmos e Estruturas de Dados](/CC_site/nav/PUC/periodo2/algoritmo_estrutura_dados/)
+    - [ ] Modelagem de Dados
+    - [x] [Engenharia de Requisitos de Software](/CC_site/nav/PUC/periodo2/engenharia_requisitos/)
+    - [x] [Design de Interação](/CC_site/nav/PUC/periodo2/design_interacao/)
+    - [x] [Programação Modular](/CC_site/nav/PUC/periodo2/programacao_modular/)
+    - [ ] [Desenvolvimento Web Back-End](/CC_site/nav/PUC/periodo2/dev_web_backend/)
+    - [ ] Fundamentos de Redes de Computadores
+    - [ ] Manipulação de Dados com SQL
 
-  - [ ] Análise e Projeto de Sistemas de Software
-      - [ ] Algoritmos e Estruturas de Dados
-      - [ ] Modelagem de Dados
-      - [ ] Engenharia de Requisitos de Software
-      - [x] Design de Interação
-      - [x] Programação Modular
-      - [ ] Desenvolvimento Wb Back-End
-      - [ ] Fundamentos de Redes de Computadores
-      - [ ] Manipulação de Dados com SQL
-      - [x] Projeto: Desenvolvimento de Uma Aplicação Interativa
+- [ ] **Período 3: Processos de Negócio e de Desenvolvimento de Software**
+    - [ ] Modelagem e Gestão de Processos de Negócios
+    - [ ] Estatística Descritiva
+    - [ ] Desenvolvimento de Aplicações Móveis
+    - [ ] [Gerência de Projetos de TI](/CC_site/nav/PUC/periodo3/gerencia_projetos/)
+    - [ ] Gerência de Configuração
+    - [ ] Qualidade de Processos de Software
+    - [ ] Gerência de Requisitos de Software
 
-Ciclo 2: Desenvolvimento de Sistemas de Software Orientados a Processos de Negócios
+- [ ] **Período 4: Infraestrutura para Sistemas de Software**
+    - [ ] Cloud Computing
+    - [ ] Projeto de Software
+    - [ ] Arquitetura de Software Distribuído
+    - [ ] APIs e Web Services
+    - [ ] Teste de Software
+    - [ ] Banco de Dados NoSQL
 
-  - [ ] Processos de Negócio e de Desenvolvimento de Software
-      - [ ] Modelagem e Gestão de Processos de Negócios
-      - [ ] Estatística Descritiva
-      - [ ] Desenvolvimento de Aplicações Móveis
-      - [ ] Gerência de Projetos de TI
-      - [ ] Gerência de Configuração
-      - [ ] Qualidade de Processos de Software
-      - [ ] Gerência de Requisitos de Software
-      - [ ] Projeto: Desenvolvimento de Uma Aplicação Móvel
-
-  - [ ] Infraestrutura para Sistemas de Software
-      - [ ] Cloud Computing
-      - [ ] Projeto de Software
-      - [ ] Arquitetura de Software Distribuído
-      - [ ] APIs e Web Services
-      - [ ] Teste de Software
-      - [ ] Banco de Dados NoSQL
-      - [ ] Projeto: Desenvolvimento de Uma Aplicação Distribuída
-
-Ciclo 3: Empreendedorismo e Inovação
-
-  - [ ] Empreendedorismo e Inovação com Sistemas de Software
-      - [ ] Segurança Aplicada ao Desenvolvimento
-      - [ ] Compliance em TI
-      - [ ] Implantação de Solução de TI
-      - [ ] Projeto: Desenvolvimento de um Sistema Sociotécnico Inovador
+- [ ] **Período 5: Empreendedorismo e Inovação com Sistemas de Software**
+    - [ ] Segurança Aplicada ao Desenvolvimento
+    - [ ] Compliance em TI
+    - [ ] Implantação de Solução de TI

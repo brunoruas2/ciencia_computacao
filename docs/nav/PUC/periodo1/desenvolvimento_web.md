@@ -3,7 +3,7 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 ## Assuntos
-- **A Web: Evolução, Padrões e Arquitetura**
+- [**A web: Evolução, Padrões e Arquitetura**](#a-web-evolucao-padroes-e-arquitetura)
     - [Histórico e Evolução da Web](#historico-e-evolucao-da-web)
     - [W3C e os Padrões da Web](#w3c-e-os-padroes-da-web)
     - [Componentes da Arquitetura da Web](#componentes-da-arquitetura-da-web)
@@ -11,11 +11,13 @@
     - [Protocolo HTTP](#protocolo-http)
     - [Servidores Web](#servidores-web)
     - [Dinâmica de Aplicações Web](#dinamica-de-aplicacoes-web)
-- **Desenvolvimento de Interfaces Web**
+- [**Desenvolvimento de Interfaces Web**](#desenvolvimento-de-interfaces-web)
     - [A Linguagem HTML](#a-linguagem-html)
     - [A Linguagem CSS](#a-linguagem-css)
     - [A Linguagem JavaScript](#a-linguagem-javascript)
 - [**Bibliografia**](#bibliografia)
+
+
 
 ## A web: Evolução, Padrões e Arquitetura
 
