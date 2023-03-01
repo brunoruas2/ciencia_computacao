@@ -25,7 +25,7 @@ Cada palavra que você ler nesse projeto foi escrita por mim. Espero que esse ma
 
 O Tecnólogo foi iniciado em 2022/01 e deve terminar em 2024/2. Ao todo, o curso é divido em 3 ciclos e 5 semestres (chamados de Eixos Temáticos).
 
-O conteúdo do curso está abaixo. A medida que vou terminando de produzir os materiais eu vou marcando no checklist sinalizando que a matéria (também chamada de microfundamento) está completa.
+O conteúdo do curso está abaixo. O checklist indicará quais matérias (que na PUC são chamadas de Microfundamentos) estão completas.
 
 - [x] **Período 1: Implementação de Sistemas de Software**
     - [x] [Algoritmos e Abstração de Dados](/CC_site/nav/PUC/periodo1/algoritmos_e_abstracao/)
