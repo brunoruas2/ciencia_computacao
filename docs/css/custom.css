@@ -5,3 +5,17 @@ pre code {
 body {
     text-align: justify !important;
 }
+
+#search {
+    display: none;
+}
+
+#mkdocs-search-query {
+    width: 150px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.md-source-repo-icon {
+    display: none;
+}

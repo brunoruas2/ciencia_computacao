@@ -44,11 +44,11 @@ nav:
         - Segurança Aplicada ao Desenvolvimento: nav\PUC\periodo5\
         - Compliance em TI: nav\PUC\periodo5\
         - Implantação de Solução de TI: nav\PUC\periodo5\
-
     - Tech: nav/tech.md
 
 theme:
   name: simple-blog
+  custom_dir: docs/theme
   favicon: assets/logo.png
   logo: assets/logo.png
   theme_style: light
@@ -89,3 +89,7 @@ markdown_extensions:
       generic: true
   # footnote
   - footnotes
+
+
+plugins:
+  - search
