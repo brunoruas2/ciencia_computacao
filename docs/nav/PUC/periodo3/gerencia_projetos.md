@@ -337,9 +337,11 @@ E deve estar preparado para alguns conflitos clássicos dessa área:
 
 ### Gerenciamento Ágil
 
+#### Gerência Ágil de Projetos
+
 Já aprendemos um pouco sobre esse tema lá no [primeiro período](/CC_site/nav/PUC/periodo1/fundamentos_eng_soft/#processos-ageis). Então vou ser bem sucinto aqui.
 
-#### Breve histórico
+##### Breve histórico
 
 Para a gente que está começando a vida de desenvolvedor agora, isso tudo parece muito simples, mas o passado era completamente diferente no mercado de tecnologia.
 
@@ -347,7 +349,7 @@ Entre as décadas de 60 e 90, não existiam métodos amplamente divulgados e pad
 
 A primeira vitória significativa na tentativa de padronização ocorreu em 1990 com a criação do **Rational Unified Process (RUP)** que também vimos na matéria de [introdução a engenharia de software](/CC_site/nav/PUC/periodo1/fundamentos_eng_soft/#processos-prescritivos).
 
-#### O Manifesto Ágil
+##### O Manifesto Ágil
 
 Com o passar do tempo, o foco na entrega se tornou cada vez mais evidente até que  o [**Manifesto Ágil**](https://agilemanifesto.org/) criou o marco para a mudança do método de gestão de projetos no começo do século XXI. Dele podemos derivar os seguintes princípios:
 
@@ -401,11 +403,149 @@ Para encerrar esse apanhado podemos destacar os principais métodos ágeis hoje 
 - Lean
 - TDD
 
-#### Gerência Ágil de Projetos
 #### O Método Ágil Scrum
-#### Atividades e Papéis no Scrum
+
+Já vimos um pouco desse assunto na parte de [introdução à engenharia de software](/CC_site/nav/PUC/periodo1/fundamentos_eng_soft/#scrum) mas aqui vamos dar mais contexto sobre ele.
+
+O método é baseado no guia do scrum que eu fiz questão de inserir aqui no material.
+
+<iframe src="https://scrumguides.org/docs/scrumguide/v1/Scrum-Guide-Portuguese-BR.pdf" width="100%" height="500px">
+</iframe>
+
+O método do Scrum é mais indicado para projetos com as seguintes características:
+
+- Projetos de curta duração
+- Equipe reduzida
+- Proximidade entre membros da equipe
+- Uma equipe com algum nível de preparo
+- Presença do cliente
+- Ambiente informal
+
+Ele pode ser integrado à ferramentas como o kanban e pode ser associado a outros métodos ágeis de gestão de projetos.
+
+**Comentário:** Como já aprendemos sobre os papéis, os artefatos e os eventos do scrum antes, não vou repetir esse conteúdo aqui. Caso não se lembre do que estou falando, volte no primeiro período e revise.
+
+No planejamento de um sprint, devemos sempre responder essas duas questões norteadoras:
+
+- O que deve ser entregue?
+- Qual o trabalho necessário para essa entrega?
+
 #### Introdução ao XP
+
+O eXtreme Programming (XP) é um outro método ágil muito comum no Brasil e no mundo. Alguns dos nomes do manifesto ágil foram os criados desse método.
+
+O foco do XP é no desenvolvimento orientado para a entrega do código no **menor tempo** possível.
+
+As premissas do XP são:
+
+- Equipes pequenas
+- Projetos curtos
+- De 1.000 a 250.000 linhas de código
+
+O papéis dos atores atuante no XP são:
+
+- Programadores (foco principal)
+- Treinador\Técnico
+- Acompanhador\Tracker
+- Cliente
+
+Valores do XP:
+
+- Comunicação
+- Feedback
+- Coragem
+- Simplicidade
+- Respeito
+
+Para finalizar essa seção de listas, temos as **12 práticas** preconizadas pelo XP:
+
+1. Planejamento
+2. Fases Pequenas
+3. Metáfora para Explicação
+4. Design Simples
+5. Testes
+6. Refatoramento
+7. Programação Pareada
+8. Propriedade Coletiva
+9. Integração Contínua
+10. Semana de 40 horas
+11. Cliente Junto do Desenvolvimento
+12. Padronização do Código
+
+Dessas práticas, podemos destacar que o foco na parte de testes é muito relevante na aplicação desse método.
+
 #### Frameworks e Práticas Ágeis
+
+Agora que aprendemos sobre os 2 métodos mais usados. Vamos fazer uma passagem rápida sobre os outros que, mesmo não sendo tão famosos, são usados por inúmeros times de desenvolvimento ao redor do mundo.
+
+##### Dynamic Systems Development Method (DSDM)
+
+Nascido na década de 1990 no Reino Unido, ele é um dos mais antigos. Tem como características:
+
+- Desenvolvimento incremental
+- Colaboração cliente-desenvolvimento
+- Funções integradas
+- Flexibilidade dos requisitos
+
+##### Test Driven Development (TDD)
+
+O TDD é fruto do XP tendo como ponto central o teste de software. O foco é tanto que tudo se inicia no desenho dos testes antes do código.
+
+O método de desenvolvimento no TDD é:
+
+1. Escrever o teste que apontará um status vermelho
+2. Faz-se a atualização do sistema para atendimento dessa nova funcionalidade
+3. Refaz-se o teste para que o status seja verde
+4. Refatoração do código da funcionalidade
+5. Próximo teste
+
+##### Lean Development
+
+Também nascido em 1990, surgiu no contexto da indústria automotiva. Seu principal foco é o **gasto mínimo** de recursos.
+
+Tem como guia os seus 7 princípios:
+
+1. Eliminar desperdícios
+2. Ampliar o conhecimento
+3. Fortalecer o time
+4. Entregas rápidas
+5. Otimizar o todo
+6. Construir qualidade
+7. Adiar decisões
+
+##### Crystal Family
+
+É um leque de métodos criado por Alistair Cockburn. Tem como principais práticas:
+
+- Entregas regulares
+- Monitoramento do progresso
+- Envolvimento direto com cliente
+- Inspeções constantes nos incrementos
+- feedback para ajuste do produto
+
+##### Método Squad
+
+Surgido em 2014 no Spotify, é um método que tem como base:
+
+- Squad - Grupo interdisciplinar de pessoas com uma missão
+- O líder que serve ao grupo
+- Equipes sempre pequenas
+
+Tem como princípios:
+
+- Comunicação
+- Chapters - Pessoa com especialidade que compõe um Squad
+- Tribes - Conjunto de Squads com objetivos parecidos
+- Guilds - Lideranças de alianças de Squads
+
+#### Conclusão ou Como escolher?
+
+A bem da verdade, na vida real, a chance de eu ou algum de vocês ter que decidir qual metodologia a empresa que a gente for trabalhar vai usar é bem baixa.
+
+Entretanto, saber sobre esses métodos pode ajudar muito no processo de adaptação quando iniciarmos nossa caminhada no mundo do desenvolvimento e, quem sabe, realmente essa responsabilidade caia no colo de algum de nós.
+
+O importante é entender os principais pontos de cada metodologia afim de sermos capaz até mesmo de mesclar as principais vantagens para o cumprimento de um projeto.
+
 ### Ferramentas e Técnicas
 #### Ferramentas e Técnicas para Planejamento
 #### Ferramentas e Técnicas para Gestão

@@ -78,6 +78,8 @@ Existem várias metodologias mas podemos elencar alguns:
 
 Hoje em dia o método mais usado é o Scrum. A novidade dele é que a abordagem do desenvolvimento é empírica e permite a evolução dos requisitos do processo ao longo do processo.
 
+#### Scrum
+
 O Scrum é divido em apenas 3 etapas: 1) Planejamento inicial do projeto; 2) Loop de desenvolvimento e feedback (chamado de sprint) e 3) Entrega ao cliente.
 
 As equipes do scrum são pequenas, multidisciplinares, de liderança diluída e trabalham com um foco de melhorias pequenas em um prazo mais curto (2 ou 4 semanas). Existe a figura do facilitador do processo chamado Scrum Master.
