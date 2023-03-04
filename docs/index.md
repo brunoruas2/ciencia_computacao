@@ -21,6 +21,8 @@ Originalmente, eu escrevia minhas notas de estudos em [LaTeX](https://www.latex-
 
 Cada palavra que você ler nesse projeto foi escrita por mim. Espero que esse material sirva a vocês tanto quanto serviu para mim. O conjunto de tecnologias usadas para construção desse site está na aba `Tech` no menu superior. O link para o repositório desse projeto também.
 
+**Comentário:** Como acontece com as universidades, não existe necessariamente uma hierarquia entre as matérias de um mesmo período. Se você for como eu, pegue qualquer uma e vá estudando até acabar, depois, pule para outra até ter terminado todas as matérias de um período. Paralelamente, é possível preferir ir vendo todas as matérias lado a lado. Não tem jeito errado de estudar desde que você se esforce para apreender os assuntos e conceitos.
+
 ## Pontifícia Universidade Católica (PUC-MG)
 
 O Tecnólogo foi iniciado em 2022/01 e deve terminar em 2024/2. Ao todo, o curso é divido em 3 ciclos e 5 semestres (chamados de Eixos Temáticos).
@@ -51,10 +53,10 @@ O conteúdo do curso está abaixo. O checklist indicará quais matérias (que na
     - [ ] Modelagem e Gestão de Processos de Negócios
     - [ ] Estatística Descritiva
     - [ ] Desenvolvimento de Aplicações Móveis
-    - [ ] [Gerência de Projetos de TI](/CC_site/nav/PUC/periodo3/gerencia_projetos/)
+    - [x] [Gerência de Projetos de TI](/CC_site/nav/PUC/periodo3/gerencia_projetos/)
     - [ ] Gerência de Configuração
     - [ ] Qualidade de Processos de Software
-    - [ ] Gerência de Requisitos de Software
+    - [ ] [Gerência de Requisitos de Software](/CC_site/nav/PUC/periodo3/gerencia_requisitos/)
 
 - [ ] **Período 4: Infraestrutura para Sistemas de Software**
     - [ ] Cloud Computing

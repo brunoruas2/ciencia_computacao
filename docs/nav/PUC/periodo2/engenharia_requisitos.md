@@ -3,23 +3,25 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 ## Assuntos
+- [Aviso](#aviso)
 - [**Tipos e Elicitação de Requisitos de Software**](#tipos-e-elicitacao-de-requisitos-de-software)
-  - [Características e Tipos de Requisitos](#caracteristicas-e-tipos-de-requisitos)
-  - [Elicitação de Requisitos de Software](#elicitacao-de-requisitos-de-software)
-(#processos-da-engenharia-de-requisitos-e-tecnicas-de-elicitacao)
+    - [Características e Tipos de Requisitos](#caracteristicas-e-tipos-de-requisitos)
+    - [Elicitação de Requisitos de Software](#elicitacao-de-requisitos-de-software)
 - [**Modelagem, Validação e Verificação de Requisitos**](#modelagem-validacao-e-verificacao-de-requisitos)
-  - [Modelagem de Requisitos](#modelagem-de-requisitos)
-  - [Validação e Verificação de Requisitos](#validacao-e-verificacao-de-requisitos)
+    - [Modelagem de Requisitos](#modelagem-de-requisitos)
+    - [Validação e Verificação de Requisitos](#validacao-e-verificacao-de-requisitos)
 - [**Bibliografia**](#bibliografia)
 
+
+## Aviso
+
+Essa matéria irá aprofundar o conteúdo que aprendemos na disciplina de [Fundamentos de Engenharia de Software](http://127.0.0.1:8000/CC_site/nav/PUC/periodo1/fundamentos_eng_soft/#requisitos).
 
 ## Tipos e Elicitação de Requisitos de Software
 
 ### Características e Tipos de Requisitos
 
 #### Conceitos e Características de Requisitos
-
-**Comentário:** Essa matéria irá aprofundar o conteúdo que aprendemos na disciplina de Fundamentos de Engenharia de Software.
 
 Os **conceitos** são palavras dotadas de significados objetivos. Ao longo de todos os nossos estudos, nós, basicamente, estamos aumentando nosso repertório de conceitos e ligando conceitos novos aos que já aprendemos previamente. Desse modo, não é nenhuma novidade começar nosso estudo por meio da definição dos conceitos que vamos usar ao longo do microfundamento.
 

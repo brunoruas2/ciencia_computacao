@@ -548,7 +548,29 @@ O importante é entender os principais pontos de cada metodologia afim de sermos
 
 ### Ferramentas e Técnicas
 #### Ferramentas e Técnicas para Planejamento
+
+Existem uma infinidade de ferramentas disponíveis hoje em dia para a realização das atividades de gestão de projetos. Independente disso, as ferramentas que escolhermos devem ter algumas features desejáveis como:
+
+- Métricas e estimativas
+- Cronogramas
+- Gestão de equipes
+- Orçamento
+
+Além disso, precisamos garantir que algumas características do projeto estejam bem definidas:
+
+- Escopo e Ideias
+- Formação das equipes
+
+Essas características se aplicam tanto à metodologias ágeis quanto às tradicionais com maior e menor grau de significância para cada um desses itens.
+
 #### Ferramentas e Técnicas para Gestão
+
+Uma vez feito o planejamento, o próximo passo é a gestão para que os objetivos sejam alcançados ao final do prazo e dos recursos disponíveis no projeto.
+
+Da mesma maneira que temos várias ferramentas disponíveis no planejamento, também temos várias opções para a gestão. Entretanto, vale destacar que existe pouca probabilidade que nós encontremos um software que atenda perfeitamente todas as várias áreas da gestão de um projeto.
+
+Normalmente, o mesmo sistema que permite o planejamento também permite a gestão. O motivo disso é que a gestão é a próxima etapa lógica ao processo de planejamento então muitas informações são parecidas.
+
 
 ## Bibliografia
 - GUIA do conhecimento em gerenciamento de projetos: (Guia PMBOK®). 6. ed. São Paulo: Project Management Institute, 2017. xxix, 755 p. ISBN 9781628251920., Nº de Exemplares: 7.
