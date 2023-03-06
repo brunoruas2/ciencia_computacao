@@ -773,7 +773,7 @@ Existem duas maneiras de se criar uma lista flexível. A primeira, contém um pr
 
 A vantagem da primeira abordagem (com cabeça) é que tratamos o método de inserir em uma lista vazia exatamente do mesmo modo de inserir em uma lista de elementos. A razão disso é que só precisaremos mudar o atributo `prox` da cabeça. No caso da abordagem sem cabeça, teríamos que primeiro verificar se existem elementos para, em caso negativo, alterarmos o atributo `prox` para null desse primeiro elemento.
 
-Abaixo temos a implementação de uma lista flexível que usa a classe autorrefencial da seção anterior.
+Abaixo temos a implementação de uma lista flexível que usa a classe autorreferencial da seção anterior.
 
 ``` c#
 // c#
@@ -900,10 +900,47 @@ class ListaFlex {
 
 ```
 O código dessa classe está disponível nesse [github gist](https://gist.github.com/brunoruas2/9846e0c842209d25c8b32bd4d0808488).
-### Árvore Binária e Tabela Hash
-#### Árvore Binária
-#### Tabela Hash
 
+### Árvore Binária e Tabela Hash
+
+#### Árvore Binária
+
+Nas listas, o custo das atividades de inserção, remoção e pesquisa costuma ser de $\mathcal{O}(n)$ enquanto, nas árvores, o custo tende a ser de $\mathcal{O}(log(n))$. O motivo disso nós veremos mais a frente.
+
+Para entendermos melhor sobre essa estrutura de dados, é muito útil ter uma representação visual dessa estrutura.
+
+![arvore binaria](../../../assets/imgs/75-arvore-binaria.png)
+
+Podemos ver que usamos dois elementos para representar essa estrutura. As bolas são chamados de nós (ou vértices) e as linhas (ou setas) são chamadas de arestas.
+
+**Comentário:** Se você ficou com algum feeling que a relação entre esses pontos lembrou um pouco a `LinkedList<T>`, você tá no caminho certo.
+
+Agora nós vamos aprender alguns conceitos importantes sobre essa estrutura que são termos usados para comunicar ideias a respeito desse objeto:
+
+- Cada bola numerada é chamada de **nó**
+- O nó mais alto é chamado de **raiz**
+- Cada camada da árvore é chamada de **nível**[^6]
+- Os nós que vêm após outro nó são chamados de **filhos**
+- Todo nó que tem filho é chamado de **nó interno**
+- Os nós sem filhos são chamados de **folhas** ou **nós externos**
+- Podemos subdividir uma árvore em **sub-árvores** onde a raiz é um nó filho da árvore original
+- Chamamos de **distância** a contagem dos níveis entre 2 nós
+- Chamamos de **altura** da árvore a contagem dos níveis entre a raiz e a folha mais alta
+
+[^6]: A raiz está **sempre** no nível 0.
+
+Todos esses conceitos acima são relacionados a qualquer estrutura de árvore. Entretanto, uma **Árvore Binária** é uma árvore em que cada nó possui, no máximo, 2 filhos.
+
+Um tipo especial de árvore binária é a **Árvore Binária de Pesquisa (ABP)** ou **Árvore Binária de Busca (ABb)**. Ela é uma árvore binária com uma condição adicional: Os valores dos nós filhos à esquerda são sempre **menores** que o valor do nó pai e, ao contrário, os valores dos filhos à direta são sempre **maiores**. Compare a árvore que mostramos logo no começo com essa aqui abaixo.
+
+![Árvore Binária de Busca](../../../assets/imgs/76-arvore-binaria-busca.png)
+
+
+Uma árvore é classificada como **Árvore Balanceada** se, para **todos** os nós, a diferença entre os níveis à esquerda e à direita seja $\leq 1$. Outra maneira de afirmar a mesma coisa é dizer que a altura da sub-árvore esquerda menos a altura da sub-árvore direita é pertence ao conjunto $\{ -1, 0, 1 \}$
+
+Agora que definimos a nossa estrutura de dados, temos que criar alguns métodos que serão usados para a manipulação das informações gravadas nela. Para efeitos didáticos, a partir de agora vamos considerar que todas as árvores binárias serão de pesquisa.
+
+#### Tabela Hash
 
 
 
