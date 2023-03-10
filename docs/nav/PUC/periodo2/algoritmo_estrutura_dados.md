@@ -15,9 +15,11 @@
 
 ## Aviso
 
-Essa disciplina costuma ser muito mais difícil em um contexto de bacharel de análise e desenvolvimento de sistemas, engenharia de computação e ciência da computação. Não sei precisar o porquê mas nessa formação nós vamos ver apenas o básico de algumas estruturas e como implementá-las em c\# por meio das collections.
+Essa disciplina costuma ser muito mais difícil em um contexto de bacharel de análise e desenvolvimento de sistemas, engenharia de computação e ciência da computação. Não sei precisar o porquê mas nessa formação nós vamos ver apenas o básico de algumas estruturas e como podemos implementar algumas dessas estruturas em c\#.
 
 Como sempre, 	**não podemos nunca** parar de estudar mais a fundo os assuntos introduzidos nos tópicos mais a frente. A bibliografia recomendada pode ser de grande valia.
+
+Uma outra fonte **espetacular** encontrada aqui no github é esse [site](https://joaoarthurbm.github.io/eda/) publicado pelo professor João Arthur Brunet. Vale muito a pena estudar por lá também (só cuidado porque lá é um curso de bacharelado então a pegada é bem mais profunda do que essa primeira parte do nosso material).
 
 
 ## Coleções Nativas das Linguagens de Programação
@@ -931,14 +933,184 @@ Agora nós vamos aprender alguns conceitos importantes sobre essa estrutura que 
 
 Todos esses conceitos acima são relacionados a qualquer estrutura de árvore. Entretanto, uma **Árvore Binária** é uma árvore em que cada nó possui, no máximo, 2 filhos.
 
-Um tipo especial de árvore binária é a **Árvore Binária de Pesquisa (ABP)** ou **Árvore Binária de Busca (ABb)**. Ela é uma árvore binária com uma condição adicional: Os valores dos nós filhos à esquerda são sempre **menores** que o valor do nó pai e, ao contrário, os valores dos filhos à direta são sempre **maiores**. Compare a árvore que mostramos logo no começo com essa aqui abaixo.
+Um tipo especial de árvore binária é a **Árvore Binária de Pesquisa (ABP)** ou **Árvore Binária de Busca (ABB)**. Ela é uma árvore binária com uma condição adicional: Os valores dos nós filhos à esquerda são sempre **menores** que o valor do nó pai e, ao contrário, os valores dos filhos à direta são sempre **maiores**. Compare a árvore que mostramos logo no começo com essa aqui abaixo.
 
 ![Árvore Binária de Busca](../../../assets/imgs/76-arvore-binaria-busca.png)
 
 
-Uma árvore é classificada como **Árvore Balanceada** se, para **todos** os nós, a diferença entre os níveis à esquerda e à direita seja $\leq 1$. Outra maneira de afirmar a mesma coisa é dizer que a altura da sub-árvore esquerda menos a altura da sub-árvore direita é pertence ao conjunto $\{ -1, 0, 1 \}$
+Uma árvore é classificada como **Árvore Balanceada** se, para **todos** os nós, a diferença entre os níveis à esquerda e à direita seja $\leq 1$. Outra maneira de afirmar a mesma coisa é dizer que a altura da sub-árvore esquerda menos a altura da sub-árvore direita pertence ao conjunto $\{ -1, 0, 1 \}$
 
 Agora que definimos a nossa estrutura de dados, temos que criar alguns métodos que serão usados para a manipulação das informações gravadas nela. Para efeitos didáticos, a partir de agora vamos considerar que todas as árvores binárias serão de pesquisa.
+
+Podemos criar uma árvore em c# com o seguinte código:
+
+``` c#
+// c sharp
+class No {
+    public int elemento;
+    public No esq, dir;
+
+    // construtor do nó raiz
+    public No(int elemento) {
+        this.elemento = elemento;
+        this.esq = null;
+        this.dir = null;
+    }
+
+    // construtor do nó filho
+    public No(int elemento, No esq, No dir) {
+        this.elemento = elemento;
+        this.esq = esq;
+        this.dir = dir;
+    }
+}
+```
+
+Mas não precisamos parar por aqui. Para ser uma estrutura de dados útil, precisamos maneiras de interagir com nossa árvore para realizar as operações de **pesquisa**, **caminhamento**, **inserção** e **remoção**.
+
+``` c#
+// c sharp
+// função de busca de um nó a partir do valor do seu elemento
+public No Busca(int valor, No no) {
+    if (no == null || no.elemento == valor) {
+        return no;
+    }
+
+    if (valor < no.elemento) {
+        return Busca(valor, no.esq);
+    } else {
+        return Busca(valor, no.dir);
+    }
+}
+
+// função que mostra os valores caminhando nos nós
+// da esquerda para a direita
+public void Caminhamento(No no) {
+    if (no != null) {
+        Caminhamento(no.esq);
+        Console.Write(no.elemento + " ");
+        Caminhamento(no.dir);
+    }
+}
+
+// função de inserção de nós em uma árvore
+public No Insercao(int valor, No no) {
+    // Nós raiz
+    if (no == null) {
+        return new No(valor);
+    }
+
+    // Essa iteração é muito inteligente porque
+    // ela aplica a mesma lógica do caminhamento
+    if (valor < no.elemento) {
+        no.esq = Insercao(valor, no.esq);
+    } else {
+        no.dir = Insercao(valor, no.dir);
+    }
+
+    return no;
+}
+```
+
+A operação mais complexa de ser implantada em uma ABP é a de remoção. A principal dificuldade vem do problema da existência de filhos. Como sabemos, um nó pode ter:
+
+- 0 Filhos (nó folha)
+- 1 Filho
+- 2 Filhos
+
+``` c#
+// Primeiro definimos uma função que vamos usar
+private No FindMin(No node) {
+    while (node.left != null) {
+        node = node.left;
+    }
+    
+    return node;
+}
+
+public No Remove(int valor, No no) {
+    // Se a árvore estiver vazia, retorne null.
+    if (no == null) {
+        return null;
+    }
+    
+    // Se o valor a ser removido for menor que o valor do nó atual, vá para a subárvore esquerda.
+    if (valor < no.valor) {
+        no.left = Remove(no.left, valor);
+    }
+    // Se o valor a ser removido for maior que o valor do nó atual, vá para a subárvore direita.
+    else if (valor > no.valor) {
+        no.right = Remove(no.right, valor);
+    }
+    // Se o valor a ser removido for igual ao valor do nó atual, remova o nó.
+    // Aqui vamos ter que levar olhar o problema dos nós filhos.
+    else {
+        // Se o nó não tiver filhos, basta removê-lo.
+        if (no.left == null && no.right == null) {
+            no = null;
+        }
+        // Se o nó tiver apenas um filho, substitua o nó pelo seu filho.
+        else if (no.left == null) {
+            no = no.right;
+        }
+        else if (no.right == null) {
+            no = no.left;
+        }
+        // Se o nó tiver dois filhos, encontre o sucessor do nó (o menor valor na subárvore direita) e substitua o nó pelo seu sucessor.
+        else {
+            No successor = FindMin(no.right);
+            no.valor = successor.valor;
+            no.right = Remove(no.right, successor.valor);
+        }
+    }
+    
+    return no;
+}
+```
+
+Na parte final, nós optamos por usar a substituição pelo sucessor. Entretanto, poderíamos fazer a escolha pelo predecessor.
+
+##### Balanceamento de Árvores Binárias
+
+A vantagem da estrutura de árvore binária é que, como existe uma ordem de criação dos nós, podemos realizar pesquisas e, por consequência, remoções e inserções a um custo menor como vimos no começo dessa seção. Contudo, cabe destacar que essa vantagem só é verificada em casos onde a árvore está **balanceada**.
+
+Para situações em que essa condição não é encontrada, podemos realizar o processo de balanceamento que verifica a árvore em busca de nós desbalanceado.
+
+O processo de balanceamento usa uma técnica chamada **rotacionamento** dos nós. A ideia é que o nó desbalanceado "gira" em torno do seu nó filho em sentido horário ou anti-horário de modo a virar filho do seu filho. Calma, olhando a imagem fica mais fácil de entender.
+
+![giro](../../../assets/imgs/77-giro-no.png)
+
+Na imagem acima, podemos ver que o nó 5 está desbalanceado à esquerda porque possui uma altura 2 à esquerda e 0 à direita. Então é realizado um giro que transforma o nó 5 em filho do nó 3. Dando a essa árvore o balanceamento que desejamos.
+
+Agora que temos uma ideia do que é o rotacionamento, podemos aprofundar um pouco mais nos seus tipos. Ao todo, existem 4 tipos de rotações que podemos usar:
+
+- Simples
+    - À esquerda
+    - À direita
+- Dupla
+    - Direita-Esquerda
+    - Esquerda-Direita
+
+**Comentário:** Isso mesmo, a imagem anterior é uma rotação simples à direita.
+
+A rotação dupla é, como o nome auto-explicativo indica, apenas a composição de rotações simples mas em sentidos contrários. Abaixo temos uma imagem explicativa para uma **rotação dupla esquerda-direita**.
+
+![giro-duplo](../../../assets/imgs/78-giro-duplo.png)
+
+Outro conceito importante é a da **Árvore Binária Adelson-Velsky e Landis (AVL)** que foi proposta lá em 1962. Esses dois soviéticos foram quem primeiro definiram as condições necessárias para a construção de uma árvore balanceada a partir da medida chamada **fator de balanceamento** que pode ser calculada pela equação:
+
+$fator(i) = altura\_{}direira(i) - altura\_{}esquerda(i)$
+ 
+Ao calcularmos o fator para todos os nós de uma árvore podemos verificar as rotações necessárias para o seu balanceamento. Abaixo temos um quadro com o resumo das regras.
+
+| Fator do nó | Fator do filho direito | Fator do filho esquerdo |     Rotação      |
+| :---------: | :--------------------: | :---------------------: | :--------------: |
+|      2      |        1 <br> 0        |                         | Simples esquerda |
+|      2      |           -1           |                         |  Dupla dir-esq   |
+|     -2      |                        |        -1 <br> 0        | Simples direita  |
+|     -2      |                        |            1            |  Dupla esq-dir   |
+
+
 
 #### Tabela Hash
 
