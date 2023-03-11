@@ -40,7 +40,7 @@ O conteúdo do curso está abaixo. O checklist indicará quais matérias (que na
     - [x] [Lógica Computacional](/CC_site/nav/PUC/periodo1/logica_comp/)
 
 - [ ] **Período 2: Análise e Projeto de Sistemas de Software**
-    - [ ] [Algoritmos e Estruturas de Dados](/CC_site/nav/PUC/periodo2/algoritmo_estrutura_dados/)
+    - [x] [Algoritmos e Estruturas de Dados](/CC_site/nav/PUC/periodo2/algoritmo_estrutura_dados/)
     - [ ] Modelagem de Dados
     - [x] [Engenharia de Requisitos de Software](/CC_site/nav/PUC/periodo2/engenharia_requisitos/)
     - [x] [Design de Interação](/CC_site/nav/PUC/periodo2/design_interacao/)

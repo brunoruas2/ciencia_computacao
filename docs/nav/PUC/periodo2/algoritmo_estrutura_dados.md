@@ -97,12 +97,14 @@ Uma lista possui alguns métodos úteis para manipulação dos dados:
 
 
 Como estamos falando de um objeto, o comportamento de cada método deve ser analisado na classe que será instanciada nele.
+
 ### Principais Coleções
 Aprendemos na disciplina de programação modular que existem várias coleções nativas no ambiente .NET que são otimizadas e devem compor o nosso repertório de soluções.
 
 Vale lembrar que para ter acesso às coleções precisaremos acessar o namespace **System.Collections**.
 
 Agora vamos aprender algumas classes interessantes para o nosso estudo.
+
 #### ArrayList
 O **ArrayList** é um objeto similar ao array com a vantagem de podermos redimensionar dinamicamente o seu tamanho (o array simples tem tamanho fixo). A documentação oficial pode ser encontrada nesse [link](https://learn.microsoft.com/pt-br/dotnet/api/system.collections.arraylist?view=net-5.0).
 
@@ -1113,8 +1115,229 @@ Ao calcularmos o fator para todos os nós de uma árvore podemos verificar as ro
 
 
 #### Tabela Hash
+Para finalizarmos nossa disciplina de Algoritmos e Estrutura de Dados, vamos ver as `tabelas hash`. Sim, o termo que vimos lá na primeira parte chamado `hashtable` é a aplicação em c# dessa estrutura.
+
+A principal vantagem da tabela hash é que, como ela ordena o arquivo no momento da sua inserção usando a sua função de hash, o custo do acesso a essa informação é constante, ou seja $\mathcal{O}(1)$.
+
+A desvantagem é que temos um custo elevado se quisermos recuperar os registros em ordem. Podendo chegar a $\mathcal{O}(n)$
+
+Quando queremos inserir elementos iguais na mesma tabela. Como a função de hash faz um mapeamento para algum subconjunto, se tentarmos inserir um elemento repetido (ou mesmo um outro elemento que gere um mesmo valor no mapeamento), teríamos uma **colisão primária**. Evitar esses problemas é o cerne de uma boa implementação dessa estrutura de dados.
+
+Normalmente, temos 3 abordagens para evitar essas colisões:
+
+1. Hash direto com área de reserva (overflow): <br> Aqui, teremos uma área reservada em um array para tratar as colisões.
+2. Hash direto com rehash: <br> Nessa abordagem temos duas funções de hash. Caso a primeira aponte para uma colisão, usaremos a segunda.
+3. Hash indireto com lista flexível simples: <br> Assumimos que cada posição é uma lista flexível que pode apontar para outros elementos. Nesse caso, uma colisão entra como uma nova ligação na lista flexível.
+
+As classes `Hashtable` e `Dictionary<TKey,TValue>` implementam a tabela hash em c#. Contudo, fica aqui um aviso. A teoria clássica assume que a as chaves são **obrigatoriamente** números inteiros[^7].
+
+Eu pedi ao chatGPT que mostrasse um exemplo da implementação dessa estrutura em c#. Ele optou por usar a Collection de hashtable (o que tá valendo).
+
+``` c#
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Criando uma nova tabela hash
+        Hashtable hashtable = new Hashtable();
+
+        // Adicionando elementos à tabela hash
+        hashtable.Add("chave1", "valor1");
+        hashtable.Add("chave2", "valor2");
+        hashtable.Add("chave3", "valor3");
+
+        // Acessando um elemento da tabela hash
+        string valorChave2 = (string)hashtable["chave2"];
+        Console.WriteLine("O valor da chave2 é: " + valorChave2);
+
+        // Alterando um elemento da tabela hash
+        hashtable["chave1"] = "novoValor1";
+
+        // Removendo um elemento da tabela hash
+        hashtable.Remove("chave3");
+
+        // Iterando sobre os elementos da tabela hash
+        foreach (DictionaryEntry entry in hashtable)
+        {
+            Console.WriteLine("A chave é: " + entry.Key + " e o valor é: " + entry.Value);
+        }
+
+        // Verificando se a tabela hash contém uma chave específica
+        if (hashtable.ContainsKey("chave1"))
+        {
+            Console.WriteLine("A tabela hash contém a chave1.");
+        }
+
+        // Verificando se a tabela hash contém um valor específico
+        if (hashtable.ContainsValue("valor2"))
+        {
+            Console.WriteLine("A tabela hash contém o valor2.");
+        }
+    }
+}
+```
+
+Mas aqui tá uma coisa interessante. Como será que essa collection lida com colisão primária? Bom, nenhum lugar é melhor que o próprio código da classe.
+
+Podemos "navegar" pelo código de tudo que importamos no nosso programa simplesmente apertando ctrl e clicando no método. Por exemplo, podemos clicar no método `Add` do objeto hashtable para irmos exatamente no código que constrói esse método na classe `Hashtable`.
+
+``` c#
+// Adds an entry with the given key and value to this hashtable. An
+// ArgumentException is thrown if the key is null or if the key is already
+// present in the hashtable.
+//
+public virtual void Add(object key, object? value)
+{
+    Insert(key, value, true);
+}
+```
+
+Podemos ver que estamos usando a função `Insert` dentro desse método. Pois bem, vamos ver o que essa função faz?
+
+```c#
+// Inserts an entry into this hashtable. This method is called from the Set
+// and Add methods. If the add parameter is true and the given key already
+// exists in the hashtable, an exception is thrown.
+private void Insert(object key, object? nvalue, bool add)
+{
+    if (key == null)
+    {
+        throw new ArgumentNullException(nameof(key), SR.ArgumentNull_Key);
+    }
+
+    if (_count >= _loadsize)
+    {
+        expand();
+    }
+    else if (_occupancy > _loadsize && _count > 100)
+    {
+        rehash();
+    }
+
+    // Assume we only have one thread writing concurrently.  Modify
+    // buckets to contain new data, as long as we insert in the right order.
+    uint hashcode = InitHash(key, _buckets.Length, out uint seed, out uint incr);
+    int ntry = 0;
+    int emptySlotNumber = -1; // We use the empty slot number to cache the first empty slot. We chose to reuse slots
+    // create by remove that have the collision bit set over using up new slots.
+    int bucketNumber = (int)(seed % (uint)_buckets.Length);
+    do
+    {
+        // Set emptySlot number to current bucket if it is the first available bucket that we have seen
+        // that once contained an entry and also has had a collision.
+        // We need to search this entire collision chain because we have to ensure that there are no
+        // duplicate entries in the table.
+        if (emptySlotNumber == -1 && (_buckets[bucketNumber].key == _buckets) && (_buckets[bucketNumber].hash_coll < 0))// (((buckets[bucketNumber].hash_coll & unchecked(0x80000000))!=0)))
+            emptySlotNumber = bucketNumber;
+
+        // Insert the key/value pair into this bucket if this bucket is empty and has never contained an entry
+        // OR
+        // This bucket once contained an entry but there has never been a collision
+        if ((_buckets[bucketNumber].key == null) ||
+            (_buckets[bucketNumber].key == _buckets && ((_buckets[bucketNumber].hash_coll & unchecked(0x80000000)) == 0)))
+        {
+            // If we have found an available bucket that has never had a collision, but we've seen an available
+            // bucket in the past that has the collision bit set, use the previous bucket instead
+            if (emptySlotNumber != -1) // Reuse slot
+                bucketNumber = emptySlotNumber;
+
+            // We pretty much have to insert in this order.  Don't set hash
+            // code until the value & key are set appropriately.
+            _isWriterInProgress = true;
+            _buckets[bucketNumber].val = nvalue;
+            _buckets[bucketNumber].key = key;
+            _buckets[bucketNumber].hash_coll |= (int)hashcode;
+            _count++;
+            UpdateVersion();
+            _isWriterInProgress = false;
+
+            return;
+        }
+
+        // The current bucket is in use
+        // OR
+        // it is available, but has had the collision bit set and we have already found an available bucket
+        if (((_buckets[bucketNumber].hash_coll & 0x7FFFFFFF) == hashcode) &&
+            KeyEquals(_buckets[bucketNumber].key, key))
+        {
+            if (add)
+            {
+                throw new ArgumentException(SR.Format(SR.Argument_AddingDuplicate__, _buckets[bucketNumber].key, key));
+            }
+            _isWriterInProgress = true;
+            _buckets[bucketNumber].val = nvalue;
+            UpdateVersion();
+            _isWriterInProgress = false;
+
+            return;
+        }
+
+        // The current bucket is full, and we have therefore collided.  We need to set the collision bit
+        // unless we have remembered an available slot previously.
+        if (emptySlotNumber == -1)
+        {// We don't need to set the collision bit here since we already have an empty slot
+            if (_buckets[bucketNumber].hash_coll >= 0)
+            {
+                _buckets[bucketNumber].hash_coll |= unchecked((int)0x80000000);
+                _occupancy++;
+            }
+        }
+
+        bucketNumber = (int)(((long)bucketNumber + incr) % (uint)_buckets.Length);
+    } while (++ntry < _buckets.Length);
+
+    // This code is here if and only if there were no buckets without a collision bit set in the entire table
+    if (emptySlotNumber != -1)
+    {
+        // We pretty much have to insert in this order.  Don't set hash
+        // code until the value & key are set appropriately.
+        _isWriterInProgress = true;
+        _buckets[emptySlotNumber].val = nvalue;
+        _buckets[emptySlotNumber].key = key;
+        _buckets[emptySlotNumber].hash_coll |= (int)hashcode;
+        _count++;
+        UpdateVersion();
+        _isWriterInProgress = false;
+
+        return;
+    }
+
+    // If you see this assert, make sure load factor & count are reasonable.
+    // Then verify that our double hash function (h2, described at top of file)
+    // meets the requirements described above. You should never see this assert.
+    Debug.Fail("hash table insert failed!  Load factor too high, or our double hashing function is incorrect.");
+    throw new InvalidOperationException(SR.InvalidOperation_HashInsertFailed);
+}
+```
+
+Pois é. O negócio ficou sério. Isso ai é coisa de Senior. Entretanto, podemos focar em uma parte especial.
+
+```c#
+// The current bucket is full, and we have therefore collided.  We need to set the collision bit
+// unless we have remembered an available slot previously.
+if (emptySlotNumber == -1)
+{// We don't need to set the collision bit here since we already have an empty slot
+    if (_buckets[bucketNumber].hash_coll >= 0)
+    {
+        _buckets[bucketNumber].hash_coll |= unchecked((int)0x80000000);
+        _occupancy++;
+    }
+}
+```
+
+Eu sei, ainda tá punk. Mas olha só. Nós conhecemos um condicional. E aqui em cima temos um dentro do outro.
+
+Ignorando o primeiro, vamos prestar atenção no de dentro. Ele parece fazer um teste se o hash do nosso elemento que foi inserido possui alguma colisão `.hash_coll >= 0`. Se isso é verdade, ele está usando o token composto `|=` do operador de atribuição `=` com o lógico `||`. A gente viu algo parecido [aqui](/CC_site/nav/PUC/periodo1/algoritmos_e_logica/#operadores-e-funcoes-aritmeticas) e [aqui](/CC_site/nav/PUC/periodo1/algoritmos_e_logica/#operadores-booleanos-e-comandos-if-aninhados).
+
+**Comentário:** `a |= b` é a mesma coisa que `a = a | b`. Ou seja, temos uma operação lógica entre `_buckets[bucketNumber].hash_coll | unchecked((int)0x80000000)`. Sendo que esse treco `0x80000000` é o número hexadecimal para o número negativo mais baixo em um inteiro de 32 bits. Eu **acho** que ele usa esse fundo como indicativo de uso do slot no array de index.
+
+Tudo bem se você não entender tudo que vimos até aqui. Principalmente nessa última parte. Com o tempo esse código vai ficar menos enigmático. O segredo é continuar estudando.
 
 
+[^7]: Já essas implementações aceitam qualquer tipo como index.
 
 ## Bibliografia
 - DEITEL, Harvey M. 	**C\#: como programar**. Editora Pearson.
