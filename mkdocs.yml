@@ -22,13 +22,13 @@ nav:
         - Engenharia de Requisitos: nav\PUC\periodo2\engenharia_requisitos.md
         - Design de Interação: nav\PUC\periodo2\design_interacao.md
         - Programação Modular: nav\PUC\periodo2\programacao_modular.md
-        - Desenvolvimento Web Back-End: nav\PUC\periodo2\
+        - Desenvolvimento Web Back-End: nav\PUC\periodo2\dev_web_backend.md
         - Fundamentos de Redes de Computadores: nav\PUC\periodo2\
         - Manipulação da Dados com SQL: nav\PUC\periodo2\
       - Período 3:
         - Modelagem e Gestão de Processos: nav\PUC\periodo3\
         - Estatística Descritiva: nav\PUC\periodo3\
-        - Desenvolvimento de Aplicações Móveis: nav\PUC\periodo3\
+        - Desenvolvimento de Aplicações Móveis: nav\PUC\periodo3\dev_mobile.md
         - Gerência de Projetos de TI: nav\PUC\periodo3\gerencia_projetos.md
         - Gerência de Configuração: nav\PUC\periodo3\
         - Qualidade de Processos de Software: nav\PUC\periodo3\

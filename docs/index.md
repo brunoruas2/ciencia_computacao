@@ -52,7 +52,7 @@ O conteúdo do curso está abaixo. O checklist indicará quais matérias (que na
 - [ ] **Período 3: Processos de Negócio e de Desenvolvimento de Software**
     - [ ] Modelagem e Gestão de Processos de Negócios
     - [ ] Estatística Descritiva
-    - [ ] Desenvolvimento de Aplicações Móveis
+    - [ ] [Desenvolvimento de Aplicações Móveis](/CC_site/nav/PUC/periodo3/dev_mobile/)
     - [x] [Gerência de Projetos de TI](/CC_site/nav/PUC/periodo3/gerencia_projetos/)
     - [ ] Gerência de Configuração
     - [ ] Qualidade de Processos de Software
