@@ -128,7 +128,7 @@ Mesmo Expo criando automaticamente um padrão de pastas, nós vamos utilizar o m
 
 Com essa nova estrutura, temos uma aplicação simples. Essa vai ser a aplicação que a gente vai evoluir ao longo de todo o microfundamento.
 
-<div data-snack-id="@bruno.ruas2/pucminas-ads---bruno-ruas" data-snack-platform="web" data-snack-preview="true" data-snack-theme="dark" style="overflow:hidden;background:#212121;border:1px solid var(--color-border);border-radius:4px;height:505px;width:100%"></div>
+<div data-snack-id="@bruno.ruas2/app-react-native-parte-01" data-snack-platform="web" data-snack-preview="true" data-snack-theme="dark" style="overflow:hidden;background:#212121;border:1px solid var(--color-border);border-radius:4px;height:505px;width:100%"></div>
 <script async src="https://snack.expo.dev/embed.js"></script>
 
 ##### React Native Paper
@@ -139,17 +139,383 @@ Essa ferramenta é construída em cima dos componentes padronizados do Google Ma
 <iframe src="https://callstack.github.io/react-native-paper/docs/guides/getting-started/" frameborder="0" width="100%" height="800"></iframe>
 
 ##### React Native Local
-Para aqueles que preferem o desenvolvimento localmente é possível configurar Um ambiente de desenvolvimento rodando o React Native localmente.
+Para aqueles que (assim como eu) preferem o desenvolvimento localmente é possível configurar Um ambiente de desenvolvimento rodando o React Native localmente.
 
 Abaixo temos um tutorial do [Rocketseat](https://react-native.rocketseat.dev/) explicando o passo a passo.
-
 
 <iframe src="https://react-native.rocketseat.dev/" frameborder="0" width="100%" height="800"></iframe>
 
 ## Desenvolvimento de Aplicações Móveis
+Agora que sabemos o básico da teoria, vamos colocar em prática no desenvolvimento de uma aplicação. Nosso objetivo é desenvolver uma aplicação focada na gestão de combustível utilizando react native e o react native paper.
+
+**Comentário:** Como a construção de um tutorial com passo a passo do desenvolvimento da aplicação tornaria essa aula muito maçante, eu criei um repositório no github para hospedar o código que vamos elaborar. Para acompanhar as fases do desenvolvimento, vocês podem usar o histórico de commits na branch do projeto.
+
+Para acessar a página do branch do projeto no github, [clique aqui](https://github.com/brunoruas2/repositorio_codigos/tree/appReactNative/appReactNative).
+
+**Comentário:** Vamos focar bastante no código a partir de agora. Os que quiserem ver o impacto das mudanças no visual, podem rodar os códigos do arquivo `App.js` no Expo ou no ambiente local.
+
 ### Interfaces
 #### Componentes
+##### Appbar
+O primeiro componente que é vamos aprender é a barra de título. A documentação oficial desse componente pode ser encontrado nesse [link](https://callstack.github.io/react-native-paper/docs/components/Appbar/AppbarHeader/).
 
+Basicamente a única coisa que a gente precisa fazer é importar o componente `Appbar` na nossa aplicação.
+
+``` js
+import React from 'react';
+import { Appbar } from 'react-native-paper';
+
+import HomePage from './src/pages/HomePage'
+
+const App = () => {
+
+  return (
+    <>
+      <Appbar.Header>
+        <Appbar.Content title="Calculadora" />
+      </Appbar.Header>
+    </>
+  );
+}
+
+export default App;
+```
+
+**Comentário:** Perceba que na parte de retorno da função nós colocamos um par de tags de abertura e fechamento sem nenhum conteúdo (`< >` e `< / >`) isso é importante porque o aplicativo precisa estar encapsulado em uma hierarquia como essa. É como se fosse apenas uma `<div></div>` em um html.
+
+
+#### TextInput
+Agora que a nossa aplicação tem uma barra de título, podemos colocar os Campos de inserção dos valores de gasolina e etanol. O componente que recebe input do usuário é o `TextInput` cuja documentação pode ser encontrada neste [link](https://callstack.github.io/react-native-paper/docs/components/TextInput/TextInputIcon/).
+
+Agora, vamos acrescentar o código anterior colocando dois campos de inserção de texto e um botão que por enquanto só vai Imprimir no console uma mensagem.
+
+``` js
+import React from 'react';
+import { Appbar, TextInput, Button } from 'react-native-paper';
+
+import HomePage from './src/pages/HomePage'
+
+const App = () => {
+
+    const [gas, setGas] = React.useState('');
+    const [eta, setEta] = React.useState('');
+
+  return (
+    <>
+        <Appbar.Header>
+            <Appbar.Content title="Calculadora" />
+        </Appbar.Header>
+
+        <TextInput 
+        label = "Preço Gasolina"
+        value={gas}
+        onChangeText={text => setGas(text)}
+        />
+
+        <TextInput 
+        label = "Preço Etanol"
+        value={eta}
+        onChangeText={text => setEta(text)}
+        />
+
+        <Button icon='alarm-panel' mode='contained' onPress={() => console.log('Apertado!')}>
+            Calcular
+        </Button>
+    </>
+  );
+}
+
+export default App;
+```
+**Comentário:** Uma fonte bacana para sabermos quais ícones podemos usar na nossa aplicação pode ser encontrada nesse link do [material-icons](https://pictogrammers.com/library/mdi/).
+
+##### Estilo
+Podemos elaborar um pouco mais o estilo da nossa aplicação através do componente do react native chamado `StyleSheet`. O funcionamento desse componente é muito similar ao CSS que aprendemos na disciplina de desenvolvimento web front end.
+
+Outro componente que usaremos do react native é a `View`. o funcionamento deste componente é muito parecido com a `div` o html.
+
+``` js
+import React from 'react';
+import { StyleSheet, View } from 'react-native'
+import { Appbar, TextInput, Button } from 'react-native-paper';
+
+import HomePage from './src/pages/HomePage'
+
+const App = () => {
+
+  const [gas, setGas] = React.useState('');
+  const [eta, setEta] = React.useState('');
+
+  return (
+    <View style={styles.container}>
+      <Appbar.Header>
+        <Appbar.Content title="Calculadora" />
+      </Appbar.Header>
+
+      <View style={styles.body}>
+        <TextInput
+          style={styles.input}
+          label = "Preço Gasolina"
+          value={gas}
+          onChangeText={text => setGas(text)}
+        />
+
+        <TextInput 
+          style={styles.input}
+          label = "Preço Etanol"
+          value={eta}
+          onChangeText={text => setEta(text)}
+        />
+
+        <Button icon='alarm-panel' mode='contained' onPress={() => console.log('Apertado!')}>
+          Calcular
+        </Button>
+      </View>
+    </View>
+  );
+}
+
+// Componente de Estilo da Aplicação
+const styles = StyleSheet.create({
+  container:{
+    flex:1
+  },
+  body:{
+    margin: 8
+  },
+  input:{
+    backgroundColor: '#FFF',
+    marginBottom:9
+  }
+});
+
+export default App;
+```
+##### Text
+Ainda precisamos de um componente que vai receber a resposta do nosso cálculo. Esse componente será do tipo `Text` e, por enquanto, receberá exatamente o conteúdo do input do preço da gasolina. Mas na frente, colocaremos o resultado de um cálculo nele.
+
+A documentação desse componente pode ser encontrada nesse [link](https://callstack.github.io/react-native-paper/docs/components/Typography/Text/).
+
+``` js
+import React from 'react';
+import { StyleSheet, View } from 'react-native'
+import { Appbar, TextInput, Button, Text } from 'react-native-paper';
+
+import HomePage from './src/pages/HomePage'
+
+const App = () => {
+
+  const [gas, setGas] = React.useState('');
+  const [eta, setEta] = React.useState('');
+  const [res, setRes] = React.useState('');
+
+  return (
+    <View style={styles.container}>
+      <Appbar.Header>
+        <Appbar.Content title="Calculadora" />
+      </Appbar.Header>
+
+      <View style={styles.body}>
+        <TextInput
+          style={styles.input}
+          label = "Preço Gasolina"
+          value={gas}
+          onChangeText={text => setGas(text)}
+        />
+
+        <TextInput 
+          style={styles.input}
+          label = "Preço Etanol"
+          value={eta}
+          onChangeText={text => setEta(text)}
+        />
+
+        <Button icon='alarm-panel' mode='contained' onPress={() => console.log('Apertado!')}>
+          Calcular
+        </Button>
+
+        <Text style={styles.text}> {gas} </Text>
+
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container:{
+    flex:1
+  },
+  body:{
+    margin: 8
+  },
+  input:{
+    backgroundColor: '#FFF',
+    marginBottom:9
+  },
+  text:{
+    textAlign:'center',
+    margin:8
+  }
+});
+
+export default App;
+```
+
+##### Refatoração
+Até aqui, temos uma aplicação minimamente funcional, entretanto, precisamos reorganizar o nosso código para aumentar a produtividade e a manutenibilidade ao longo prazo.
+
+Usaremos a pasta `components` do nosso projeto para guardar esses itens da nossa refatoração. Nesta pasta, vamos criar um primeiro arquivo chamado `Container.js`
+
+``` js
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+
+const Container = ({children}) => {
+    return <View style={styles.container}>
+        {children}
+    </View>
+};
+
+const styles = StyleSheet.create({
+    container:{
+        flex: 1,
+        backgroundColor: '#FFF'
+    }
+});
+
+export default Container;
+```
+
+Exatamente a mesma lógica vai ser aplicada nos componentes do cabeçalho, do corpo e dos inputs de texto.
+
+``` js
+import React from 'react';
+import { Appbar } from 'react-native-paper';
+
+const Header = ({title}) => {
+    return (
+        <Appbar.Header>
+            <Appbar.Content title={title} />
+        </Appbar.Header>
+    )
+};
+
+export default Header;
+```
+
+``` js
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+
+const Body = ({children}) => {
+    return <View style={styles.body}>
+        {children}
+    </View>
+};
+
+const styles = StyleSheet.create({
+    body:{
+        margin: 8
+    }
+});
+
+export default Body;
+```
+
+No caso do input de texto, vamos aproveitar e já colocar o padrão de teclado numérico no nosso dispositivo mobile. Além disso, passaremos Todas as propriedades do `TextInput` para o nosso novo componente de texto.
+
+``` js
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { TextInput } from 'react-native-paper';
+
+const Input = (props) => {
+    return (
+        <TextInput
+            style={styles.input}
+            keyboardType='decimal-pad'
+            // Isso aqui indica que a gente quer
+            // receber todas as propriedades padrão
+            // do componente TextInput no nosso novo
+            // componente
+            {...props}
+        />
+    )
+};
+
+const styles = StyleSheet.create({
+    input:{
+        backgroundColor: '#FFF',
+        marginBottom:9
+    }
+});
+
+export default Input;
+```
+
+Agora que conseguimos criar os nossos próprios componentes, podemos atualizar o nosso arquivo `App.js` fazendo uso dessas novas nomenclaturas.
+
+``` js
+import React from 'react';
+import { StyleSheet, View } from 'react-native'
+import { Appbar, TextInput, Button, Text } from 'react-native-paper';
+
+import Container from './src/components/Container';
+import Header from './src/components/Header';
+import Body from './src/components/Body';
+import Input from './src/components/Input';
+
+import HomePage from './src/pages/HomePage'
+
+const App = () => {
+
+  const [gas, setGas] = React.useState('');
+  const [eta, setEta] = React.useState('');
+  const [res, setRes] = React.useState('');
+
+  return (
+    <Container>
+      <Header title={"Calculadora"}/>
+
+      <Body>
+        <Input
+          label = "Preço Gasolina"
+          value={gas}
+          onChangeText={text => setGas(text)}
+        />
+
+        <Input 
+          label = "Preço Etanol"
+          value={eta}
+          onChangeText={text => setEta(text)}
+        />
+
+        <Button icon='alarm-panel' mode='contained' onPress={() => console.log('Apertado!')}>
+          Calcular
+        </Button>
+
+        <Text style={styles.text}> {gas} </Text>
+
+      </Body>
+    </Container>
+  );
+}
+
+const styles = StyleSheet.create({
+  text:{
+    textAlign:'center',
+    margin:8
+  }
+});
+
+export default App;
+```
+Essa refatoração nos dá duas vantagens. A primeira, é que o texto se torna muito mais legível (lembrando até a estrutura de uma aplicação web). A segunda, é que qualquer mudança que fizermos nos nossos componentes vai ser aplicada a toda a nossa aplicação uniformemente.
+
+O resultado pode ser visto abaixo.
+
+<div data-snack-id="@bruno.ruas2/app-react-native-parte-02" data-snack-platform="web" data-snack-preview="true" data-snack-theme="dark" style="overflow:hidden;background:#212121;border:1px solid var(--color-border);border-radius:4px;height:505px;width:100%"></div>
+<script async src="https://snack.expo.dev/embed.js"></script>
 
 #### Navegação
 
