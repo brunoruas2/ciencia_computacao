@@ -518,7 +518,388 @@ O resultado pode ser visto abaixo.
 <script async src="https://snack.expo.dev/embed.js"></script>
 
 #### Navegação
+Nossa aplicação ainda tem um problema que precisamos resolver: ela tem apenas uma página. Para podermos trabalhar com mais de uma tela, vamos precisar de um mecanismo de navegação entre páginas.
 
+Ao contrário do que temos em páginas web, em aplicações móveis não temos a utilização de url entre as páginas. Dessa feita, essa limitação precisa ser levada em consideração no desenho de uma boa aplicação móvel.
+
+Ecossistema do react tem um pacote que nos ajuda grandemente nessa tarefa. A documentação oficial pode ser encontrada neste [link](https://reactnavigation.org/).
+
+##### Bottom Navigation
+Sem dúvida nenhuma, o principal método de navegação nas aplicações móveis hoje é uma barra com ícones indicando as diferentes páginas do nosso aplicativo. O nome desse tipo de componente do react native é o **Bottom Navigation**.
+
+A documentação desse componente pode ser encontrada nesse [link](https://callstack.github.io/react-native-paper/docs/components/BottomNavigation/).
+
+A primeira coisa que vamos fazer para a criação dessa capacidade é alimentar a nossa pasta de `pages` com 2 páginas novas. A primeira nós chamaremos de `calculadora` e a segunda de `custos`. Dessa forma, nossa pasta do projeto ficará do seguinte modo:
+
+```
+- src/
+    | - components/
+    |   | - Body.js
+    |   | - Container.js
+    |   | - Header.js
+    |   | - Input.js
+    | - pages/
+        | - HomePage.js
+        | - Calculadora.js
+        | - Custos.js
+- App.js
+- package.json
+- README.md
+```
+
+Além dessa mudança, vamos migrar todo o conteúdo do arquivo `App.js` pra página `Homepage.js`. Desse modo, o `App.js` vai renderizar apenas um componente que chamaremos de `Home`.
+
+``` js
+// App.js
+import React from 'react';
+
+import Home from './src/pages/HomePage'
+
+const App = () => {
+
+  return (
+    <Home />
+  )
+}
+
+export default App;
+```
+
+O código da página inicial está agora contido no arquivo `HomePage.js`.
+
+``` js
+// HomePage.js
+import * as React from 'react';
+import { BottomNavigation, Text } from 'react-native-paper';
+
+import Calculadora from './Calculadora';
+import Custos from './Custos';
+
+const Home = () => {
+  // Index usado para a navegação
+  const [index, setIndex] = React.useState(0);
+
+  // Componente de rotas entre as páginas
+  const [routes] = React.useState([
+    { key: 'calculadora', title: 'Calculadora', icon: 'calculator'},
+    { key: 'custos', title: 'Custos', icon: 'cash'}
+  ]);
+
+  // Componente da barra
+  const renderScene = BottomNavigation.SceneMap({
+    calculadora: Calculadora,
+    custos: Custos,
+  });
+
+  return (
+    <BottomNavigation
+      navigationState={{ index, routes }}
+      onIndexChange={setIndex}
+      renderScene={renderScene}
+    />
+  );
+};
+
+export default Home;
+```
+
+Para finalizar, temos que criar 2 outras páginas que serão navegadas por meio da nossa barra de navegação. A primeira será nossa página que estava no `App.js` com a calculadora (que ainda está incompleta). A outra, será uma página que por enquanto chamaremos de gerenciador e não terá nada no body.
+
+``` js
+// Custos.js
+import React from 'react';
+
+import Header from '../components/Header';
+import Container from '../components/Container';
+import Body from '../components/Body';
+
+const Custos = () => {
+    return(
+        <Container>
+            <Header title={'Gerenciador'} />
+            <Body>
+            </Body>
+        </Container>
+    )
+}
+
+export default Custos;
+```
+
+``` js
+// Calculadora.js
+import React from 'react';
+import { StyleSheet, View } from 'react-native'
+import { Appbar, TextInput, Button, Text } from 'react-native-paper';
+
+import Container from './../components/Container';
+import Header from './../components/Header';
+import Body from './../components/Body';
+import Input from './../components/Input';
+
+const Calculadora = () => {
+
+  const [gas, setGas] = React.useState('');
+  const [eta, setEta] = React.useState('');
+  const [res, setRes] = React.useState('');
+
+  return (
+    <Container>
+      <Header title={"Calculadora"} />
+
+      <Body>
+        <Input
+          label="Preço Gasolina"
+          value={gas}
+          onChangeText={text => setGas(text)}
+        />
+
+        <Input
+          label="Preço Etanol"
+          value={eta}
+          onChangeText={text => setEta(text)}
+        />
+
+        <Button icon='alarm-panel' mode='contained' onPress={() =>console.log('Apertado!')}>
+          Calcular
+        </Button>
+
+        <Text style={styles.text}> {gas} </Text>
+
+      </Body>
+    </Container>
+  );
+}
+
+const styles = StyleSheet.create({
+  text: {
+    textAlign: 'center',
+    margin: 8
+  }
+});
+
+export default Calculadora;
+```
+
+##### FlatList e List
+Agora vamos acrescentar alguma informação na nossa página de custos. O objetivo dessa página é armazenar o histórico de consumo do usuário. Para podermos efetuar esse trabalho vamos precisar de 2 componentes que mostram elementos em listas.
+
+O primeiro é o `FlatList` do react native. O segundo é o `List` do react native paper.
+
+Antes de colocar informação em uma lista nos precisamos de dados. No nosso caso, vamos criar um array simples com 3 entradas de consumo.
+
+``` js
+const DATA = [
+    {
+      id:1,
+      tipo: 0,
+      date: '13/01/2023',
+      preco: 3.44,
+      valor: 120,
+      km:2000
+    },
+    {
+      id:2,
+      tipo: 1,
+      date: '15/01/2023',
+      preco: 3.34,
+      valor: 122,
+      km:3000
+    },
+    {
+      id:3,
+      tipo: 0,
+      date: '17/01/2023',
+      preco: 2.44,
+      valor: 520,
+      km:4000
+    },
+];
+
+const Custos = () => { ... }
+
+export default Custos;
+```
+
+Uma vez que temos dados, podemos arranjar esses elementos em uma lista com a utilização do componente `List`. Entretanto, antes de criarmos a nossa lista propriamente dita, precisamos renderizar os componentes.
+
+**Comentário:** O código pode parecer um pouco complexo mas na verdade não é. Não se assuste e veja os comentários a respeito de cada item do componente.
+
+``` js
+const Custos = () => {
+
+    const renderItem = ({ item }) => (
+        <List.Item
+            // Uma string do tipo R$ 12.00 (R$ 2.00 x 3.00 L), ou seja, foi gasto 2 reais por 3 litros.
+            title={'R$ ' + item.valor.toFixed(2) + ' ( R$ ' + item.preco.toFixed(2) + ' x ' + (item.valor/item.preco).toFixed(2) +' L)'}
+            // Apenas a kilometragem do carro com km no final
+            description={item.km + 'km'}
+            // No lado esquerdo da informação temos a passagem das propriedades da lista para o itens em uma função lambda
+            // Esses itens serão do tipo List.Icon herdando a passagem dos parâmetros para cada da lista.
+            // Em cada um desses itens, são definidas apenas 2 propriedades: a cor e o ícone.
+            // A cor tem um truque na definição porque tem um condicional ternário. Se o id for 0, então a cor é verde, se não, azul.
+            left={props => <List.Icon {...props} color={ item.tipo == 0 ? 'green' : 'blue'} icon='gas-station' />}
+            // No lado direito, temos algo parecido mas passando as props para um elemento de texto
+            // esse elemento tem um style para tamanho da fonte e o seu alinhamento.
+            right={props => <Text {...props} style={{alignSelf: 'center', fontSize:10}}> {item.date} </Text>}
+        />
+    );
+
+    return (...)
+}
+```
+
+Agora que conseguimos tratar a informação em itens renderizados, podemos passar esses elementos para a construção da lista no retorno do nosso componente `Custos`. Mais especificamente, no body dele por meio de uma `FlatList`.
+
+``` js
+// Custos.js
+import React from 'react';
+import { FlatList } from 'react-native';
+import { List, Text } from 'react-native-paper';
+
+import Header from '../components/Header';
+import Container from '../components/Container';
+import Body from '../components/Body';
+
+// Dados que estamos usando como teste de desenvolvimento (depois vamos usar API)
+const DATA = [
+    {
+        id:1,
+        tipo: 0,
+        date: '13/01/2023',
+        preco: 3.44,
+        valor: 120,
+        km:2000
+    },
+    {
+        id:2,
+        tipo: 1,
+        date: '15/01/2023',
+        preco: 3.34,
+        valor: 122,
+        km:3000
+    },
+    {
+        id:3,
+        tipo: 0,
+        date: '17/01/2023',
+        preco: 2.44,
+        valor: 520,
+        km:4000
+    },
+];
+
+const Custos = () => {
+    // Renderização dos elementos que comporão a nossa lista
+    const renderItem = ({ item }) => (
+        <List.Item
+            title={'R$ ' + item.valor.toFixed(2) + ' ( R$ ' + item.preco.toFixed(2) + ' x ' + (item.valor/item.preco).toFixed(2) +' L)'}
+            description={item.km + 'km'}
+            left={props => <List.Icon {...props} color={ item.tipo == 0 ? 'green' : 'blue'} icon='gas-station' />}
+            right={props => <Text {...props} style={{alignSelf: 'center', fontSize:10}}> {item.date} </Text>}
+        />
+    );
+    return(
+        <Container>
+            <Header title={'Gerenciador'} />
+            <Body>
+                <FlatList
+                    data={DATA}
+                    renderItem={renderItem}
+                    keyExtractor={item => item.id}
+                />
+            </Body>
+        </Container>
+    )
+}
+
+export default Custos;
+```
+
+#### FAB (O botão flutuante)
+Agora que conseguimos tratar os nossos dados em uma lista na nossa página do gerenciador, temos que viabilizar a inserção de novos dados na aplicação. Para isso vamos criar um botão flutuante que facilitará essa inserção. Na verdade, vamos fazer um pequeno truque. Ao clicar no botão de adicionar a pessoa vai ser direcionada para uma nova tela.
+
+A documentação desse componente pode ser encontrada neste [link](https://callstack.github.io/react-native-paper/docs/components/FAB/).
+
+Como o nosso código da página de custo já está muito grande, vamos colocar embaixo apenas os pedaços do código que se referem a esse componente.
+
+``` js
+// Custos.js
+
+import { List, Text, FAB } from 'react-native-paper';
+
+...
+
+const Custos = () => {
+
+  ...
+  
+  return (
+    <Container>
+      <Header title={'Gerenciador'} />
+      <Body>
+        ...
+      </Body>
+      <FAB
+          small
+          icon='plus'
+          onPress={() => console.log('Quero adicionar!')}
+          style={{ position: 'absolute', margin: 16, right: 0, bottom: 0 }}
+        />
+    </Container>
+  )
+}
+
+export default Custos;
+```
+##### Navegando entre páginas
+Como afirmamos agora há pouco, ao clicar no botão de adicionar a pessoa será encaminhada para uma nova página com um formulário de inserção dos dados de consumo. Para isso teremos que usar uma outra técnica de navegação diferente da que usamos no nosso menu de navegação.
+
+A documentação dessa técnica pode ser encontrada neste [link](https://reactnavigation.org/docs/hello-react-navigation).
+
+Da mesma maneira que fizemos antes, temos que criar uma nova página que chamaremos de `Abastecimento.js`. Portanto, nossa pasta do projeto ficará com a seguinte configuração:
+
+```
+- src/
+    | - components/
+    |   | - Body.js
+    |   | - Container.js
+    |   | - Header.js
+    |   | - Input.js
+    | - pages/
+        | - HomePage.js
+        | - Calculadora.js
+        | - Custos.js
+        | - Abastecimento.js
+- App.js
+- package.json
+- README.md
+```
+
+Para que essa técnica funcione, teremos que atualizar o nosso `App.js` com a inclusão de um contêiner de navegação.
+
+**Comentário:** Agora precisamos revisar alguns conceitos importantes. Aprendemos lá em algoritmos e estrutura de dados o que é uma pilha. Esse conceito vai ser usado no nosso controle do fluxo de utilização que é parecido com histórico de navegador. Quando o usuário sai de uma página para outra, a nossa aplicação vai registrar isso em uma estrutura de pilha onde, caso ele queira retornar para a página anterior, ela vai seguindo a mesma ordem dos procedimentos que foram inseridos só que de trás pra frente.
+
+Além de habilitarmos a parte de interligação de páginas nós também estamos, de fato, aplicando o conceito de histórico de navegação ao nosso aplicativo. O que torna a aplicação ainda mais complexa do que ela já está sendo feita.
+
+``` js
+// App.js
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+
+import Home from './src/pages/HomePage'
+
+const App = () => {
+
+  return (
+    <NavigationContainer>
+      <Home />
+    </NavigationContainer>
+  )
+}
+
+export default App;
+```
 
 ### Persistência de Dados
 #### SQLite
