@@ -3,12 +3,12 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 ## Assuntos
-- [**Fundamentos de Computação Móvel**](#fundamentos-de-computação-móvel)
+- [**Fundamentos de Computação Móvel**](#fundamentos-de-computacao-movel)
     - [Fundamentos](#fundamentos)
     - [Ambiente de Desenvolvimento](#ambiente-de-desenvolvimento)
-- [**Desenvolvimento de Aplicações Móveis**](#desenvolvimento-de-aplicações-móveis)
+- [**Desenvolvimento de Aplicações Móveis**](#desenvolvimento-de-aplicacoes-moveis)
     - [Interfaces](#interfaces)
-    - [Persistência de Dados](#persistência-de-dados)
+    - [Persistência de Dados](#persistencia-de-dados)
     - [Recursos Nativos](#recursos-nativos)
 - [**Bibliografia**](#bibliografia)
 
@@ -148,11 +148,9 @@ Abaixo temos um tutorial do [Rocketseat](https://react-native.rocketseat.dev/) e
 ## Desenvolvimento de Aplicações Móveis
 Agora que sabemos o básico da teoria, vamos colocar em prática no desenvolvimento de uma aplicação. Nosso objetivo é desenvolver uma aplicação focada na gestão de combustível utilizando react native e o react native paper.
 
-**Comentário:** Como a construção de um tutorial com passo a passo do desenvolvimento da aplicação tornaria essa aula muito maçante, eu criei um repositório no github para hospedar o código que vamos elaborar. Para acompanhar as fases do desenvolvimento, vocês podem usar o histórico de commits na branch do projeto.
+**Comentário:** Como a construção de um tutorial com passo a passo do desenvolvimento da aplicação tornaria essa aula muito maçante, eu criei um repositório no github para hospedar o código que vamos elaborar. Para acompanhar as fases do desenvolvimento, vocês podem usar o histórico de commits na branch do projeto. Além disso, vou colocar algumas versões do nosso app no Expo para vocês verem a evolução.
 
 Para acessar a página do branch do projeto no github, [clique aqui](https://github.com/brunoruas2/repositorio_codigos/tree/appReactNative/appReactNative).
-
-**Comentário:** Vamos focar bastante no código a partir de agora. Os que quiserem ver o impacto das mudanças no visual, podem rodar os códigos do arquivo `App.js` no Expo ou no ambiente local.
 
 ### Interfaces
 #### Componentes
@@ -547,181 +545,16 @@ A primeira coisa que vamos fazer para a criação dessa capacidade é alimentar 
 - README.md
 ```
 
-Além dessa mudança, vamos migrar todo o conteúdo do arquivo `App.js` pra página `Homepage.js`. Desse modo, o `App.js` vai renderizar apenas um componente que chamaremos de `Home`.
-
-``` js
-// App.js
-import React from 'react';
-
-import Home from './src/pages/HomePage'
-
-const App = () => {
-
-  return (
-    <Home />
-  )
-}
-
-export default App;
-```
-
-O código da página inicial está agora contido no arquivo `HomePage.js`.
-
-``` js
-// HomePage.js
-import * as React from 'react';
-import { BottomNavigation, Text } from 'react-native-paper';
-
-import Calculadora from './Calculadora';
-import Custos from './Custos';
-
-const Home = () => {
-  // Index usado para a navegação
-  const [index, setIndex] = React.useState(0);
-
-  // Componente de rotas entre as páginas
-  const [routes] = React.useState([
-    { key: 'calculadora', title: 'Calculadora', icon: 'calculator'},
-    { key: 'custos', title: 'Custos', icon: 'cash'}
-  ]);
-
-  // Componente da barra
-  const renderScene = BottomNavigation.SceneMap({
-    calculadora: Calculadora,
-    custos: Custos,
-  });
-
-  return (
-    <BottomNavigation
-      navigationState={{ index, routes }}
-      onIndexChange={setIndex}
-      renderScene={renderScene}
-    />
-  );
-};
-
-export default Home;
-```
+Além dessa mudança, vamos migrar todo o conteúdo do arquivo `App.js` pra página `Homepage.js`. Desse modo, o `App.js` vai renderizar apenas um componente que chamaremos de `Home`. O código da página inicial está agora contido no arquivo `HomePage.js`.
 
 Para finalizar, temos que criar 2 outras páginas que serão navegadas por meio da nossa barra de navegação. A primeira será nossa página que estava no `App.js` com a calculadora (que ainda está incompleta). A outra, será uma página que por enquanto chamaremos de gerenciador e não terá nada no body.
-
-``` js
-// Custos.js
-import React from 'react';
-
-import Header from '../components/Header';
-import Container from '../components/Container';
-import Body from '../components/Body';
-
-const Custos = () => {
-    return(
-        <Container>
-            <Header title={'Gerenciador'} />
-            <Body>
-            </Body>
-        </Container>
-    )
-}
-
-export default Custos;
-```
-
-``` js
-// Calculadora.js
-import React from 'react';
-import { StyleSheet, View } from 'react-native'
-import { Appbar, TextInput, Button, Text } from 'react-native-paper';
-
-import Container from './../components/Container';
-import Header from './../components/Header';
-import Body from './../components/Body';
-import Input from './../components/Input';
-
-const Calculadora = () => {
-
-  const [gas, setGas] = React.useState('');
-  const [eta, setEta] = React.useState('');
-  const [res, setRes] = React.useState('');
-
-  return (
-    <Container>
-      <Header title={"Calculadora"} />
-
-      <Body>
-        <Input
-          label="Preço Gasolina"
-          value={gas}
-          onChangeText={text => setGas(text)}
-        />
-
-        <Input
-          label="Preço Etanol"
-          value={eta}
-          onChangeText={text => setEta(text)}
-        />
-
-        <Button icon='alarm-panel' mode='contained' onPress={() =>console.log('Apertado!')}>
-          Calcular
-        </Button>
-
-        <Text style={styles.text}> {gas} </Text>
-
-      </Body>
-    </Container>
-  );
-}
-
-const styles = StyleSheet.create({
-  text: {
-    textAlign: 'center',
-    margin: 8
-  }
-});
-
-export default Calculadora;
-```
 
 ##### FlatList e List
 Agora vamos acrescentar alguma informação na nossa página de custos. O objetivo dessa página é armazenar o histórico de consumo do usuário. Para podermos efetuar esse trabalho vamos precisar de 2 componentes que mostram elementos em listas.
 
 O primeiro é o `FlatList` do react native. O segundo é o `List` do react native paper.
 
-Antes de colocar informação em uma lista nos precisamos de dados. No nosso caso, vamos criar um array simples com 3 entradas de consumo.
-
-``` js
-const DATA = [
-    {
-      id:1,
-      tipo: 0,
-      date: '13/01/2023',
-      preco: 3.44,
-      valor: 120,
-      km:2000
-    },
-    {
-      id:2,
-      tipo: 1,
-      date: '15/01/2023',
-      preco: 3.34,
-      valor: 122,
-      km:3000
-    },
-    {
-      id:3,
-      tipo: 0,
-      date: '17/01/2023',
-      preco: 2.44,
-      valor: 520,
-      km:4000
-    },
-];
-
-const Custos = () => { ... }
-
-export default Custos;
-```
-
-Uma vez que temos dados, podemos arranjar esses elementos em uma lista com a utilização do componente `List`. Entretanto, antes de criarmos a nossa lista propriamente dita, precisamos renderizar os componentes.
+Uma vez que temos dados (por enquanto escritos em um array na própria página), podemos arranjar esses elementos em uma lista com a utilização do componente `List`. Entretanto, antes de criarmos a nossa lista propriamente dita, precisamos renderizar os componentes.
 
 **Comentário:** O código pode parecer um pouco complexo mas na verdade não é. Não se assuste e veja os comentários a respeito de cada item do componente.
 
@@ -750,71 +583,6 @@ const Custos = () => {
 ```
 
 Agora que conseguimos tratar a informação em itens renderizados, podemos passar esses elementos para a construção da lista no retorno do nosso componente `Custos`. Mais especificamente, no body dele por meio de uma `FlatList`.
-
-``` js
-// Custos.js
-import React from 'react';
-import { FlatList } from 'react-native';
-import { List, Text } from 'react-native-paper';
-
-import Header from '../components/Header';
-import Container from '../components/Container';
-import Body from '../components/Body';
-
-// Dados que estamos usando como teste de desenvolvimento (depois vamos usar API)
-const DATA = [
-    {
-        id:1,
-        tipo: 0,
-        date: '13/01/2023',
-        preco: 3.44,
-        valor: 120,
-        km:2000
-    },
-    {
-        id:2,
-        tipo: 1,
-        date: '15/01/2023',
-        preco: 3.34,
-        valor: 122,
-        km:3000
-    },
-    {
-        id:3,
-        tipo: 0,
-        date: '17/01/2023',
-        preco: 2.44,
-        valor: 520,
-        km:4000
-    },
-];
-
-const Custos = () => {
-    // Renderização dos elementos que comporão a nossa lista
-    const renderItem = ({ item }) => (
-        <List.Item
-            title={'R$ ' + item.valor.toFixed(2) + ' ( R$ ' + item.preco.toFixed(2) + ' x ' + (item.valor/item.preco).toFixed(2) +' L)'}
-            description={item.km + 'km'}
-            left={props => <List.Icon {...props} color={ item.tipo == 0 ? 'green' : 'blue'} icon='gas-station' />}
-            right={props => <Text {...props} style={{alignSelf: 'center', fontSize:10}}> {item.date} </Text>}
-        />
-    );
-    return(
-        <Container>
-            <Header title={'Gerenciador'} />
-            <Body>
-                <FlatList
-                    data={DATA}
-                    renderItem={renderItem}
-                    keyExtractor={item => item.id}
-                />
-            </Body>
-        </Container>
-    )
-}
-
-export default Custos;
-```
 
 #### FAB (O botão flutuante)
 Agora que conseguimos tratar os nossos dados em uma lista na nossa página do gerenciador, temos que viabilizar a inserção de novos dados na aplicação. Para isso vamos criar um botão flutuante que facilitará essa inserção. Na verdade, vamos fazer um pequeno truque. Ao clicar no botão de adicionar a pessoa vai ser direcionada para uma nova tela.
@@ -852,6 +620,11 @@ const Custos = () => {
 
 export default Custos;
 ```
+
+Até agora temos 2 páginas Na nossa aplicação. Para navegar entre a página inicial e a página de registros de consumo, nós podemos clicar diretamente no item do menu inferior. Entretanto,ao clicar no ícone de inserir um novo consumo nós precisaremos de acesso a uma nova página com um formulário de inserção. Aprenderemos como fazer isso na próxima sessão desse micro fundamento.
+
+
+
 ##### Navegando entre páginas
 Como afirmamos agora há pouco, ao clicar no botão de adicionar a pessoa será encaminhada para uma nova página com um formulário de inserção dos dados de consumo. Para isso teremos que usar uma outra técnica de navegação diferente da que usamos no nosso menu de navegação.
 
