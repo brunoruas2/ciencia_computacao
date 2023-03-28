@@ -153,6 +153,11 @@ Agora que sabemos o básico da teoria, vamos colocar em prática no desenvolvime
 Para acessar a página do branch do projeto no github, [clique aqui](https://github.com/brunoruas2/repositorio_codigos/tree/appReactNative/appReactNative).
 
 ### Interfaces
+
+Nessa parte vamos focar nos principais componentes do react native e react native paper. Tente entender bem a utilização desses componentes nos códigos dispostos abaixo.
+
+A ideia é que, com a utilização desses componentes, vocês tenham uma noção de como esses itens podem ajudar na construção das aplicações que vocês mesmos vão construir no futuro.
+
 #### Componentes
 ##### Appbar
 O primeiro componente que é vamos aprender é a barra de título. A documentação oficial desse componente pode ser encontrado nesse [link](https://callstack.github.io/react-native-paper/docs/components/Appbar/AppbarHeader/).
@@ -182,10 +187,10 @@ export default App;
 **Comentário:** Perceba que na parte de retorno da função nós colocamos um par de tags de abertura e fechamento sem nenhum conteúdo (`< >` e `< / >`) isso é importante porque o aplicativo precisa estar encapsulado em uma hierarquia como essa. É como se fosse apenas uma `<div></div>` em um html.
 
 
-#### TextInput
-Agora que a nossa aplicação tem uma barra de título, podemos colocar os Campos de inserção dos valores de gasolina e etanol. O componente que recebe input do usuário é o `TextInput` cuja documentação pode ser encontrada neste [link](https://callstack.github.io/react-native-paper/docs/components/TextInput/TextInputIcon/).
+#### TextInput e Button
+Agora que a nossa aplicação tem uma barra de título, podemos colocar os campos de inserção dos valores de gasolina e etanol. O componente que recebe input do usuário é o `TextInput` cuja documentação pode ser encontrada neste [link](https://callstack.github.io/react-native-paper/docs/components/TextInput/TextInputIcon/).
 
-Agora, vamos acrescentar o código anterior colocando dois campos de inserção de texto e um botão que por enquanto só vai Imprimir no console uma mensagem.
+Vamos acrescentar, no código anterior, dois campos de inserção de texto e um botão que por enquanto só vai imprimir no console uma mensagem.
 
 ``` js
 import React from 'react';
@@ -227,10 +232,10 @@ export default App;
 ```
 **Comentário:** Uma fonte bacana para sabermos quais ícones podemos usar na nossa aplicação pode ser encontrada nesse link do [material-icons](https://pictogrammers.com/library/mdi/).
 
-##### Estilo
+##### Estilo e View
 Podemos elaborar um pouco mais o estilo da nossa aplicação através do componente do react native chamado `StyleSheet`. O funcionamento desse componente é muito similar ao CSS que aprendemos na disciplina de desenvolvimento web front end.
 
-Outro componente que usaremos do react native é a `View`. o funcionamento deste componente é muito parecido com a `div` o html.
+Outro componente que usaremos do react native é a `View`. o funcionamento deste componente é muito parecido com a `div` o html. Ela vai substituir as tags vazias usadas até agora.
 
 ``` js
 import React from 'react';
@@ -290,7 +295,7 @@ const styles = StyleSheet.create({
 export default App;
 ```
 ##### Text
-Ainda precisamos de um componente que vai receber a resposta do nosso cálculo. Esse componente será do tipo `Text` e, por enquanto, receberá exatamente o conteúdo do input do preço da gasolina. Mas na frente, colocaremos o resultado de um cálculo nele.
+Ainda precisamos de um componente que vai receber a resposta do nosso cálculo. Esse componente será do tipo `Text` e, por enquanto, receberá exatamente o conteúdo do input do preço da gasolina. Mais à frente colocaremos o resultado de um cálculo nele.
 
 A documentação desse componente pode ser encontrada nesse [link](https://callstack.github.io/react-native-paper/docs/components/Typography/Text/).
 
@@ -432,10 +437,9 @@ const Input = (props) => {
         <TextInput
             style={styles.input}
             keyboardType='decimal-pad'
-            // Isso aqui indica que a gente quer
-            // receber todas as propriedades padrão
-            // do componente TextInput no nosso novo
-            // componente
+            // Os três pontos indicam que a gente quer
+            // receber todas as propriedades do componente
+            // TextInput no nosso novo componente
             {...props}
         />
     )
@@ -516,7 +520,9 @@ O resultado pode ser visto abaixo.
 <script async src="https://snack.expo.dev/embed.js"></script>
 
 #### Navegação
-Nossa aplicação ainda tem um problema que precisamos resolver: ela tem apenas uma página. Para podermos trabalhar com mais de uma tela, vamos precisar de um mecanismo de navegação entre páginas.
+Nossa aplicação ainda tem um problema que precisamos resolver: ela tem apenas uma página.
+
+Para podermos trabalhar com mais de uma tela, vamos precisar de um mecanismo de navegação entre páginas.
 
 Ao contrário do que temos em páginas web, em aplicações móveis não temos a utilização de url entre as páginas. Dessa feita, essa limitação precisa ser levada em consideração no desenho de uma boa aplicação móvel.
 
@@ -546,8 +552,6 @@ A primeira coisa que vamos fazer para a criação dessa capacidade é alimentar 
 ```
 
 Além dessa mudança, vamos migrar todo o conteúdo do arquivo `App.js` pra página `Homepage.js`. Desse modo, o `App.js` vai renderizar apenas um componente que chamaremos de `Home`. O código da página inicial está agora contido no arquivo `HomePage.js`.
-
-Para finalizar, temos que criar 2 outras páginas que serão navegadas por meio da nossa barra de navegação. A primeira será nossa página que estava no `App.js` com a calculadora (que ainda está incompleta). A outra, será uma página que por enquanto chamaremos de gerenciador e não terá nada no body.
 
 ##### FlatList e List
 Agora vamos acrescentar alguma informação na nossa página de custos. O objetivo dessa página é armazenar o histórico de consumo do usuário. Para podermos efetuar esse trabalho vamos precisar de 2 componentes que mostram elementos em listas.
@@ -585,15 +589,13 @@ const Custos = () => {
 Agora que conseguimos tratar a informação em itens renderizados, podemos passar esses elementos para a construção da lista no retorno do nosso componente `Custos`. Mais especificamente, no body dele por meio de uma `FlatList`.
 
 #### FAB (O botão flutuante)
-Agora que conseguimos tratar os nossos dados em uma lista na nossa página do gerenciador, temos que viabilizar a inserção de novos dados na aplicação. Para isso vamos criar um botão flutuante que facilitará essa inserção. Na verdade, vamos fazer um pequeno truque. Ao clicar no botão de adicionar a pessoa vai ser direcionada para uma nova tela.
+Temos que viabilizar a inserção de novos dados na aplicação. Para isso, vamos criar um botão flutuante que facilitará essa inserção. Na verdade, vamos fazer um pequeno truque. Ao clicar no botão de adicionar a pessoa vai ser direcionada para uma nova tela.
 
 A documentação desse componente pode ser encontrada neste [link](https://callstack.github.io/react-native-paper/docs/components/FAB/).
 
 Como o nosso código da página de custo já está muito grande, vamos colocar embaixo apenas os pedaços do código que se referem a esse componente.
 
 ``` js
-// Custos.js
-
 import { List, Text, FAB } from 'react-native-paper';
 
 ...
@@ -621,9 +623,14 @@ const Custos = () => {
 export default Custos;
 ```
 
-Até agora temos 2 páginas Na nossa aplicação. Para navegar entre a página inicial e a página de registros de consumo, nós podemos clicar diretamente no item do menu inferior. Entretanto,ao clicar no ícone de inserir um novo consumo nós precisaremos de acesso a uma nova página com um formulário de inserção. Aprenderemos como fazer isso na próxima sessão desse micro fundamento.
+Até agora temos 2 páginas na nossa aplicação. Para navegar entre a página inicial e a página de registros de consumo, nós podemos clicar diretamente no item do menu inferior.
 
+Entretanto, ao clicar no ícone de inserir um novo consumo nós precisaremos de acesso a uma nova página com um formulário de inserção. Aprenderemos como fazer isso na próxima sessão desse micro fundamento.
 
+Podemos ver o estado atual do nosso aplicativo abaixo.
+
+<div data-snack-id="@bruno.ruas2/app-react-native-parte-03" data-snack-platform="web" data-snack-preview="true" data-snack-theme="dark" style="overflow:hidden;background:#212121;border:1px solid var(--color-border);border-radius:4px;height:505px;width:100%"></div>
+<script async src="https://snack.expo.dev/embed.js"></script>
 
 ##### Navegando entre páginas
 Como afirmamos agora há pouco, ao clicar no botão de adicionar a pessoa será encaminhada para uma nova página com um formulário de inserção dos dados de consumo. Para isso teremos que usar uma outra técnica de navegação diferente da que usamos no nosso menu de navegação.
@@ -651,28 +658,169 @@ Da mesma maneira que fizemos antes, temos que criar uma nova página que chamare
 
 Para que essa técnica funcione, teremos que atualizar o nosso `App.js` com a inclusão de um contêiner de navegação.
 
-**Comentário:** Agora precisamos revisar alguns conceitos importantes. Aprendemos lá em algoritmos e estrutura de dados o que é uma pilha. Esse conceito vai ser usado no nosso controle do fluxo de utilização que é parecido com histórico de navegador. Quando o usuário sai de uma página para outra, a nossa aplicação vai registrar isso em uma estrutura de pilha onde, caso ele queira retornar para a página anterior, ela vai seguindo a mesma ordem dos procedimentos que foram inseridos só que de trás pra frente.
-
 Além de habilitarmos a parte de interligação de páginas nós também estamos, de fato, aplicando o conceito de histórico de navegação ao nosso aplicativo. O que torna a aplicação ainda mais complexa do que ela já está sendo feita.
 
+**Comentário:** Agora precisamos revisar alguns conceitos importantes. Aprendemos lá em algoritmos e estrutura de dados o que é uma pilha. Esse conceito vai ser usado no nosso controle do fluxo de utilização que é parecido com histórico de navegador. Quando o usuário sai de uma página para outra, a nossa aplicação vai registrar isso em uma estrutura de pilha onde, caso ele queira retornar para a página anterior, ela vai seguindo a mesma ordem dos procedimentos que foram inseridos só que de trás pra frente.
+
+##### Navegação entre Abastecimento e Custos
+Para possibilitar a navegação entre a página de abastecimento e a página de custos precisaremos habilitar um tipo histórico de navegação bem simples. Primeiro vamos criar uma nova pasta chamada `navigations` e um arquivo dentro dela chamado `Main.js` que guardará o nosso fluxo básico de navegação em uma pilha.
+
+```
+- src/
+    | - components/
+    |   | - Body.js
+    |   | - Container.js
+    |   | - Header.js
+    |   | - Input.js
+    | - pages/
+    |   | - HomePage.js
+    |   | - Calculadora.js
+    |   | - Custos.js
+    |   | - Abastecimento.js
+    | - navigation/
+        | - Main.js
+- App.js
+- package.json
+- README.md
+```
+
+O código desse arquivo que conterá o histórico de navegação pode ser visto abaixo.
+
 ``` js
-// App.js
+import React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import Home from '../pages/HomePage';
+import Abastecimento from '../pages/Abastecimento';
+
+const Stack = createNativeStackNavigator();
+
+const Main = () => {
+
+    return (
+        <Stack.Navigator initialRouteName="Home">
+            <Stack.Screen name="Home" component={Home} options={{header:() => null}}/>
+            <Stack.Screen name="Abastecimento" component={Abastecimento} options={{header:() => null}}/>
+        </Stack.Navigator>
+    );
+}
+
+export default Main;
+```
+
+Após isso, no ``App.js`` nos mudaremos a indicação da página Home para Main.
+
+``` js
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
-import Home from './src/pages/HomePage'
+import Main from './src/navigations/Main' // aqui
 
 const App = () => {
 
   return (
     <NavigationContainer>
-      <Home />
+      <Main /> // e aqui
     </NavigationContainer>
   )
 }
 
 export default App;
 ```
+
+Nós queremos habilitar a opção de voltar apenas na página de abastecimento. Por causa disso, nós vamos mudar o nosso componente de header criando uma nova propriedade. Sempre que o nosso header receber uma propriedade chamada `goBack` ele mostrará o ícone de voltar no canto superior esquerdo. Além disso, executará o que quer que passemos no parâmetro de goBack.
+
+O código do componente de cabeçalho ficará desse modo.
+
+``` js
+import React from 'react';
+import { Appbar } from 'react-native-paper';
+
+const Header = ({ title, goBack }) => { // Acrescentamos o parâmetro
+    return (
+        <Appbar.Header>
+            // Criamos um teste condicional que só mostra
+            // A backaction se o parâmetro goBack foi recebido
+            {
+                goBack &&
+                <Appbar.BackAction onPress={goBack} />
+            }
+            <Appbar.Content title={title} />
+        </Appbar.Header>
+    )
+};
+
+export default Header;
+```
+
+Na nossa página de custos, nós vamos inserir o componente que vai permitir a navegação. Além disso, vamos colocar um comando de navegação para a página de abastecimento assim que o FAB for clicado.
+
+``` js
+...
+
+import { useNavigation } from '@react-navigation/native';
+
+const Custos = () => {
+
+  const navigation = useNavigation(); // Componente que permite a navegação
+  ...
+  
+  return (
+    <Container>
+      <Header title={'Gerenciador'} />
+      <Body>
+        ...
+      </Body>
+      <FAB
+          small
+          icon='plus'
+          onPress={() => navigation.navigate('Abastecimento')}
+          style={{ position: 'absolute', margin: 16, right: 0, bottom: 0 }}
+        />
+    </Container>
+  )
+}
+
+export default Custos;
+```
+
+A partir de agora ao clicar no nosso botão flutuante seremos direcionados para a página de abastecimento. Basta agora finalmente criarmos a página de abastecimento que, por enquanto, só terá um texto simples.
+
+``` js
+import React from 'react';
+import { FlatList } from 'react-native';
+import { List, Text, FAB } from 'react-native-paper';
+
+import Header from '../components/Header';
+import Container from '../components/Container';
+import Body from '../components/Body';
+
+import { useNavigation } from '@react-navigation/native';
+
+const Abastecimento = () => {
+
+  const navigation = useNavigation();
+
+  return (
+    <Container>
+      <Header
+        title={'Abastecimento'}
+        goBack={() => navigation.goBack()}
+      />
+      <Body>
+        <Text>Aqui vai ficar o formulário de abastecimento!</Text>
+      </Body>
+    </Container>
+  )
+}
+
+export default Abastecimento;
+```
+
+Todas essas mudanças podem ser vistas no aplicativo abaixo. Vá para a página de custos e clique no botão de + para ser direcionado à página de abastecimento. Clique na seta para esquerda para voltar para a página anterior.
+
+<div data-snack-id="@bruno.ruas2/app-reactive-native-parte-04" data-snack-platform="web" data-snack-preview="true" data-snack-theme="dark" style="overflow:hidden;background:#212121;border:1px solid var(--color-border);border-radius:4px;height:505px;width:100%"></div>
+<script async src="https://snack.expo.dev/embed.js"></script>
 
 ### Persistência de Dados
 #### SQLite
