@@ -3,14 +3,13 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 ## Assuntos
-- [Aviso](#aviso)
 - [**Administração e Rastreabilidade de Requisitos**](#administracao-e-rastreabilidade-de-requisitos)
     - [Introdução à Gerencia de Requisitos](#introducao-a-gerencia-de-requisitos)
     - [Administração de Requisitos](#administracao-de-requisitos)
     - [Rastreabilidade de Requisitos](#rastreabilidade-de-requisitos)
 - [**Priorização e Gerência de Mudanças de Requisitos**](#priorizacao-e-gerencia-de-mudancas-de-requisitos)
     - [Priorização de Requisitos](#priorizacao-de-requisitos)
-    - [Gerência de Mudanças de Requisitos](#gerencia-de-mudanças-de-requisitos)
+    - [Gerência de Mudanças de Requisitos](#gerencia-de-mudancas-de-requisitos)
 - [**Bibliografia**](#bibliografia)
 
 
@@ -24,7 +23,7 @@ Para tirarmos o máximo proveito dessa matéria, é **muito** indicado que os co
 
 Como disse [Frederick Brooks](https://en.wikipedia.org/wiki/Fred_Brooks): "A parte mais difícil de construir um sistema de software é decidir exatamente o que construir".
 
-É exatamente nesse contexto que as técnicas de elicitação de requisitos e definição de escopo que a engenharia de software desenvolveu atuam. Uma vez definido o que se deseja, nascem o **Requisitos de Software**
+É exatamente nesse contexto que as técnicas de elicitação de requisitos e definição de escopo que a engenharia de software desenvolveu atuam. Uma vez definido o que se deseja, nascem os **Requisitos de Software**.
 
 Podemos entender os requisitos como características e limitações que nossa solução terá. Além disso, esse conceito está relacionado à documentação a respeito dessas duas naturezas.
 
@@ -62,24 +61,87 @@ Dentre os atributos, podemos destacar alguns muitos importantes:
 - Referência Cruzada com outros requisitos
 - Observações
 
-**Comentário:** Pois é, quem achava que gerir requisito era só anotar em post it tá muito enganado. Tudo isso deve ser, idealmente, coletado para que o processo de desenvolvimento seja feito de maneira produtiva e que o produto final atenda as expectativas do clientes.
+**Comentário:** Pois é, quem achava que gerir requisito era só anotar em post-it tá muito enganado. Tudo isso deve ser, idealmente, coletado para que o processo de desenvolvimento seja feito de maneira produtiva e que o produto final atenda as expectativas do clientes.
 
 #### Stakeholders
+Até aqui, temos um bom entendimento de que precisamos entender profundamente o que nossa solução fara e como será feito. Entretanto, ainda temos uma pergunta muito importante a ser respondida: **Para quem?**.
 
+É justamente para responder essa pergunta que temos mais uma palavra em inglês para aprendermos (e parecer inteligentes naquele churrasco de domingo). A palavra é **Stakeholder**.
 
+Esse termo é usado para definir as partes interessadas (podem ser indivíduos específicos ou grupos de pessoas) no programa que vamos construir. Essas partes podem ser de dentro ou fora da organização. A única regra para a definição é ser impactado com o nosso produto de software.
+
+Basicamente, podemos dividir os stakeholders em três grandes grupos:
+
+- Externos
+- Internos
+- Time de desenvolvimento
+
+Desse modo, os requisitos sempre são relacionados a, pelo menos, um stakeholder. Normalmente, um projeto possui um número bem grande deles.
+
+Um grupo de stakeholders particularmente muito importante são os **Clientes** e, dentro desse grupo, os **Usuários**. São eles (principalmente o segundo) quem realmente trazem as demandas concretas que terão grande relevância no desenvolvimento do nosso sistema.
+
+Aqui tem um vídeo com um resumo animado desse assunto que vimos.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8uZiGB8DeJg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 #### Atividades de Gerenciamento de Requisitos
+A essa altura, já percebemos que qualquer software, que não seja um aplicativo pessoal que criamos para resolver problemas apenas nossos, possui uma grande lista de requisitos. Diante disso, precisamos de técnicas para agrupar, priorizar, validar e acompanhar esses vários requisitos.
 
+É justamente nesse contexto que a **Engenharia de Requisitos** surge. Inicialmente, podemos dividi-la em dois grupos de atividades:
+
+- Desenvolvimento
+- Gerenciamento
+
+Na primeira fase, estamos conhecendo melhor as necessidades e levantando a real necessidade[^1]. Essa fase é dividida em quatro subareas:
+
+[^1]: Acredite, não é nada raro o próprio cliente não ter uma noção estrutura da real necessidade dele. Cabe ao gerente de requisitos fazer essa extração das necessidades e amadurecer a ideia na cabeça do cliente.
+
+- Elicitação - levantamento dos requisitos
+- Análise - verificação da harmonia dos requisitos
+- Especificação - produção da documentação
+- Validação - aprovação do baseline pelo cliente
+
+Cabe a gerência de requisitos o acompanhamento da fase de desenvolvimento para que as mudanças (que sempre irão ocorrer) sejam adequadamente inseridas e documentadas para o atingimento da meta. Similar a fase de desenvolvimento, temos quatro subareas dessa atividade:
+
+- Controle de Versão
+- Controle de Mudanças
+- Acompanhamento do Status
+- Rastreabilidade
 
 ### Administração de Requisitos
-
-
 #### Controle de Versão
+Não podemos nos enganar. Nossa cabeça ao ler algo como "controle de versão" pensa logo em versionamento de código com git e github mas não é nada disso que vamos lidar agora.
 
+O controle de versão como subárea da engenharia de requisitos é a atividade relacionada ao controle da documentação de baseline que é a guia para as fases de desenvolvimento de artefatos do projeto.
 
+Sempre que o cliente muda de ideia, é responsabilidade dessa área em atualizar a documentação e comunicar a todos os setores impactados com essa mudança afim de evitar que algum esforço seja desperdiçado em atividades que não estão mais contempladas na baseline vigente do projeto.
+
+Para manter o controle da documentação, usamos comumente o **versionamento semântico** para indicar as mudanças. Normalmente, podemos dividir as versões em 3 componentes:
+
+<div style="text-align : center">
+    Major Version + Minor Version + Patch
+</div>
+
+Como exemplo, nesse momento eu estou escrevendo esse trecho do material no Visual Studio Code versão 1.77.0. Ou seja, Major Version = 1, Minor Version = 77 e patch = 0.
 
 #### Acompanhamento do Status
+Não adianta nada levantar todas as necessidades sem que haja um trabalho de atualização do status em cada um deles.
 
+O trabalho de acompanhamento é crucial para responder preguntas como "Quantos porcento do projeto já foi implementado?" ou "Ainda faltam quantas funcionalidades para ser implementadas?".
+
+Cada requisito deve receber um status que foi previamente acordado de acordo com a prática de desenvolvimento de cada local. Normalmente, temos os seguintes status nos projetos:
+
+1. Proposto
+2. Em progresso
+3. Rascunhado
+4. Aprovado
+5. Implementado
+6. Verificado
+7. Deferido
+8. Deletado
+9.  Rejeitado
+
+Isso mesmo, vale muito a pena manter memória inclusive das ideias que foram descartadas porque, em várias situações, elas podem ser fontes de insights úteis.
 
 ### Rastreabilidade de Requisitos
 #### Tipos de Rastreabilidade

@@ -21,7 +21,9 @@ Originalmente, eu escrevia minhas notas de estudos em [LaTeX](https://www.latex-
 
 Cada palavra que você ler nesse projeto foi escrita por mim. Espero que esse material sirva a vocês tanto quanto serviu para mim. O conjunto de tecnologias usadas para construção desse site está na aba `Tech` no menu superior. O link para o repositório desse projeto também.
 
-**Comentário:** Como acontece com as universidades, não existe necessariamente uma hierarquia entre as matérias de um mesmo período. Se você for como eu, pegue qualquer uma e vá estudando até acabar, depois, pule para outra até ter terminado todas as matérias de um período. Paralelamente, é possível preferir ir vendo todas as matérias lado a lado. Não tem jeito errado de estudar desde que você se esforce para apreender os assuntos e conceitos.
+Como acontece com as universidades, não existe necessariamente uma hierarquia entre as matérias de um mesmo período. Se você for como eu, pegue qualquer uma e vá estudando até acabar, depois, pule para outra até ter terminado todas as matérias de um período. Paralelamente, é possível preferir ir vendo todas as matérias lado a lado. Não tem jeito errado de estudar desde que você se esforce para apreender os assuntos e conceitos.
+
+**Aviso:** Nas matérias mais práticas eu uso a ferramenta de controle de versão git\github para organizar a evolução das aplicações que vamos construir ao longo das aulas. Caso você não saiba usar essa ferramenta, por favor, veja [esse vídeo](/CC_site/nav/tech/).
 
 ## Pontifícia Universidade Católica (PUC-MG)
 

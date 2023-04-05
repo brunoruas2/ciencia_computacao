@@ -1,7 +1,8 @@
+# Como usar Git e Github para controle de versão
 
-Aqui eu coloco o conjunto de ferramentas que usei para construir esse portal.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gkBDXyy5aSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-# Links
+# Ferramentas usadas na construção do site
 
 [mkdocs](https://www.mkdocs.org/) para construir um repo local que pode ser facilmente convertido em um site.
 
