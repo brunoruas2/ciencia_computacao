@@ -58,7 +58,7 @@ O conteúdo do curso está abaixo. O checklist indicará quais matérias (que na
     - [x] [Gerência de Projetos de TI](/CC_site/nav/PUC/periodo3/gerencia_projetos/)
     - [ ] Gerência de Configuração
     - [ ] Qualidade de Processos de Software
-    - [ ] [Gerência de Requisitos de Software](/CC_site/nav/PUC/periodo3/gerencia_requisitos/)
+    - [x] [Gerência de Requisitos de Software](/CC_site/nav/PUC/periodo3/gerencia_requisitos/)
 
 - [ ] **Período 4: Infraestrutura para Sistemas de Software**
     - [ ] Cloud Computing
