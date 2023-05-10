@@ -15,11 +15,11 @@ Eu tenho um método de estudar: **fingindo que estou dando aula**. Ao longo dos 
 Esse site é justamente o repositório público dos conteúdos que venho estudando sobre Ciência da Computação seguindo duas fontes:
 
  - O conteúdo da formação em Tecnólogo em Análise e Desenvolvimento de Sistemas pela **PUC Minas Gerais**.
- - Os cursos da Open **Source Society University - OSSU**.
+ - Os cursos da Open **[Source Society University - OSSU](https://github.com/ossu/computer-science)**.
 
 Originalmente, eu escrevia minhas notas de estudos em [LaTeX](https://www.latex-project.org/#:~:text=LaTeX%20is%20a%20high%2Dquality,is%20available%20as%20free%20software.) mas o eu percebi que [Markdown](https://www.markdownguide.org/) aliado ao mkdocs e github pages era uma maneira mais simples de manter o projeto a medida que a quantidade de páginas foram se aproximando das centenas. Dessa feita, os repositórios antigos em pdf vão ser todos migrados para esse projeto.
 
-Cada palavra que você ler nesse projeto foi escrita por mim. Espero que esse material sirva a vocês tanto quanto serviu para mim. O conjunto de tecnologias usadas para construção desse site está na aba `Tech` no menu superior. O link para o repositório desse projeto também.
+Espero que esse material sirva a vocês tanto quanto serviu para mim. O conjunto de tecnologias usadas para construção desse site está na aba `Tech` no menu superior. O link para o repositório desse projeto também.
 
 Como acontece com as universidades, não existe necessariamente uma hierarquia entre as matérias de um mesmo período. Se você for como eu, pegue qualquer uma e vá estudando até acabar, depois, pule para outra até ter terminado todas as matérias de um período. Paralelamente, é possível preferir ir vendo todas as matérias lado a lado. Não tem jeito errado de estudar desde que você se esforce para apreender os assuntos e conceitos.
 
@@ -52,12 +52,12 @@ O conteúdo do curso está abaixo. O checklist indicará quais matérias (que na
     - [ ] Manipulação de Dados com SQL
 
 - [ ] **Período 3: Processos de Negócio e de Desenvolvimento de Software**
-    - [ ] Modelagem e Gestão de Processos de Negócios
-    - [ ] Estatística Descritiva
+    - [ ] Modelagem\Gestão de Processos de Negócios
+    - [x] [Estatística Descritiva](/CC_site/nav/PUC/periodo3/estat_desc)
     - [ ] [Desenvolvimento de Aplicações Móveis](/CC_site/nav/PUC/periodo3/dev_mobile/)
     - [x] [Gerência de Projetos de TI](/CC_site/nav/PUC/periodo3/gerencia_projetos/)
-    - [ ] Gerência de Configuração
-    - [ ] Qualidade de Processos de Software
+    - [x] [Gerência de Configuração](/CC_site/nav/PUC/periodo3/gerencia_config/)
+    - [ ] [Qualidade de Processos de Software](/CC_site/nav/PUC/periodo3/qualidade_processos/)
     - [x] [Gerência de Requisitos de Software](/CC_site/nav/PUC/periodo3/gerencia_requisitos/)
 
 - [ ] **Período 4: Infraestrutura para Sistemas de Software**

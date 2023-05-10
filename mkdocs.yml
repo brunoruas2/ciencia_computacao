@@ -27,11 +27,11 @@ nav:
         - Manipulação da Dados com SQL: nav\PUC\periodo2\
       - Período 3:
         - Modelagem e Gestão de Processos: nav\PUC\periodo3\
-        - Estatística Descritiva: nav\PUC\periodo3\
+        - Estatística Descritiva: nav\PUC\periodo3\estat_desc.md
         - Desenvolvimento de Aplicações Móveis: nav\PUC\periodo3\dev_mobile.md
         - Gerência de Projetos de TI: nav\PUC\periodo3\gerencia_projetos.md
-        - Gerência de Configuração: nav\PUC\periodo3\
-        - Qualidade de Processos de Software: nav\PUC\periodo3\
+        - Gerência de Configuração: nav\PUC\periodo3\gerencia_config.md
+        - Qualidade de Processos de Software: nav\PUC\periodo3\qualidade_processos.md
         - Gerência de Requisitos de Software: nav\PUC\periodo3\gerencia_requisitos.md
       - Período 4:
         - Cloud Computing: nav\PUC\periodo4\

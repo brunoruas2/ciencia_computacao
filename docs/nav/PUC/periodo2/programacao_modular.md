@@ -10,9 +10,8 @@
     - [Herança](#herança)
 - [**Polimorfismo e Princípios do Projeto Modular**](#polimorfismo-e-principios-do-projeto-modular)
     - [Polimorfismo de Inclusão](#polimorfismo-de-inclusao)
-  (#sobreposicao-de-metodos-virtual-e-override)
-      - [Polimorfismo Paramétrico](#polimorfismo-parametrico)
-  - [**Projeto Orientado para Objetos**](#projeto-orientado-para-objetos)
+    - [Polimorfismo Paramétrico](#polimorfismo-parametrico)
+    - [Projeto Orientado para Objetos](#projeto-orientado-para-objetos)
 - [**Bibliografia**](#bibliografia)
 
 
