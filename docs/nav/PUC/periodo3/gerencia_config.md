@@ -4,12 +4,12 @@
 
 ## Assuntos
 - [**Planejamento da Configuração e Controle de Mudanças**](#planejamento-da-configuracao-e-controle-de-mudancas)
-      - [Introdução à GCS](#introducao-a-gcs)
-      - [Processo de Gerenciamento de Mudanças](#processo-de-gerenciamento-de-mudancas)
-      - [Gerenciamento de Versões e Releases](#gerenciamento-de-versoes-e-releases)
+	- [Introdução à GCS](#introducao-a-gcs)
+	- [Processo de Gerenciamento de Mudanças](#processo-de-gerenciamento-de-mudancas)
+	- [Gerenciamento de Versões e Releases](#gerenciamento-de-versoes-e-releases)
 - [**Gerenciamento de Entregas e Ferramentas de Gerenciamento de Configuração**](#gerenciamento-de-entregas-e-ferramentas-de-gerenciamento-de-configuracao)
-      - [Integração, Entrega e Implantação Contínuas](#integracao-entrega-e-implantacao-continuas)
-      - [Ferramentas de GCS](#ferramentas-de-gcs)
+	- [Integração, Entrega e Implantação Contínuas](#integracao-entrega-e-implantacao-continuas)
+	- [Ferramentas de GCS](#ferramentas-de-gcs)
 - [**Bibliografia**](#bibliografia)
 
 

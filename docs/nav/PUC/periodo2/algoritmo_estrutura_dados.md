@@ -578,7 +578,6 @@ static void Main (string[] args) {
         Console.WriteLine("Média da Turma: " + media);
     }
 }
-
 ```
 **Comentário:** Aqui o professor não teve pena. E eu também não vou ter. **Não siga adiante** se você não for capaz de entender o que esse programa faz. Analise o código até fazer sentido.
 

@@ -2,7 +2,11 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-Eu me chamo Bruno de Melo Ruas. Sou Economista pela Universidade do Estado do Amazonas (UEA). Especialista em Gestão Financeira pela Fundação Getúlio Vargas (FGV). Atualmente curso o tecnólogo de Análise e Desenvolvimento de Sistemas da Pontifícia Universidade Católica de Minas Gerais (PUC-MG).
+Olá, seja muito bem-vindo(a)!
+
+Eu me chamo Bruno de Melo Ruas.
+
+Sou Economista pela Universidade do Estado do Amazonas (UEA). Especialista em Gestão Financeira pela Fundação Getúlio Vargas (FGV). Atualmente curso o tecnólogo de Análise e Desenvolvimento de Sistemas da Pontifícia Universidade Católica de Minas Gerais (PUC-MG).
 
 Minhas Redes:
 
@@ -14,16 +18,14 @@ Eu tenho um método de estudar: **fingindo que estou dando aula**. Ao longo dos 
 
 Esse site é justamente o repositório público dos conteúdos que venho estudando sobre Ciência da Computação seguindo duas fontes:
 
- - O conteúdo da formação em Tecnólogo em Análise e Desenvolvimento de Sistemas pela **PUC Minas Gerais**.
- - Os cursos da Open **[Source Society University - OSSU](https://github.com/ossu/computer-science)**.
+ - O conteúdo da formação em Tecnólogo em Análise e Desenvolvimento de Sistemas pela **[PUC Minas Gerais](https://www.pucminas.br/PucVirtual/Graduacao/Paginas/Analise-e-Desenvolvimento-de-Sistemas-Tecnologo.aspx?moda=1&curso=492&local=7c032ce9-43f6-4571-b72e-674be76a5b62)**.
+ - Os cursos da **[Open Source Society University - OSSU](https://github.com/ossu/computer-science)**.
 
 Originalmente, eu escrevia minhas notas de estudos em [LaTeX](https://www.latex-project.org/#:~:text=LaTeX%20is%20a%20high%2Dquality,is%20available%20as%20free%20software.) mas o eu percebi que [Markdown](https://www.markdownguide.org/) aliado ao mkdocs e github pages era uma maneira mais simples de manter o projeto a medida que a quantidade de páginas foram se aproximando das centenas. Dessa feita, os repositórios antigos em pdf vão ser todos migrados para esse projeto.
 
-Espero que esse material sirva a vocês tanto quanto serviu para mim. O conjunto de tecnologias usadas para construção desse site está na aba `Tech` no menu superior. O link para o repositório desse projeto também.
+Espero que esse material sirva a vocês tanto quanto serviu para mim. O conjunto de tecnologias usadas para construção desse site está na aba `Sobre` no menu superior. O link para o repositório desse projeto também.
 
 Como acontece com as universidades, não existe necessariamente uma hierarquia entre as matérias de um mesmo período. Se você for como eu, pegue qualquer uma e vá estudando até acabar, depois, pule para outra até ter terminado todas as matérias de um período. Paralelamente, é possível preferir ir vendo todas as matérias lado a lado. Não tem jeito errado de estudar desde que você se esforce para apreender os assuntos e conceitos.
-
-**Aviso:** Nas matérias mais práticas eu uso a ferramenta de controle de versão git\github para organizar a evolução das aplicações que vamos construir ao longo das aulas. Caso você não saiba usar essa ferramenta, por favor, veja [esse vídeo](/CC_site/nav/tech/).
 
 ## Pontifícia Universidade Católica (PUC-MG)
 
@@ -63,7 +65,7 @@ O conteúdo do curso está abaixo. O checklist indicará quais matérias (que na
 - [ ] **Período 4: Infraestrutura para Sistemas de Software**
     - [ ] Cloud Computing
     - [ ] Projeto de Software
-    - [ ] Arquitetura de Software Distribuído
+    - [ ] [Arquitetura de Software Distribuído](/CC_site/nav/PUC/periodo4/arquitetura_distribuida/)
     - [ ] APIs e Web Services
     - [ ] Teste de Software
     - [ ] Banco de Dados NoSQL

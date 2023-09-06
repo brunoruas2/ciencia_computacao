@@ -5,8 +5,8 @@ site_url: https://brunoruas2.github.io/CC_site/
 copyright: Bruno de Melo Ruas
 
 nav:
-    - Bem Vindos: index.md
-    - PUC:
+    - Home: index.md
+    - Tecnólogo:
       - Período 1:
         - Algoritmo e Abstração: nav\PUC\periodo1\algoritmos_e_abstracao.md
         - Algoritmo e Lógica: nav\PUC\periodo1\algoritmos_e_logica.md
@@ -36,7 +36,7 @@ nav:
       - Período 4:
         - Cloud Computing: nav\PUC\periodo4\
         - Projeto de Software: nav\PUC\periodo4\
-        - Arquitetura de Software Distribuído: nav\PUC\periodo4\
+        - Arquitetura de Software Distribuído: nav\PUC\periodo4\arquitetura_distribuida.md
         - APIs e Web Services: nav\PUC\periodo4\
         - Teste de Software: nav\PUC\periodo4\
         - Banco de Dados NoSQL: nav\PUC\periodo4\
@@ -44,7 +44,7 @@ nav:
         - Segurança Aplicada ao Desenvolvimento: nav\PUC\periodo5\
         - Compliance em TI: nav\PUC\periodo5\
         - Implantação de Solução de TI: nav\PUC\periodo5\
-    - Tech: nav/tech.md
+    - Sobre: nav/tech.md
 
 theme:
   name: simple-blog

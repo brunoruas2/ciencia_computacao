@@ -1,0 +1,7 @@
+# Arquivo .editorconfig para usar 2 espaços para a indentação em todos os arquivos
+# Certifique-se de que seu editor suporta o EditorConfig ou instale um plugin, se necessário.
+
+# Configuração padrão para todos os arquivos
+[*]
+indent_style = space
+indent_size = 4
