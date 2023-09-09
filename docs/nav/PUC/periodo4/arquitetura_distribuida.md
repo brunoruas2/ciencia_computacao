@@ -40,12 +40,45 @@ Um sistema distribuído é composto por um conjunto de vários softwares (que ch
 
 Nesse microfundamento vamos aprender alguns padrões arquiteturais de construção de sistemas distribuídos[^1].
 
-[^1]: Vai por mim. Aprende bem essa aula porque praticamente todas as empresas grandes usam essas arquiteturas.
-
 ### Exemplos de Software Distribuído
+Podemos elencar uma série de sistemas distribuídos que utilizamos corriqueiramente:
+
+ - Sistemas de Banco de Dados
+     - Permitem acesso unificado a uma infraestrutura de dados
+     - São acessados por diferentes origens de frontend
+ - Aplicações Web
+     - Sistemas complexos que utilizam fortemente as redes de computadores
+     - Separação em várias camadas lógicas: frontend, backend, banco de dados, servidor de arquivos e etc
+     - Utilizam arquitetura cliente-servidor
+ - Sistemas P2P
+     - Sistemas construídos de maneira não centralizada
+     - Cada nó implementa a lógica de aplicação e acesso parcial as dados
+     - Maior custo de localização de dados quando comparado aos sistemas centralizados
+ - Aplicações de Internet das Coisas
+     - Vários microcontroladores com sensores cada vez mais conectados à internet
+ - Redes Sociais
 
 ## Características de Sistemas Distribuídos
 ### Compartilhamento de Recursos
+Uma característica que une todos os sistemas atuais é o compartilhamento de informações. Nas aplicações modernas, é muito estranho pensarmos no usuário apenas como um consumidor de dados sem que ele mesmo seja um ator ativo no processo. No passado, a coisa era bem diferente, a chamada web 1.0 era estática e unidirecional.
+
+Diante dessa nova realidade, temos que pensar em soluções que permitam o compartilhamento de informações em diferentes meios (web, mobile, API e etc) e entre múltiplos usuários (como uma planilha no google sheets que pode acessada por vários usuários simultaneamente).
+
+#### Serviços e Servidores
+Podemos definir como **serviço** qualquer parte de um sistema que gerencia um **conjunto de recursos** por meio de uma **interface**. Em sistemas distribuídos, os recursos são acessados remotamente por mecanismos de comunicação.
+
+Um **servidor** é um programa (isso mesmo, um programa) que é executado em um hardware (que também costumamos chamar de servidor) e que atende às solicitações feitas por programas em outros computadores.
+
+Aqui tem um vídeo bacana sobre o que é um servidor.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VXmvM2QtuMU?si=R5UQAHydpPe3ZcuQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+A arquitetura mais famosa e simples é a cliente-servidor que a essa altura do campeonato já estamos bem familiares.
+
+Chamamos de **requisição remota** o processo completo da comunicação entre cliente e servidor que vai desde a requisição inicial até o recebimento da resposta esperada.
+
+**Atenção: ** Mesmo que possa parecer, a arquitetura client-server não é a única possível. Falamos agora a pouco que existem sistemas P2P que subvertem essa lógica e transformam todos os nós em clientes-servidores ao mesmo tempo.
+
 ### Desafios de Arquiteturas Distribuídas
 
 # Arquiteturas de Software Distribuído
@@ -78,3 +111,5 @@ Nesse microfundamento vamos aprender alguns padrões arquiteturais de construç�
  - KATZER, Jason. Learning Serverless. O'Reilly Media, 2019. ISBN 9781492057017.
  - LEE, Valentino; Schneider, Heather; Schell, Robbie. Aplicações Móveis: arquitetura, projetos e desenvolvimento. Pearson 350 ISBN 9788534615402.
  - TANENBAUM, Andrew S.; STEEN, Maarten van. Sistemas Distribuídos: princípios e paradigmas. 2. Ed. Pearson, 2015. ISBN 9788576051428.
+
+[^1]: Vai por mim. Aprende bem essa aula porque praticamente todas as empresas grandes usam essas arquiteturas.
