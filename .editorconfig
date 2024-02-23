@@ -4,4 +4,4 @@
 # Configuração padrão para todos os arquivos
 [*]
 indent_style = space
-indent_size = 4
+indent_size = 2

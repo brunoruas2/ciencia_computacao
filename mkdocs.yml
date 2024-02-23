@@ -5,46 +5,47 @@ site_url: https://brunoruas2.github.io/CC_site/
 copyright: Bruno de Melo Ruas
 
 nav:
-    - Home: index.md
-    - Tecnólogo:
+  - Home: index.md
+  - PUC-MG:
+      - Tecnólogo: nav\PUC\Sobre\puc.md
       - Período 1:
-        - Algoritmo e Abstração: nav\PUC\periodo1\algoritmos_e_abstracao.md
-        - Algoritmo e Lógica: nav\PUC\periodo1\algoritmos_e_logica.md
-        - Desenvolvimento Web Frontend: nav\PUC\periodo1\desenvolvimento_web.md
-        - Matemática Básica: nav\PUC\periodo1\matematica_basica.md
-        - Organização de Computadores: nav\PUC\periodo1\organizacao_computadores.md
-        - Fundamentos de Eng. de Software: nav\PUC\periodo1\fundamentos_eng_soft.md
-        - Pensamento Computacional: nav\PUC\periodo1\pensamento_comp.md
-        - Lógica Computacional: nav\PUC\periodo1\logica_comp.md
+          - Algoritmo e Abstração: nav\PUC\periodo1\algoritmos_e_abstracao.md
+          - Algoritmo e Lógica: nav\PUC\periodo1\algoritmos_e_logica.md
+          - Desenvolvimento Web Frontend: nav\PUC\periodo1\desenvolvimento_web.md
+          - Matemática Básica: nav\PUC\periodo1\matematica_basica.md
+          - Organização de Computadores: nav\PUC\periodo1\organizacao_computadores.md
+          - Fundamentos de Eng. de Software: nav\PUC\periodo1\fundamentos_eng_soft.md
+          - Pensamento Computacional: nav\PUC\periodo1\pensamento_comp.md
+          - Lógica Computacional: nav\PUC\periodo1\logica_comp.md
       - Período 2:
-        - Algoritmos e Estrutura de Dados: nav\PUC\periodo2\algoritmo_estrutura_dados.md
-        - Modelagem de Dados: nav\PUC\periodo2\
-        - Engenharia de Requisitos: nav\PUC\periodo2\engenharia_requisitos.md
-        - Design de Interação: nav\PUC\periodo2\design_interacao.md
-        - Programação Modular: nav\PUC\periodo2\programacao_modular.md
-        - Desenvolvimento Web Back-End: nav\PUC\periodo2\dev_web_backend.md
-        - Fundamentos de Redes de Computadores: nav\PUC\periodo2\
-        - Manipulação da Dados com SQL: nav\PUC\periodo2\
+          - Algoritmos e Estrutura de Dados: nav\PUC\periodo2\algoritmo_estrutura_dados.md
+          - Modelagem de Dados: nav\PUC\periodo2\
+          - Engenharia de Requisitos: nav\PUC\periodo2\engenharia_requisitos.md
+          - Design de Interação: nav\PUC\periodo2\design_interacao.md
+          - Programação Modular: nav\PUC\periodo2\programacao_modular.md
+          - Desenvolvimento Web Back-End: nav\PUC\periodo2\dev_web_backend.md
+          - Fundamentos de Redes de Computadores: nav\PUC\periodo2\
+          - Manipulação da Dados com SQL: nav\PUC\periodo2\
       - Período 3:
-        - Modelagem e Gestão de Processos: nav\PUC\periodo3\
-        - Estatística Descritiva: nav\PUC\periodo3\estat_desc.md
-        - Desenvolvimento de Aplicações Móveis: nav\PUC\periodo3\dev_mobile.md
-        - Gerência de Projetos de TI: nav\PUC\periodo3\gerencia_projetos.md
-        - Gerência de Configuração: nav\PUC\periodo3\gerencia_config.md
-        - Qualidade de Processos de Software: nav\PUC\periodo3\qualidade_processos.md
-        - Gerência de Requisitos de Software: nav\PUC\periodo3\gerencia_requisitos.md
+          - Modelagem e Gestão de Processos: nav\PUC\periodo3\
+          - Estatística Descritiva: nav\PUC\periodo3\estat_desc.md
+          - Desenvolvimento de Aplicações Móveis: nav\PUC\periodo3\dev_mobile.md
+          - Gerência de Projetos de TI: nav\PUC\periodo3\gerencia_projetos.md
+          - Gerência de Configuração: nav\PUC\periodo3\gerencia_config.md
+          - Qualidade de Processos de Software: nav\PUC\periodo3\qualidade_processos.md
+          - Gerência de Requisitos de Software: nav\PUC\periodo3\gerencia_requisitos.md
       - Período 4:
-        - Cloud Computing: nav\PUC\periodo4\
-        - Projeto de Software: nav\PUC\periodo4\
-        - Arquitetura de Software Distribuído: nav\PUC\periodo4\arquitetura_distribuida.md
-        - APIs e Web Services: nav\PUC\periodo4\
-        - Teste de Software: nav\PUC\periodo4\
-        - Banco de Dados NoSQL: nav\PUC\periodo4\
+          - Cloud Computing: nav\PUC\periodo4\
+          - Projeto de Software: nav\PUC\periodo4\
+          - Arquitetura de Software Distribuído: nav\PUC\periodo4\arquitetura_distribuida.md
+          - APIs e Web Services: nav\PUC\periodo4\
+          - Teste de Software: nav\PUC\periodo4\
+          - Banco de Dados NoSQL: nav\PUC\periodo4\
       - Período 5:
-        - Segurança Aplicada ao Desenvolvimento: nav\PUC\periodo5\
-        - Compliance em TI: nav\PUC\periodo5\
-        - Implantação de Solução de TI: nav\PUC\periodo5\
-    - Sobre: nav/tech.md
+          - Segurança Aplicada ao Desenvolvimento: nav\PUC\periodo5\
+          - Compliance em TI: nav\PUC\periodo5\
+          - Implantação de Solução de TI: nav\PUC\periodo5\
+  - Sobre: nav/tech.md
 
 theme:
   name: simple-blog
@@ -89,7 +90,6 @@ markdown_extensions:
       generic: true
   # footnote
   - footnotes
-
 
 plugins:
   - search
