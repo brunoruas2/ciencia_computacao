@@ -2,7 +2,7 @@ Olá, seja muito bem-vindo(a)!
 
 Eu me chamo Bruno de Melo Ruas. Sou Economista pela Universidade do Estado do Amazonas (UEA). Especialista em Gestão Financeira pela Fundação Getúlio Vargas (FGV). Tecnólogo em Análise e Desenvolvimento de Sistemas da Pontifícia Universidade Católica de Minas Gerais (PUC-MG).
 
-Em julho de 2023 eu migrei de carreira para desenvolvedor de software. Atualmente sou desenvolvedor backend na [GFT Technologies](https://www.gft.com/br/pt) onde estou alocado no Btg Pactual. Esse material me serviu para chegar até aqui. Espero que também ajude você!
+Em julho de 2023 eu migrei a carreira de economista para desenvolvedor de software. Atualmente sou desenvolvedor backend na [GFT Technologies](https://www.gft.com/br/pt) onde estou alocado no Btg Pactual. Esse material me serviu para chegar até aqui. Espero que também ajude você!
 
 Minhas Redes:
 

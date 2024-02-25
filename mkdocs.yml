@@ -42,7 +42,7 @@ nav:
           - Teste de Software: nav\PUC\periodo4\
           - Banco de Dados NoSQL: nav\PUC\periodo4\
       - Período 5:
-          - Segurança Aplicada ao Desenvolvimento: nav\PUC\periodo5\
+          - Segurança Aplicada ao Desenvolvimento: nav\PUC\periodo5\seguranca.md
           - Compliance em TI: nav\PUC\periodo5\
           - Implantação de Solução de TI: nav\PUC\periodo5\
   - Sobre: nav/tech.md
