@@ -9,7 +9,32 @@
 
 # Gestão da Segurança da Informação
 ## Conceitos Básicos
+Muito bem. A essa altura do nosso estudo saímos do praticamente zero lá no primeiro período. Aprendemos a desenvolver interfaces frontend. A lógica de negócio e acesso ao banco de dados relacional e não relacional no backend. Aprendemos aplicações mobile. Também vimos aplicações distribuídas.
+
+Caramba, quanta coisa! Entretanto, teve algo que sempre acompanhou a nossa caminhada mas que finalmente terá o seu devido lugar de foco. A **Segurança** as nossas aplicações finalmente será o objeto do nosso cuidado agora.
+
+Enquanto os times de desenvolvimento se esforça para entregar todos os requisitos elicitados no backlog. Entretanto, o time de segurança também se esforça para entregar todos os requisitos elencados no backlog e, além disso, eles também se empenham em evitar que o sistema apresente comportamentos indesejados no que tange ao acesso as informações.
+
 ### Requisitos da Segurança da Informação
+Para elicitar os requisitos relacionados à segurança, também temos algumas abordagens que podem ser úteis. O material cita as três principais fontes para requisitos dessa natureza:
+
+ - Avaliação de riscos à organização relacionados aos objetivos da empresa.
+ - Requisitos legais, estatutos e regulamentos (aqui a LGPD veio com força total).
+ - Conjunto de princípios e práticas para o manuseio da informação que a empresa usa para apoiar suas operações.
+
+Uma vez que tenhamos aprendido as fontes dos requisitos. Temos que entender quais propriedades esses itens devem receber para que a organização faça uso correto e pertinente das suas informações e, ao mesmo tempo, se proteja de vazamentos e intrusões.
+
+Principais propriedades da segurança da informação:
+
+ - **Confidencialidade** - Somente pessoas autorizadas devem ver certas informações.
+ - **Integridade** - A informação não deve ser alterada.
+ - **Disponibilidade** - Os sistemas devem estar disponíveis para a consulta.
+ - **Garantia** - As pessoas e sistemas devem se comportar como o esperado.
+ - **Autenticidade** - Garantia que os atos e fatos são gerados pela indicação da fonte.
+ - **Anonimato (Privacidade)** -  Em alguns casos, deve-se assegurar que alguns fatos e atos não sejam rastreáveis.
+ - **Auditabilidade** - Registro dos acessos às informações.
+ - **Legalidade** - Conformidade com os regulamentos e normas.
+
 ### Ameaças, Ataques e Vulnerabilidades
 ## Normas e Políticas
 ### Norma ISO/IEC 27001
