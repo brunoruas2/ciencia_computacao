@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	// IMPORTANTE: GO É DO TIPO INDEX INICIAL = 0
+	// IMPORTANTE: GO É UMA LINGUAGE QUE USA INDEX INICIAL = 0
 	// em go um array é uma sequencia numerada de elementos de um tamanho específico
 	// normalmente se usam mais slices mas arrays podem ser úteis em casos especiais
 
@@ -27,8 +27,10 @@ func main() {
 	b = [...]int{1, 2, 3, 4, 5}
 	fmt.Println("dcl:", b)
 
-	// da pra usar : pra definir o valor do index do elemento que voce quer inserir o valor. No caso, to colocando 400 no index 3
-	// como a gente ta criando um array de 9 posicoes definido que 100 é a 0, 400 vai na 3 e 500 vai na 8. Todo o resto é zero
+	// da pra usar : pra definir o valor do index do elemento que voce quer inserir o valor.
+	// No caso, to colocando 400 no index 3
+	// como a gente ta criando um array de 9 posicoes definido que 100 é a 0, 400 vai na 3 e 500 vai na 8.
+	// Todo o resto é zero
 	var c = [...]int{100, 3: 400, 8: 500}
 	fmt.Println("idx:", c)
 
@@ -42,6 +44,7 @@ func main() {
 	fmt.Println("2d: ", arrayDuasDimensoes)
 
 	// também da pra criar os arrays de multi dimensoes do mesmo jeito que criamos o de 1 dimensao
+	// e com notação de chaves ao invés de loop
 	var arrayTresDimensoes = [1][2][3]int{
 		{
 			{1, 2, 3},
