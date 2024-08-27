@@ -1,16 +1,19 @@
 Olá, seja muito bem-vindo(a)!
 
-Eu me chamo Bruno de Melo Ruas. Sou Economista pela Universidade do Estado do Amazonas (UEA). Especialista em Gestão Financeira pela Fundação Getúlio Vargas (FGV). Tecnólogo em Análise e Desenvolvimento de Sistemas da Pontifícia Universidade Católica de Minas Gerais (PUC-MG).
+Eu me chamo Bruno de Melo Ruas. 
+
+Sou formado em Análise e Desenvolvimento de Sistemas da Pontifícia Universidade Católica de Minas Gerais (PUC-MG). Economista pela Universidade do Estado do Amazonas (UEA). Especialista em Gestão Financeira pela Fundação Getúlio Vargas (FGV). 
 
 Em julho de 2023 eu migrei a carreira de economista para desenvolvedor de software. Atualmente sou desenvolvedor backend na [GFT Technologies](https://www.gft.com/br/pt) onde estou alocado no Btg Pactual. Esse material me serviu para chegar até aqui. Espero que também ajude você!
 
 Minhas Redes:
-
  - [Linkedin](https://www.linkedin.com/in/brunoruas2/)
  - [Twitter](https://twitter.com/bruno_ruas2)
  - [Github](https://github.com/brunoruas2)
 
-Eu tenho um método de estudar: **fingindo que estou dando aula**. Ao longo dos anos, percebi que eu havia escrito tanto material, que poderia ajudar outras pessoas com meus textos. Entretanto, eu também aprendi que se o tutorial ou documentação já existe na internet de maneira pública, vale mais a pena consumir o material original, nesses casos, vamos focar em desenvolver algum projeto para consolidar o conhecimento.
+Eu tenho um método de estudar: **fingindo que estou dando aula**. Ao longo dos anos, percebi que eu havia escrito tanto material, que poderia ajudar outras pessoas com meus textos. 
+
+Mesmo gostando de escrever meu material, ao longo do tempo eu percebi que todo programador maduro é capaz de ler diretamente da **documentação oficial** sempre que é necessário. Por causa disso, em matérias mais práticas, vamos tocar um mini projeto ao invés de ficar apenas reescrevendo o que já existe na documentação.
 
 Esse site serve como meu repositório público dos conteúdos que venho estudando sobre Programação e Desenvolvimento de Software seguindo fontes como:
 
@@ -20,4 +23,4 @@ Esse site serve como meu repositório público dos conteúdos que venho estudand
 
 Espero que esse material sirva a vocês tanto quanto serviu para mim. O conjunto de tecnologias usadas para construção desse site está na aba `Sobre` no menu superior. O link para o repositório desse projeto também - aproveita e dá uma estrelinha lá ;)
 
-Como acontece com as universidades, não existe necessariamente uma hierarquia entre as matérias de um mesmo período. Se você for como eu, pegue qualquer uma e vá estudando até acabar, depois, pule para outra até ter terminado todas as matérias de um período. Paralelamente, é possível preferir ir vendo todas as matérias lado a lado. Não tem jeito errado de estudar desde que você se esforce para apreender os assuntos e conceitos.
+Se você está começando do zero. Recomendo seguir a grade do tecnólogo antes de focar nas partes mais práticas.
