@@ -7,6 +7,7 @@ Sou formado em Análise e Desenvolvimento de Sistemas da Pontifícia Universidad
 Em julho de 2023 eu migrei a carreira de economista para desenvolvedor de software. Atualmente sou desenvolvedor backend na [GFT Technologies](https://www.gft.com/br/pt) onde estou alocado no Btg Pactual. Esse material me serviu para chegar até aqui. Espero que também ajude você!
 
 Minhas Redes:
+
  - [Linkedin](https://www.linkedin.com/in/brunoruas2/)
  - [Twitter](https://twitter.com/bruno_ruas2)
  - [Github](https://github.com/brunoruas2)

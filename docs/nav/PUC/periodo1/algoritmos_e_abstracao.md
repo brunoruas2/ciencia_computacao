@@ -342,14 +342,6 @@ for (int i = 0; i < 5; i++)
 A criação de tipos eficientes de dados é uma ferramenta muito eficiente para padronização e manutenção de soluções de software. É sempre bom entendermos bem o problema proposto e quais tipos de dados podem ser criados para a criação de uma resposta adequada a ele.
 
 
-
-
-
-
-
-
-
-
 ## TAD, Classes e Implementação
 
 ### Definição de um TAD - Classes e Objetos

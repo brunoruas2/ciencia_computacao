@@ -394,7 +394,7 @@ Nós aprendemos que o bloco de código será executado sempre que a expressão l
 | **Operador** |     **Operação**      |      **Exemplo**       |
 | :----------: | :-------------------: | :--------------------: |
 |  `&& (AND)`  | true se tudo for true | `if (a > 2 && b == 1)` |
-|      `       |                       |         (OR)`          | true se um for true | `if (a < 2 |  | b != 0)` |
+|    `(OR)`    |  true se um for true  |   `if (a < 2b != 0)`   |
 |  `! (NOT)`   |     false se true     |     `if (!(x==y))`     |
 
 Existem problemas que requerem mais de dois resultados no output. Nesse caso, não é suficiente usarmos apenas os tokens de condicional composto `if-else` da maneira como aprendemos até agora.

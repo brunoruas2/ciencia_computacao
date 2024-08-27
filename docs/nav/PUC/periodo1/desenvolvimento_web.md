@@ -199,7 +199,7 @@ A lista de provedores também é extensa  e possuem diferentes capacidades disti
 Quando você acessa um site, o arquivo que coordena o modo de exposição da informação e os conteúdos da mesma é um arquivo `.html`. Observe o exemplo abaixo de uma página simples.
 
 ``` html
-<!-- > Html <-->
+<!-- Html -->
 <!DOCTYPE html>
 	<html lang="en">
 	<head>
@@ -280,7 +280,7 @@ Dentro de alguns elementos podem ser inseridas informações e configurações p
 
 Agora que sabemos o que são elementos e como eles são construídos, podemos seguir para a 	**organização de um documento HTML**. Existe um padrão em todo arquivo HTML onde existem alguns elementos obrigatórios para o processamento da página pelo browser do client.
 ``` html
-// html
+<!-- html -->
 <!DOCTYPE html> -------------------------------> Elemento da versão do HTML
 <html lang="en"> ------------------------------> Abertura do documento HTML
 	<head> ------------------------------------> Abertura do cabeçalho
@@ -352,7 +352,7 @@ Existem 3 tipos de listas em HTML.
 
 Listas ordenadas:
 ``` html
-// html
+<!-- html -->
 <ol>
 	<li> Primeiro item </li> --------> 1. Primeiro item
 	<li> Segundo item </li> ---------> 2. Segundo item
@@ -362,7 +362,7 @@ Listas ordenadas:
 ```
 Lista não ordenada:
 ``` html
-// html
+<!-- html -->
 <ul>
 	<li> Primeiro item </li> --------> o Primeiro item
 	<li> Segundo item </li> ---------> o Segundo item
@@ -372,7 +372,7 @@ Lista não ordenada:
 ```
 Lista de definições:
 ``` html
-// html
+<!-- html -->
 <dl>
 	<dt> Termo 01 </li> -------------> Termo 01
 		<dd> Definição 01 </li> ---------> 		Definição 01
@@ -385,14 +385,14 @@ Lista de definições:
 ##### Imagens
 
 ``` html
-// html
+<!-- html -->
 <img width="200" height="180" src="img.png" alt="Peixe">
 
 ```
 ##### Links
 
 ``` html
-// html
+<!-- html -->
 <a href="link.com" target="_blank"> Texto </a> ------> Nova tab
 <a href="link.com" target="_self"> Texto </a> -------> Mesma tab
 <a href="link.com" target="_parent"> Texto </a> -----> Frame pai
@@ -406,7 +406,7 @@ Lista de definições:
 A partir da versão 4.0 o principal elemento usado para segmentar as partes de uma página html passou a ser o `<div>` que é um um elemento de divisão genérico para agrupar qualquer conjunto de elementos necessários. Por exemplo:
 
 ``` html
-// html
+<!-- html -->
 <div>
 	<h1> Titulo </h1>
 	<p> Parágrafo pequeno </p>
@@ -448,7 +448,7 @@ Não é difícil perceber que o uso de elementos semânticos é fortemente indic
 
 Não é nada incomum ter que demonstrar dados usando uma tabela. Pensando nisso, a linguagem HTML também possui um elemento especificamente criado para criação de tabelas. Uma tabela pode ser criada com o uso das seguintes tags:
 ``` html
-// html
+<!-- html -->
 <table border="1"> --------------> Cria a Tabela
 	<caption> Título </caption> -> Coloca um Título
 	<tr> ------------------------> Table Row (tr)
@@ -484,7 +484,7 @@ Uma das interações mais básicas que precisamos de um usuário é a inserção
 O HTML fornece vários atributos dentro do elemento `<form></form>` que nos permite a criar campos de texto, botões clicáveis, campos de senha e etc. A sintaxe mais básica de um formulário é dada por:
 
 ``` html
-// html
+<!-- html -->
 <form name="form_name" action="login.html" method="POST">
 	Usuário: <br>
 	<input type="text" name="user" value=""> <br>
@@ -535,7 +535,7 @@ Esse é tranquilo de entender. Sempre que precisarmos de um input de texto maior
 Podemos permitir que o usuário selecione uma lista pré-selecionada de opções através de uma 	**lista em caixa** (também chamada de 	**dropdown menu**). Um exemplo de código contendo esse elemento por ser visto abaixo.
 
 ``` html
-// html
+<!-- html -->
 <label for="lista"> Dropdown Menu </label>
 <select name="lista">
 	<option value="">Selecione uma opção</option>
@@ -568,7 +568,7 @@ Contudo, na realidade, existem outras formas de trabalhar o visual da aplicaçã
 Aqui podemos ver um exemplo de cada aplicação do estilo visual que elencamos acima:
 
 ``` html
-// html
+<!-- html -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -608,7 +608,7 @@ A leitura de um arquivo CSS é bem simples. A primeira coisa que precisamos sabe
 Por exemplo, se tivermos no nosso html dois elementos `<p>`, só que um deles possui o atributo id `<p id="teste">`. Para criarmos uma regra de estilo no nosso CSS basta escrevermos a tag do elemento (sem os símbolos `<>`) do seguinte modo.
 
 ``` css
-// css
+/* css */
 p {
 	color: red;
 }
@@ -618,7 +618,7 @@ p {
 Essa regra diz que todos os textos contidos nos elementos `<p>` terão a cor vermelha. Contudo, se quisermos adotar uma regra específica para apenas um elemento em questão, podemos definir a regra no css diretamente para o elemento com o seu id.
 
 ``` css
-// css
+/* css */
 #teste {
 	color: black;
 }
@@ -629,7 +629,7 @@ Isso nos dará uma página onde todos os textos dos parágrafos serão vermelhos
 Podemos resumir a sintaxe do CSS como sendo:
 
 ``` css
-// css
+/* css */
 seletor {
 	propriedade_1 : valor_da_propriedade_1;
 	propriedade_2 : valor_da_propriedade_2;
@@ -729,7 +729,7 @@ Mais ou menos como nessa imagem abaixo
 Podemos modificar o comportamento padrão de um elemento através do parâmetro `display:` no CSS. Por exemplo, para transformar os `<input>` em um elemento sozinho na página, podemos colocar no CSS a seguinte linha
 
 ``` css
-// css
+/* css */
 input {
 	display: block;
 	margin: 0 auto;
@@ -791,7 +791,7 @@ Aqui tem um material bem completo fornecido pelo [Mozilla](https://developer.moz
 O CSS nos dá as seguintes opções de letras: serif, sans-serif,monospace, cursive e fantasy. Contudo, nós nunca teremos certeza se o navegados do user terá a capacidade de carregar a fonte que desejamos. Para evitar esse problema, podemos definir opções de fontes do seguinte modo:
 
 ``` css
-// css
+/* css */
 p {
 	font-family: "Trebuchet MS", Verdana, sans-serif;
 }
@@ -802,7 +802,7 @@ O navegador do user vai tenter renderizar a página usando a primeira opção, c
 Além das opções padrão CSS, podemos usar fontes proprietárias de outras fontes (Google Fonts, DaFont, Adobe e etc). A maneira de fazer isso é definir uma propriedade de importação como no exemplo abaixo
 
 ``` css
-// css
+/* css */
 @import url('https://fonts.googleapis.com/css?family=Baloo');
 div {
 	font-family: 'Baloo', cursive;
@@ -830,7 +830,7 @@ Os principais padrões de layout responsivos são. Por enquanto eu vou deixar es
 As media queries são os parâmetros usados na aplicação que usam alguma característica do dispositivo onde a página está sendo exibida. Abaixo nós podemos ver um exemplo de elemento HTML com media query.
 
 ``` html
-// html
+<!-- html -->
 <head>
 	<link rel="stylesheet" media='screen and (min-width: 900px)' href="tela_g.css">
 	<link rel="stylesheet" media='screen and (max-width: 600px)' href="tela_p.css">
@@ -843,7 +843,7 @@ Nesse exemplo HTML, podemos ver como, de acordo com o tamanho da tela, o arquivo
 Do lado do CSS, a sintaxe das media queries são usadas da seguinte maneira:
 
 ``` css
-// css
+/* css */
 body { background-color: red; }
 @media screen and (min-width: 600px) {
 	body {background-color: orange;}
@@ -883,7 +883,7 @@ $$ Viewport = \dfrac{	\textrm{Resolução}}{	\textrm{Pixel-Ratio}} = \dfrac{1920
 Para habilitar esse método de ajuste, o HTML precisa ter a seguinte linha no `head`:
 
 ``` html
-// html
+<!-- html -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 ```
@@ -902,7 +902,7 @@ Para usar esse recurso, usaremos no elemento pai[^6] o parâmetro `display:` `fl
 
 
 ``` html
-// html
+<!-- html -->
 <!DOCTYPE html>
 	<body>
 		<main class='container'>
@@ -915,7 +915,7 @@ Para usar esse recurso, usaremos no elemento pai[^6] o parâmetro `display:` `fl
 ```
 
 ``` css
-// css
+/* css */
 .container {
 	display: flex;
 	flex-wrap: wrap;
@@ -976,7 +976,7 @@ O sistema Grid possui alguns conceitos que nos ajudam a criar e manter a interfa
 Abaixo temos o código de uma aplicação simples usando esse sistema de construção de front end:
 
 ``` html
-// html
+<!-- html -->
 <body>
 	<div class="container">
 		<header>Header </header>
@@ -988,7 +988,7 @@ Abaixo temos o código de uma aplicação simples usando esse sistema de constru
 ```
 
 ``` css
-// css
+/* css */
 body {
 	background-color: rgb(255, 255, 255);
 }
@@ -1040,7 +1040,7 @@ Ao invés de definir a separação da tela como parâmetro da classe container n
 
 
 ``` html
-// html
+<!-- html -->
 <body>
 	<div class="container">
 		<div class="item-a">Header</div>
@@ -1052,7 +1052,7 @@ Ao invés de definir a separação da tela como parâmetro da classe container n
 ```
 
 ``` css
-// css
+/* css */
 body {
 	background-color: rgb(255, 255, 255);
 }
@@ -1176,7 +1176,7 @@ O código HTML usando o Bootstrap é fortemente baseado em `<div>`. A novidade e
 A hierarquia é similar ao grid system porque a aplicação existira dentro de um container. O Container terá pelo menos uma linha (row). Cada linha terá pelo menos uma coluna. Internalize essa hierarquia de Container, Linhas e Colunas.
 
 ``` html
-// html
+<!-- html -->
 <div class="row">
 	<div class="col-md-6" id="cel1">.col-md-6</div>
 	<div class="col-md-6" id="cel2">.col-md-6</div>
@@ -1191,7 +1191,7 @@ A hierarquia é similar ao grid system porque a aplicação existira dentro de u
 </div>
 ```
 ``` css
-// css
+/* css */
 #cel1 {
 	color: white;
 	background-color: red;
