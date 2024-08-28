@@ -82,6 +82,7 @@ class SubClasseHeranca : SuperClasse
 
 class SubclasseComposicao
 {
-	public void Metodo() // continuar
+	public void Metodo() // continuar estudando esse ponto
 }
 ```
+
