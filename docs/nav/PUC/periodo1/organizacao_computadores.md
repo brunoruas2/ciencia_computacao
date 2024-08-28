@@ -1,5 +1,3 @@
-
-
 ## Assuntos
 - [**Fundamentos de Organização de Computadores**](#fundamentos-de-organizacao-de-computadores)
     - [Representação de Dados e Sistemas Binário](#representacao-de-dados-e-sistemas-binario)

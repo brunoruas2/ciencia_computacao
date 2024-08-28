@@ -1,5 +1,3 @@
-
-
 ## Assuntos
 - [Aviso](#aviso)
 - [**Tipos e Elicitação de Requisitos de Software**](#tipos-e-elicitacao-de-requisitos-de-software)

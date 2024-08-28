@@ -1,5 +1,3 @@
-
-
 ## Assuntos
 - [**Elementos do Design de Interação**](#elementos-do-design-de-interacao)
       - [Sistemas Interativos em Contexto](#sistemas-interativos-em-contexto)

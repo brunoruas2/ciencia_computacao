@@ -1,8 +1,3 @@
-
-
-## Assuntos
-
-
 ## Aviso
 Essa matéria tem uma abordagem muito prática. Desse modo, escrever um passo a passo detalhado de maneira escrita é a **pior** maneira de ensinar esse conhecimento por ser algo extremamente enfadonho tanto para mim (que estou escrevendo) quando para vocês que estarão lendo.
 

@@ -1,11 +1,7 @@
-
-
 ## Assuntos
 - [Conceitos e Competências de Pensamento Computacional](#conceitos-e-competencias-de-pensamento-computacional)
 - [Computação Desplugada](#computacao-desplugada)
 - [Bibliografia](#bibliografia)
-
-
 
 ## Conceitos e Competências de Pensamento Computacional
 Existem divergências quanto ao significado preciso desse conceito, contudo, as interpretações vigentes costumam convergir para a definição que o pensamento computacional é a maneira de organizar o raciocínio de modo a pensar de maneira organizada, lógica e propor soluções úteis para os problemas propostos.

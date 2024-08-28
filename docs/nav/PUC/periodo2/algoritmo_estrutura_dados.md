@@ -1,5 +1,3 @@
-
-
 ## Assuntos
 - [Aviso](#aviso)
 - [**Coleções Nativas das Linguagens de Programação**](#colecoes-nativas-das-linguagens-de-programacao)
@@ -357,8 +355,8 @@ class Aluno {
         "mat: " + matricula + " email: " + email);
     }
 }
-
 ```
+
 Podemos ver que essa classe possui dois construtores e um método chamado `Mostrar` que imprime na tela os dados do objeto.
 
 Agora vamos comparar dois programas que realizam a mesma tarefa onde, em um usamos ArrayList e, no outro, usamos Lista genérica.

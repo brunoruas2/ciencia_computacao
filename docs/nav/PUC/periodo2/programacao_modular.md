@@ -1,5 +1,3 @@
-
-
 ## Assuntos
 - [**Programação Orientada à Objetos**](#programacao-orientada-a-objetos)
     - [Fatores de Qualidade de Software](#fatores-de-qualidade-de-software)

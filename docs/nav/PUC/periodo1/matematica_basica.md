@@ -1,5 +1,3 @@
-
-
 ## Aviso
 Como o escopo dessa matéria é super básico. Eu nem vou me dar o trabalho de resumir. Se quiserem ver um material mais completo, podem conferir na Bibliografia ou no meu [Projeto Matemática](https://github.com/brunoruas2/ProjetoMatematica/blob/main/Book%20of%20Proof%20-%20Richard%20Hammack/book_of_proof.pdf).
 
