@@ -88,10 +88,11 @@ AWS Simple Store Service (S3) -> Store data as objects with versions in buckets 
 S3 Lifecycle Policies -> Rules that can move data for s3 tiers automaticly for better storage and cost
 
 S3 Classes aka Tiers ->
-      Standard (999999999% prob of aviability in a year)
-      Static Website Hosting
-      Standard-Infrequent Access Data aka Standard-IA (not so frequently until we need it, like a backup)
-      Glacier Flexible Retrieval (Retain data for audit or compliance in valts). Acept policies like Write one - read many (worm)
+
+- Standard (999999999% prob of aviability in a year)
+- Static Website Hosting
+- Standard-Infrequent Access Data aka Standard-IA (not so frequently until we need it, like a backup)
+- Glacier Flexible Retrieval (Retain data for audit or compliance in valts). Acept policies like Write one - read many (worm)
 
 AWS Elastic File System (EFS) -> Scales automatically. Run in a region. Can be access by on-premisses by AWS Direct Connect
 
@@ -100,12 +101,13 @@ AWS Relational Database Service (RDS) -> Suport dbms with automated patching, ba
 lift-and-shift -> Migrate for an onpremisses dbms
 
 AWS RDS database engines ->
-      AWS Aurora (compatible with MySQL and PostegreSQL)
-      MySQL
-      PostegreSQL
-      MariaDB
-      Oracle
-      MSSQLServer
+
+- AWS Aurora (compatible with MySQL and PostegreSQL)
+- MySQL
+- PostegreSQL
+- MariaDB
+- Oracle
+- MSSQLServer
 
 AWS DynamoDB -> Serverless database. NoSQL with item + attribute. Purpose built.
 
@@ -138,10 +140,11 @@ IAM Groups -> a better way to manage the permitions by attach users in groups
 IAM Roles -> temporary permitions
 
 AWS Organizations -> 
-	1. Central local to manage multiple AWS accounts
-	2. Consolidade billing
-	3. Hierarchical group accounts
-	4. Control AWS Service and API Actions (Service Control Polices - SCP)
+
+1. Central local to manage multiple AWS accounts
+2. Consolidade billing
+3. Hierarchical group accounts
+4. Control AWS Service and API Actions (Service Control Polices - SCP)
 
 Organization Units -> The name of each AWS organization
 
@@ -150,14 +153,16 @@ AWS Compliance -> A LOT of best practices that AWS already follow
 AWS Artifact -> Service that provide on-demand access to AWS Security and compliance reports
 
 Denial-of-service Attacks -> 
-	1. UDF Flood (api weather)
-	2. HTTP Level Attacks (multiple http clients)
-	3. Slowloris Attack (slow connection fake to stop de queue)
+
+1. UDF Flood (api weather)
+2. HTTP Level Attacks (multiple http clients)
+3. Slowloris Attack (slow connection fake to stop de queue)
 
 Defenses of DDoS by AWS ->
-	1. Security Groups (the bad api calls does not reach the server)
-	2. AWS Shield with AWS WAF (Machine learning and other stuff)
-	3. Elastic Load Balancer (each track is segregated)
+
+1. Security Groups (the bad api calls does not reach the server)
+2. AWS Shield with AWS WAF (Machine learning and other stuff)
+3. Elastic Load Balancer (each track is segregated)
 
 AWS Shield -> Service that protects applications against DDoS attacks (two levels: stantad -no cost- and advanced)
 
@@ -190,9 +195,10 @@ AWS Trusted Advisor -> Avaluate by 5 pillars: Cost optmization, Performance, Sec
 AWS Free Tier -> 3 ways: aways free, 12 months free and trial
 
 How AWS price works ->
-	- Pay for what you user
-	- Pay less when you reserve
-	- Pay less with volumed-based discounts when you use more
+
+- Pay for what you user
+- Pay less when you reserve
+- Pay less with volumed-based discounts when you use more
 
 AWS Princing Calculator
 
@@ -205,31 +211,33 @@ AWS Budged -> 4 types: cost, usage, reservation and saving plans. Custom alerts 
 AWS Cost explore -> drill down to know where you are allocating the cost. Can be group by tag to keep track of projects or other group of services
 
 AWS Support plans ->
-	- Basic support:
-		- 24/7 customer service
-		- documentation
-		- whitepapers
-		- aws trusted advisor
-		- aws personal health dashboard
-	- Developer support:
-		- Email support 24 hours to response
-	- Business support:
-		- aws trusted advisor full power
-		- direct phone to cloud support team (4 hour to response)
-	- Enterprise On-Ramp support:
-		- 30 minutes response for critical workload
-		- access to a pool of Technical Account Managers (TAMs)
-	- Enterprise support:
-		- 15 minutes response
-		- Designated Technical Account Manager (TAM)
+
+- Basic support:
+	- 24/7 customer service
+	- documentation
+	- whitepapers
+	- aws trusted advisor
+	- aws personal health dashboard
+- Developer support:
+	- Email support 24 hours to response
+- Business support:
+	- aws trusted advisor full power
+	- direct phone to cloud support team (4 hour to response)
+- Enterprise On-Ramp support:
+	- 30 minutes response for critical workload
+	- access to a pool of Technical Account Managers (TAMs)
+- Enterprise support:
+	- 15 minutes response
+	- Designated Technical Account Manager (TAM)
 
 Technical Account Manager (TAM) -> A consigliere to keep the aws account running in conformity of the 6 pillars of well-architectured framework (more in module 10):
-	- Operational Excellence
-	- Security
-	- Reliability
-	- Performance Efficiency
-	- Cost Optimization
-	- Sustainability
+
+- Operational Excellence
+- Security
+- Reliability
+- Performance Efficiency
+- Cost Optimization
+- Sustainability
 
 AWS Marketplace -> A market for enterprise services of third parties in a bunch of categories like devops, infra, Iot, machine learning and more
 
@@ -240,17 +248,19 @@ AWS Adoption Framework (CAF) -> Advice to make a smooth change for cloud in 6 pe
 AWS CAF Action Plan -> Guide to make a migration
 
 Migration Strategies (6 R's) ->
-	- Re-hosting (lift and shift)
-	- Re-platforming (lift, tinker and shift)
-	- Retire (die apps not needed anymore)
-	- Retain (make app life only for a short period of time on premisses until then die)
-	- Repurchasing (buy new software inted of use the old ones)
-	- Refactoring (re-code part of your software)
+
+- Re-hosting (lift and shift)
+- Re-platforming (lift, tinker and shift)
+- Retire (die apps not needed anymore)
+- Retain (make app life only for a short period of time on premisses until then die)
+- Repurchasing (buy new software inted of use the old ones)
+- Refactoring (re-code part of your software)
 
 AWS Snow Family ->
-	- AWS Snowcone - A hardware that you receive from amazon, plug in your data center, copy the data and send back to amazon to send this to the cloud. Store up to 14TB
-	- AWS Snowball Edge - A device suited for large-scale data migrations. Can be Storage focused or Compute focused. 80TB
-	- AWS Snowmobile - 100PB. Like a container to plug in your on-premises data center
+
+- AWS Snowcone - A hardware that you receive from amazon, plug in your data center, copy the data and send back to amazon to send this to the cloud. Store up to 14TB
+- AWS Snowball Edge - A device suited for large-scale data migrations. Can be Storage focused or Compute focused. 80TB
+- AWS Snowmobile - 100PB. Like a container to plug in your on-premises data center
 
 Innovation in AWS -> VMWare Cloud AWS, Amazon SageMakes (machine learning pre-trained models), Amazon Augmented AI (2AI), Amazon Lex (the heart of Alexa), Amazon Textract (extract text), AWS DeepRacer, Iot, AWS Groud Station (for satelities)
 
@@ -259,38 +269,43 @@ AWS Q Developer -> Like a copilot without store or be used
 ## Module 10 - The Cloud Journey
 
 6 pillars of Well-Architectured framework ->
-	- Operational Excellence (running and monitoring systems)
-	- Security (integrity of data and users)
-	- Reliability (recovery plannings and handle changes)
-	- Performance Efficiency (compute resources used in the best way)
-	- Cost Optimization (optimize full cost)
-	- Sustainability (minimize the environmental impact)
+
+- Operational Excellence (running and monitoring systems)
+- Security (integrity of data and users)
+- Reliability (recovery plannings and handle changes)
+- Performance Efficiency (compute resources used in the best way)
+- Cost Optimization (optimize full cost)
+- Sustainability (minimize the environmental impact)
 
 Well-Architectured tool -> A service that evaluate your aws account by the 6 pillars above by a form of questions
 
 6 main benefits to use cloud ->
-	- pay as you use (not upfront cost) and the cost is not fixed 
-	- benefit from massive scale
-	- stop guessing capacity and scale fast when needed
-	- increase speed and agility by trying and failing fast and cheap
-	- stop wasting money hosting data centers and focus on the business
-	- go global in minutes
+
+- pay as you use (not upfront cost) and the cost is not fixed 
+- benefit from massive scale
+- stop guessing capacity and scale fast when needed
+- increase speed and agility by trying and failing fast and cheap
+- stop wasting money hosting data centers and focus on the business
+- go global in minutes
 
 ## Module 11 - AWS Certified Cloud Practitioner Basics
 
 4 Domains ->
-	- Cloud Concepts (24%)
-	- Security and Compliance (30%)
-	- Technology (34%)
-	- Billing and Pricing (12%)
+
+- Cloud Concepts (24%)
+- Security and Compliance (30%)
+- Technology (34%)
+- Billing and Pricing (12%)
 
 Exam Details ->
-	- 65 questions
-	- 90 minutes
-	- Minimum score is 700
-	- Two types of questions (multiple-choice and multiple-response)
+
+- 65 questions
+- 90 minutes
+- Minimum score is 700
+- Two types of questions (multiple-choice and multiple-response)
 
 Exam Strategies ->
-	- Read the full question
-	- Predict the answers before reading the options
-	- Eliminate the wrong options
+
+- Read the full question
+- Predict the answers before reading the options
+- Eliminate the wrong options
