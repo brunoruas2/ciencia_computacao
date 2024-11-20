@@ -69,7 +69,6 @@ Já vimos que o URI abarca dos conceitos de URL e URN. Agora vamos aprender um p
 #### URL
 O padrão URL serve para identificar o recurso pela sua localização e é composto da seguinte maneira:
 
-
 	ftp://example.com:8080/pasta/arquivo?name=book#nose
 
 Cujas partes são
@@ -199,7 +198,6 @@ A lista de provedores também é extensa  e possuem diferentes capacidades disti
 Quando você acessa um site, o arquivo que coordena o modo de exposição da informação e os conteúdos da mesma é um arquivo `.html`. Observe o exemplo abaixo de uma página simples.
 
 ``` html
-<!-- Html -->
 <!DOCTYPE html>
 	<html lang="en">
 	<head>
@@ -280,7 +278,6 @@ Dentro de alguns elementos podem ser inseridas informações e configurações p
 
 Agora que sabemos o que são elementos e como eles são construídos, podemos seguir para a 	**organização de um documento HTML**. Existe um padrão em todo arquivo HTML onde existem alguns elementos obrigatórios para o processamento da página pelo browser do client.
 ``` html
-<!-- html -->
 <!DOCTYPE html> -------------------------------> Elemento da versão do HTML
 <html lang="en"> ------------------------------> Abertura do documento HTML
 	<head> ------------------------------------> Abertura do cabeçalho
@@ -352,53 +349,43 @@ Existem 3 tipos de listas em HTML.
 
 Listas ordenadas:
 ``` html
-<!-- html -->
 <ol>
 	<li> Primeiro item </li> --------> 1. Primeiro item
 	<li> Segundo item </li> ---------> 2. Segundo item
 	<li> Terceiro item </li> --------> 3. Terceiro item
 </ol>
-
 ```
 Lista não ordenada:
 ``` html
-<!-- html -->
 <ul>
 	<li> Primeiro item </li> --------> o Primeiro item
 	<li> Segundo item </li> ---------> o Segundo item
 	<li> Terceiro item </li> --------> o Terceiro item
 </ul>
-
 ```
 Lista de definições:
 ``` html
-<!-- html -->
 <dl>
 	<dt> Termo 01 </li> -------------> Termo 01
 		<dd> Definição 01 </li> ---------> 		Definição 01
 	<dt> Termo 02 </li> -------------> Termo 02
 		<dd> Definição 02 </li> ---------> 		Definição 02
 </dl>
-
 ```
 
 ##### Imagens
 
 ``` html
-<!-- html -->
 <img width="200" height="180" src="img.png" alt="Peixe">
-
 ```
 ##### Links
 
 ``` html
-<!-- html -->
 <a href="link.com" target="_blank"> Texto </a> ------> Nova tab
 <a href="link.com" target="_self"> Texto </a> -------> Mesma tab
 <a href="link.com" target="_parent"> Texto </a> -----> Frame pai
 <a href="link.com" target="_top"> Texto </a> --------> Janela atual
 <a href="link.com" target="nome_frame"> Texto </a> --> Frame nominado
-
 ```
 
 #### Elementos Estruturais
@@ -406,7 +393,6 @@ Lista de definições:
 A partir da versão 4.0 o principal elemento usado para segmentar as partes de uma página html passou a ser o `<div>` que é um um elemento de divisão genérico para agrupar qualquer conjunto de elementos necessários. Por exemplo:
 
 ``` html
-<!-- html -->
 <div>
 	<h1> Titulo </h1>
 	<p> Parágrafo pequeno </p>
@@ -448,7 +434,6 @@ Não é difícil perceber que o uso de elementos semânticos é fortemente indic
 
 Não é nada incomum ter que demonstrar dados usando uma tabela. Pensando nisso, a linguagem HTML também possui um elemento especificamente criado para criação de tabelas. Uma tabela pode ser criada com o uso das seguintes tags:
 ``` html
-<!-- html -->
 <table border="1"> --------------> Cria a Tabela
 	<caption> Título </caption> -> Coloca um Título
 	<tr> ------------------------> Table Row (tr)
@@ -484,7 +469,6 @@ Uma das interações mais básicas que precisamos de um usuário é a inserção
 O HTML fornece vários atributos dentro do elemento `<form></form>` que nos permite a criar campos de texto, botões clicáveis, campos de senha e etc. A sintaxe mais básica de um formulário é dada por:
 
 ``` html
-<!-- html -->
 <form name="form_name" action="login.html" method="POST">
 	Usuário: <br>
 	<input type="text" name="user" value=""> <br>
@@ -535,7 +519,6 @@ Esse é tranquilo de entender. Sempre que precisarmos de um input de texto maior
 Podemos permitir que o usuário selecione uma lista pré-selecionada de opções através de uma 	**lista em caixa** (também chamada de 	**dropdown menu**). Um exemplo de código contendo esse elemento por ser visto abaixo.
 
 ``` html
-<!-- html -->
 <label for="lista"> Dropdown Menu </label>
 <select name="lista">
 	<option value="">Selecione uma opção</option>
@@ -568,7 +551,6 @@ Contudo, na realidade, existem outras formas de trabalhar o visual da aplicaçã
 Aqui podemos ver um exemplo de cada aplicação do estilo visual que elencamos acima:
 
 ``` html
-<!-- html -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -608,7 +590,6 @@ A leitura de um arquivo CSS é bem simples. A primeira coisa que precisamos sabe
 Por exemplo, se tivermos no nosso html dois elementos `<p>`, só que um deles possui o atributo id `<p id="teste">`. Para criarmos uma regra de estilo no nosso CSS basta escrevermos a tag do elemento (sem os símbolos `<>`) do seguinte modo.
 
 ``` css
-/* css */
 p {
 	color: red;
 }
@@ -618,7 +599,6 @@ p {
 Essa regra diz que todos os textos contidos nos elementos `<p>` terão a cor vermelha. Contudo, se quisermos adotar uma regra específica para apenas um elemento em questão, podemos definir a regra no css diretamente para o elemento com o seu id.
 
 ``` css
-/* css */
 #teste {
 	color: black;
 }
@@ -629,7 +609,6 @@ Isso nos dará uma página onde todos os textos dos parágrafos serão vermelhos
 Podemos resumir a sintaxe do CSS como sendo:
 
 ``` css
-/* css */
 seletor {
 	propriedade_1 : valor_da_propriedade_1;
 	propriedade_2 : valor_da_propriedade_2;
@@ -729,7 +708,6 @@ Mais ou menos como nessa imagem abaixo
 Podemos modificar o comportamento padrão de um elemento através do parâmetro `display:` no CSS. Por exemplo, para transformar os `<input>` em um elemento sozinho na página, podemos colocar no CSS a seguinte linha
 
 ``` css
-/* css */
 input {
 	display: block;
 	margin: 0 auto;
@@ -791,7 +769,6 @@ Aqui tem um material bem completo fornecido pelo [Mozilla](https://developer.moz
 O CSS nos dá as seguintes opções de letras: serif, sans-serif,monospace, cursive e fantasy. Contudo, nós nunca teremos certeza se o navegados do user terá a capacidade de carregar a fonte que desejamos. Para evitar esse problema, podemos definir opções de fontes do seguinte modo:
 
 ``` css
-/* css */
 p {
 	font-family: "Trebuchet MS", Verdana, sans-serif;
 }
@@ -802,7 +779,6 @@ O navegador do user vai tenter renderizar a página usando a primeira opção, c
 Além das opções padrão CSS, podemos usar fontes proprietárias de outras fontes (Google Fonts, DaFont, Adobe e etc). A maneira de fazer isso é definir uma propriedade de importação como no exemplo abaixo
 
 ``` css
-/* css */
 @import url('https://fonts.googleapis.com/css?family=Baloo');
 div {
 	font-family: 'Baloo', cursive;
@@ -830,7 +806,6 @@ Os principais padrões de layout responsivos são. Por enquanto eu vou deixar es
 As media queries são os parâmetros usados na aplicação que usam alguma característica do dispositivo onde a página está sendo exibida. Abaixo nós podemos ver um exemplo de elemento HTML com media query.
 
 ``` html
-<!-- html -->
 <head>
 	<link rel="stylesheet" media='screen and (min-width: 900px)' href="tela_g.css">
 	<link rel="stylesheet" media='screen and (max-width: 600px)' href="tela_p.css">
@@ -843,7 +818,6 @@ Nesse exemplo HTML, podemos ver como, de acordo com o tamanho da tela, o arquivo
 Do lado do CSS, a sintaxe das media queries são usadas da seguinte maneira:
 
 ``` css
-/* css */
 body { background-color: red; }
 @media screen and (min-width: 600px) {
 	body {background-color: orange;}
@@ -883,7 +857,6 @@ $$ Viewport = \dfrac{	\textrm{Resolução}}{	\textrm{Pixel-Ratio}} = \dfrac{1920
 Para habilitar esse método de ajuste, o HTML precisa ter a seguinte linha no `head`:
 
 ``` html
-<!-- html -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 ```
@@ -902,7 +875,6 @@ Para usar esse recurso, usaremos no elemento pai[^6] o parâmetro `display:` `fl
 
 
 ``` html
-<!-- html -->
 <!DOCTYPE html>
 	<body>
 		<main class='container'>
@@ -915,7 +887,6 @@ Para usar esse recurso, usaremos no elemento pai[^6] o parâmetro `display:` `fl
 ```
 
 ``` css
-/* css */
 .container {
 	display: flex;
 	flex-wrap: wrap;
@@ -976,7 +947,6 @@ O sistema Grid possui alguns conceitos que nos ajudam a criar e manter a interfa
 Abaixo temos o código de uma aplicação simples usando esse sistema de construção de front end:
 
 ``` html
-<!-- html -->
 <body>
 	<div class="container">
 		<header>Header </header>
@@ -988,7 +958,6 @@ Abaixo temos o código de uma aplicação simples usando esse sistema de constru
 ```
 
 ``` css
-/* css */
 body {
 	background-color: rgb(255, 255, 255);
 }
@@ -1040,7 +1009,6 @@ Ao invés de definir a separação da tela como parâmetro da classe container n
 
 
 ``` html
-<!-- html -->
 <body>
 	<div class="container">
 		<div class="item-a">Header</div>
@@ -1052,7 +1020,6 @@ Ao invés de definir a separação da tela como parâmetro da classe container n
 ```
 
 ``` css
-/* css */
 body {
 	background-color: rgb(255, 255, 255);
 }
@@ -1176,7 +1143,6 @@ O código HTML usando o Bootstrap é fortemente baseado em `<div>`. A novidade e
 A hierarquia é similar ao grid system porque a aplicação existira dentro de um container. O Container terá pelo menos uma linha (row). Cada linha terá pelo menos uma coluna. Internalize essa hierarquia de Container, Linhas e Colunas.
 
 ``` html
-<!-- html -->
 <div class="row">
 	<div class="col-md-6" id="cel1">.col-md-6</div>
 	<div class="col-md-6" id="cel2">.col-md-6</div>
@@ -1191,7 +1157,6 @@ A hierarquia é similar ao grid system porque a aplicação existira dentro de u
 </div>
 ```
 ``` css
-/* css */
 #cel1 {
 	color: white;
 	background-color: red;
@@ -1244,13 +1209,11 @@ Da mesma maneira que vimos com o CSS, podemos trazer o JS para nossa aplicação
 
 Por arquivo externo - Código é mantido em um arquivo separado
 ``` js
-// js
 <script type="text/javascript" src="script.js"></script>
 
 ```
 Em Bloco interno - Código fica em um bloco dentro do HTML
 ``` js
-// js
 <script type="text/javascript">
 	/* Código JS */
 	alert("Olá mundo!");
@@ -1259,7 +1222,6 @@ Em Bloco interno - Código fica em um bloco dentro do HTML
 ```
 Inline - Código fica dentro de um atributo do elemento HTML
 ``` js
-// js
 <p onClick="alert('Click feito!');"></p>
 
 ```
@@ -1284,7 +1246,6 @@ Esse aqui é apenas o começo da nossa caminhada!
 A linguagem JS é de tipagem dinâmica. Então o tipo de variável é definido pela própria linguagem na hora da atribuição do valor. Temos dois tokens de atribuição em JS 	**var** ou 	**let**.
 
 ``` js
-// js
 var variavel01;     // Aqui eu declarei sem atribuir nada
 var x = 10;         // x agora é um numérico de valor 10
 let y = "Olá mundo" // y é uma string
@@ -1301,7 +1262,6 @@ As variáveis declaradas com `var` são de 	**escopo global** se forem declarada
 Abaixo temos um exemplo bem bacana mostrando essas diferenças.
 
 ``` js
-// js
 var a = 5;
 var b = 10;
 if (a === 5) {
@@ -1362,7 +1322,6 @@ Qualquer aplicação precisa ser capaz de lidar com textos. Uma string é exatam
 
 Também é comum precisarmos juntar diferentes strings. No javascript, podemos fazer isso simplesmente usando o operador de soma:
 ``` js
-// js
 str = 'abc' + 'def'
 console.log(str)
 
@@ -1391,7 +1350,6 @@ A partir do ECMAScript6 existe outra maneira de compor strings: por meio do uso 
 
 
 ``` js
-// js
 nome = "bruno"
 console.log(nome)
 
@@ -1410,7 +1368,6 @@ Podemos ver que na última linha o resultado faz uso do valor da variável `nome
 Objetos são uma boa parte do que faz o JS ser tão poderoso. Cada objeto é simplesmente uma coleção de pares nome-valor. Os nomes são as 	**propriedades** do objeto e os valores podem ser qualquer tipo de variável que vimos logo antes (incluindo outros objetos e funções). Quando a propriedade for uma função, dizemos que essa função é um 	**método** do objeto.
 
 ``` js
-// js
 var objeto1 = new Object(); // Criando o objeto "objeto1"
 objeto1.name = "bruno"; // modo 1 de criar uma propriedade
 objeto1["age"] = 28;    // modo 2 de criar uma propriedade
@@ -1435,7 +1392,6 @@ Para acessar o valor de uma propriedade em um objeto basta escrever algo como: `
 Na elaboração de uma aplicação é comum ter que lidar com varáveis do relacionadas ao tempo. Para isso o JS possui um tipo de objeto especialmente projetado para facilitar essa tratativa. O objeto `Date()`. Podemos usa-lo como:
 
 ``` js
-// js
 var a = new Date() // Atribui a data atual ao objeto
 var c = new Date(string) // Atribui a data por uma string
 var d = new Date(Ano,Mes,Dia,Hora,Segundo,Milisegundos)
@@ -1449,7 +1405,6 @@ Como todo objeto, a variável criada com o Date() possui várias propriedades e 
 
 
 ``` js
-// js
 var z = new Date()
 
 z.getFullYear()
@@ -1471,7 +1426,6 @@ Acho que não é necessário explicar cada método desse porque o nome é bem al
 Um array é uma estrutura de dados semelhante a uma lista. Em JS temos algumas maneiras de criar arrays:
 
 ``` js
-// js
 /* Modo 01 */
 var a = new Array()
 a[0] = 'valor01'
@@ -1490,7 +1444,6 @@ Todos os 3 modos produzem o mesmo resultado e podem ser usados alternadamente.
 Como qualquer objeto, existem vários métodos muito úteis dentro de um Array().
 
 ``` js
-// js
 concat() // Junta dois ou mais vetores
 fill() // Preencher os elementos em um vetor com um valor estático
 find() // Retorna o valor do primeiro elemento em um vetor que atender ao filtro
@@ -1524,7 +1477,6 @@ Em qualquer linguagem de programação[^7] existem maneiras de organizar blocos 
 Quando estamos fazendo um script de código, é muito comum termos que nos adaptar as situações onde determinados eventos podem ou não acontecer. Para isso, usamos algumas estruturas lógicas que permitem o processamento de blocos de texto apenas se alguma condição predeterminada seja satisfeita. Ou seja, usamos um condicionante do tipo "Se-Então".
 
 ``` js
-// js
 if (expressao) {
 	bloco de codigo caso true
 }
@@ -1559,7 +1511,6 @@ Veja que usamos o token `break` para indicar que vamos para outra condicional. N
 Abaixo temos um exemplo de uma aplicação simples usando esse método de gestão de fluxo. Não se preocupe em entender o código inteiro, foque apenas no que estamos estudando.
 
 ``` js
-// js
 // Função que recebe um input no terminal
 const readLine = require('readline').createInterface({
 	input: process.stdin,
@@ -1598,7 +1549,6 @@ A primeira maneira de criarmos um laço de repetição em JS é por meio do toke
 
 
 ``` js
-// js
 // Exemplo de loop com while
 var i = 0
 while (i <= 5) {
@@ -1620,7 +1570,6 @@ Primeiro criamos a variável `i` e usamos a estrutura de loop `while` para a seg
 O operador que aprendemos anteriormente faz um loop enquanto a condição expressa entre os parênteses não for false. Mas existem situações onde queremos executar o bloco de código um número definido de vezes. Para isso o JS possui o token `for`.
 
 ``` js
-// js
 // Exemplo de loop com for
 let frutas = ['pera','uva','maca','banana']
 for (let index = 0; index < frutas.length; index++) {
@@ -1645,7 +1594,6 @@ Mesmo sendo um objeto, o JS possui um token específico para a criação de fun�
 
 
 ``` js
-// js
 // Criacao de uma funcao de soma
 function soma(x,y) {
 	var total = x + y
@@ -1660,7 +1608,6 @@ soma(2,3)
 Para o segundo exemplo, nós queremos construir uma função que retorna a média dos valores apresentados entre os parênteses. Para isso, precisaremos de um dos tokens que vimos na seção passada. Sabemos muito bem que a média é calculada pela soma dos $n$ valores dividida pela quantidade $n$. Para isso, teremos que usar o token de laço de repetição.
 
 ``` js
-// js
 function media() {
 	var soma = 0
 	n = arguments.length
@@ -1678,7 +1625,6 @@ Calma, eu sei que em uma primeira vista é estranho esse objeto `arguments` ter 
 Também podemos usar as funções para criação de 	**estruturas padronizadas de objetos** que são conhecidas como 	**classes**. Abaixo vamos criar uma estrutura para objetos do tipo `Pessoa`.
 
 ``` js
-// js
 function Pessoa (primeiro,ultimo) {
 	this.primeiro = primeiro
 	this.ultimo = ultimo
@@ -1709,7 +1655,6 @@ Outra novidade é que criamos uma ``cópia'' do objeto `Pessoa` só que com um o
 Agora vamos entrar num ponto que, para mim, foi bem difícil de entender no começo. O JS permite que a construção de 	**funções anônimas**, ou seja, funções que não precisam de nomes definidos. Mas antes de aprendermos mais sobre isso, precisamos saber que existem diferentes modos de se criar uma função em JS. Abaixo temos 3 maneiras de se criar a função `soma`.
 
 ``` js
-// js
 // forma tradicional
 soma = function(a,b) { return a + b }
 //forma com arrow function
@@ -1724,7 +1669,6 @@ Agora que entendemos um pouco melhor a construção de funções em JS, podemos 
 Assim como os outros objetos, existem propriedades e métodos das arrow functions que podemos usar. Um exemplo disso é o operador `this` que faz referência ao bloco em que nossa arrow functions está contida. Em uma função normal, nós aprendemos que esse operador faz referência à própria função. Abaixo temos um exemplo adaptado do material.
 
 ``` js
-// js
 // usando 'this' em uma arrow function
 var Pessoa2 = {
 	nome:'Bruno',
@@ -1785,7 +1729,6 @@ O objeto window é o representante da da janela do browser. Ele contém toda a h
 Na parte de 	**armazenamento de dados** o window nos dá duas maneiras: 	**localStorage** e 	**sessionStorage**. No primeiro os dados são mantidos mesmo se o navegador seja fechado. Já o sessionStorage mantém os arquivos apenas enquanto o navegador é mantido aberto. Abaixo temos um exemplo de como usar esses repositórios.
 
 ``` js
-// js
 // guardando dados no repositório de sessão
 sessionStorage.setItem('login','Bruno Ruas')
 alert('O usuário logado é: ' + sessionStorage.getItem('login'))
@@ -1836,7 +1779,6 @@ Não tem muito pra onde correr. Só vamos aprender bem usando, mas por agora, ba
 Abaixo tempos um exemplo usando uma função JS para alterar um elemento do body através do DOM.
 
 ``` js
-// js
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -1884,7 +1826,6 @@ Como o próprio deixa claro, o objeto navigator representa o software do navegad
 Abaixo temos um exemplo de página web adaptado do material do curso que faz uso o objeto navegador e retorna a geolocalização do navegador.
 
 ``` js
-// js
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -1929,7 +1870,6 @@ Outra funcionalidade interessante do DOM é a capacidade de usarmos não apenas 
 No exemplo abaixo,  temos o uso de dois contextos do mouse sobre um elemento de texto. Quando o mouse está sobre o elemento, nós mudamos a cor dele para vermelho. Quando o mouse não está sobre o elemento, a cor dele se torna preto.
 
 ``` js
-// js
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -1950,7 +1890,6 @@ Podemos ver mais um exemplo do uso do token `this` mas dessa vez fora de um bloc
 Mesmo sendo possível fazer uso do atributo de evento direto no HTML, como fizemos no exemplo anterior, a boa prática é manter essas features em um arquivo JS à parte (igual nós fizemos com o CSS) pois isso torna o arquivo de estrutura mais fácil de ler. Abaixo temos exatamente a mesma funcionalidade mas usando o campo de script do meta mas que poderia ser hospedado em um arquivo .js em separado.
 
 ``` js
-// js
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -2018,8 +1957,7 @@ Como dito anteriormente, o JSON não é o único formato existente no mercado. P
 
 Um arquivo JSON é muito parecido com um bloco de código JS. Começa e termina com chaves `{}` e cada elemento é formado por um par de nome-valor e são separados por vírgula. O JSON permite diferentes tipos de valores que podem ser dos mesmo tipos de dados que estudamos anteriormente para o JS. Abaixo temos um exemplo de um arquivo JS.
 
-``` json
-// json
+``` jsonon
 {
 	"idade": 28,
 	"nome": "Bruno Ruas",
@@ -2048,8 +1986,7 @@ Os outros tipos de dados como datas, geolocalização e outros, são passados em
 
 Agora que sabemos um pouco sobre esse tipo de estrutura de dados, vamos aprender como manipular esse objeto dentro de um script JS. A maneira que o JS tem que trabalhar com JSON é por meio de um objeto nativo da linguagem chamado, nem um pouco sem querer, de JSON. Esse objeto possui dois métodos úteis: Um `parse()` que recebe uma string e retorna um objeto na notação JSON e um `stringfy()` que pega um objeto análogo JSON e transforma em string.
 
-``` json
-// JSON para string
+``` jsonON para string
 var TextoJSON = '{
 	"Revistas": [
 		{
@@ -2095,7 +2032,6 @@ Primeiro nós criamos uma string no formato de um JSON. Depois passamos essa str
 Para converter nosso objeto novamente para string basta usarmos o seguinte comando:
 
 ``` js
-// js
 JSON.stringify(banca,null,2)
 ```
 
@@ -2152,7 +2088,6 @@ O objeto XMLHTTPRequest é a base do AJAX. Mas cuidado. Apesar do nome, ele acei
 Para aprender como usar essa ferramenta, vamos por partes. Podemos começar o nosso script com a criação de um objeto que será do tipo XMLHTTPRequest.
 
 ``` js
-// js
 // função caso a conexão funcione
 function success() {
 	window.document.getElementById('texto').innerHTML = this.responseText
@@ -2204,7 +2139,6 @@ Os estágios de uma requisição são:
 Abaixo temos um exemplo de uso do `readyState` para verificação do status da chamada.
 
 ``` js
-// js
 function requisicaoAJAX() {
 	var xmlhttp = new HMLHttpResquest()
 }
@@ -2227,7 +2161,6 @@ Podemos ver que nós criamos uma função disparada apenas quando o status muda 
 Os navegadores atuais nos permitem uma alternativa ao XMLHttpRequest chamada API Fetch. A vantagem é que essa nova tecnologia nos permite fazer uso das *promises* que simplifica a escrita da programação assíncrona. Podemos ver um exemplo abaixo.
 
 ``` js
-// js
 <script>
 fetch('https:api.github.com/users/brunoruas2')
 .then(res => res.json())

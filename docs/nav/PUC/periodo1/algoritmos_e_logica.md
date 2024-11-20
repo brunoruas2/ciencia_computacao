@@ -70,7 +70,6 @@ Vamos aprender agora como declarar os 4 tipos mais simples de variáveis:
 **Comentário:** c\# é uma linguagem fortemente tipada, entretanto, existe um tipo de tipagem implícita que é muito usado na prática onde o próprio compilador "interpreta" o tipo de variável. Ao longo desse microfundamento nós vamos usar apenas os tokens de tipagem explícita. Mas vale muito a pena a leitura da documentação oficial nesse [link](https://learn.microsoft.com/pt-br/dotnet/csharp/language-reference/statements/declarations#implicitly-typed-local-variables).
 
 ``` c#
-// c#
 static void Main(string[] args) 
 {
 	int idade, numero;
@@ -98,7 +97,6 @@ Na etapa de processamento, podemos precisar de grande criatividade e esforço pa
 Uma vez que já sabemos como atribuir uma variável ao seu tipo, precisamos aprender a como atribuir um valor a essas variáveis. Em c\# a atribuição de valor é feita do seguinte modo:
 
 ``` c#
-// c#
 idade = 28;
 numero = 9992233;
 ```
@@ -106,7 +104,6 @@ numero = 9992233;
 É possível fazer 3 tipos de atribuição de valor para uma variável: Valor fixo; Conteúdo de outra variável e Expressão aritmética ou booliana. Abaixo temos 3 exemplo disso.
 
 ``` c#
-// c#
 idade = 28; // Valor fixo
 numero = idade; // Valor de outra variável
 idadeNum = idade + numero; // Valor por expressão
@@ -116,7 +113,6 @@ idadeEqNum = idade == numero; // Valor por expressão booliana
 Nesse ponto vale uma reflexão. Será que sempre precisamos separar as etapas de atribuição do tipo de dados e do valor? Ou podemos, no mesmo momento, definir o tipo de dados e o valor da variável? A resposta, para nossa sorte, é que é possível em c\# atribuição de tipo e valor ao mesmo tempo. A sintaxe fica desse modo:
 
 ``` c#
-// c#
 int idade = 28;
 int numero = idade;
 double = 2.3;
@@ -132,7 +128,6 @@ Agora que fizemos esse pequeno desvio no assunto, vamos retornar para as estrutu
 Em c\# temos duas maneiras de saída de dados:
 
 ``` c#
-// c#
 // Imprime a informação e cursor fica na mesma linha
 Console.Write('string');
 
@@ -143,7 +138,6 @@ Console.WriteLine('string ' + var1 + ' string');
 Nesses exemplos a gente pode perceber que podemos concatenar textos e variáveis textuais por meio do operador de soma. Além dessa forma, podemos fazer uso de PlaceHolders ou Interpolação de string como nos exemplos abaixo.
 
 ``` c#
-// c#
 string nome = "Bruno";
 
 // Concatenação
@@ -163,7 +157,6 @@ Os três exemplos geram o mesmo resultado mas são consideravelmente diferentes 
 Agora que sabemos como fazer nosso programa imprimir resultados, vamos aprender como inputar dados nele. Em c\# podemos inserir dados com o seguinte comando:
 
 ``` c#
-// c#
 variavel = Console.ReadLine();
 
 ```
@@ -172,7 +165,6 @@ O input captado por esse comando **sempre retorna uma string**. Mas as vezes pre
 
 
 ``` c#
-// c#
 // Valores Inteiros
 variavel = int.Parse(Console.ReaLine());
 variavel = Convert.ToInt32(Console.ReadLine());
@@ -233,7 +225,6 @@ Existem outras operações que estão contidas em um objeto nativo chamado `Math
 Agora podemos juntar tudo que vimos em um programa simples de cálculo da média de 5 valores. O código e o seu resultado podem ser vistos abaixo.
 
 ``` c#
-// c#
 // Declaração dos tipos das variáveis
 int n1, n2, n3, n4, n5, soma;
 float media;
@@ -270,7 +261,6 @@ Outro exemplo que podemos usar é o do cálculo das raízes de uma função de s
 
 
 ``` c#
-// c#
 // Programa para calcular o valor de x em uma equação de segundo grau
 
 // Declaração das variáveis
@@ -335,7 +325,6 @@ Tome cuidado com o operador de igualdade `==` e o de atribuição `=`, afinal, e
 Em c\# o comando usado para criar uma condição simples é o `if`. Se a condição que colocarmos atrelada ao comando `if` retornar um true, o bloco de código atribuído a ele será executar, caso contrário, o código do bloco será ignorado.
 
 ``` c#
-// c#
 // Parte condicional no calculo da equação de segundo grau
 
 delta = (Math.Pow(b, 2) - 4 * a * c);
@@ -364,7 +353,6 @@ Esses são os casos onde, se o teste lógico retorna true, executamos um bloco, 
 
 
 ``` c#
-// c#
 // Parte condicional no calculo da equação de segundo grau
 
 delta = (Math.Pow(b, 2) - 4 * a * c);
@@ -402,7 +390,6 @@ Existem problemas que requerem mais de dois resultados no output. Nesse caso, n�
 Para resolver esse problema temos a técnica de `IF` aninhados (nested) e a de `IF` escada (ladder). As duas formas produzem o mesmo resultado mas mudam significativamente legibilidade do nosso código. Abaixo temos um exemplo de cada.
 
 ``` c#
-// c#
 // Leadder IF
 if (condicao1)
 	comando1;
@@ -419,7 +406,6 @@ else
 
 
 ``` c#
-// c#
 // Nested IF
 if (condicao1)
 	comando1;
@@ -449,7 +435,6 @@ Pensando nessa necessidade, os criadores do c\# criaram um operador que simplifi
 O operador que é mais indicado para lidar com várias situações de saída é o `switch-case`. Cuja construção é bem mais legível que os IFs anteriores. Abaixo temos um exemplo.
 
 ``` c#
-// c#
 // Lidando com varias condições com switch/case
 switch(opcao)
 {
@@ -478,7 +463,6 @@ Para finalizar o nosso estudo das estruturas condicionais, vamos aprender como t
 
 
 ``` c#
-// c#
 condicao ? expressao_true : expressao_false
 ```
 
@@ -488,7 +472,6 @@ Sim, é exatamente um caso de `if-else` só que em apenas uma linha. Como as sol
 
 
 ``` c#
-// c#
 // Comparação entre if-else e operador ternário
 bool passou;
 double nota;
@@ -513,7 +496,6 @@ Como sabemos, ainda temos mais um tipo de estrutura para estudarmos. Até agora,
 O c\# possui 3 operadores de repetição:
 
 ``` c#
-// c#
 // tipo 01
 while (condicao)
 	comando;
@@ -531,7 +513,6 @@ for (inicial; expressao logica; atualizacao)
 Vamos ver um exemplo de como nosso código pode ser reduzir com o uso da estrutura de repetição. Primeiro, vamos ver um exemplo onde o programa recebe uma lista de 3 palavras (nome, nome do meio e sobrenome) e depois faz o print.
 
 ``` c#
-// c#
 // Programa que recebe nome completo e
 // depois devolve uma mensagem de boas vindas
 
@@ -573,7 +554,6 @@ A repetição usando o token `while` é condicionada ao resultado de uma express
 
 
 ``` c#
-// c#
 // Programa de nomes refatorado com while
 string nome, mid, last;
 int contador;
@@ -616,7 +596,6 @@ Agora nós temos um loop usando a expressão "a variável contador é menor igua
 Para a nossa sorte, o operador DO WHILE é muito similar ao WHILE. A única diferença é que primeiro declaramos o bloco de código e, no final, colocamos a condição para sua execução. No exemplo abaixo temos o mesmo resultado que o de cima mas usando essa outra estrutura de operador.
 
 ``` c#
-// c#
 // Programa de nomes refatorado com do-while
 string nome, mid, last;
 int contador;
@@ -659,7 +638,6 @@ Quando usamos nosso operador while, foi criada uma variável `contador` que era 
 O operador de loop `for` recebe 3 parâmetros, na ordem: condição inicial da variável de controle; expressão lógica (que retorna true ou false) e, por fim, um incremento ou decremento.
 
 ``` c#
-// c#
 // Programa de nomes refatorado com for
 string nome, mid, last;
 int contador;
@@ -706,7 +684,6 @@ Podemos usar o operador de incremento tanto no bloco de código de um loop quant
 Um **acumulador** é muito parecido com um contador, a diferença é que a cada iteração nós podemos adicionar qualquer valor ao acumulador. Por exemplo, se queremos calcular a média de uma turma, teremos que somar todas as notas e dividir pelo quantitativo dos alunos da turma. Para isso, podemos criar um acumulador chamado `soma_notas` que recebe, para cada aluno, a nota através de um comando parecido com o exemplo a baixo.
 
 ``` c#
-// c#
 double soma_notas = 0;
 
 for (n_aluno=0; n_alunos <= qtd; n_aluno++)
@@ -736,7 +713,6 @@ A ideia é simples: menos linhas, mais fácil será a manutenção. Esse é um v
 Existem dois tipos de métodos para modularização: **funções**, que sempre retornam algum valor, e **procedimentos** que não retornam nenhum valor. Abaixo vemos como criar esses dois tipos.   
 
 ``` c#
-// c#
 // criando uma função que retorna um inteiro
 int nome_metodo(string par1, float par2,..., int parn)
 {
@@ -761,7 +737,6 @@ Podemos ver que um procedimento em c\# recebe esse token
 Para usarmos um parâmetro não precisamos fazer nenhuma atribuição, basta chamar-lo com os seus parâmetros preenchidos e atribuídos ao tipo de variável correto. No caso de uma função, como ela retorna um resultado, precisamos atribuir o resultado a alguma variável. Abaixo temos um exemplo de como usar cada um desses métodos.
 
 ``` c#
-// c#
 // chamando um procedimento
 nome_procedimento(par1,par2);
 // chamando um método
@@ -785,7 +760,6 @@ Quanto a passagem desses parâmetros, também temos duas nomenclaturas:   **Pass
 Quando usamos a passagem por valor, estamos usando os parâmetros do tipo formais. Quando usamos a passagem por referência estamos usando os parâmetros reais.
 
 ``` c#
-// c#
 int a = 5, b = 7;
 // exemplo de passagem por valor
 static void passagemValor(int x, int y)
@@ -824,7 +798,6 @@ Devemos evitar ter métodos com um número muito elevado de parâmetros. Cabe a 
 
 Agora que aprendemos mais sobre o métodos e boas práticas, podemos entender bem melhor a estrutura padrão de uma aplicação em c\#.
 ``` c#
-// c#
 using System;
 public class Program
 {
@@ -868,7 +841,6 @@ Agora o termo "fluxo" começa a ficar mais claro. Para um programa trabalhar um 
 Um arquivo não pode ser lido usando um instanciamento (que é a criação de uma variável do tipo de um objeto definido previamente) através do objeto `StreamReader`. Esse objeto é nativo e pode ser invocado sem precisar ser criado anteriormente. E, como todo objeto, possui métodos dentro dele (10 pra ser mais preciso) mas nós só vamos usar o mais básico.
 
 ``` c#
-// c#
 // abrindo um arquivo para a leitura
 StreamReader NOME = new StreamReader("path.txt");
 StreamReader NOME = new StreamReader("c:\temp\path.txt");
@@ -878,7 +850,6 @@ StreamReader NOME = new StreamReader(@"c:	emp\path.txt");
 Agora que temos nosso objeto criado, para lermos o conteúdo só precisamos usar um dos métodos contidos nesse objeto criado.
 
 ``` c#
-// c#
 // obtendo o texto
 string linha = NOME.ReadLine();
 // ler todas as linhas de um arquivo
@@ -893,7 +864,6 @@ while (linha != null)
 ##### Abrir um arquivo para escrita
 
 ``` c#
-// c#
 // criando o objeto de leitura em diferentes modos
 StreamWriter NOME = new StreamWriter("path.txt");
 StreamWriter NOME = new StreamWriter("c:\temp\path.txt");
@@ -902,7 +872,6 @@ StreamWriter NOME = new StreamWriter(@"c:	emp\path.txt");
 ```
 Qualquer arquivo que possa ser lida em um editor de texto (como o notepad) pode ser lida por esse método. Independente da extensão.
 ``` c#
-// c#
 // usando o parâmetro append (true ou false)
 // conteúdo existente sera apagado
 StreamWriter NOME = new StreamWriter("path.txt",false);
@@ -913,7 +882,6 @@ StreamWriter NOME = new StreamWriter("path.txt",true);
 Agora só precisamos saber como gravar os nossos dados no arquivo de texto. Isso é feito de maneira parecida com o comando que mostrava mensagens na tela do terminal de comando.
 
 ``` c#
-// c#
 // gravando uma string no arquivo texto aberto
 arquivo.Write(string);
 // ou
