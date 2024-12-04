@@ -29,7 +29,7 @@ There are some options of cloud compute, to list a fell:
 3. Batch Processing Compute Resources
 4. Serverless Compute
 
-Amazon Elastic Compute Cloud (EC2) -> The principal option of virtual machine in aws ecosystem.
+Amazon Elastic Compute Cloud (EC2) -> The principal option of **virtual machine** in aws ecosystem.
 
 ### EC2 types
 
@@ -56,11 +56,38 @@ Amazon Elastic Compute Cloud (EC2) -> The principal option of virtual machine in
 
 #### Amazon EC2 Auto Scaling
 
+The same content we learned before.
+
 ### Severless
+
+Building and running applications without managing servers at al!
+
+Keep in mind that **serverless doesn't run idle resources**, so you pay what you need.
 
 #### AWS Lambda
 
+Some benefits:
+
+1. Multiple languages
+2. Stateless code
+3. Code can run on schedule or by trigger
+4. Pricing by milisec of usage
+5. Event-driven architectures
+6. Totally scalable
+7. High availability
+
+Some exemples of usage:
+
+1. Web apps
+2. Backend
+3. Data processing
+4. Chatbots
+5. Alexa
+6. IT automation
+
 ### Containers
+
+Amazon Elastic Container Service (AWS ECS) and Amazon Elastic Kubernetes Service (AWS EKS) are **containger orchestration services**. 
 
 ## Storage
 
