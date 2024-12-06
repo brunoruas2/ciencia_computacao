@@ -6,7 +6,7 @@ copyright: Bruno de Melo Ruas
 
 nav:
   - Home: index.md
-  - PUC-MG:
+  - Tecnólogo:
       - Tecnólogo: nav\PUC\Sobre\puc.md
       - Período 1:
           - Algoritmo e Abstração: nav\PUC\periodo1\algoritmos_e_abstracao.md
@@ -45,6 +45,14 @@ nav:
           - Segurança Aplicada ao Desenvolvimento: nav\PUC\periodo5\seguranca.md
           - Compliance em TI: nav\PUC\periodo5\
           - Implantação de Solução de TI: nav\PUC\periodo5\
+  - Cursos:
+    - AWS:
+      - Getting Started: nav\Cursos\AwsSkillBuilder\cloudPractioner\Getting_Started.md
+      - Billing and Cost: nav\Cursos\AwsSkillBuilder\cloudPractioner\Billing_Cost.md
+      - Cloud Aquisition: nav\Cursos\AwsSkillBuilder\cloudPractioner\Cloud_Acquisition.md
+      - Cloud Practictioner: nav\Cursos\AwsSkillBuilder\cloudPractioner\Cloud_Pratictioner.md
+    - Desenvolvedor.io:
+      - OOP: nav\Cursos\Desenvolvedor.io\Arquitetura_Software\01-OOP.md
   - Sobre: nav/tech.md
 
 theme:
