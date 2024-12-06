@@ -2,9 +2,11 @@ Olá, seja muito bem-vindo(a)!
 
 Eu me chamo Bruno de Melo Ruas. 
 
-Sou formado em Análise e Desenvolvimento de Sistemas da Pontifícia Universidade Católica de Minas Gerais (PUC-MG). Economista pela Universidade do Estado do Amazonas (UEA). Especialista em Gestão Financeira pela Fundação Getúlio Vargas (FGV). 
+Sou formado em Análise e Desenvolvimento de Sistemas pela Pontifícia Universidade Católica de Minas Gerais (PUC-MG). Bacharel em Economia pela Universidade do Estado do Amazonas (UEA). Especialista em Gestão Financeira pela Fundação Getúlio Vargas (FGV). 
 
-Em julho de 2023 eu migrei a carreira de economista para desenvolvedor de software. Atualmente sou desenvolvedor backend na [GFT Technologies](https://www.gft.com/br/pt) onde estou alocado em um dos maiores bancos da América Latina. Esse material me serviu para chegar até aqui. Espero que também ajude você!
+Eu comecei a programar em meados de 2017. Na época aprendendo Econometria usando uma linguagem de programação chamada R. Ao longo do tempo, fui aprendendo novas técnicas como Robot Process Automation (RPA), Web Scraping e fui tomando cada vez mais gosto pela área de tecnologia. Em julho de 2023 eu migrei definitivamente a carreira de Economista para desenvolvedor de software. 
+
+Atualmente sou desenvolvedor com foco em Backend na [GFT Technologies](https://www.gft.com/br/pt) onde estou alocado em um dos maiores bancos da América Latina. Esse material me serviu para chegar até aqui. Espero que também ajude você!
 
 Minhas Redes:
 
@@ -16,9 +18,9 @@ Eu tenho um método de estudar: **produzindo material didático**. Ao longo dos 
 
 Mesmo gostando de escrever, eu percebi que todo programador maduro é capaz de ler diretamente da **documentação oficial** sempre que necessário. Por causa disso, em matérias mais práticas, vamos tocar um mini projeto ao invés de ficar apenas reescrevendo o que já existe na documentação.
 
-Esse site serve como meu repositório público dos conteúdos que venho estudando sobre Programação e Desenvolvimento de Software seguindo fontes como:
+Esse site serve como meu repositório público (um segundo cérebro) dos conteúdos que venho estudando sobre Programação e Desenvolvimento de Software seguindo fontes como:
 
- - Tecnólogo em Análise e Desenvolvimento de Sistemas pela **[PUC Minas Gerais](https://www.pucminas.br/PucVirtual/Graduacao/Paginas/Analise-e-Desenvolvimento-de-Sistemas-Tecnologo.aspx?moda=1&curso=492&local=7c032ce9-43f6-4571-b72e-674be76a5b62)** (Em andamento).
+ - Tecnólogo em Análise e Desenvolvimento de Sistemas pela **[PUC Minas Gerais](https://www.pucminas.br/PucVirtual/Graduacao/Paginas/Analise-e-Desenvolvimento-de-Sistemas-Tecnologo.aspx?moda=1&curso=492&local=7c032ce9-43f6-4571-b72e-674be76a5b62)**.
  - Bacharelado Aberto em Ciência da Computação pela **[Open Source Society University - OSSU](https://github.com/ossu/computer-science)**.
  - Cursos Livres como os do [**Balta.io**](https://balta.io/cursos) ou [**Curso.dev**](https://curso.dev/) e outros.
 

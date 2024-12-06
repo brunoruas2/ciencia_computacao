@@ -1,4 +1,3 @@
-
 # Overview 
 
 CLOUD = Programmable Resources + Dynamic Abilities + Pay as you go
