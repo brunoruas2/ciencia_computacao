@@ -1,6 +1,6 @@
 # Notas Rápidas de Estudo AWS
 
-## Module 1 - Intro and Module 2 - The Cloud
+## Module 1 - Intro + Module 2 - The Cloud
 
 Cloud computing -> pay as you go withou pay beforehand.
 
@@ -15,13 +15,13 @@ Load balance
 
 Lambda
 
-SNS
+SNS -> Topic post
 
-SQS
+SQS -> Message broker
 
-ECS -> eks da amazon.
+ECS -> EKS da amazon
 
-EKS -> orquestrador de containers docker.
+EKS -> orquestrador de containers docker
 
 AWS Fargate (serveless para containers)
 
@@ -47,11 +47,11 @@ AWS Elastic Beanstalk -> Ferramenta que faz deploy de app php, .net, java, pytho
 
 AWS Cloudformation -> Infra as code tool (yaml or json).
 
-Advice: run across 2 AZ in each region
+Advice: run at least across 2 AZ in each region.
 
 ## Module 4 - Networking
 
-AWS VPC -> Provison of isolated aws cloud separed by subnets that contains resources.
+AWS VPC -> Provision of isolated aws cloud separated by subnets that contains resources.
 
 Subnet -> A group of resources based on security or operacional needs. Can be public (through a internet gateway) or private (through a vpc).
 
@@ -79,26 +79,26 @@ Block Level Storage -> Place to store file in a way that can be updated block by
 
 EC2 Storage -> Instance Store Volumens that dies within the ec2 machine
 
-AWS Elastic Block Store (EBS) -> A persistent database to ec2 instances. Block storage that can be updated partially. Run in a AZ (not region)
+AWS Elastic Block Store (EBS) -> A way to save persistence data for ec2 instances. Block storage that can be updated partially. Run in a AZ (not region). Kind of SSD/HDD for EC2.
 
-Snapshots -> Incremental backupds for EBS
+Snapshots -> Incremental backups for EBS
 
-AWS Simple Store Service (S3) -> Store data as objects with versions in buckets (like a file equivalent). Can receave objects until 5TB!
+AWS Simple Store Service (S3) -> Store data as objects with versions in buckets (like a file equivalent). Can receive objects until 5TB!
 
-S3 Lifecycle Policies -> Rules that can move data for s3 tiers automaticly for better storage and cost
+S3 Lifecycle Policies -> Rules that can move data for s3 tiers automatically for better storage and cost
 
 S3 Classes aka Tiers ->
 
-- Standard (999999999% prob of aviability in a year)
+- Standard (99.9999999% prob of availability in a year)
 - Static Website Hosting
 - Standard-Infrequent Access Data aka Standard-IA (not so frequently until we need it, like a backup)
-- Glacier Flexible Retrieval (Retain data for audit or compliance in valts). Acept policies like Write one - read many (worm)
+- Glacier Flexible Retrieval (Retain data for audit or compliance in valts). Accept policies like Write one - read many (worm)
 
-AWS Elastic File System (EFS) -> Scales automatically. Run in a region. Can be access by on-premisses by AWS Direct Connect
+AWS Elastic File System (EFS) -> Is a serverless shared file system. Scales automatically. Run in a region. Can be access by premises by AWS Direct Connect.
 
-AWS Relational Database Service (RDS) -> Suport dbms with automated patching, backups, redundance, failover and disaster recovery
+AWS Relational Database Service (RDS) -> Support dbms with automated patching, backups, redundancy, fail over and disaster recovery
 
-lift-and-shift -> Migrate for an onpremisses dbms
+lift-and-shift -> Migrate from an on-premisses dbms
 
 AWS RDS database engines ->
 

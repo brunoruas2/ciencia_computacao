@@ -5,6 +5,7 @@ The cloud can be bought in different ways:
 1. Direct (AWS) aka you do the work to build
 2. Indirect (Cloud-managed service providers aka "CSP" or resellers) who do the work for you (for a price)
 
+
 Selling a single model -> the contract of a Cloud service is one-to-many so the buyer is responsible either building the services in cloud or find a AWS Partner Network (APN) to do the job
 
 procurement of cloud services x procurement of labor to use cloud services

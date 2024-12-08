@@ -52,7 +52,7 @@ nav:
       - Cloud Aquisition: nav\Cursos\AwsSkillBuilder\cloudPratictioner\Cloud_Acquisition.md
       - Cloud Practictioner: nav\Cursos\AwsSkillBuilder\cloudPratictioner\Cloud_Pratictioner.md
     - Desenvolvedor.io:
-      - OOP: nav\Cursos\Desenvolvedor.io\Arquitetura_Software\Aula01-OOP.md
+      - Orientação à Objetos: nav\Cursos\Desenvolvedor.io\Arquitetura_Software\Aula01-OOP.md
   - Sobre: nav/tech.md
 
 theme:

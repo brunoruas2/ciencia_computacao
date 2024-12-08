@@ -3,11 +3,13 @@
 CLOUD = Programmable Resources + Dynamic Abilities + Pay as you go
 
 Ways to interact with AWS:
+
 - AWS Management Console (site)
 - AWS Command Line Interface (AWS CLI)
 - AWS System Development Kits (AWS SDKs)
 
 AWS Core Areas
+
 - Compute
 - Storage
 - Databases
@@ -86,11 +88,124 @@ Some exemples of usage:
 
 ### Containers
 
-Amazon Elastic Container Service (AWS ECS) and Amazon Elastic Kubernetes Service (AWS EKS) are **containger orchestration services**. 
+There are 2 main types of **containger orchestration services** offer by AWS:
+- Amazon Elastic Container Service (AWS ECS)
+- Amazon Elastic Kubernetes Service (AWS EKS)
+
+Not much information was given in the material (need to deeper in the future).
 
 ## Storage
 
+### Amazon Simple Storage Service (AWS S3)
+
+We can aggregate the S3 benefits in two main categories:
+
+- **Durability** of 99.999999999 (this is the actual number, no joke)
+- **Support for event triggers** that be able to be used in event-driven applications with usage of lambda for example
+
+#### S3 classes
+
+[Link for official documentation](https://aws.amazon.com/pt/s3/storage-classes/)
+
+There are four classes that can be used to improve the benefits of S3 usage and maintain de cost at minimum possible.
+
+1. Standard: <br> Low latency and high throughput
+2. Intelligent-Tiering: <br> Tries to low the cost automatically moving the data to less-expensive s3 classes by volume of requests. Latency of milliseconds and high performance.
+3. Express One Zone: <br> Runs in only one AZ. One digit milliseconds latency.
+4. Standard-IA: <br> For data with infrequent access by low latency when necessary.
+5. One Zone-IA: <br> Same of standard by runs in a single AZ with a reduce in 20% of the cost.
+6. Glacier Instant Retrieval: <br> Low cost for data with long storage prevision but required milliseconds latency when necessary.
+7. Glacier Flexible Retrieval: <br> For data needed one or two times a year and with high latency. 10% less expensive if compared with Glacier instant retrieval.
+8. Glacier Deep Archive: <br> For clients that need to store data up do 7 years for due diligence or accountability purposes.
+9. Outposts: <br> For data that need to be on-premises, AWS offers a way to run a kind of local AWS server locally and still have the AWS APIs to interact with the infra.
+
+
+#### Use Cases 
+
+- Content storage and distribution
+- Backup and archiving
+- Build a data lake
+- Backup and restore critical data
+- Archive data
+- Run cloud-native apps
+
+### Amazon Elastic Block Store (AWS EBS)
+
+EC2 instances didn't have persistence in data. When the EC2 instance dies, the data is gone. But with EBS you can persist data which can be used by EC2 instances.
+
+Has incremental snapshots.
+
+Has encrypt option to all the data in the volume. And data traveling between instance and EBS is encrypt as well. Even the past data stored in snapshots become encrypted.
+
+The amount of SSD/HDD volume can be defined and scale only if needed.
+
+To remember: EBS is like a virtual SSD for EC2 instances. 
+
+### Amazon Elastic File System (AWS EFS)
+
+If you need a serverless shared file system solution, you will need AWS EFS.
+
+Four types:
+- NetApp ONTAP
+- Open ZFS
+- Windows File Server
+- Lustre
+
 ## Databases
+
+### Overview
+
+There's a lot of database solutions on AWS. We will do some brief overlook in the types and solutions available in the AWS Ecosystem.  
+
+### Relational Databases
+
+The more tradicional type of DBMS. Works with traditional applications, ERPs, CRMs and other types of well-know demands.
+
+- **Amazon Aurora**: <br> MySQL or PostgreSQL compatible relational database for cloud that can run in multi AZ replicas.
+- **Amazon RDS**: <br> A web service that can run in **multiple AZs** for high availability. You can user RDS with a lot of engines like Aurora (MySQL or PostegreSQL), MariaDB, Oracle, SQL Server, MySQL and PostegreSQL.
+- **Amazon Redshift**: <br> A  data warehouse that uses **columnar storage** that enable complex queries over analytical data workloads.
+
+### Key-value Databases
+
+Well suited for high-traffic web apps, e-commerce systems and gaming.
+
+- **Amazon DynamoDB**: <br> Achieve a single digit millisecond latency serverless non-relational database.
+### In-memory Databases
+
+For demands of really fast response and not long term storage like caching, session management, gaming leaderboards, geospatial apps.
+
+- **Amazon ElastiCache**: <br> Microsecond latency scalable caching service.
+- **Amazon MemoryDB for Redis**: <br> The redis approaching in the AWS ecosystem. 
+
+### Document Databases
+
+Content management, catalogs, user profiles are some of example of usage.
+
+- **Amazon DocumentDB**: <br> With MongoDB compatibility, can scale JSON workloads.
+
+### Wide Column Databases
+
+Here is a [link](https://budibase.com/blog/data/wide-column-database/) for an article that discuss what is a wide column database. In (really) short, is a type of column database that is better suited for infrequent attributes in each entry (like attributes of products in a e-commerce SaaS).
+
+- **Amazon Keyspaces**
+
+### Graph Databases
+
+Better suited for fraud detection, social networking, recommendations engines and so on.
+
+- **Amazon Neptune**: <br> Focus on **relationship** between data for highly connected datasets.
+
+### Time Series Databases
+
+For really intensive metrics over time like IoT, DevOps, Telemetry per exemple.
+
+- **Amazon Timestream**: <br> Can store and analyse trillions of events per day.
+
+### Ledger Databases
+
+Systems of record, supply chain, registrations, banking transactions are some applications.
+
+- **Amazon Quantum Ledger Database (AWS QLDB)**: <br> Transparent, immutable and cryptographically verificable.
 
 ## Networking
 

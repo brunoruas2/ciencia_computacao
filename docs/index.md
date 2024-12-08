@@ -4,7 +4,7 @@ Eu me chamo Bruno de Melo Ruas.
 
 Sou formado em Análise e Desenvolvimento de Sistemas pela Pontifícia Universidade Católica de Minas Gerais (PUC-MG). Bacharel em Economia pela Universidade do Estado do Amazonas (UEA). Especialista em Gestão Financeira pela Fundação Getúlio Vargas (FGV). 
 
-Eu comecei a programar em meados de 2017. Na época aprendendo Econometria usando uma linguagem de programação chamada R. Ao longo do tempo, fui aprendendo novas técnicas como Robot Process Automation (RPA), Web Scraping e fui tomando cada vez mais gosto pela área de tecnologia. Em julho de 2023 eu migrei definitivamente a carreira de Economista para desenvolvedor de software. 
+Eu comecei a programar em meados de 2017. Na época aprendendo Econometria usando uma linguagem de programação chamada R. Ao longo do tempo, fui aprendendo novas técnicas como Robot Process Automation (RPA), Web Scraping e fui tomando cada vez mais gosto pela área de tecnologia. Em julho de 2023 eu migrei definitivamente a carreira de Economista para Desenvolvedor de Software. 
 
 Atualmente sou desenvolvedor com foco em Backend na [GFT Technologies](https://www.gft.com/br/pt) onde estou alocado em um dos maiores bancos da América Latina. Esse material me serviu para chegar até aqui. Espero que também ajude você!
 
