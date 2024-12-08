@@ -209,7 +209,50 @@ Systems of record, supply chain, registrations, banking transactions are some ap
 
 ## Networking
 
+### Amazon VPC
+
+Is a private network that provides logical isolation for the workloads. You can control the traffic in and out a VPC.
+
+The gate of a VPC is a **Internet Gateway**.
+
+### Amazon Route 53
+
+A high available cloud DNS service. Can be used to domain registration, DNS routing and heal checking.
+
+### Elastic Load Balancing
+
+Like others Load Balance applications, the Elastic Load Balancing is a web service that control de inflow of traffic and redirect between the EC2 instances available (and can escalate the instances if necessary) in one ou more AZs.
+
 ## Security
+
+### Shared Responsibility Model
+
+Even the AWS and the client are responsible for the security either **in** the cloud and **of** the cloud. The each share of responsibility is defined by the so called **Shared Responsibility Model**.
+
+#### Customer Responsibility
+
+Basically, the customer is responsible for the security **of the cloud**. To list some of his part:
+
+- Platform, apps and identity access management
+- Operation system, network and firewall config
+- Client-side data and data integrity auth
+- Server-side encryption
+- Network traffic protection
+
+and so on.
+
+#### AWS Responsibility
+
+The AWS' part is the infrastructure of the cloud:
+
+- AWS software
+- Hardware and AWS global infra
+
+### AWS Compliance
+
+
+
+### AWS Trust Advisor
 
 ## Pricing
 
