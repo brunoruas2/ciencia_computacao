@@ -250,9 +250,61 @@ The AWS' part is the infrastructure of the cloud:
 
 ### AWS Compliance
 
+To permit that the client achieve their goal of maintain the security in the cloud. AWS create a handful Security Services:
 
+- AWS Identity and Access Management (AWS IAM) to control access
+- AWS Artifact to generate on-demand compliance reports
+- AWS Key Management Service (AWS KMS) to generate, manage and rotate encryption keys
+- AWS Shield to protect from DDoS attacks
 
 ### AWS Trust Advisor
 
+Service that help the customer to reduce cost, increase performance, fault tolerance, services quotas and improve security by recommendations that help the customer to achieve the best practices.
+
 ## Pricing
 
+Pricing concepts used by AWS:
+
+- Pay for what you use
+- Pay less when you reserve
+- Pay less with volume-based discounts
+- Pay even less as AWS grows
+
+### EC2  Pricing
+
+There are three categories of purchasing:
+
+- On-demand instances:
+	- Charged per hour
+	- Short-term
+	- Best fit on unpredictable workloads
+- Reserved Instances/Saving Plans
+	- Discount by 1 or 3 year commitments
+	- Larger the upfront payment, lager the discount
+	- Two offering classes:
+		- Standard Reserved Instances -> you can modify AZ, scope, networking type and instance size in the same EC2 family
+		- Convertible Reserved Instances -> you can exchange EC2 instances of different EC2 family, OS and tenancy
+- Spot Instances
+	- Up to 90% discount
+	- Best fir for aplication with flexible start and end
+
+### AWS Free Tiers
+
+There are three types:
+
+- Always free
+- 12 months free
+- Free trials
+
+
+
+# Next Steps
+
+There are 12 AWS certifications.
+
+There are four levels of expertise in AWS certifications:
+
+1. Foundational
+2. Associate
+3. Professional
+4. Specialty

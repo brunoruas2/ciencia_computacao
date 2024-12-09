@@ -290,6 +290,8 @@ Well-Architectured tool -> A service that evaluate your aws account by the 6 pil
 
 ## Module 11 - AWS Certified Cloud Practitioner Basics
 
+There are 12 AWS Certifications.
+
 4 Domains ->
 
 - Cloud Concepts (24%)
