@@ -73,6 +73,13 @@ AWS Cloudfront
 
 AWS Route 53
 
+Types of Load Balances:
+
+ - Application -> Flexible feature set with HTTP and HTTPS traffic.
+ - Network -> Ultra-high performance. TLS. UDP. Static IP and so on. Capable to handle millions of requests per second.
+ - Gateway -> Deploy and manage third-party virtual apps that suports GENEVE.
+ - Classic
+
 ## Module 5 - Databases and Storage
 
 Block Level Storage -> Place to store file in a way that can be updated block by block and not by the hole file
@@ -176,6 +183,32 @@ AWS Inspector -> Automated security assessments to avaluate your app and give so
 
 AWS GuardDuty -> Inteligent threat detection by monitoring the network activity and account behavior
 
+There are services that permits security assessments or penetration tests without a prior approval of AWS:
+
+- EC2
+- RDS
+- Cloudfront
+- Aurora
+- API Gateway
+- Lambda
+- Lightsail
+- Elastic Beanstalk
+
+But there some services which a prior approval is required:
+
+- DNS via Route 53
+- DDoS attacks
+- Port flooding
+- Protocol flooding
+- Request flooding
+
+AWS Security Tools with IA:
+
+- Macie -> Machine Learning to discover, classify and protect sensive data.
+- Rekognition -> Same as Macie but used to image and videos analysis.
+- GuardDuty -> Threat detection service.
+- Cognito -> Sign-in tool for web and mobile apps.
+
 ## Module 7 - Monitoring
 
 AWS CloudWatch -> Monitoring your aws infra by metrics. Reduce Mean Time To Resolution (MTTR) and improve Total Costume Ownership (TCO)
@@ -190,6 +223,9 @@ CloudTrail Insigns -> Automatic detect unusual API activities in my aws account
 
 AWS Trusted Advisor -> Avaluate by 5 pillars: Cost optmization, Performance, Security, Fault tolerance and Service limits. Some are free and others paid. 3 actions: Action recomendation, Investigation recomendation and alright.
 
+AWS Health page -> A page that alerts when AWS is having some difficult that may impact your applications.
+
+AWS Database Migration Service (AWS DMS) -> Tool for migrate the on-premisses database to AWS RDS.
 ## Module 8 - Billing
 
 AWS Free Tier -> 3 ways: aways free, 12 months free and trial
@@ -243,7 +279,16 @@ AWS Marketplace -> A market for enterprise services of third parties in a bunch 
 
 ## Module 9 - Migration and Innovation
 
-AWS Adoption Framework (CAF) -> Advice to make a smooth change for cloud in 6 perspectives: Business, People, Governance, Platform, Security and Operations. The first 3 focus on business and the last 3 focus on technical capabilities
+AWS Adoption Framework (CAF) -> Advice to make a smooth change for cloud in 6 perspectives: 
+
+- Business
+- People -> Bridge between tech and business.
+- Governance -> Orchestration cloud initiatives, max benefits and low the risks.
+- Platform
+- Security -> Data and workload sec.
+- Operations -> Cloud services that meet business need with involving of stakeholders like infra and operations leaders.
+
+The first 3 focus on business and the last 3 focus on technical capabilities
 
 AWS CAF Action Plan -> Guide to make a migration
 
@@ -264,7 +309,14 @@ AWS Snow Family ->
 
 Innovation in AWS -> VMWare Cloud AWS, Amazon SageMakes (machine learning pre-trained models), Amazon Augmented AI (2AI), Amazon Lex (the heart of Alexa), Amazon Textract (extract text), AWS DeepRacer, Iot, AWS Groud Station (for satelities)
 
-AWS Q Developer -> Like a copilot without store or be used
+AWS Q Developer -> TODO: Search this topic
+
+AWS Code Control:
+
+ - AWS CodeCommit
+ - AWS CodeBuild
+ - AWS CodePipeline
+ - AWS CodeDeploy
 
 ## Module 10 - The Cloud Journey
 

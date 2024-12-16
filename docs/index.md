@@ -14,11 +14,9 @@ Minhas Redes:
  - [Twitter](https://twitter.com/bruno_ruas2)
  - [Github](https://github.com/brunoruas2)
 
-Eu tenho um método de estudar: **produzindo material didático**. Ao longo dos anos, percebi que eu havia escrito tanto material, que poderia ajudar outras pessoas com meus textos. 
+**Aviso aos Juniores**: Mesmo gostando de escrever, eu percebi que todo programador maduro é capaz de ler diretamente da **documentação oficial** e **pesquisar por conta própria** sempre que necessário. Por causa disso, em matérias mais práticas, vamos tocar um mini projeto ao invés de ficar apenas reescrevendo o que já existe na documentação.
 
-Mesmo gostando de escrever, eu percebi que todo programador maduro é capaz de ler diretamente da **documentação oficial** sempre que necessário. Por causa disso, em matérias mais práticas, vamos tocar um mini projeto ao invés de ficar apenas reescrevendo o que já existe na documentação.
-
-Esse site serve como meu repositório público (um segundo cérebro) dos conteúdos que venho estudando sobre Programação e Desenvolvimento de Software seguindo fontes como:
+Meu objetivo com esse projeto é construir um tipo de **segundo cérebro** para consultas pontuais sempre que eu precisar revisar um conteúdo já estudado e também ajudar as outras pessoas (principalmente os iniciantes na área). Ao longo do projeto eu coleto conteúdos sobre Programação e Desenvolvimento de Software seguindo fontes como:
 
  - Tecnólogo em Análise e Desenvolvimento de Sistemas pela **[PUC Minas Gerais](https://www.pucminas.br/PucVirtual/Graduacao/Paginas/Analise-e-Desenvolvimento-de-Sistemas-Tecnologo.aspx?moda=1&curso=492&local=7c032ce9-43f6-4571-b72e-674be76a5b62)**.
  - Bacharelado Aberto em Ciência da Computação pela **[Open Source Society University - OSSU](https://github.com/ossu/computer-science)**.
