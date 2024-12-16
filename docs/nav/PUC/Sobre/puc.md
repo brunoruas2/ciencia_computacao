@@ -1,4 +1,5 @@
 # Pontifícia Universidade Católica (PUC-MG)
+
 Por ser uma formação tecnológica em desenvolvimento de sistemas, o foco aqui é aprender os conceitos gerais relacionados ao trabalho de analista de sistemas. Nem de longe essa formação é suficiente para os desafios dos profissionais top tier do nosso ramo.
 
 A ideia aqui é ser capaz de **resolver problemas usando software** com a principal ferramenta. Além disso tem um monte de matéria de gestão que podem servir bastante para os que seguirem para cargos de liderança e gerência.

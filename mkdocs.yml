@@ -53,6 +53,21 @@ nav:
       - Cloud Practictioner: nav\Cursos\AwsSkillBuilder\cloudPratictioner\Cloud_Pratictioner.md
     - Desenvolvedor.io:
       - Orientação à Objetos: nav\Cursos\Desenvolvedor.io\Arquitetura_Software\Aula01-OOP.md
+    - AI Roadmap.sh:
+      - Roadmap: nav/Cursos/Roadmap/index.md
+      - Introdução:
+        - AI ou ML Engineer?: nav/Cursos/Roadmap/01_Introduction/ai_ml.md
+        - Terminologia: nav/Cursos/Roadmap/01_Introduction/common_terminology.md
+      # - Modelos Pré-Treinados
+      # - OpenAI API
+      # - Segurança e Ética
+      # - AI OpenSource
+      # - Embeddings
+      # - Vector Databases
+      # - RAG
+      # - Ai Agents
+      # - Multimodal AI
+      # - Development Tools
   - Sobre: nav/tech.md
 
 theme:
