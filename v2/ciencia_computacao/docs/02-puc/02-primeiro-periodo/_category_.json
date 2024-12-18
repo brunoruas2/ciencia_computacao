@@ -1,0 +1,8 @@
+{
+  "label": "Primeiro Período",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Disciplinas estudadas no primeiro período."
+  }
+}
