@@ -10,25 +10,12 @@ Este repositório contém os meus estudos e projetos relacionados a ciência da 
 
 ## Como utilizar este repositório
 
-Esse repositório pode ser usado para acessar os mesmos conteúdos disponíveis no [site do projeto](https://brunoruas2.github.io/CC_site/).
+A maneira mais simples é acessar diretamente o [site do projeto](https://brunoruas2.github.io/CC_site/).
 
-Se preferir acessar o conteúdo offline ou ter uma cópia do projeto, basta seguir os passos abaixo:
+Mas se você quiser ter uma cópia própria desse material, basta ter o nodeJs instalado e seguir o tutorial básico do [docusauros](https://docusaurus.io/docs/installation) e hospedar ele localmente 
 
-1 - Primeiro faça o clone do projeto na pasta que você preferir
+> Aviso: Para usar a busca, é necessário rodar `npm run build` e depois `npm run serve` pois o arquivo de index da pesquisa é gerado apenas no build.
 
-`git clone https://github.com/brunoruas2/ciencia_computacao`
-
-2 - Se certifique de ter instalado um interpretador Python com o MkDocs e Simple-Blog
-
-`pip install mkdocs`
-
-`pip install mkdocs-simple-blog`
-
-3 - Execute o servidor web local através do mkdocs
-
-`mkdocs serve`
-
-4 - Agora você terá uma cópia do site rodando em um servidor web local que pode ser acessada por qualquer navegador no endereço indicado no seu terminal.
 
 ## Contribuindo
 
