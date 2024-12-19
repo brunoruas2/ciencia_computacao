@@ -1,6 +1,6 @@
 @echo off
 
-xcopy /E /I /Y "site" "C:\Users\bruno\Documentos\GitHub\CC_site\docs"
+xcopy /E /I /Y "build" "C:\Users\bruno\Documentos\GitHub\CC_site\docs"
 
 cd ..
 
@@ -16,4 +16,4 @@ cd ..
 
 cd ciencia_computacao
 
-rmdir "site" /S /Q
+rmdir "build" /S /Q

@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Desenvolvimento Web Front-end
+# Desenvolvimento Web Frontend
 
 ## A web: Evolução, Padrões e Arquitetura
 
