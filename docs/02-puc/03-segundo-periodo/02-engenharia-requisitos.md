@@ -64,7 +64,7 @@ Após as coletas de todas as informações, passamos para fase de **Estudo de Do
 ## Modelagem, Validação e Verificação de Requisitos
 ### Modelagem de Requisitos
 #### Modelagem de Requisitos e Introdução à UML
-A [**Unified Modeling Language (UML)**](www.uml.org) é uma linguagem de modelagem unificada. Surgida em 1997 como resultado de um esforço de várias empresas para a construção de um padrão para a modelagem de engenharia de software. Vale ressaltar que a UML não é uma metodologia e apenas uma maneira de expor processos de software.
+A [**Unified Modeling Language (UML)**](https://www.uml.org) é uma linguagem de modelagem unificada. Surgida em 1997 como resultado de um esforço de várias empresas para a construção de um padrão para a modelagem de engenharia de software. Vale ressaltar que a UML não é uma metodologia e apenas uma maneira de expor processos de software.
 
 A **Modelagem de Requisitos ou Análise de Requisitos** é a produção da lista de requisitos funcionais e não-funcionais para um projeto. Para padronização desses produtos, usamos a UML como linguagem de representação.
 

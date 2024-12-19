@@ -53,7 +53,7 @@ A segunda maneira é o desenvolvimento híbrido. Nesse caso, desenvolvemos uma a
 
 Nessa matéria, usaremos a abordagem do desenvolvimento híbrido utilizando a tecnologia [React Native](https://reactnative.dev/) que é inteiramente baseada em JavaScript.
 
-**Comentário:** Se você precisar de um reforço de JavaScript, nós temos uma parte da disciplina de [desenvolvimento web front end](/CC_site/nav/PUC/periodo1/desenvolvimento_web/#a-linguagem-javascript) que ensina o básico sobre ela.
+**Comentário:** Se você precisar de um reforço de JavaScript, nós temos uma parte da disciplina de [desenvolvimento web front end](../03-segundo-periodo/05-desenvolvimento-web-backend.md) que ensina o básico sobre ela.
 
 #### React Native
 O nome React Native não é atoa. Podemos separar esse conceito em 2. O primeiro, [**React**](https://reactjs.org/), se refere a um framework em JavaScript para construção de interfaces de usuário. O segundo, **native**, é uma alusão ao fato que, uma vez que a aplicação é construída, ela pode ser traduzida para código nativo de cada plataforma.

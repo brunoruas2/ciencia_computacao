@@ -331,7 +331,7 @@ E deve estar preparado para alguns conflitos clássicos dessa área:
 
 #### Gerência Ágil de Projetos
 
-Já aprendemos um pouco sobre esse tema lá no [primeiro período](/CC_site/nav/PUC/periodo1/fundamentos_eng_soft/#processos-ageis). Então vou ser bem sucinto aqui.
+Já aprendemos um pouco sobre esse tema lá no [primeiro período](../02-primeiro-periodo/06-fundamentos-engenharia-software.md). Então vou ser bem sucinto aqui.
 
 ##### Breve histórico
 
@@ -339,7 +339,7 @@ Para a gente que está começando a vida de desenvolvedor agora, isso tudo parec
 
 Entre as décadas de 60 e 90, não existiam métodos amplamente divulgados e padronizados de desenvolvimento. Era tudo mato mesmo.
 
-A primeira vitória significativa na tentativa de padronização ocorreu em 1990 com a criação do **Rational Unified Process (RUP)** que também vimos na matéria de [introdução a engenharia de software](/CC_site/nav/PUC/periodo1/fundamentos_eng_soft/#processos-prescritivos).
+A primeira vitória significativa na tentativa de padronização ocorreu em 1990 com a criação do **Rational Unified Process (RUP)** que também vimos na matéria de [introdução a engenharia de software](../02-primeiro-periodo/06-fundamentos-engenharia-software.md).
 
 ##### O Manifesto Ágil
 
@@ -397,7 +397,7 @@ Para encerrar esse apanhado podemos destacar os principais métodos ágeis hoje 
 
 #### O Método Ágil Scrum
 
-Já vimos um pouco desse assunto na parte de [introdução à engenharia de software](/CC_site/nav/PUC/periodo1/fundamentos_eng_soft/#scrum) mas aqui vamos dar mais contexto sobre ele.
+Já vimos um pouco desse assunto na parte de [introdução à engenharia de software](../02-primeiro-periodo/06-fundamentos-engenharia-software.md) mas aqui vamos dar mais contexto sobre ele.
 
 O método é baseado no guia do scrum que eu fiz questão de inserir aqui no material.
 

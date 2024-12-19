@@ -1298,7 +1298,7 @@ if (emptySlotNumber == -1)
 
 Eu sei, ainda tá punk. Mas olha só. Nós conhecemos um condicional. E aqui em cima temos um dentro do outro.
 
-Ignorando o primeiro, vamos prestar atenção no de dentro. Ele parece fazer um teste se o hash do nosso elemento que foi inserido possui alguma colisão `.hash_coll >= 0`. Se isso é verdade, ele está usando o token composto `|=` do operador de atribuição `=` com o lógico `||`. A gente viu algo parecido [aqui](/CC_site/nav/PUC/periodo1/algoritmos_e_logica/#operadores-e-funcoes-aritmeticas) e [aqui](/CC_site/nav/PUC/periodo1/algoritmos_e_logica/#operadores-booleanos-e-comandos-if-aninhados).
+Ignorando o primeiro, vamos prestar atenção no de dentro. Ele parece fazer um teste se o hash do nosso elemento que foi inserido possui alguma colisão `.hash_coll >= 0`. Se isso é verdade, ele está usando o token composto `|=` do operador de atribuição `=` com o lógico `||`. A gente viu algo parecido [aqui](../02-primeiro-periodo/02-algoritmo-logica.md) e [aqui](../02-primeiro-periodo/02-algoritmo-logica.md).
 
 **Comentário:** `a |= b` é a mesma coisa que `a = a | b`. Ou seja, temos uma operação lógica entre `_buckets[bucketNumber].hash_coll | unchecked((int)0x80000000)`. Sendo que esse treco `0x80000000` é o número hexadecimal para o número negativo mais baixo em um inteiro de 32 bits. Eu **acho** que ele usa esse fundo como indicativo de uso do slot no array de index.
 
