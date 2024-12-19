@@ -20,10 +20,10 @@ Podemos ver que o objetivo aqui é aprender a **usar** IA mais do que **criar** 
 
 ## Roadmap do projeto
 
-- [ ] Introduction
-  - [ ] [AI Engineer vs ML Engineer](../01-ai-engineer/02-intro/01-ai-ml.md)
-  - [ ] [Common Terminology](../01-ai-engineer/02-intro/02-Terminologia.md)
-- [ ] Pre-trained Models
+- [x] **Introduction**
+  - [x] [AI Engineer vs ML Engineer](./02-intro/01-ai-ml.md)
+  - [x] [Common Terminology](./02-intro/02-Terminologia.md)
+- [ ] **Pre-trained Models**
   - [ ] Open AI Models
   - [ ] Anthropic's Claude
   - [ ] Google's Gemini
@@ -33,44 +33,44 @@ Podemos ver que o objetivo aqui é aprender a **usar** IA mais do que **criar** 
   - [ ] Mistral AI
   - [ ] Cohere
   - [ ] Replicate
-- [ ] OpenAI API
+- [ ] **OpenAI API**
   - [ ] Writing Prompts
   - [ ] Managing Tokens
   - [ ] Open AI Playground
   - [ ] Fine-tuning
   - [ ] Prompt Engineering Roadmap
-- [ ] AI Safety and Ethics
+- [ ] **AI Safety and Ethics**
   - [ ] Prompt Injection
   - [ ] Security and Privacy
   - [ ] Bias and Fareness
-- [ ] OpenSource AI
+- [ ] **OpenSource AI**
   - [ ] Hugging Face
   - [ ] Ollama
-- [ ] Embeddings
+- [ ] **Embeddings**
   - [ ] Semantic Search
   - [ ] Data Classification
   - [ ] Recommendation Systems
   - [ ] Anomaly Detection
-  - [ ] Open AI Embeddings API
+  - [ ] **Open AI Embeddings API**
     - [ ] Embedding Models
-  - [ ] Open-Source Embeddings
+  - [ ] **Open-Source Embeddings**
     - [ ] Sentence Transformers
     - [ ] Models on Hugging Faces
-- [ ] Vector Databases
+- [ ] **Vector Databases**
   - [ ] Popular Vector DBs
   - [ ] Implementing Vector Search
-- [ ] RAG & Implementation
+- [ ] **RAG**
   - [ ] Implementing RAG
   - [ ] Way of Implementing RAG
-- [ ] AI Agents
+- [ ] **AI Agents**
   - [ ] Agents Usecases
   - [ ] ReAct Prompting
   - [ ] Building AI Agents
-- [ ] Multimodal AI
+- [ ] **Multimodal AI**
   - [ ] Implementing Multimodal AI
   - [ ] Usecases
   - [ ] Multimodal AI Tasks
-- [ ] Development Tools
+- [ ] **Development Tools**
   - [ ] AI Code Editors
   - [ ] Code Completion Tools
 
