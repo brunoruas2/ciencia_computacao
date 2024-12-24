@@ -2,7 +2,7 @@
 sidebar_position: 1 # ../img/
 ---
 
-# Sobre
+# Sobre o Roadmap
 
 Nós podemos dizer que 2024 foi um dos anos em que o termo "AI" foi muito popular. Mas seguindo as dicas do youtuber  [Fábio Akita](https://www.youtube.com/@Akitando), nós temos que focar em compreender todas as tecnologias para além do hype.
 

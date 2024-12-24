@@ -2,7 +2,7 @@
 sidebar_position: 1 # ../img/
 ---
 
-# Sobre a formação
+# Sobre o Tecnólogo
 
 Por ser uma formação tecnológica em desenvolvimento de sistemas, o foco aqui é aprender os conceitos gerais relacionados ao trabalho de analista de sistemas. **Nem de longe** essa formação é suficiente para os desafios dos profissionais top tier do nosso ramo ainda mais pelo fato que aqui são apenas as minhas anotações sobre algumas matérias (algumas eu não trouxe porque não eram tão relacionadas com tecnologia per se).
 

@@ -139,6 +139,21 @@ Tem como vantagens: a) Tempo de inicialização mais rápido porque o consumo é
 
 Tem como desvantagens: a) Falta de suporte no server side que impede qualquer processamento mais elaborado de dados e b) Sem renderização em tempo real que prejudica a customização da experiência de uso.
 
+## Projeto
+
+Pois bem, agora vamos colocar a mão na massa. Como o projeto é de backend, vamos fazer um app **web api** com ASP.NET Core usando como material a própria documentação no [site da microsoft](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-9.0&tabs=visual-studio).
+
+Também não vamos perder tempo desenvolvendo nada de interface. No final, vamos ter uma aplicação que recebe chamadas http (via [postman](https://www.postman.com/) ou [insomnia](https://insomnia.rest/download)) e retorna um json.
+
+**Aviso:** Eu vou seguir um modelo de arquitetura chamado **Controller-Based API** mas o ASP.NET Core também permite a construção via **Minimal API**. Para entender melhor sobre esses estilos basta ler essa [página](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/apis?view=aspnetcore-9.0).[^3]
+
+[^3]: Já que você está começando. Vale a pena fazer os 2 modelos pra aprender.
+
+### Requisitos
+
+1. Receber requisição HTTP GET/POST/PUT/DELETE
+2. Retornar um JSON como resposta
+
 
 ## Bibliografia
 - Ingeno, Joseph. **Software Architect's Handbook**. Packt Publishing, 2018.
