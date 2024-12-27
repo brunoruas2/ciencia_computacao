@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Algoritmo e Estrutura de Dados
+description: "" 
 ---
 
 # Algoritmo e Estrutura de Dados
@@ -64,7 +66,9 @@ for (int i = 0; i < 3; i++)
 ```
 Se tentarmos acessar um valor fora do index de um array com uma posição não aceita, vamos receber um erro chamado **Index out of Range Exception**.
 
-**Comentário:** Aqui o professor propõe um exercício onde fazemos o input de um nome de aluno e a nota dele. A partir disso, o sistema calcula a média da turma e mostra a lista dos alunos que estão acima de média da turma. Fica ai o desafio para o leitor.
+:::tip[Comentário] 
+Aqui o professor propõe um exercício onde fazemos o input de um nome de aluno e a nota dele. A partir disso, o sistema calcula a média da turma e mostra a lista dos alunos que estão acima de média da turma. Fica ai o desafio para o leitor.
+:::
 
 **Listas, Pilhas e Filas**
 
@@ -190,7 +194,9 @@ foreach(object o in lista)
 }
 
 ```
-**Comentário:** O comando dentro da condicional `(int)o` é uma das várias maneiras de se converter um item de uma lista em um inteiro. Chamamos essa maneira de `TypeCasting`[^3] Além dela poderíamos usar `int.Parse()` ou `Convert.ToInt32()`. Aqui tem um [texto falando mais sobre isso](https://www.delftstack.com/howto/csharp/convert-to-int-in-csharp/) e a [aqui](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions) temos a própria documentação da Microsoft.
+:::tip[Comentário] 
+O comando dentro da condicional `(int)o` é uma das várias maneiras de se converter um item de uma lista em um inteiro. Chamamos essa maneira de `TypeCasting`[^3] Além dela poderíamos usar `int.Parse()` ou `Convert.ToInt32()`. Aqui tem um [texto falando mais sobre isso](https://www.delftstack.com/howto/csharp/convert-to-int-in-csharp/) e a [aqui](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions) temos a própria documentação da Microsoft.
+:::
 
 [^3]:Vamos usar esse tipo de sintaxe mais a frente nesse microfundamento. Preste atenção nele!.
 
@@ -199,7 +205,9 @@ Além da lista vamos aprender outros conceitos de estrutura de dados muito usado
 
 Uma **Pilha** ou **Stack** é um TAD que possui a característica que o **primeiro elemento que entra é o último elemento que sai**. A essa característica damos o nome de First In, Last Out (FILO).
 
-**Comentário:** Pense em uma pilha de pratos sujos na pia. O prato que foi colocado primeiro é o último prato que será limpo pois está na base da pilha de louça suja.
+:::tip[Comentário] 
+Pense em uma pilha de pratos sujos na pia. O prato que foi colocado primeiro é o último prato que será limpo pois está na base da pilha de louça suja.
+:::
 
 Uma **Fila** ou **Queue** é um TAD em que o **primeiro elemento que entra é o primeiro a sair**. O nome dessa característica é Fist In, First Out (FIFO).
 
@@ -241,7 +249,9 @@ A terceira estrutura de dados que vamos aprender é chamada **Hashtable**. Essa 
 
 Table é simplesmente uma alusão à tabela. O que temos de novidade aqui é o termo **hash**.
 
-**Comentário:** Esse material é, em tese, um resumo dos conteúdos dados na graduação da PUC-MG, entretanto, quando eu sinto que o tópico está demasiadamente superficial, eu simplesmente não consigo evitar de expandir o conteúdo originalmente dado. Essa parte eu tirei do livro "Data Structures and Algorithms with Python".
+:::tip[Comentário] 
+Esse material é, em tese, um resumo dos conteúdos dados na graduação da PUC-MG, entretanto, quando eu sinto que o tópico está demasiadamente superficial, eu simplesmente não consigo evitar de expandir o conteúdo originalmente dado. Essa parte eu tirei do livro "Data Structures and Algorithms with Python".
+:::
 
 A primeira coisa que precisamos para entender o que é esse conceito de hash é compreender que programas acessam a memória e que o tempo necessário para realizar esse trabalho pode variar de acordo com a maneira que os programas são construídos. Para lidar com essa preocupação os cientistas da computação criaram o conceito de notação Omnicron ou Big-Oh.
 
@@ -285,7 +295,9 @@ Começamos a ver esse assunto em programação modular e agora vamos adentrar um
 
 Uma grande diferença entre as coleções anteriores e às genéricas é que nas últimas temos que declarar os tipos no momento da criação **sem possibilidade de misturar tipos** dentro do objeto. Enquanto as classes padrões permitiam qualquer tipo de dados misturados.
 
-**Comentário:** O `<T>` na escrita dessas classes é justamente para indicar que somos obrigados a indicar o **tipo** do dado no momento da criação do objeto.
+:::tip[Comentário] 
+O `<T>` na escrita dessas classes é justamente para indicar que somos obrigados a indicar o **tipo** do dado no momento da criação do objeto.
+:::
 
 Cada collection apresentada nas seções anteriores desse capítulo possui uma versão genérica de modo que seus métodos e propriedade são, em algum grau, análogos. Todas elas são acessíveis pelo namespace `System.Collections.Generic`.
 
@@ -554,14 +566,18 @@ static void Main (string[] args) {
     }
 }
 ```
-**Comentário:** Aqui o professor não teve pena. E eu também não vou ter. **Não siga adiante** se você não for capaz de entender o que esse programa faz. Analise o código até fazer sentido.
+:::tip[Comentário] 
+Aqui o professor não teve pena. E eu também não vou ter. **Não siga adiante** se você não for capaz de entender o que esse programa faz. Analise o código até fazer sentido.
+:::
 
 ## Tipos Abstratos de Dados
 A partir de agora, vamos estudar o funcionamento básico de algumas estruturas muito comuns na resolução de problemas computáveis: listas, árvores binárias e tabelas hash.
 
 Na seção anterior, nós aprendemos como usar algumas implementações desses conceitos em c\#. Agora, vamos estudar um pouco da teoria por trás dessas classes.
 
-**Comentário:** A partir de agora, vamos ver muito código. Sério. Se prepare, pegue uma boa dose de café e vamos embarcar nessa tonelada de código c\#.
+:::tip[Comentário] 
+A partir de agora, vamos ver muito código. Sério. Se prepare, pegue uma boa dose de café e vamos embarcar nessa tonelada de código c\#.
+:::
 
 ### Listas
 
@@ -643,7 +659,9 @@ if(n >= array.Length || pos < 0 || os > n) {
 ```
 Esses 3 métodos de inserção são tranquilos de entendermos. No caso do primeiro, ele move todo mundo pra direita e acrescenta o valor novo no index 0. No caso do inserir no final, ele simplesmente olha o contador e insere um elemento no index dele. Por fim, no caso do inserir genérico, ele primeiro move todos os elementos para a direita do index da posição indicada para depois inserir o elemento nela.
 
-**Comentário:** Bem legal vermos como um simples método de adição pode dar uma dor de cabeça para se pensar em como implementar a melhor maneira. Nas próximas vezes que usar um simples insert em uma lista, podemos pensar o que tá acontecendo por trás das bibliotecas que usamos.
+:::tip[Comentário] 
+Bem legal vermos como um simples método de adição pode dar uma dor de cabeça para se pensar em como implementar a melhor maneira. Nas próximas vezes que usar um simples insert em uma lista, podemos pensar o que tá acontecendo por trás das bibliotecas que usamos.
+:::
 
 Agora vamos para os métodos de remoção. São análogos aos métodos de inserção só que no caminho reverso.
 
@@ -686,7 +704,9 @@ int Remover(int pos) {
 }
 
 ```
-**Comentário:** Novamente, se você está com dificuldade em entender esse código. **Pare agora e revise o conteúdo**. Não basta pegar o código e rodar no seu computador. Você é que deve ser capaz de ler e entender o código.
+:::tip[Comentário] 
+Novamente, se você está com dificuldade em entender esse código. **Pare agora e revise o conteúdo**. Não basta pegar o código e rodar no seu computador. Você é que deve ser capaz de ler e entender o código.
+:::
 
 Agora só precisamos de um último método de mostrar os elementos da nossa lista linear.
 
@@ -703,7 +723,9 @@ void Mostrar() {
 }
 
 ```
-**Comentário:** Aqui vai um pequeno teste. Imagine que eu crie uma lista com essa classe instanciada. Qual será o output obtido caso a gente use o método `Mostrar()`?
+:::tip[Comentário] 
+Aqui vai um pequeno teste. Imagine que eu crie uma lista com essa classe instanciada. Qual será o output obtido caso a gente use o método `Mostrar()`?
+:::
 
 O código integral desse programa pode ser encontrado no meu [github gist](https://gist.github.com/brunoruas2/da13f73beddbc996d6a4663dc7575c67).
 
@@ -735,7 +757,9 @@ class Celula {
 ```
 A vantagem dessa abordagem é que podemos criar elementos em cadeia. No exemplo acima, cada instanciação da classe pode ser relacionada a outra de maneira recursiva.
 
-**Comentário:** A gente viu um pouco sobre recursão lá no microfundamento de programação modular mas no contexto de uma função.
+:::tip[Comentário] 
+A gente viu um pouco sobre recursão lá no microfundamento de programação modular mas no contexto de uma função.
+:::
 
 #### Lista flexível
 Uma lista flexível é justamente a construção feita pelas classes autorreferenciais que acabamos de ver. Cada elemento instanciado é salvo na memória de modo a ocupar uma sequência aleatória de armazenamento no hardware da memória.
@@ -885,7 +909,9 @@ Para entendermos melhor sobre essa estrutura de dados, é muito útil ter uma re
 
 Podemos ver que usamos dois elementos para representar essa estrutura. As bolas são chamados de nós (ou vértices) e as linhas (ou setas) são chamadas de arestas.
 
-**Comentário:** Se você ficou com algum feeling que a relação entre esses pontos lembrou um pouco a `LinkedList<T>`, você tá no caminho certo.
+:::tip[Comentário] 
+Se você ficou com algum feeling que a relação entre esses pontos lembrou um pouco a `LinkedList<T>`, você tá no caminho certo.
+:::
 
 Agora nós vamos aprender alguns conceitos importantes sobre essa estrutura que são termos usados para comunicar ideias a respeito desse objeto:
 
@@ -1061,7 +1087,9 @@ Agora que temos uma ideia do que é o rotacionamento, podemos aprofundar um pouc
     - Direita-Esquerda
     - Esquerda-Direita
 
-**Comentário:** Isso mesmo, a imagem anterior é uma rotação simples à direita.
+:::tip[Comentário] 
+Isso mesmo, a imagem anterior é uma rotação simples à direita.
+:::
 
 A rotação dupla é, como o nome auto-explicativo indica, apenas a composição de rotações simples mas em sentidos contrários. Abaixo temos uma imagem explicativa para uma **rotação dupla esquerda-direita**.
 
@@ -1300,7 +1328,9 @@ Eu sei, ainda tá punk. Mas olha só. Nós conhecemos um condicional. E aqui em 
 
 Ignorando o primeiro, vamos prestar atenção no de dentro. Ele parece fazer um teste se o hash do nosso elemento que foi inserido possui alguma colisão `.hash_coll >= 0`. Se isso é verdade, ele está usando o token composto `|=` do operador de atribuição `=` com o lógico `||`. A gente viu algo parecido [aqui](../02-primeiro-periodo/02-algoritmo-logica.md) e [aqui](../02-primeiro-periodo/02-algoritmo-logica.md).
 
-**Comentário:** `a |= b` é a mesma coisa que `a = a | b`. Ou seja, temos uma operação lógica entre `_buckets[bucketNumber].hash_coll | unchecked((int)0x80000000)`. Sendo que esse treco `0x80000000` é o número hexadecimal para o número negativo mais baixo em um inteiro de 32 bits. Eu **acho** que ele usa esse fundo como indicativo de uso do slot no array de index.
+:::tip[Comentário] 
+`a |= b` é a mesma coisa que `a = a | b`. Ou seja, temos uma operação lógica entre `_buckets[bucketNumber].hash_coll | unchecked((int)0x80000000)`. Sendo que esse treco `0x80000000` é o número hexadecimal para o número negativo mais baixo em um inteiro de 32 bits. Eu **acho** que ele usa esse fundo como indicativo de uso do slot no array de index.
+:::
 
 Tudo bem se você não entender tudo que vimos até aqui. Principalmente nessa última parte. Com o tempo esse código vai ficar menos enigmático. O segredo é continuar estudando.
 

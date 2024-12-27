@@ -16,7 +16,9 @@ Como consta como resposta à pergunta "What is an AI Engineer?" no próprio road
 
 Podemos ver que o objetivo aqui é aprender a **usar** IA mais do que **criar** IA. Então o foco aqui é aprender a construir coisas com modelos e ferramentas criadas e não construir modelos de AI do zero.
 
-**Disclaimer**: Eu só estou usando esse material porque o Akita usou o de backend na série de vídeos que ele fez sobre carreiras em dev. Mas no fim do dia, o que importa mesmo é começar e depois ir ajustando ao longo do curso.
+:::danger[Atenção]
+Eu só estou usando esse material porque o Akita usou o de backend na série de vídeos que ele fez sobre carreiras em dev. Mas no fim do dia, o que importa mesmo é começar e depois ir ajustando ao longo do curso.
+:::
 
 ## Roadmap do projeto
 

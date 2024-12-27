@@ -1,5 +1,9 @@
 ---
 sidebar_position: 1 # ../img/
+# id: my-doc-id  
+title: Sobre o Tecnólogo PUC-MG  
+description: Panorama do curso  
+# slug: /my-custom-url
 ---
 
 # Sobre o Tecnólogo
@@ -29,7 +33,7 @@ O conteúdo do curso está abaixo. O checklist indicará quais matérias (que na
     - [x] [Engenharia de Requisitos de Software](./03-segundo-periodo/02-engenharia-requisitos.md)
     - [x] [Design de Interação](./03-segundo-periodo/03-design-interacao.md)
     - [x] [Programação Modular](./03-segundo-periodo/04-programacao-modular.md)
-    - [ ] [Desenvolvimento Web Back-End](./03-segundo-periodo/05-desenvolvimento-web-backend.md)
+    - [x] [Desenvolvimento Web Back-End](./03-segundo-periodo/05-desenvolvimento-web-backend.md)
     - [ ] Modelagem de Dados
     - [ ] Fundamentos de Redes de Computadores
     - [ ] Manipulação de Dados com SQL

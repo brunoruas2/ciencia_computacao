@@ -1,6 +1,9 @@
 ---
 sidebar_position: 2
+title: Algoritmos e Lógica  
+description: ""
 ---
+
 
 # Algoritmos e Lógica de Programação
 
@@ -57,7 +60,9 @@ Vamos aprender agora como declarar os 4 tipos mais simples de variáveis:
 - `string` para cadeia de caracteres
 - `bool` para as variáveis booleanas (`true` ou `false`)
 
-**Comentário:** c\# é uma linguagem fortemente tipada, entretanto, existe um tipo de tipagem implícita que é muito usado na prática onde o próprio compilador "interpreta" o tipo de variável. Ao longo desse microfundamento nós vamos usar apenas os tokens de tipagem explícita. Mas vale muito a pena a leitura da documentação oficial nesse [link](https://learn.microsoft.com/pt-br/dotnet/csharp/language-reference/statements/declarations#implicitly-typed-local-variables).
+:::tip[Comentário]
+C# é uma linguagem fortemente tipada, entretanto, existe um tipo de tipagem implícita que é muito usado na prática onde o próprio compilador "interpreta" o tipo de variável. Ao longo desse microfundamento nós vamos usar apenas os tokens de tipagem explícita. Mas vale muito a pena a leitura da documentação oficial nesse [link](https://learn.microsoft.com/pt-br/dotnet/csharp/language-reference/statements/declarations#implicitly-typed-local-variables).
+:::
 
 ```cs
 static void Main(string[] args) 
@@ -70,7 +75,9 @@ static void Main(string[] args)
 ```
 Nesse código acima temos a declaração de várias variáveis de cada tipo. Basta colocar o tipo da variável seguido do nome de cada uma delas separadas por vírgula.
 
-**Comentário:** Em c\# todas as linhas precisam conter um carácter de encerramento que é o ponto e vírgula `;`. Sem esse token, o computador vai interpretar a próxima linha como sendo a continuação da anterior.
+:::tip[Comentário] 
+Em c\# todas as linhas precisam conter um carácter de encerramento que é o ponto e vírgula `;`. Sem esse token, o computador vai interpretar a próxima linha como sendo a continuação da anterior.
+:::
 
 ### Etapas de um Algoritmo e Operador de Atribuição
 
@@ -446,7 +453,9 @@ switch(opcao)
 }
 ```
 
-**Comentário:** Existem várias maneiras de se usar o switch. Eu não vou me aprofundar agora em todas elas. Mas vale muito a pena fazer uso dessa ferramenta para cenários de várias interações possíveis ou múltiplas saídas contextuais.
+:::tip[Comentário] 
+Existem várias maneiras de se usar o switch. Eu não vou me aprofundar agora em todas elas. Mas vale muito a pena fazer uso dessa ferramenta para cenários de várias interações possíveis ou múltiplas saídas contextuais.
+:::
 
 Para finalizar o nosso estudo das estruturas condicionais, vamos aprender como trabalhar com o **Operador ternário**. Esse nome é relativo ao número de operandos que esse comando usa (no caso, 3).
 
@@ -733,8 +742,10 @@ resultado = nome_metodo(par1,par2);
 
 ```
 
-**Comentário:** Se não queremos usar nenhum parâmetro, basta definir o procedimento ou o método com os parênteses vazios, por exemplo,
+:::tip[Comentário]
+Se não queremos usar nenhum parâmetro, basta definir o procedimento ou o método com os parênteses vazios, por exemplo,
 `nome_procedimento()`.
+:::
 
 A essa altura você já deve ter percebido que um procedimento nada mais é que um tipo de método. Só que ele possui uma regra diferente na hora da criação e não pode ter seu resultado atribuído a nenhuma variável. Desse modo, a modularização faz uso de dois métodos possíveis.
 

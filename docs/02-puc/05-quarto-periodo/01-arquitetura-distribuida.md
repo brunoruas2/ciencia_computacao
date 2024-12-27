@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Arquitetura Distribuída
+description: "" 
 ---
 
 # Arquitetura de Software Distribuído

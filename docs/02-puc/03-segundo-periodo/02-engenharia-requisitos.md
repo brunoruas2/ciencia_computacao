@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+title: Engenharia de Requisitos
+description: "" 
 ---
 
 # Engenharia de Requisitos
@@ -125,7 +127,9 @@ Caso haja inadimplência, a seguradora cancela o seguro. Comunicando o cliente.
 
 Em caso de acidente, o cliente comunica o sinistro à seguradora. Ela paga as despesas do conserto. Em casos raros, a seguradora paga ao cliente o valor integral do veículo.
 
-**Comentário:** Antes de olhar como ficou. Tente fazer o diagrama sozinho. Uma boa ferramenta para isso é o [Lucidchart](https://www.lucidchart.com/pages/pt/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_pt_allcountries_mixed_search_brand_exact_&km_CPC_CampaignId=1500131167&km_CPC_AdGroupID=59412156898&km_CPC_Keyword=lucid%20chart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=294337318271&km_CPC_TargetID=kwd-55720648523&km_CPC_Country=1001511&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=EAIaIQobChMIvub9rbam-gIVKClMCh0xyAyZEAAYASAAEgISVvD_BwE) ou o [Draw.io](https://app.diagrams.net/).
+:::tip[Comentário] 
+Antes de olhar como ficou. Tente fazer o diagrama sozinho. Uma boa ferramenta para isso é o [Lucidchart](https://www.lucidchart.com/pages/pt/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_pt_allcountries_mixed_search_brand_exact_&km_CPC_CampaignId=1500131167&km_CPC_AdGroupID=59412156898&km_CPC_Keyword=lucid%20chart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=294337318271&km_CPC_TargetID=kwd-55720648523&km_CPC_Country=1001511&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=EAIaIQobChMIvub9rbam-gIVKClMCh0xyAyZEAAYASAAEgISVvD_BwE) ou o [Draw.io](https://app.diagrams.net/).
+:::
 
 Abaixo temos uma representação de caso de uso possível para o caso exemplo.
 
@@ -138,7 +142,9 @@ Lá em programação modular nós aprendemos que uma classe é um conjunto de ob
 
 ![40-uml-class.png](../img/40-uml-class.png)
 
-**Comentário:** Esse último parágrafo faz muito sentido para todos que já passaram pela matéria de programação modular. Se não for o seu caso, corre lá depois que terminar esse microfundamento.
+:::tip[Comentário] 
+Esse último parágrafo faz muito sentido para todos que já passaram pela matéria de programação modular. Se não for o seu caso, corre lá depois que terminar esse microfundamento.
+:::
 
 Também sabemos que classes podem ser relacionadas entre si pela relação de **herança** que é um dos pilares da programação orientada à objetos. No contexto da UML, podemos chamar essa relação de herança de **Generalização-Especialização**. A representação entre a superclasse e as classes filhas é feita com o uso de uma seta de ponta fechada onde a seta **sempre** sai da subclasse e aponta para a superclasse.
 
@@ -152,7 +158,9 @@ A agregação pode ser representada de dois modos. Na **Agregação Simples** us
 
 ![42-uml-agregacao.png](../img/42-uml-agregacao.png)
 
-**Comentário:** A ideia nessa dotação da multiplicidade é simples. Imagine que temos uma classe "Estoque" e uma classe "Produto". Uma vez que um estoque é justamente o todo dos produtos armazenados, é plenamente possível termos a relação entre essas classes. Podemos usar a relação de agregação para indicar esse caso. Quando ligamos as classes, nós indicamos quantos objetos são aceitos na relação. No nosso exemplo é possível termos um estoque de zero itens[^2] de cada produto, logo, a multiplicidade indicada será de `0...*` que deve ser lida como ``Podemos ter entre zero e n produtos no nos" estoque". 
+:::tip[Comentário] 
+A ideia nessa dotação da multiplicidade é simples. Imagine que temos uma classe "Estoque" e uma classe "Produto". Uma vez que um estoque é justamente o todo dos produtos armazenados, é plenamente possível termos a relação entre essas classes. Podemos usar a relação de agregação para indicar esse caso. Quando ligamos as classes, nós indicamos quantos objetos são aceitos na relação. No nosso exemplo é possível termos um estoque de zero itens[^2] de cada produto, logo, a multiplicidade indicada será de `0...*` que deve ser lida como ``Podemos ter entre zero e n produtos no nos" estoque". 
+:::
 
 [^2]:Ou seja, é o caso onde não temos o produto estocado.
 

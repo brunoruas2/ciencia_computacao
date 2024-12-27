@@ -1,5 +1,7 @@
 ---
 sidebar_position: 6 # ../img/
+title: Qualidade de Processos
+description: "" 
 ---
 
 # Qualidade de Processos de Software

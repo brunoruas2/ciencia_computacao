@@ -1,5 +1,7 @@
 ---
 sidebar_position: 5
+title: Gerência de Configuração
+description: "" 
 ---
 
 # Gerência de Configuração

@@ -1,6 +1,9 @@
 ---
 sidebar_position: 3
+title: Desenvolvimento Web Frontend
+description: "" 
 ---
+
 
 # Desenvolvimento Web Frontend
 
@@ -448,7 +451,9 @@ Existem vários elementos que podem ser usados dentro de uma tabela. São os pri
 |    `<th>`     | Cabeçalho dentro de uma linha |
 |    `<td>`     |          Table data           |
 
-**Comentário:** Não podemos cair na tentação de usar tabelas como ferramenta de layout da página. Pode até parecer mais simples no começo mas tabelas não são boas para criação de aplicações fluidas e dinâmicas.
+:::tip[Comentário]
+Não podemos cair na tentação de usar tabelas como ferramenta de layout da página. Pode até parecer mais simples no começo mas tabelas não são boas para criação de aplicações fluidas e dinâmicas.
+:::
 
 #### Elementos de Formulários
 
@@ -923,7 +928,10 @@ O resultado desses códigos acima produzem o seguinte resultado:
 
 Para além das medias queries e layout flex, podemos construir o front end de uma aplicação usando o Sistema Grid que o CSS possui. A ideia é pensar no front end da aplicação em termos de dois elementos visuais: O Container e os Itens.
 
-**Comentário:** Depois eu vou revisitar essa seção com base no material disponível nesse [link](https://css-tricks.com/snippets/css/complete-guide-grid/).
+:::tip[Comentário] 
+Depois eu vou revisitar essa seção com base no material disponível nesse [link](https://css-tricks.com/snippets/css/complete-guide-grid/).
+:::
+
 
 O sistema Grid possui alguns conceitos que nos ajudam a criar e manter a interface de uma aplicação que use essa metodologia:
 
@@ -1064,7 +1072,7 @@ Para finalizar nosso estudo de desenvolvimento web com CSS vamos fazer uma aplic
 
 ![16-responsividade-front-end.png](../img/16-responsividade-front-end.png)
 
-**Comentário:** Acredite, com os conceitos aprendidos até agora nós já conseguimos fazer aplicações simples com páginas estáticas com relativa facilidade. A prova disso é que enquanto escrevo esse parágrafo acabamos de criar a primeira página da aplicação web front end que meu grupo precisa entregar como projeto do primeiro semestre da graduação. Eu usei, basicamente, apenas o que aprendemos aqui e alguma pesquisa no google para coisas mais simples.
+Acredite, com os conceitos aprendidos até agora nós já conseguimos fazer aplicações simples com páginas estáticas com relativa facilidade. A prova disso é que enquanto escrevo esse parágrafo acabamos de criar a primeira página da aplicação web front end que meu grupo precisa entregar como projeto do primeiro semestre da graduação. Eu usei, basicamente, apenas o que aprendemos aqui e alguma pesquisa no google para coisas mais simples.
 
 ![17-brefV1.jpg](../img/17-brefV1.jpg)
 
@@ -1187,7 +1195,9 @@ Para citar alguns desses motores:
 |     Edge      |     EDGE      |     Chakra Core      |
 |     Opera     |     Blink     |                      |
 
-**Comentário:** Não confunda a linguagem de programação [Java](https://www.java.com/pt-BR/) com JavaScript. São linguagens totalmente diferentes.
+:::tip[Comentário] 
+Não confunda a linguagem de programação [Java](https://www.java.com/pt-BR/) com JavaScript. São linguagens totalmente diferentes.
+:::
 
 ##### Aplicação da Linguagem JavaScript
 
@@ -1263,13 +1273,16 @@ console.log(b);
 
 > Mostra 5 e 1 no console
 ```
-**Comentário:** Uma boa prática em JS (e em praticamente todas as linguagens) é sempre declarar as variáveis na parte de cima de cada bloco ou no começo do código.
+
+:::tip[Comentário] 
+Uma boa prática em JS (e em praticamente todas as linguagens) é sempre declarar as variáveis na parte de cima de cada bloco ou no começo do código.
+:::
 
 Também é possível usar o token `const` para atribuição. Esse token funciona igual ao `let` e é definido para constantes. Uma boa prática da comunidade é usar letra maiúsculas para definir suas constantes.
 
 ##### Tipos e Estruturas de Dados
 
-Todas as variáveis que são números, textos (strings) ou valores booleanos (true ou false) são o que chamamos de 	**tipo Primitivo**. As variáveis especiais do tipo nulo (null) ou indefinido (undefined) são possuem características de tipo primitivo mas podem ser entendidas como sendo de um tipo único especial. No ECMAScript 6 foi inserida uma nova categoria de variáveis chamadas de 	**tipo Simbólico ou Symbol** (Não vamos nos aprofundar nisso agora. Depois eu atualizo esse material com o ECMAScript 6.). O que não for de tipo primitivo, null, undefined ou symbol, será do 	**tipo Objeto** que possui uma lista de propriedades, que por sua vez, possuem um nome e valores associados.
+Todas as variáveis que são números, textos (strings) ou valores booleanos (true ou false) são o que chamamos de **tipo Primitivo**. As variáveis especiais do tipo nulo (null) ou indefinido (undefined) são possuem características de tipo primitivo mas podem ser entendidas como sendo de um tipo único especial. No ECMAScript 6 foi inserida uma nova categoria de variáveis chamadas de 	**tipo Simbólico ou Symbol** (Não vamos nos aprofundar nisso agora. Depois eu atualizo esse material com o ECMAScript 6.). O que não for de tipo primitivo, null, undefined ou symbol, será do 	**tipo Objeto** que possui uma lista de propriedades, que por sua vez, possuem um nome e valores associados.
 
 Podemos resumir o que acabamos de ver como:
 
@@ -1384,7 +1397,9 @@ var d = new Date(Ano,Mes,Dia,Hora,Segundo,Milisegundos)
 
 Geralmente estamos preocupados apenas com o dia, mês e ano. Para criar um objeto com esses valores basta ir colocando na mesma ordem do último elemento do exemplo acima.
 
-**Aviso:** Quando você for indicar o mês, saiba que para o JS, janeiro é 0 e dezembro é 11. Então quando quisermos salvar a data 01/01/2022 usaremos `Date(2022,0,1)`.
+:::danger[Aviso]
+Quando você for indicar o mês, saiba que para o JS, janeiro é 0 e dezembro é 11. Então quando quisermos salvar a data 01/01/2022 usaremos `Date(2022,0,1)`.
+:::
 
 Como todo objeto, a variável criada com o Date() possui várias propriedades e métodos. Uma boa referência é o material do MDN que pode ser visto [aqui](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date). Mas podemos elencar alguns métodos importantes como:
 
@@ -1449,7 +1464,9 @@ valueOf() // Retorna o valor primitivo de um vetor
 
 ```
 
-**Comentário:** Eu achei estranho que o material não falou nada sobre vetor e matriz. Então uma hora eu volto para expandir essa parte com esses outros dois tipos de dados.
+:::tip[Comentário]
+Eu achei estranho que o material não falou nada sobre vetor e matriz. Então uma hora eu volto para expandir essa parte com esses outros dois tipos de dados.
+:::
 
 #### Controle de Fluxo
 
@@ -1699,7 +1716,9 @@ Todos esses objetos estão vinculados ao objeto maior `window` que é a janela d
 
 Cada um desses elementos possui informações e podem ser manipulados para conseguirmos construir as aplicações da maneira como quisermos.
 
-**Comentário:** No material do curso nós só aprofundamos em dois desses vários elementos. Depois eu volto aqui a medida que for aprendendo mais sobre os outros.
+:::tip[Comentário]
+No material do curso nós só aprofundamos em dois desses vários elementos. Depois eu volto aqui a medida que for aprendendo mais sobre os outros.
+:::
 
 ##### Objeto Window
 
@@ -1917,7 +1936,9 @@ Na tabela a baixo temos os principais tipos de gatilhos que podem ser usados pel
 |     `load`      |   Algum elemento é carregado    |
 |    `unload`     |        Ao sair da página        |
 
-**Comentário:** Aqui o professor da disciplina faz o desafio de criarmos uma calculadora simples com o uso dos elementos estudados nessa seção. Um dia eu volto aqui e faço esse desafio.
+:::tip[Comentário] 
+Aqui o professor da disciplina faz o desafio de criarmos uma calculadora simples com o uso dos elementos estudados nessa seção. Um dia eu volto aqui e faço esse desafio.
+:::
 
 #### A Notação de Objetos (JSON)
 
@@ -1955,7 +1976,9 @@ Nesse exemplo, podemos ver que o valor para Idade é do tipo number. Nome é uma
 
 Os outros tipos de dados como datas, geolocalização e outros, são passados em JSON como uma string. Temos que lembrar disso se um dia precisamos lidar com esse tipo de informação.
 
-**Comentário:** Quando estamos criando um JSON dentro de um código JS nós não precisamos colocar as aspas no nome dos elementos. Mas é padrão que essas aspas sejam usadas em objetos JSON. Então temos que ficar atentos a isso também.
+:::tip[Comentário] 
+Quando estamos criando um JSON dentro de um código JS nós não precisamos colocar as aspas no nome dos elementos. Mas é padrão que essas aspas sejam usadas em objetos JSON. Então temos que ficar atentos a isso também.
+:::
 
 ##### Objeto JSON no JavaScript
 
@@ -2143,7 +2166,9 @@ fetch('https:api.github.com/users/brunoruas2')
 </script>
 ```
 
-**Comentário:** O material não se aprofunda no tema, então eu volto aqui para aprofundar no futuro. Aqui tem um [link](https://developer.mozilla.org/pt-BR/docs/Web/Guide/AJAX) com um material de referência da MDN.
+:::tip[Comentário]
+O material não se aprofunda no tema, então eu volto aqui para aprofundar no futuro. Aqui tem um [link](https://developer.mozilla.org/pt-BR/docs/Web/Guide/AJAX) com um material de referência da MDN.
+:::
 
 ## Bibliografia
 

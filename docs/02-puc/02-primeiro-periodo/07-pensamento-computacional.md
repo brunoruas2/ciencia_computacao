@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+title: Pensamento Computacional
+description: "" 
 ---
 
 # Pensamento Computacional

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+title: Gerência de Requisitos
+description: "" 
 ---
 
 # Gerência de Requisitos
@@ -52,7 +54,9 @@ Dentre os atributos, podemos destacar alguns muitos importantes:
 - Referência Cruzada com outros requisitos
 - Observações
 
-**Comentário:** Pois é, quem achava que gerir requisito era só anotar em post-it tá muito enganado. Tudo isso deve ser, idealmente, coletado para que o processo de desenvolvimento seja feito de maneira produtiva e que o produto final atenda as expectativas do clientes.
+:::tip[Comentário] 
+Pois é, quem achava que gerir requisito era só anotar em post-it tá muito enganado. Tudo isso deve ser, idealmente, coletado para que o processo de desenvolvimento seja feito de maneira produtiva e que o produto final atenda as expectativas do clientes.
+:::
 
 #### Stakeholders
 Até aqui, temos um bom entendimento de que precisamos entender profundamente o que nossa solução fara e como será feito. Entretanto, ainda temos uma pergunta muito importante a ser respondida: **Para quem?**.

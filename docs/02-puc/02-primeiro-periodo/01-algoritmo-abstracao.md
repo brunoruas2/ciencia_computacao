@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Algoritmo e Abstração de Dados 
+description: ""
 ---
 
 # Algoritmo e Abstração de Dados
@@ -14,7 +16,9 @@ A construção de TADs passa pela identificação das entidades de um problema c
 
 Primeiramente, vamos aprender sobre os tipos de dados normalmente existente nas linguagens de programação mais comuns do mercado. Podemos dividir os tipos de dados em dois grandes grupos: Homogêneos e Heterogêneos.
 
-**Comentário:** Esse microfundamento deve ser estudado somente após o microfundamento de **Algoritmo e Lógica de Programação**. Como esse material é de referência, ele não deve ser lido, necessariamente, como se fosse um livro.
+:::tip[Comentário]
+Esse microfundamento deve ser estudado somente após o microfundamento de **Algoritmo e Lógica de Programação**. Como esse material é de referência, ele não deve ser lido, necessariamente, como se fosse um livro.
+:::
 
 ## Estrutura de Dados Homogêneas e Heterogêneas
 
@@ -38,7 +42,9 @@ string[] Nomes = new string[10]; // Vetor de string com 10
 
 No exemplo acima, podemos ver que criamos um vetor denominado Idades que receberá apenas valores do tipo inteiro. Um vetor de doubles (que é um float com mais casas de precisão) chamado salario. E, por fim, um vetor de strings chamado Nomes.
 
-**Comentário:** Existe uma classe que permite a criação de um tipo de vetor genérico sem tamanho definido em c\# chamado Lista. O curso não entrou nesse assunto mas eu vou deixar esse exemplo de lista aqui.
+:::tip[Comentário] 
+Existe uma classe que permite a criação de um tipo de vetor genérico sem tamanho definido em c\# chamado Lista. O curso não entrou nesse assunto mas eu vou deixar esse exemplo de lista aqui.
+:::
 
 ```cs
 using System.Collections.Generic;
@@ -650,7 +656,9 @@ namespace WorkSpace
 }
 ```
 
-**Comentário:** Eu não sei você, mas eu fiquei com dúvidas sobre essa parte do `area:F2`. Isso é muito simples. Como o valor `area` é do tipo double, ele possui várias casas após a vírgula. Esse parâmetro é a definição da quantidade de casas após a vírgula. Nesse caso, o resultado terá 2 casas após a vírgula.
+:::tip[Comentário] 
+Eu não sei você, mas eu fiquei com dúvidas sobre essa parte do `area:F2`. Isso é muito simples. Como o valor `area` é do tipo double, ele possui várias casas após a vírgula. Esse parâmetro é a definição da quantidade de casas após a vírgula. Nesse caso, o resultado terá 2 casas após a vírgula.
+:::
 
 Quando encapsulamos as propriedades e os métodos dentro de um objeto, estamos omitindo os detalhes de como objeto faz as transformações e armazena os dados. A essa técnica damos o nome de **ocultação da informação**. Isso é útil para garantir a integridade da manipulação dos dados por parte dos usuários e aumenta a segurança quanto a lógica implementada no código.
 
@@ -762,7 +770,9 @@ A técnica da omissão da informação nos ajuda a garantir o cumprimento desses
 
 Um construtor de classe é usado para criação de um objeto e pela inicialização dos seus atributos. Sempre que instanciamos um objeto, o seu construtor entra em ação.
 
-**Comentário:** Não entraremos a fundo no conceito de Common Language Runtime (CLR) agora. Talvez mais pra frente a gente veja isso.
+:::tip[Comentário] 
+Não entraremos a fundo no conceito de Common Language Runtime (CLR) agora. Talvez mais pra frente a gente veja isso.
+:::
 
 Se um construtor não for declarado explicitamente, o c\# cria a classe usando algumas convenções de modo a colocar o objeto disponível para uso. Esses padrões de construtores são definidos de acordo com o tipo primitivo das variáveis contidas no nosso objeto (que sabemos que se chamam atributos). Por padrão, o CLR atribui os seguintes valores para os atributos dos objetos:
 

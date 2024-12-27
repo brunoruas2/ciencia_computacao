@@ -20,8 +20,6 @@ Minhas Redes:
  - [Twitter](https://twitter.com/bruno_ruas2)
  - [Github](https://github.com/brunoruas2)
 
-**Aviso aos Juniores**: Mesmo gostando de escrever, eu percebi que todo programador maduro é capaz de ler diretamente da **documentação oficial** e **pesquisar por conta própria** sempre que necessário. Por causa disso, em matérias mais práticas, vamos tocar um mini projeto ao invés de ficar apenas reescrevendo o que já existe na documentação.
-
 Meu objetivo com esse projeto é construir um tipo de **segundo cérebro** para consultas pontuais sempre que eu precisar revisar um conteúdo já estudado e também ajudar as outras pessoas (principalmente os iniciantes na área). Ao longo do projeto eu coleto conteúdos sobre Programação e Desenvolvimento de Software seguindo fontes como:
 
  - Tecnólogo em Análise e Desenvolvimento de Sistemas pela **[PUC Minas Gerais](https://www.pucminas.br/PucVirtual/Graduacao/Paginas/Analise-e-Desenvolvimento-de-Sistemas-Tecnologo.aspx?moda=1&curso=492&local=7c032ce9-43f6-4571-b72e-674be76a5b62)**.
@@ -29,3 +27,10 @@ Meu objetivo com esse projeto é construir um tipo de **segundo cérebro** para 
  - Cursos Livres como os do [**Balta.io**](https://balta.io/cursos) ou [**Curso.dev**](https://curso.dev/) e outros.
 
 Se você está começando do zero. Recomendo seguir a grade do tecnólogo antes de focar nas partes mais práticas.
+
+:::danger[Aviso]
+Mesmo gostando de escrever, eu percebi que todo programador maduro é capaz de ler diretamente da **documentação oficial** e **pesquisar por conta própria** sempre que necessário. Por causa disso, em matérias mais práticas, vamos tocar um mini projeto onde eu vou mostrar os commits feitos e fazer uma breve explicação em cada commit[^1].
+
+[^1]: Você **tem** que ser capaz de ler as alterações em cada commit. Pare, leia e se esforce para entender cada alteração.
+:::
+

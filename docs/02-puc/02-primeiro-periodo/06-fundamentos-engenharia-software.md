@@ -1,5 +1,7 @@
 ---
 sidebar_position: 6
+title: Engenharia de Software
+description: "" 
 ---
 
 # Fundamentos de Engenharia de Software
@@ -44,7 +46,9 @@ Hoje em dia, temos dois modelos mais usados. A modelo incremental foca em entreg
 
 Agora que aprendemos o conceito de modelo de processo de software, vamos analisar algumas abordagens de elaboração de software. Podemos dizer que existem 3 grupos principais de processos de gestão de software: 1) Processos ágeis; 2) Processos Prescritivos e 3) Processos Enxutos (lean process).
 
-**Comentário:** No material do curso só foram abordadas os dois primeiros processos.
+:::tip[Comentário] 
+No material do curso só foram abordadas os dois primeiros processos.
+:::
 
 ### Processos Ágeis
 Os processos ágeis nasceram no final do século XX. Seguem o modelo incremental e iterativo de desenvolvimento. Os incrementos são pequenos e sucessivos (2 a 3 semanas). O cliente está constantemente em contato com o produto gerado no ciclo. A documentação é reduzida porque há muita comunicação interpessoal.
@@ -376,7 +380,9 @@ Mostra como os requisitos (que compõe as linhas da matriz) se relacionam com os
 
 Nós já aprendemos o que são os artefatos de software e em que contexto eles são gerados, agora, vamos aprender algumas ferramentas e templates que nos auxiliam no processo de criação desses artefatos durante o processo de desenvolvimento de software.
 
-**Comentário:** Essa seção é mais para consulta quando você precisar gerenciar algum projeto de desenvolvimento de software. Vou tentar manter os links atualizados mas caso algum deixe de funcionar, pode me avisar pelo [twitter](https://twitter.com/bruno_ruas2).
+:::tip[Comentário] 
+Essa seção é mais para consulta quando você precisar gerenciar algum projeto de desenvolvimento de software. Vou tentar manter os links atualizados mas caso algum deixe de funcionar, pode me avisar pelo [twitter](https://twitter.com/bruno_ruas2).
+:::
 
 ##### Backlog do produto e Kanban
 

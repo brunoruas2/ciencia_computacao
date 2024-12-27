@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+title: Design de Interação
+description: "" 
 ---
 
 # Design de Interação
@@ -9,7 +11,10 @@ Ao longo desse microfundamento, teremos o objetivo de responder a seguinte pergu
 
 A base desse trabalho é compreender o usuário, os sistemas interativos e a relação entre usuário e sistemas. Vamos aprender a projetar essas interações bem como avaliar se os objetivos determinados foram alcançados.
 
-**Comentário:** Essa matéria tem abordagem bem teórica. Então esse material vai ser o mais resumido possível sobre os temas abordados. Quem tiver interesse em se aprofundar, pode buscar esse diferencial na bibliografia.
+:::tip[Comentário] 
+Essa matéria tem abordagem bem teórica. Então esse material vai ser o mais resumido possível sobre os temas abordados. Quem tiver interesse em se aprofundar, pode buscar esse diferencial na bibliografia.
+:::
+
 ### Sistemas Interativos em Contexto
 Em qualquer planejamento de interações existem dois atores: o usuário humano e o computador. Ambos são peças fundamentais para o desenho das interações, entretanto, a maneira como modelamos o comportamento desses agentes pode variar de acordo com o contexto e o objetivo de design.
 
@@ -83,7 +88,9 @@ Os problemas descritos acima são originários da diferença entre como o design
   - Modelo do Usuário - É o modelo construído internamente pelo usuário ao longo das interações com o sistema.
 
 
-**Comentário:** Cada conceito que vimos até agora levam anos de pesquisa até se ter algum domínio. Nosso foco por agora é apenas conhecer a existência desses conceitos bem como uma versão resumida do que são.
+:::tip[Comentário] 
+Cada conceito que vimos até agora levam anos de pesquisa até se ter algum domínio. Nosso foco por agora é apenas conhecer a existência desses conceitos bem como uma versão resumida do que são.
+:::
 
 **Fontes Complementares:**
 
@@ -93,7 +100,9 @@ Os problemas descritos acima são originários da diferença entre como o design
 
 
 #### A interação pela Lente Semiótica 
-**Comentário:** Eu não sei vocês, mas, pra mim, a palavra semiótica é o tipo de palavra que apenas eruditos e intelectuais costumam usar. Então, finalmente, chegou a nossa hora de aprender o que significa isso.
+:::tip[Comentário] 
+Eu não sei vocês, mas, pra mim, a palavra semiótica é o tipo de palavra que apenas eruditos e intelectuais costumam usar. Então, finalmente, chegou a nossa hora de aprender o que significa isso.
+:::
 
 Podemos definir a **Semiótica** como o ramo da linguística que estuda como e porque as pessoas atribuem significado às coisas e, além disso, como usam esses objetos dotados de significado para se comunicar.
 
@@ -150,7 +159,9 @@ Existem algumas maneiras de se considerar o usuário na hora de construirmos a i
 
 
 #### Desing é Técnica ou Arte?
-**Comentário:** Eu, particularmente, acho esse tipo de discussão pouco relevante. Então vou apenas resumir e indicar as bibliografias.
+:::tip[Comentário] 
+Eu, particularmente, acho esse tipo de discussão pouco relevante. Então vou apenas resumir e indicar as bibliografias.
+:::
 
 Basicamente, temos duas maneiras de enxergar o conhecimento de construção de design de interações:
 
@@ -402,7 +413,9 @@ Nessa seção vamos aprender duas abordagens de avaliação da comunicabilidade 
 
 O **Método de Inspeção Semiótica (MIS)** é um tipo de avaliação que busca analisar a comunicabilidade do sistema por meio da emissão da metacomunicação. Metacomunicação é o estudo da capacidade de comunicar a própria dinâmica da comunicação entre interlocutores, ou seja, é o estudo da informação sobre a informação.
 
-**Comentário:** Bem filosófico né?! Eu, sinceramente, acho que não vale a pena entrar muito profundamente em cada tópico desse por agora. Vamos ficar apenas na superfície por enquanto.
+:::tip[Comentário] 
+Bem filosófico né?! Eu, sinceramente, acho que não vale a pena entrar muito profundamente em cada tópico desse por agora. Vamos ficar apenas na superfície por enquanto.
+:::
 
 O protocolo MIS é baseado em:
 
@@ -444,7 +457,10 @@ A maneira de investigação é baseada em 13 etiquetas com frases que simulam o 
   - Desisto
 
 
-**Comentário:** De todos os assuntos, esse ai foi o que eu achei mais estranho. Talvez precisaremos expandir mais essa seção mas por hora, é o que temos.
+:::tip[Comentário] 
+De todos os assuntos, esse ai foi o que eu achei mais estranho. Talvez precisaremos expandir mais essa seção mas por hora, é o que temos.
+:::
+
 #### Avaliação da Acessibilidade
 No quesito acessibilidade, queremos que a interface tenha os  requisitos necessários dispositivos na análise Web Content Accessibility Guidelines (WCAG). Esse método de avaliação possui quatro princípios que devem ser observados nas interfaces:
 

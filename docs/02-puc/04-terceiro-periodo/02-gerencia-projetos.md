@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+title: Gerência de Projetos
+description: "" 
 ---
 
 # Gerência de Projetos
@@ -123,7 +125,9 @@ Podemos destacar as principais estruturas atualmente como sendo:
 - Estrutura por Projeto: Foco na autonomia no cumprimento das metas. Atores temporários atrelados à projetos. Maior celeridade na comunicação.
 - Estrutura Matricial: É um misto das duas. Possui alguma flexibilidade na comunicação entre projetos mas pode causar problemas de falta de clareza na cadeia de comando.
 
-**Comentário:** Na vida real, nenhuma organização é 100% classificável de acordo com essas estruturas. Mas conhecê-las ajudará muito caso, quem sabe algum dia, nos encontremos no papel de gerente de projeto.
+:::tip[Comentário] 
+Na vida real, nenhuma organização é 100% classificável de acordo com essas estruturas. Mas conhecê-las ajudará muito caso, quem sabe algum dia, nos encontremos no papel de gerente de projeto.
+:::
 
 #### Áreas da Gerência de Projetos
 
@@ -161,7 +165,9 @@ Na construção do cronograma podemos usar várias representações gráficas. C
 - Diagrama de Rede PERT
 - Gráfico de Gantt
 
-**Comentário:** Existem várias ferramentas para gerenciamento. O [MS-Project](https://www.microsoft.com/pt-br/microsoft-365/project/project-management-software), [ClickUp](https://clickup.com/), [Trello](https://trello.com), [Primavera](https://www.oracle.com/br/industries/construction-engineering/primavera-p6/), [OpenProj](https://www.openproject.org/) e outros
+:::tip[Comentário] 
+Existem várias ferramentas para gerenciamento. O [MS-Project](https://www.microsoft.com/pt-br/microsoft-365/project/project-management-software), [ClickUp](https://clickup.com/), [Trello](https://trello.com), [Primavera](https://www.oracle.com/br/industries/construction-engineering/primavera-p6/), [OpenProj](https://www.openproject.org/) e outros
+:::
 
 #### Recursos em Projetos
 
@@ -415,7 +421,9 @@ O método do Scrum é mais indicado para projetos com as seguintes característi
 
 Ele pode ser integrado à ferramentas como o kanban e pode ser associado a outros métodos ágeis de gestão de projetos.
 
-**Comentário:** Como já aprendemos sobre os papéis, os artefatos e os eventos do scrum antes, não vou repetir esse conteúdo aqui. Caso não se lembre do que estou falando, volte no primeiro período e revise.
+:::tip[Comentário] 
+Como já aprendemos sobre os papéis, os artefatos e os eventos do scrum antes, não vou repetir esse conteúdo aqui. Caso não se lembre do que estou falando, volte no primeiro período e revise.
+:::
 
 No planejamento de um sprint, devemos sempre responder essas duas questões norteadoras:
 

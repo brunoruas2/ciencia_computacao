@@ -1,5 +1,7 @@
 ---
 sidebar_position: 5
+title: Organização de Computadores
+description: "" 
 ---
 
 # Organização de Computadores
@@ -147,7 +149,9 @@ Ao aplicarmos o teorema de DeMorgan $(\overline{X1 . X2}) = \overline{X1} + \ove
 $F = (A + B + C) . (A + B + \overline{C}) . (\overline{A} + B + C) . (\overline{A} + B + \overline{C}) . (\overline{A} + \overline{B} + \overline{C})$
 Que chamamos de 	**Produto das Somas** ou 	**Product of Sums (POS)**.
 
-**Comentário:** O material do microfundamento é consideravelmente reduzido nessa parte. Mas como estou perto da prova enquanto escrevo essa parte, terei que, por agora, reduzir a profundidade e seguir como é dado pelo material da aula. Em tempo oportuno eu volto aqui e expando essa seção.
+:::tip[Comentário] 
+O material do microfundamento é consideravelmente reduzido nessa parte. Mas como estou perto da prova enquanto escrevo essa parte, terei que, por agora, reduzir a profundidade e seguir como é dado pelo material da aula. Em tempo oportuno eu volto aqui e expando essa seção.
+:::
 
 Agora que entendemos um pouco melhor sobre cisrcuitos lógicos combinacionais, vamos aprender mais sobre alguns circuitos desse tipo.
 
@@ -274,7 +278,9 @@ $\textrm{Capacidade} = 2^{	\textrm{Numero de Celulas}} * 	\textrm{Numero de bits
 
 A memória principal pode ser divida em 	**memória RAM - Random Access Memory**, que pode ser lida e apagada a qualquer momento mas não é capaz de armazenar os dados após o desligamento do computador, e a 	**memória ROM - Read Only Memory** que não pode ser alterada na execução do programa mas se mantém após o desligamento do computador.
 
-**Comentário:** A memória RAM ainda é subdividida em outras memórias mas veremos isso em uma atualização desse curso.
+:::tip[Comentário] 
+A memória RAM ainda é subdividida em outras memórias mas veremos isso em uma atualização desse curso.
+:::
 
 A memória secundária é o HD e o SSD dos nossos computadores. O processador só faz uso dela por meio de dispositivos de entrada e saída. A vantagem dela é o seu preço que é infinitamente menor que as memórias mais rápidas.
 

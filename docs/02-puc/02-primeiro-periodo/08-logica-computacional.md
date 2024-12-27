@@ -1,5 +1,7 @@
 ---
 sidebar_position: 8 # ../img/
+title: Lógica Computacional
+description: "" 
 ---
 
 # Lógica Computacional
@@ -204,7 +206,9 @@ Outra falácia conhecida é a 	**negação da hipótese**. Podemos construir ela
 
 #### Regras de Inferência
 
-**Comentário:** Eu achei que essa parte foi um pouco negligenciada no curso. Devo voltar aqui para expandir esse conteúdo mais tarde. Por enquanto, temos essa tabela de referência.
+:::tip[Comentário] 
+Eu achei que essa parte foi um pouco negligenciada no curso. Devo voltar aqui para expandir esse conteúdo mais tarde. Por enquanto, temos essa tabela de referência.
+:::
 
 
 |      **Regra de Inferência**      |         **Nome**          |             **Nota**              |

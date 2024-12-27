@@ -1,5 +1,7 @@
 ---
 sidebar_position: 5
+title: Desenvolvimento Web Backend
+description: "" 
 ---
 
 # Desenvolvimento Web Backend
@@ -9,6 +11,7 @@ Essa matéria tem uma abordagem muito prática. Desse modo, escrever um passo a 
 
 Dessa feita, eu vou criar um repositório no github dedicado para esse microfundamento onde cada commit será uma etapa do processo de desenvolvimento da aplicação. Aqui no material restará apenas a parte teórica e um resumo das transformações feitas ao longo do processo de desenvolvimento da aplicação.
 
+[Link do Repositório do Mini Projeto](https://github.com/brunoruas2/repositorio_codigos/tree/main/projetoBackend).
 
 ## Arquitetura e Linguagens de Programação de Aplicações Web Back-End
 No nosso projeto de primeiro semestre, desenvolvemos uma aplicação web front-end. Como aprendemos até então, o front-end de uma aplicação é a parte da aplicação que tem foco na **interface de interação** com o usuário. Por outro lado, uma aplicação back-end tem foco nos serviços e tecnologias necessárias para atendimento das **regras de negócio** que a aplicação deve obedecer.
@@ -34,8 +37,6 @@ Tal qual aprendemos nas boas práticas de desenvolvimento e design de aplicaçõ
 
 
   - **Operacional**
-    
-
       - Disponibilidade
       - Desempenho
       - Recuperabilidade
@@ -45,8 +46,6 @@ Tal qual aprendemos nas boas práticas de desenvolvimento e design de aplicaçõ
     
 
   - **Estrutural**
-    
-
       - Configurabilidade
       - Extensibilidade
       - Installabilty
@@ -58,8 +57,6 @@ Tal qual aprendemos nas boas práticas de desenvolvimento e design de aplicaçõ
     
 
   - **Transversal**
-    
-
       - Acessibilidade
       - Arquivabilidade
       - Autenticação
@@ -72,7 +69,10 @@ Tal qual aprendemos nas boas práticas de desenvolvimento e design de aplicaçõ
 
 
 
-**Comentário:** Infelizmente, enquanto eu escrevo essa parte do material, estou com pouquíssimo tempo disponível para me aprofundar mais em alguns tópicos. Em tempo oportuno voltaremos a rever essas seções com a devida atenção que elas merecem.
+:::tip[Comentário] 
+Infelizmente, enquanto eu escrevo essa parte do material, estou com pouquíssimo tempo disponível para me aprofundar mais em alguns tópicos. Em tempo oportuno voltaremos a rever essas seções com a devida atenção que elas merecem.
+:::
+
 #### Estilos Arquiteturais
 Já entendemos que, na construção de uma solução, precisaremos nos perguntar qual será o tipo de arquitetura de software que será usada para preencher todos os requisitos elicitados na etapa inicial de planejamento. Nessa seção, vamos ver os principais modelos\estilos de arquiteturas de back-end usados hoje em dia.
 
@@ -94,7 +94,9 @@ Esse modelo de construção é usado quando temos processos de tratamento de inf
 
 Uma maneira de se evitar a complexidade gerada por alto acoplamento na arquitetura monolítica é a separação das funções do sistema em camadas que podem, ou não, se comunicar livremente entre si. A arquitetura web é a principal implementação desse tipo de arquitetura (camada de user, camada de api, camada de banco de dados e etc). Quando separamos um sistema em camadas, podemos definir a capacidade de cada em emitir e receber dados de modo a termos um controle da segurança dos dados e desempenho.
 
-**Comentário:** Na literatura, podemos achar o termo multi-tier que se refere a separação **física** entre as camadas e multi-layer que se refere a separação **lógica**.
+:::tip[Comentário] 
+Na literatura, podemos achar o termo multi-tier que se refere a separação **física** entre as camadas e multi-layer que se refere a separação **lógica**.
+:::
 
 **Arquitetura Cliente/Servidor**
 
@@ -104,7 +106,9 @@ Uma maneira de se evitar a complexidade gerada por alto acoplamento na arquitetu
 
 Esse é o mais novo tipo de arquitetura onde cada nó da rede é tido como simultaneamente um cliente e um servidor. É amplamente usado para escalabilidade de soluções e é um dos motores da chamada web 3.0. Como exemplo, temos os torrents e as blockchains usados para a criação e manutenção das criptomoedas.
 
-**Comentário:** Como dito no início, essas separações são apenas didáticas e não definitivas. Não existe arquitetura errada. Tudo depende do problema a ser resolvido.
+:::tip[Comentário] 
+Como dito no início, essas separações são apenas didáticas e não definitivas. Não existe arquitetura errada. Tudo depende do problema a ser resolvido.
+:::
 
 #### Tipos de Aplicações Web
 Quando definimos que um dado problema será resolvido por meio de uma aplicação web. Temos que decidir a arquitetura dessa aplicação levando-se em conta coisas como: desempenho esperado, custos de servidor, segurança da informação e etc. Nessa seção vamos aprender sobre os principais modelos de construção de soluções web usadas na atualidade.
@@ -141,19 +145,90 @@ Tem como desvantagens: a) Falta de suporte no server side que impede qualquer pr
 
 ## Projeto
 
-Pois bem, agora vamos colocar a mão na massa. Como o projeto é de backend, vamos fazer um app **web api** com ASP.NET Core usando como material a própria documentação no [site da microsoft](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-9.0&tabs=visual-studio).
+Pois bem, agora vamos colocar a mão na massa. 
 
-Também não vamos perder tempo desenvolvendo nada de interface. No final, vamos ter uma aplicação que recebe chamadas http (via [postman](https://www.postman.com/) ou [insomnia](https://insomnia.rest/download)) e retorna um json.
+Como o projeto é de Backend, vamos fazer um **WEB API** com ASP.NET Core usando como material a própria documentação no [site da microsoft](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-9.0&tabs=visual-studio).
 
-**Aviso:** Eu vou seguir um modelo de arquitetura chamado **Controller-Based API** mas o ASP.NET Core também permite a construção via **Minimal API**. Para entender melhor sobre esses estilos basta ler essa [página](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/apis?view=aspnetcore-9.0).[^3]
+Também não vamos perder tempo desenvolvendo nada de interface. No final, vamos ter uma aplicação que recebe chamadas http   via swagger[^4] e retorna um json.
+
+:::danger[Aviso]
+Eu vou seguir um modelo de arquitetura chamado **Controller-Based API** mas o ASP.NET Core também permite a construção via **Minimal API**. Para entender melhor sobre esses estilos basta ler essa [página](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/apis?view=aspnetcore-9.0)[^3].
 
 [^3]: Já que você está começando. Vale a pena fazer os 2 modelos pra aprender.
+:::
+
+[^4]: Pode ser feita via [postman](https://www.postman.com/) ou [insomnia](https://insomnia.rest/download) também.
 
 ### Requisitos
 
 1. Receber requisição HTTP GET/POST/PUT/DELETE
 2. Retornar um JSON como resposta
 
+### Panorama do Desenvolvimento
+
+![88-commits-backend.png](../img/88-commits-backend.png)
+
+#### Commit 1 - Update Git Ignore
+
+Nada de mais aqui, só colocando algumas coisas no git ignore pra gente não ter que ficar olhando pra arquivos desnecessários (faltou colocar o .db ai também).
+
+[Link do Commit](https://github.com/brunoruas2/repositorio_codigos/commit/1bd18d4ab2907b1a1b9789506aa486c6ef8c6455)
+
+#### Commit 2 - Template padrão do ASP.NET Core
+
+Tirado da própria documentação do .NET, podemos ver que existem 3 tipos de runtime para executar aplicativos .NET. O ASP.NET Core é a parte para aplicações web mas além dele tem o Desktop e a parte de CLI.
+
+Aqui nesse commit eu criei um app padrão só pra gente sentir a "temperatura". Tem vários arquivos que são gerados automaticamente pelo Visual Studio 2022 mas eu deixei um comentário nos mais importantes.
+
+[Link do Commit](https://github.com/brunoruas2/repositorio_codigos/commit/4c42dad7155e865d93e7703e48ad9dd66bf745a5)
+
+#### Commit 3 - Models, DataContext e InMemory Database
+
+Aqui nós pegamos o template do ASP.NET Core e começamos a criar nossa aplicação.
+
+Primeiro, criamos o modelo da classe de item TO DO e também a classe que representa a conexão com o banco de dados.
+
+Falando em banco de dados, nesse primeiro momento, vamos usar um banco alocado diretamente na memória RAM do computador, ou seja, desligando o app, perdemos todos os dados.
+
+[Link do Commit](https://github.com/brunoruas2/repositorio_codigos/commit/939ede2af40b02b5bf89804b5b3188577e951f7e)
+
+#### Commit 4 - Scaffold do controller para To Do Item
+
+Nessa etapa a gente cria o controller da nossa aplicação usando uma automação chamada Scaffold onde só precisamos dizer a classe de datacontext e da tabela que o VS 2022 faz praticamente tudo no CRUD (o que significa que a gente tem que saber muito mais do que criar apenas CRUD).
+
+Tem um monte de outros arquivos também mas só foca no que eu comentei.
+
+[Link do Commit](https://github.com/brunoruas2/repositorio_codigos/commit/0ebcdbbc1cd1e5b96e327cc0e2f0252ea2916480)
+
+Rodando o projeto, podemos ver que agora temos os nossos endpoints no swagger.
+
+![swagger](../img/89-swagger.jpg)
+
+#### Commit 5 - Database local parte 1 - Error
+
+Agora, queremos salvar as informações de maneira persistente. Para isso, vamos abandonar a estratégia de `InMemoryDatabase` para um banco de dados que é super simples chamado `sqlite`.
+
+[Documentação oficial](https://www.sqlite.org/cli.html)
+
+![cli sqlite](../img/90-sqlite.jpg)
+
+[Link do Commit](https://github.com/brunoruas2/repositorio_codigos/commit/3a6890bef19cb922372db82202c4f6fa6c420190#r150727419)
+
+![error](../img/91-error-database.jpg)
+
+**Atenção**: Aprendam a ler logs de erro! Sério, um programador passa mais tempo lendo logs de erro e interpretando eles do que escrevendo código. Então vejam que eu apontei na `stacktrace` onde o nosso código quebrou. Vejam que tem um monte de coisa antes mas o que importa é saber onde no nosso código precisamos resolver. 
+
+#### Commit 6 - Database local parte 2 - Done
+
+Para resolver o problema eu tive que pesquisar no [`stackoverflow`](https://stackoverflow.com/questions/75150958/entity-framework-sqlite-error-1-no-such-table-efmigrationshistory-databa), [`macoratti`](https://macoratti.net/21/08/aspc_sqlite1.htm) e no `chatgpt`. Basicamente, ficaram faltando algumas libs e o `appsettings.json` tinha um erro porque eu coloquei a referência para o banco de dados dentro das chaves da parte de log.
+
+[Link do Commit](https://github.com/brunoruas2/repositorio_codigos/commit/a1b1af70696ba9b6debcf60ab477b68e79653ef7#r150727548)
+
+#### Commit 7 - Update no Database
+
+Esse último commit é só salvando os dados do teste que eu fiz com os dados persistindo no banco. Logo abaixo eu mostro a consulta no banco.
+
+![banco](../img/92-tudo-certo.jpg)
 
 ## Bibliografia
 - Ingeno, Joseph. **Software Architect's Handbook**. Packt Publishing, 2018.

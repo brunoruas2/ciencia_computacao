@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+title: Programação Modular
+description: "" 
 ---
 
 # Programação Modular
@@ -47,7 +49,9 @@ class Calculo {
 }
 
 ```
-**Comentário:** Tudo que usamos nesse programa acima foi aprendido na parte 1 desse material com apenas 1 exceção. Pode ser que para algumas pessoas seja estranho que na definição da função fatorial se faça uso da própria função que está sendo criada. Chamamos esse recurso de **recursão** e é usado bastante como ferramenta de solução de problemas matemáticos formais. Aqui tem um [link](https://panda.ime.usp.br/pensepy/static/pensepy/12-Recursao/recursionsimple-ptbr.html) sobre essa técnica em linguagem de programação.
+:::tip[Comentário] 
+Tudo que usamos nesse programa acima foi aprendido na parte 1 desse material com apenas 1 exceção. Pode ser que para algumas pessoas seja estranho que na definição da função fatorial se faça uso da própria função que está sendo criada. Chamamos esse recurso de **recursão** e é usado bastante como ferramenta de solução de problemas matemáticos formais. Aqui tem um [link](https://panda.ime.usp.br/pensepy/static/pensepy/12-Recursao/recursionsimple-ptbr.html) sobre essa técnica em linguagem de programação.
+:::
 
 Além do conceito de função, as linguagens também evoluíram para o uso de **procedimentos** que podem ser entendidos como a abstração de comandos. É a representação de um conjunto de passos que resolve um tarefa. Diferente das funções que possuem um retorno, um procedimento pode ou não ter um resultado visível.
 
@@ -98,7 +102,9 @@ Desse modo, podemos pensar em um **Módulo**[^2] como um tipo abstrato de dados 
 
 A vantagem de se encapsular a lógica é permitir que os arquivos de código se tornem mais legíveis porque toda a lógica das funções usadas está guardada nos arquivos de referência de cada módulo que foi carregado no começo do script, além disso, podemos desejar que certas partes do nosso código não estejam disponíveis para manipulação por parte do usuário. 
 
-**Comentário:** Já vimos um pouco sobre escopo quando trabalhos tipos abstratos de dados.
+:::tip[Comentário] 
+Já vimos um pouco sobre escopo quando trabalhos tipos abstratos de dados.
+:::
 
 ```cs
 using System;
@@ -149,7 +155,9 @@ public class MainClass {
 
 ```
 
-**Comentário:** Se alguns de vocês tiveram dúvidas na linha onde o objeto `ContaDoZe` é criado pela passagem de dois parâmetros `Conta(1200,DateTime.Now)` é porque vocês se esqueceram do que aprendemos sobre **construtores**.
+:::tip[Comentário] 
+Se alguns de vocês tiveram dúvidas na linha onde o objeto `ContaDoZe` é criado pela passagem de dois parâmetros `Conta(1200,DateTime.Now)` é porque vocês se esqueceram do que aprendemos sobre **construtores**.
+:::
 
 **Programação Orientada à Objetos**
 
@@ -287,7 +295,9 @@ Na parte `Produto produto` estamos fazendo apenas a **referência** à classe ma
 
 Logo após a referência usamos o token `new` para, ai sim, criar um endereço na memória que onde o objeto será criado.
 
-**Comentário:** Se você ainda está com dúvidas sobre o que esse objeto criado fará, recomendamos fortemente os fundamentos da etapa 1.
+:::tip[Comentário] 
+Se você ainda está com dúvidas sobre o que esse objeto criado fará, recomendamos fortemente os fundamentos da etapa 1.
+:::
 
 #### Construtores
 Começamos a ver esse assunto no período 1 do curso. Vale a pena relembrar antes de continuar essa seção.
@@ -348,7 +358,9 @@ class Produto {
 }
 
 ```
-**Comentário:** O objeto `this` é um token que faz referência ao escopo onde se encontra. No caso em tela, ele se refere ao objeto sendo criado e não ao método onde está sendo usado. Essa parte de tokens de referência de escopo é um pouco confusa a primeira vista mas com o tempo é possível entender melhor.
+:::tip[Comentário] 
+O objeto `this` é um token que faz referência ao escopo onde se encontra. No caso em tela, ele se refere ao objeto sendo criado e não ao método onde está sendo usado. Essa parte de tokens de referência de escopo é um pouco confusa a primeira vista mas com o tempo é possível entender melhor.
+:::
 
 Dessa maneira, nossa nova classe melhorada de objeto chamado Produto recebe dois tipos de construção. Podemos criar um objeto de produto com ou sem parâmetros.
 ```cs
@@ -473,7 +485,9 @@ class Produto {
 }
 
 ```
-**Comentário:** Reflita sobre esse código acima. Não devemos ter nenhuma dúvida sobre todos os elementos da construção dessa classe chamada `Produto`. Sempre retorne e revise os tópicos anteriores até que tudo tenha sentido.
+:::tip[Comentário] 
+Reflita sobre esse código acima. Não devemos ter nenhuma dúvida sobre todos os elementos da construção dessa classe chamada `Produto`. Sempre retorne e revise os tópicos anteriores até que tudo tenha sentido.
+:::
 
 ### Encapsulamento
 Alguns assuntos podem parecer repetidos. Mas aprofundaremos mais a discussão em relação ao que já aprendemos na primeira parte desse material.
@@ -508,7 +522,9 @@ A interface pode ser divida em duas partes:
 - Especificação - Descrição sobre o significado e funcionamento dessas funções
 
 
-**Comentário:** Essa seção será expandida em tempo oportuno porque esse assunto é muito vasto para pararmos apenas nesses conceitos básicos.
+:::tip[Comentário] 
+Essa seção será expandida em tempo oportuno porque esse assunto é muito vasto para pararmos apenas nesses conceitos básicos.
+:::
 
 **Encapsulamento**
 
@@ -548,7 +564,9 @@ Em c\# existem 3 níveis de acesso aos atributos e métodos que podemos usar na 
 - `public` - Acesso em qualquer parte do programa
 
 
-**Comentário:** Por default, o c\# atribui o nível privado quando nenhum modificador de acesso é atribuído explicitamente. Mas é sempre uma boa prática tornar os acessos sempre explicitamente visíveis no código, mesmo quando eles são privados.
+:::tip[Comentário] 
+Por default, o c\# atribui o nível privado quando nenhum modificador de acesso é atribuído explicitamente. Mas é sempre uma boa prática tornar os acessos sempre explicitamente visíveis no código, mesmo quando eles são privados.
+:::
 
 Voltando à nossa classe Produto. O ideal seria manter todos os atributos privados com apenas os construtores e o método de checagem de estoque acessíveis ao usuário.
 ```cs
@@ -606,14 +624,18 @@ Para facilitar a internalização do princípio da ocultação da informação. 
 
 [^6]:Ou seja, atributo ou método da classe.
 
-**Comentário:** Os pontos 1 e 2 são praticamente a mesma coisa na minha visão. A lógica do ponto 3 é que quanto mais membros de classe públicos, maior é a chance que outros módulos façam uso deles, desse modo, o risco de um alto acoplamento se torna cada vez maior.
+:::tip[Comentário] 
+Os pontos 1 e 2 são praticamente a mesma coisa na minha visão. A lógica do ponto 3 é que quanto mais membros de classe públicos, maior é a chance que outros módulos façam uso deles, desse modo, o risco de um alto acoplamento se torna cada vez maior.
+:::
 
 #### Métodos de Acesso e Propriedades
 O princípio da ocultação da informação não nos impede de ter acesso aos atributos. Nós apenas nos certificamos que eles serão seguramente acessados por meios dos métodos que deixaremos disponíveis para interação.
 
 Chamamos de **métodos de acesso** os meios criados para permitir que os usuários tenham capacidade de acessar da maneira desejada as informações contidas nos atributos dos nossos objetos. Desse modo, temos a confiança que os valores atribuídos aos atributos dos nossos objetos sempre obedecerão às regras definidas nos seus métodos públicos.
 
-**Comentário:** Já iniciamos esse assunto anteriormente no nosso material.
+:::tip[Comentário] 
+Já iniciamos esse assunto anteriormente no nosso material.
+:::
 
 **Métodos get (leitura):** É capaz de acessar um valor de atributo privado.
 
@@ -865,11 +887,16 @@ class BemDuravel : Produto
 }
 
 ```
-**Comentário:** Não se assustem pela mudança na maneira de escrever as propriedades `get` e `set`. Esse token `=>` é interpretado do mesmo jeito que o par de chaves vistos anteriormente.
+:::tip[Comentário] 
+Não se assustem pela mudança na maneira de escrever as propriedades `get` e `set`. Esse token `=>` é interpretado do mesmo jeito que o par de chaves vistos anteriormente.
+:::
 
 Ao usarmos essas subclasses no nosso programa, elas terão os mesmo atributos e métodos que a superclasse `Produto` que elaboramos durante todo esse capítulo.
 
-**Comentário:** Existe um princípio da programação orientada à objetos que prioria composição ao invés da herança. A ideia é que é melhor fazer as conexões entre classes de mesma hierarquia do que criar uma vasta linha entre superclasses e subclasses. Em tempo oportuno retomaremos essa discussão. Por enquanto segue esse [link](https://acervolima.com/favorecendo-a-composicao-em-vez-da-heranca-em-java-com-exemplos/#:~:text=Favorecer%20a%20composi%C3%A7%C3%A3o%20em%20vez,uma%20classe%20base%20ou%20pai.) com esse assunto.
+:::tip[Comentário] 
+Existe um princípio da programação orientada à objetos que prioria composição ao invés da herança. A ideia é que é melhor fazer as conexões entre classes de mesma hierarquia do que criar uma vasta linha entre superclasses e subclasses. Em tempo oportuno retomaremos essa discussão. Por enquanto segue esse [link](https://acervolima.com/favorecendo-a-composicao-em-vez-da-heranca-em-java-com-exemplos/#:~:text=Favorecer%20a%20composi%C3%A7%C3%A3o%20em%20vez,uma%20classe%20base%20ou%20pai.) com esse assunto.
+:::
+
 #### Construtores em Classes Filhas
 Quando instaciamos um objeto a partir de uma classe filha, primeiro disparamos os construtores da classe pai para, depois, executarmos os construtores da subclasse.
 
@@ -919,7 +946,9 @@ Da mesma maneira que temos um token na classe pai, temos que usar o token `overr
 
 Outra requisição obrigatória no processo de sobreposição é o uso do token `new` na hora da criação de um método ou atributo de mesmo nome na classe original. Abaixo temos um exemplo de como podemos expandir um método criado na classe origina por meio da sobreposição.
 
-**Comentário:** Até agora usamos várias vezes o token `void` e ainda não tivemos a satisfação de uma definição do que ele faz. O token `void` é usado na construção de **métodos sem retorno**, ou seja, funções que não possuem uma linha com o comando `return`. 
+:::tip[Comentário] 
+Até agora usamos várias vezes o token `void` e ainda não tivemos a satisfação de uma definição do que ele faz. O token `void` é usado na construção de **métodos sem retorno**, ou seja, funções que não possuem uma linha com o comando `return`. 
+:::
 
 ```cs
 using System;
@@ -971,7 +1000,9 @@ Para a existência do polimorfismos são necessários três requisitos:
 
 Vamos a um exemplo de polimorfismo mas com o devido contexto. É natural pensar que um objeto contenha um método cuja saída seja uma string com as informações a respeito dele. Em c\# existem métodos nativos, ou seja, que existe por padrão em todos os objetos, cujo um deles é chamado `toString()` que retorna uma string com informações sobre o objeto.
 
-**Comentário:** Mais sobre esse assunto pode ser encontrado nessa [documentação oficial](https://docs.microsoft.com/pt-br/dotnet/api/system.object?view=net-6.0).
+:::tip[Comentário] 
+Mais sobre esse assunto pode ser encontrado nessa [documentação oficial](https://docs.microsoft.com/pt-br/dotnet/api/system.object?view=net-6.0).
+:::
 
 Mas como esse método é nativo, normalmente ele só trás algumas poucas informações sobre os objetos. Pensando nos atributos de qualidade de software que aprendemos até agora, não faz sentido (ou não é indicado) criarmos um método novo que retorne uma string com informações das nossas classes instanciadas porque já temos um por default. Como podemos resolver o fato desse método nativo não ser suficientemente detalhado? Polimorfismo é a solução!
 
@@ -996,8 +1027,10 @@ class Produto {
 }
 
 ```
-**Comentário:** Mas espere um segundo. Temos um `override` em uma classe pai?! É isso mesmo! A razão disso é que **todas as classes** em c\# são, de certa maneira, classes filhas de uma classe mestre que contém todos os métodos padrões. Mesmo as classes pai.
-"
+:::tip[Comentário] 
+Mas espere um segundo. Temos um `override` em uma classe pai?! É isso mesmo! A razão disso é que **todas as classes** em c\# são, de certa maneira, classes filhas de uma classe mestre que contém todos os métodos padrões. Mesmo as classes pai.
+:::
+
 ```cs
 using System;
 class BemDeConsumo : Produto {
@@ -1024,7 +1057,9 @@ class BemDeConsumo : Produto {
 
 ```
 
-**Comentário:** Essa seção é bem densa e importante. Pare e reflita sobre os códigos que foram vistos aqui. Revise sempre que necessário.
+:::tip[Comentário] 
+Essa seção é bem densa e importante. Pare e reflita sobre os códigos que foram vistos aqui. Revise sempre que necessário.
+:::
 
 #### Classes Abstratas
 Em c\# podemos definir métodos sem declarar as suas implementações, ou seja, reservamos os nomes mas não dizemos o que eles farão. Não é de se estranhar que esses métodos recebam a nomenclatura de **métodos abstratos**. Se uma classe possui um ou mais desses métodos ela é chamada de **classe abstrata** porque não contém tudo que é necessário para a construção de uma classe normal.
@@ -1185,7 +1220,9 @@ class MainClass {
 }
 
 ```
-**Comentário:** Se ficou na dúvida, lembre-se do que aprendemos sobre **vetores** na disciplina de abstração de dados.
+:::tip[Comentário] 
+Se ficou na dúvida, lembre-se do que aprendemos sobre **vetores** na disciplina de abstração de dados.
+:::
 
 #### Classes e Membros Selados (sealed)
 
@@ -1325,7 +1362,9 @@ Abaixo temos um exemplo de construção de um programa que julga se dois conjunt
 
 [^10]:Ou seja, se não possuem nenhum elemento em comum.
 
-**Comentário:** Não se preocupe se não entender o algoritmo de primeira. Eu tentei ser bem generoso nos comentários mas esse programa é, na minha opinião, desafiador de ser compreendido por quem não tem um background de matemática e programação um pouco desenvolvido. Leia quantas vezes for necessário e, se a dúvida persistir, entra em contato comigo pela issue do github.
+:::tip[Comentário] 
+Não se preocupe se não entender o algoritmo de primeira. Eu tentei ser bem generoso nos comentários mas esse programa é, na minha opinião, desafiador de ser compreendido por quem não tem um background de matemática e programação um pouco desenvolvido. Leia quantas vezes for necessário e, se a dúvida persistir, entra em contato comigo pela issue do github.
+:::
 
 ```cs
 using System;
@@ -1379,7 +1418,9 @@ Uma **coleção** ou **collection** é um objeto que agrupa múltiplos objetos. 
 
 Mas paremos pra pensar 1 minuto. Nós já não tínhamos definido um conjunto de objetos como um **namespace**? Sim! Uma coleção é um namespace nativo que nos fornecem métodos otimizados para o tratamento de dados de maneira a tornar nossos programas o mais eficiente possível.
 
-**Comentário:** Eu gosto de pensar nas coleções como um "kit de ferramentas" que já nos fornecem maneiras de lidar com problemas comuns. Mais vale aprender bem quais ferramentas o .NET nos dá nativamente do que perder horas e horas reinventando a roda.
+:::tip[Comentário] 
+Eu gosto de pensar nas coleções como um "kit de ferramentas" que já nos fornecem maneiras de lidar com problemas comuns. Mais vale aprender bem quais ferramentas o .NET nos dá nativamente do que perder horas e horas reinventando a roda.
+:::
 
 Aqui vamos aprender sobre algumas das coleções que certamente usaremos várias vezes ao longo da nossa trajetória de desenvolvedores c\#. Mas antes de irmos direto para elas, vamos aprender algumas características em comum que podemos avaliar para definir quando e onde implementar alguns de seus objetos.
 
@@ -1651,14 +1692,18 @@ class Program {
 }
 
 ```
-**Comentário:** De todas as seções desse microfundamento, essa é provavelmente a que mais contém conceitos que diferenciam os programadores .NET iniciantes dos mais experientes. O uso dessas três categorias de polimorfismo paramétrico fazem muita diferença na qualidade do seu código e devem ser entendidas muito profundamente.
+:::tip[Comentário] 
+De todas as seções desse microfundamento, essa é provavelmente a que mais contém conceitos que diferenciam os programadores .NET iniciantes dos mais experientes. O uso dessas três categorias de polimorfismo paramétrico fazem muita diferença na qualidade do seu código e devem ser entendidas muito profundamente.
+:::
 
 ### Projeto Orientado para Objetos
 O objetivo de qualquer programador profissional é produzir códigos de qualidade. Nessa última parte do microfundamento, vamos aprender sobre alguns normativos que regem os princípios e práticas para construção de programas com essas qualidades.
 
 Os princípios que vamos aprender aqui são uma maneira de se produzir código fácil de ler, fácil de modificar e fácil de testar. De modo a permitir que um time de desenvolvedores atue de forma colaborativa.
 
-**Comentário:** Uma boa maneira de saber se estamos indo bem é sempre olhar os nossos códigos se perguntando "Outra pessoa poderia continuar o meu trabalho se eu sair desse projeto?" ou "Caso eu precise trabalhar com alguém, essa pessoa conseguirá entender o meu código apenas olhando diretamente para ele?".
+:::tip[Comentário] 
+Uma boa maneira de saber se estamos indo bem é sempre olhar os nossos códigos se perguntando "Outra pessoa poderia continuar o meu trabalho se eu sair desse projeto?" ou "Caso eu precise trabalhar com alguém, essa pessoa conseguirá entender o meu código apenas olhando diretamente para ele?".
+:::
 
 #### Princípios SOLID
 Os princípios que vamos estudar agora foram introduzidos por Robert C. Martin (também conhecido como Uncle Bob) no artigo [Design Principles and Design Patterns](http://staff.cs.utu.fi/staff/jouni.smed/doos_06/material/DesignPrinciplesAndPatterns.pdf). Posteriormente, os conceitos foram desenvolvidos por Michael Feathers e ganharam o acrônimo SOLID. Nos últimos 20 anos, esses princípios têm impacto fortemente o mundo das programação orientada à objetos e devem ser compreendidos e internalizados por quem se propõe a entrar nessa jornada.
@@ -1772,7 +1817,9 @@ Padrões **Estruturais** tratam do desacoplamento entre interface e implmentaç�
 
 Padrões **Comportamentais** são focados na definição de mecanismos de colaboração entre objetos. Mais relacionados à distribuição de responsabilidades e padronização de comunicações. Exemplos de padrões desse tipos são: Chain of Responsability, Comand Iterator, Mediator, Memento, Observer, State, Strategy, Visitor.
 
-**Comentário:** Essa parte final é só uma introdução geral aos conceitos de padrões de projeto. Existe um mundo a ser explorado nesse tópico mas agora estamos cientes da existência dele e já temos algumas referências iniciais para aprofundarmos o conhecimento.
+:::tip[Comentário] 
+Essa parte final é só uma introdução geral aos conceitos de padrões de projeto. Existe um mundo a ser explorado nesse tópico mas agora estamos cientes da existência dele e já temos algumas referências iniciais para aprofundarmos o conhecimento.
+:::
 
 
 ## Bibliografia

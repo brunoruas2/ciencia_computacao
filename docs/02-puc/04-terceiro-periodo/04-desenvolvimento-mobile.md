@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+title: Desenvolvimento Mobile
+description: "" 
 ---
 
 # Desenvolvimento Mobile
@@ -25,7 +27,9 @@ A primeira parte que a gente aprendeu sobre arquitetura pode ser encontrada na m
 
 O modelo mais usado de arquitetura de aplicações móveis é o modelo cliente e servidor. Nesse modelo, Temos a figura do banco de dados E da aplicação que se comunicam por meio da internet.
 
-**Comentário:** Isso mesmo lembra bastante a maneira como um site funciona. A principal diferença é que ao invés do navegador aqui temos o aplicativo.
+:::tip[Comentário] 
+Isso mesmo lembra bastante a maneira como um site funciona. A principal diferença é que ao invés do navegador aqui temos o aplicativo.
+:::
 
 ##### Tipos de cliente
 Podemos separar os tipos de clientes em 2 grupos:
@@ -53,12 +57,16 @@ A segunda maneira é o desenvolvimento híbrido. Nesse caso, desenvolvemos uma a
 
 Nessa matéria, usaremos a abordagem do desenvolvimento híbrido utilizando a tecnologia [React Native](https://reactnative.dev/) que é inteiramente baseada em JavaScript.
 
-**Comentário:** Se você precisar de um reforço de JavaScript, nós temos uma parte da disciplina de [desenvolvimento web front end](../03-segundo-periodo/05-desenvolvimento-web-backend.md) que ensina o básico sobre ela.
+:::tip[Comentário] 
+Se você precisar de um reforço de JavaScript, nós temos uma parte da disciplina de [desenvolvimento web front end](../03-segundo-periodo/05-desenvolvimento-web-backend.md) que ensina o básico sobre ela.
+:::
 
 #### React Native
 O nome React Native não é atoa. Podemos separar esse conceito em 2. O primeiro, [**React**](https://reactjs.org/), se refere a um framework em JavaScript para construção de interfaces de usuário. O segundo, **native**, é uma alusão ao fato que, uma vez que a aplicação é construída, ela pode ser traduzida para código nativo de cada plataforma.
 
-**Comentário:** Não podemos achar que o React possibilita desenvolvimento fullstack de aplicações em JavaScript. Ela é uma biblioteca para criação de interfaces de usuário. Nada mais do que isso.
+:::tip[Comentário] 
+Não podemos achar que o React possibilita desenvolvimento fullstack de aplicações em JavaScript. Ela é uma biblioteca para criação de interfaces de usuário. Nada mais do que isso.
+:::
 
 ##### Crash Course em React
 Não tem jeito, para entender bem React Native precisamos entender pelo menos o básico do React.
@@ -97,7 +105,9 @@ Ao criar um snack no Expo a gente consegue perceber a estrutura básica de um pr
 - README.md
 ```
 
-**Comentário:** Podemos rodar a aplicação que estamos desenvolvendo também no nosso próprio smartphone baixando o aplicativo do Expo no nosso celular. O app que temos que baixar é o [Expo Go](https://expo.dev/client).
+:::tip[Comentário] 
+Podemos rodar a aplicação que estamos desenvolvendo também no nosso próprio smartphone baixando o aplicativo do Expo no nosso celular. O app que temos que baixar é o [Expo Go](https://expo.dev/client).
+:::
 
 Mesmo Expo criando automaticamente um padrão de pastas, nós vamos utilizar o mesmo padrão que o professor usou na construção do projeto da disciplina.
 
