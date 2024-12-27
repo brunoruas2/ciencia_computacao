@@ -140,7 +140,9 @@ Abaixo temos um tutorial do [Rocketseat](https://react-native.rocketseat.dev/) e
 ## Desenvolvimento de Aplicações Móveis
 Agora que sabemos o básico da teoria, vamos colocar em prática no desenvolvimento de uma aplicação. Nosso objetivo é desenvolver uma aplicação focada na gestão de combustível utilizando react native e o react native paper.
 
-**Aviso Importante:** Eu não gostei da maneira como a parte prática foi ministrada nesse microfundamento da PUC. O professor focou demais em mostrar como o ecossistema possui funcionalidades então foi um showcase de componentes desnecessariamente. Em virtude disso, eu vou ter que ir atrás de um projeto coeso que tenha começo, meio e fim. Então os que tiverem pressa no assunto desse material, pode ir direto na bibliografia abaixo ou os materiais da primeira parte.
+:::danger[Aviso] 
+Eu não gostei da maneira como a parte prática foi ministrada nesse microfundamento da PUC. O professor focou demais em mostrar como o ecossistema possui funcionalidades então foi um showcase de componentes desnecessariamente. Em virtude disso, eu vou ter que ir atrás de um projeto coeso que tenha começo, meio e fim. Então os que tiverem pressa no assunto desse material, pode ir direto na bibliografia abaixo ou os materiais da primeira parte.
+:::
 
 ## Bibliografia
 - Bass, Len; Clements, Paul; Kazman, Rick. **Software Architecture in Practice,** Third Edition. Addison-Wesley Professional, 2012.
