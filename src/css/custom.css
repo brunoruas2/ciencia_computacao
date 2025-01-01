@@ -4,6 +4,14 @@
  * work well for content-centric websites.
  */
 
+body {
+  text-align: justify;
+}
+
+.table-of-contents {
+  text-align: left !important;
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;

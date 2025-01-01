@@ -34,9 +34,9 @@ O conteúdo do curso está abaixo. O checklist indicará quais matérias (que na
     - [x] [Design de Interação](./03-segundo-periodo/03-design-interacao.md)
     - [x] [Programação Modular](./03-segundo-periodo/04-programacao-modular.md)
     - [x] [Desenvolvimento Web Back-End](./03-segundo-periodo/05-desenvolvimento-web-backend.md)
-    - [ ] Modelagem de Dados
-    - [ ] Fundamentos de Redes de Computadores
-    - [ ] Manipulação de Dados com SQL
+    - [ ] [Modelagem de Dados](./03-segundo-periodo/06-modelagem-dados.md)
+    - [ ] [Fundamentos de Redes de Computadores](./03-segundo-periodo/07-redes-computadores.md)
+    - [ ] [Manipulação de Dados com SQL](./03-segundo-periodo/08-modelagem-sql.md)
 
 - [ ] **Período 3: Processos de Negócio e de Desenvolvimento de Software**
     - [x] [Estatística Descritiva](./04-terceiro-periodo/01-estatistica-descritiva.md)
@@ -45,17 +45,17 @@ O conteúdo do curso está abaixo. O checklist indicará quais matérias (que na
     - [ ] [Desenvolvimento de Aplicações Móveis](./04-terceiro-periodo/04-desenvolvimento-mobile.md)
     - [ ] [Gerência de Configuração](./04-terceiro-periodo/05-gerencia-configuracao.md)
     - [ ] [Qualidade de Processos de Software](./04-terceiro-periodo/06-qualidade-processos.md)
-    - [ ] Modelagem\Gestão de Processos de Negócios
+    - [ ] [Modelagem\Gestão de Processos de Negócios](./04-terceiro-periodo/07-modelagem-processos.md)
 
 - [ ] **Período 4: Infraestrutura para Sistemas de Software**
     - [ ] [Arquitetura de Software Distribuído](./05-quarto-periodo/01-arquitetura-distribuida.md)
-    - [ ] Cloud Computing
-    - [ ] Projeto de Software
-    - [ ] APIs e Web Services
-    - [ ] Teste de Software
-    - [ ] Banco de Dados NoSQL
+    - [ ] [Cloud Computing](./05-quarto-periodo/02-cloud.md)
+    - [ ] [Projeto de Software](./05-quarto-periodo/03-projeto-software.md)
+    - [ ] [APIs e Web Services](./05-quarto-periodo/04-api-webservices.md)
+    - [ ] [Teste de Software](./05-quarto-periodo/05-testes.md)
+    - [ ] [Banco de Dados NoSQL](./05-quarto-periodo/06-banco-nosql.md)
 
 - [ ] **Período 5: Empreendedorismo e Inovação com Sistemas de Software**
     - [ ] [Segurança Aplicada ao Desenvolvimento](./06-quinto-periodo/01-seguranca.md)
-    - [ ] Compliance em TI
-    - [ ] Implantação de Solução de TI
+    - [ ] [Compliance em TI](./06-quinto-periodo/02-compliance.md)
+    - [ ] [Implantação de Solução de TI](./06-quinto-periodo/03-implantacao.md)

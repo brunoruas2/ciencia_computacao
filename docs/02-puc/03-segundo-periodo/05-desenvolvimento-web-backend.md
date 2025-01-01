@@ -6,7 +6,8 @@ description: ""
 
 # Desenvolvimento Web Backend
 
-## Aviso
+## Comentário
+
 Essa matéria tem uma abordagem muito prática. Desse modo, escrever um passo a passo detalhado de maneira escrita é a **pior** maneira de ensinar esse conhecimento por ser algo extremamente enfadonho tanto para mim (que estou escrevendo) quando para vocês que estarão lendo.
 
 Dessa feita, eu vou criar um repositório no github dedicado para esse microfundamento onde cada commit será uma etapa do processo de desenvolvimento da aplicação. Aqui no material restará apenas a parte teórica e um resumo das transformações feitas ao longo do processo de desenvolvimento da aplicação.
@@ -166,13 +167,15 @@ Eu vou seguir um modelo de arquitetura chamado **Controller-Based API** mas o AS
 
 ### Panorama do Desenvolvimento
 
+Abaixo temos a lista dos commits usados no projeto. Em seguida eu explico o geral de cada commit, seu papel é abrir os links e ler os códigos.
+
 ![88-commits-backend.png](../img/88-commits-backend.png)
 
 #### Commit 1 - Update Git Ignore
 
 Nada de mais aqui, só colocando algumas coisas no git ignore pra gente não ter que ficar olhando pra arquivos desnecessários (faltou colocar o .db ai também).
 
-[Link do Commit](https://github.com/brunoruas2/repositorio_codigos/commit/1bd18d4ab2907b1a1b9789506aa486c6ef8c6455)
+[Link do Commit 1](https://github.com/brunoruas2/repositorio_codigos/commit/1bd18d4ab2907b1a1b9789506aa486c6ef8c6455)
 
 #### Commit 2 - Template padrão do ASP.NET Core
 
@@ -180,7 +183,7 @@ Tirado da própria documentação do .NET, podemos ver que existem 3 tipos de ru
 
 Aqui nesse commit eu criei um app padrão só pra gente sentir a "temperatura". Tem vários arquivos que são gerados automaticamente pelo Visual Studio 2022 mas eu deixei um comentário nos mais importantes.
 
-[Link do Commit](https://github.com/brunoruas2/repositorio_codigos/commit/4c42dad7155e865d93e7703e48ad9dd66bf745a5)
+[Link do Commit 2](https://github.com/brunoruas2/repositorio_codigos/commit/4c42dad7155e865d93e7703e48ad9dd66bf745a5)
 
 #### Commit 3 - Models, DataContext e InMemory Database
 
@@ -190,7 +193,7 @@ Primeiro, criamos o modelo da classe de item TO DO e também a classe que repres
 
 Falando em banco de dados, nesse primeiro momento, vamos usar um banco alocado diretamente na memória RAM do computador, ou seja, desligando o app, perdemos todos os dados.
 
-[Link do Commit](https://github.com/brunoruas2/repositorio_codigos/commit/939ede2af40b02b5bf89804b5b3188577e951f7e)
+[Link do Commit 3](https://github.com/brunoruas2/repositorio_codigos/commit/939ede2af40b02b5bf89804b5b3188577e951f7e)
 
 #### Commit 4 - Scaffold do controller para To Do Item
 
@@ -198,7 +201,7 @@ Nessa etapa a gente cria o controller da nossa aplicação usando uma automaçã
 
 Tem um monte de outros arquivos também mas só foca no que eu comentei.
 
-[Link do Commit](https://github.com/brunoruas2/repositorio_codigos/commit/0ebcdbbc1cd1e5b96e327cc0e2f0252ea2916480)
+[Link do Commit 4](https://github.com/brunoruas2/repositorio_codigos/commit/0ebcdbbc1cd1e5b96e327cc0e2f0252ea2916480)
 
 Rodando o projeto, podemos ver que agora temos os nossos endpoints no swagger.
 
@@ -212,7 +215,7 @@ Agora, queremos salvar as informações de maneira persistente. Para isso, vamos
 
 ![cli sqlite](../img/90-sqlite.jpg)
 
-[Link do Commit](https://github.com/brunoruas2/repositorio_codigos/commit/3a6890bef19cb922372db82202c4f6fa6c420190#r150727419)
+[Link do Commit 5](https://github.com/brunoruas2/repositorio_codigos/commit/3a6890bef19cb922372db82202c4f6fa6c420190#r150727419)
 
 ![error](../img/91-error-database.jpg)
 
@@ -222,13 +225,17 @@ Agora, queremos salvar as informações de maneira persistente. Para isso, vamos
 
 Para resolver o problema eu tive que pesquisar no [`stackoverflow`](https://stackoverflow.com/questions/75150958/entity-framework-sqlite-error-1-no-such-table-efmigrationshistory-databa), [`macoratti`](https://macoratti.net/21/08/aspc_sqlite1.htm) e no `chatgpt`. Basicamente, ficaram faltando algumas libs e o `appsettings.json` tinha um erro porque eu coloquei a referência para o banco de dados dentro das chaves da parte de log.
 
-[Link do Commit](https://github.com/brunoruas2/repositorio_codigos/commit/a1b1af70696ba9b6debcf60ab477b68e79653ef7#r150727548)
+[Link do Commit 6](https://github.com/brunoruas2/repositorio_codigos/commit/a1b1af70696ba9b6debcf60ab477b68e79653ef7#r150727548)
 
 #### Commit 7 - Update no Database
 
 Esse último commit é só salvando os dados do teste que eu fiz com os dados persistindo no banco. Logo abaixo eu mostro a consulta no banco.
 
 ![banco](../img/92-tudo-certo.jpg)
+
+#### Conclusão
+
+Agora sabemos como criar um backend simples que pode ser consumido via chamadas nos endpoints da nossa API com controller. Ainda podemos evoluir muito mais nossa aplicação com segurança, camada de serviço, camada de domínio e etc.
 
 ## Bibliografia
 - Ingeno, Joseph. **Software Architect's Handbook**. Packt Publishing, 2018.
