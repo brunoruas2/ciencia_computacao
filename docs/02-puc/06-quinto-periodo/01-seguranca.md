@@ -4,7 +4,7 @@ title: Segurança no Desenvolvimento
 description: "" 
 ---
 
-# Segurança Aplicada ao Desenvolvimento
+# Segurança no Desenvolvimento
 
 ## Gestão da Segurança da Informação
 ### Conceitos Básicos
