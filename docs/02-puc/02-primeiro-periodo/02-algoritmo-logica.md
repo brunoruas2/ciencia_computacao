@@ -60,7 +60,7 @@ Vamos aprender agora como declarar os 4 tipos mais simples de variáveis:
 - `string` para cadeia de caracteres
 - `bool` para as variáveis booleanas (`true` ou `false`)
 
-:::tip[Comentário]
+:::note[Comentário]
 C# é uma linguagem fortemente tipada, entretanto, existe um tipo de tipagem implícita que é muito usado na prática onde o próprio compilador "interpreta" o tipo de variável. Ao longo desse microfundamento nós vamos usar apenas os tokens de tipagem explícita. Mas vale muito a pena a leitura da documentação oficial nesse [link](https://learn.microsoft.com/pt-br/dotnet/csharp/language-reference/statements/declarations#implicitly-typed-local-variables).
 :::
 
@@ -75,7 +75,7 @@ static void Main(string[] args)
 ```
 Nesse código acima temos a declaração de várias variáveis de cada tipo. Basta colocar o tipo da variável seguido do nome de cada uma delas separadas por vírgula.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Em c\# todas as linhas precisam conter um carácter de encerramento que é o ponto e vírgula `;`. Sem esse token, o computador vai interpretar a próxima linha como sendo a continuação da anterior.
 :::
 
@@ -453,7 +453,7 @@ switch(opcao)
 }
 ```
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Existem várias maneiras de se usar o switch. Eu não vou me aprofundar agora em todas elas. Mas vale muito a pena fazer uso dessa ferramenta para cenários de várias interações possíveis ou múltiplas saídas contextuais.
 :::
 
@@ -742,7 +742,7 @@ resultado = nome_metodo(par1,par2);
 
 ```
 
-:::tip[Comentário]
+:::note[Comentário]
 Se não queremos usar nenhum parâmetro, basta definir o procedimento ou o método com os parênteses vazios, por exemplo,
 `nome_procedimento()`.
 :::

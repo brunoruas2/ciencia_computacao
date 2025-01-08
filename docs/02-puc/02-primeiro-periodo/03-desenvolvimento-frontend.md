@@ -451,7 +451,7 @@ Existem vários elementos que podem ser usados dentro de uma tabela. São os pri
 |    `<th>`     | Cabeçalho dentro de uma linha |
 |    `<td>`     |          Table data           |
 
-:::tip[Comentário]
+:::note[Comentário]
 Não podemos cair na tentação de usar tabelas como ferramenta de layout da página. Pode até parecer mais simples no começo mas tabelas não são boas para criação de aplicações fluidas e dinâmicas.
 :::
 
@@ -928,7 +928,7 @@ O resultado desses códigos acima produzem o seguinte resultado:
 
 Para além das medias queries e layout flex, podemos construir o front end de uma aplicação usando o Sistema Grid que o CSS possui. A ideia é pensar no front end da aplicação em termos de dois elementos visuais: O Container e os Itens.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Depois eu vou revisitar essa seção com base no material disponível nesse [link](https://css-tricks.com/snippets/css/complete-guide-grid/).
 :::
 
@@ -1195,7 +1195,7 @@ Para citar alguns desses motores:
 |     Edge      |     EDGE      |     Chakra Core      |
 |     Opera     |     Blink     |                      |
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Não confunda a linguagem de programação [Java](https://www.java.com/pt-BR/) com JavaScript. São linguagens totalmente diferentes.
 :::
 
@@ -1274,7 +1274,7 @@ console.log(b);
 > Mostra 5 e 1 no console
 ```
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Uma boa prática em JS (e em praticamente todas as linguagens) é sempre declarar as variáveis na parte de cima de cada bloco ou no começo do código.
 :::
 
@@ -1397,7 +1397,7 @@ var d = new Date(Ano,Mes,Dia,Hora,Segundo,Milisegundos)
 
 Geralmente estamos preocupados apenas com o dia, mês e ano. Para criar um objeto com esses valores basta ir colocando na mesma ordem do último elemento do exemplo acima.
 
-:::danger[Aviso]
+:::danger[Perigo]
 Quando você for indicar o mês, saiba que para o JS, janeiro é 0 e dezembro é 11. Então quando quisermos salvar a data 01/01/2022 usaremos `Date(2022,0,1)`.
 :::
 
@@ -1464,7 +1464,7 @@ valueOf() // Retorna o valor primitivo de um vetor
 
 ```
 
-:::tip[Comentário]
+:::note[Comentário]
 Eu achei estranho que o material não falou nada sobre vetor e matriz. Então uma hora eu volto para expandir essa parte com esses outros dois tipos de dados.
 :::
 
@@ -1716,7 +1716,7 @@ Todos esses objetos estão vinculados ao objeto maior `window` que é a janela d
 
 Cada um desses elementos possui informações e podem ser manipulados para conseguirmos construir as aplicações da maneira como quisermos.
 
-:::tip[Comentário]
+:::note[Comentário]
 No material do curso nós só aprofundamos em dois desses vários elementos. Depois eu volto aqui a medida que for aprendendo mais sobre os outros.
 :::
 
@@ -1936,7 +1936,7 @@ Na tabela a baixo temos os principais tipos de gatilhos que podem ser usados pel
 |     `load`      |   Algum elemento é carregado    |
 |    `unload`     |        Ao sair da página        |
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Aqui o professor da disciplina faz o desafio de criarmos uma calculadora simples com o uso dos elementos estudados nessa seção. Um dia eu volto aqui e faço esse desafio.
 :::
 
@@ -1976,7 +1976,7 @@ Nesse exemplo, podemos ver que o valor para Idade é do tipo number. Nome é uma
 
 Os outros tipos de dados como datas, geolocalização e outros, são passados em JSON como uma string. Temos que lembrar disso se um dia precisamos lidar com esse tipo de informação.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Quando estamos criando um JSON dentro de um código JS nós não precisamos colocar as aspas no nome dos elementos. Mas é padrão que essas aspas sejam usadas em objetos JSON. Então temos que ficar atentos a isso também.
 :::
 
@@ -2166,7 +2166,7 @@ fetch('https:api.github.com/users/brunoruas2')
 </script>
 ```
 
-:::tip[Comentário]
+:::note[Comentário]
 O material não se aprofunda no tema, então eu volto aqui para aprofundar no futuro. Aqui tem um [link](https://developer.mozilla.org/pt-BR/docs/Web/Guide/AJAX) com um material de referência da MDN.
 :::
 

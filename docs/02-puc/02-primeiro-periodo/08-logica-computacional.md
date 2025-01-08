@@ -206,7 +206,7 @@ Outra falácia conhecida é a 	**negação da hipótese**. Podemos construir ela
 
 #### Regras de Inferência
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Eu achei que essa parte foi um pouco negligenciada no curso. Devo voltar aqui para expandir esse conteúdo mais tarde. Por enquanto, temos essa tabela de referência.
 :::
 

@@ -70,7 +70,7 @@ Tal qual aprendemos nas boas práticas de desenvolvimento e design de aplicaçõ
 
 
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Infelizmente, enquanto eu escrevo essa parte do material, estou com pouquíssimo tempo disponível para me aprofundar mais em alguns tópicos. Em tempo oportuno voltaremos a rever essas seções com a devida atenção que elas merecem.
 :::
 
@@ -95,7 +95,7 @@ Esse modelo de construção é usado quando temos processos de tratamento de inf
 
 Uma maneira de se evitar a complexidade gerada por alto acoplamento na arquitetura monolítica é a separação das funções do sistema em camadas que podem, ou não, se comunicar livremente entre si. A arquitetura web é a principal implementação desse tipo de arquitetura (camada de user, camada de api, camada de banco de dados e etc). Quando separamos um sistema em camadas, podemos definir a capacidade de cada em emitir e receber dados de modo a termos um controle da segurança dos dados e desempenho.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Na literatura, podemos achar o termo multi-tier que se refere a separação **física** entre as camadas e multi-layer que se refere a separação **lógica**.
 :::
 
@@ -107,7 +107,7 @@ Na literatura, podemos achar o termo multi-tier que se refere a separação **f�
 
 Esse é o mais novo tipo de arquitetura onde cada nó da rede é tido como simultaneamente um cliente e um servidor. É amplamente usado para escalabilidade de soluções e é um dos motores da chamada web 3.0. Como exemplo, temos os torrents e as blockchains usados para a criação e manutenção das criptomoedas.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Como dito no início, essas separações são apenas didáticas e não definitivas. Não existe arquitetura errada. Tudo depende do problema a ser resolvido.
 :::
 
@@ -152,7 +152,7 @@ Como o projeto é de Backend, vamos fazer um **WEB API** com ASP.NET Core usando
 
 Também não vamos perder tempo desenvolvendo nada de interface. No final, vamos ter uma aplicação que recebe chamadas http   via swagger[^4] e retorna um json.
 
-:::danger[Aviso]
+:::info[Info]
 Eu vou seguir um modelo de arquitetura chamado **Controller-Based API** mas o ASP.NET Core também permite a construção via **Minimal API**. Para entender melhor sobre esses estilos basta ler essa [página](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/apis?view=aspnetcore-9.0)[^3].
 
 [^3]: Já que você está começando. Vale a pena fazer os 2 modelos pra aprender.

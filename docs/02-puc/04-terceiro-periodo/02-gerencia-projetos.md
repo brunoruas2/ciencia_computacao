@@ -6,7 +6,6 @@ description: ""
 
 # Gerência de Projetos
 
-## Aviso
 Eu, particularmente, não sou muito fã dessas matérias mais de "humanas"[^1]. Então aqui eu vou deixar apenas um **resumo/sumário** dos conceitos trabalhados.
 
 [^1]:E olha que eu sou formado em Economia.
@@ -125,7 +124,7 @@ Podemos destacar as principais estruturas atualmente como sendo:
 - Estrutura por Projeto: Foco na autonomia no cumprimento das metas. Atores temporários atrelados à projetos. Maior celeridade na comunicação.
 - Estrutura Matricial: É um misto das duas. Possui alguma flexibilidade na comunicação entre projetos mas pode causar problemas de falta de clareza na cadeia de comando.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Na vida real, nenhuma organização é 100% classificável de acordo com essas estruturas. Mas conhecê-las ajudará muito caso, quem sabe algum dia, nos encontremos no papel de gerente de projeto.
 :::
 
@@ -165,7 +164,7 @@ Na construção do cronograma podemos usar várias representações gráficas. C
 - Diagrama de Rede PERT
 - Gráfico de Gantt
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Existem várias ferramentas para gerenciamento. O [MS-Project](https://www.microsoft.com/pt-br/microsoft-365/project/project-management-software), [ClickUp](https://clickup.com/), [Trello](https://trello.com), [Primavera](https://www.oracle.com/br/industries/construction-engineering/primavera-p6/), [OpenProj](https://www.openproject.org/) e outros
 :::
 
@@ -421,7 +420,7 @@ O método do Scrum é mais indicado para projetos com as seguintes característi
 
 Ele pode ser integrado à ferramentas como o kanban e pode ser associado a outros métodos ágeis de gestão de projetos.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Como já aprendemos sobre os papéis, os artefatos e os eventos do scrum antes, não vou repetir esse conteúdo aqui. Caso não se lembre do que estou falando, volte no primeiro período e revise.
 :::
 

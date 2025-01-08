@@ -6,14 +6,15 @@ description: ""
 
 # Algoritmo e Estrutura de Dados
 
-## Aviso
-
+:::warning[Atenção]
 Essa disciplina costuma ser muito mais difícil em um contexto de bacharel de análise e desenvolvimento de sistemas, engenharia de computação e ciência da computação. Não sei precisar o porquê mas nessa formação nós vamos ver apenas o básico de algumas estruturas e como podemos implementar algumas dessas estruturas em c\#.
 
-Como sempre, 	**não podemos nunca** parar de estudar mais a fundo os assuntos introduzidos nos tópicos mais a frente. A bibliografia recomendada pode ser de grande valia.
+Como sempre, **não podemos nunca** parar de estudar mais a fundo os assuntos introduzidos nos tópicos mais a frente. A bibliografia recomendada pode ser de grande valia.
+:::
 
-Uma outra fonte **espetacular** encontrada aqui no github é esse [site](https://joaoarthurbm.github.io/eda/) publicado pelo professor João Arthur Brunet. Vale muito a pena estudar por lá também (só cuidado porque lá é um curso de bacharelado então a pegada é bem mais profunda do que essa primeira parte do nosso material).
-
+:::tip[Dica]
+Como material adicional, podemos usar esse [material espetacular](https://joaoarthurbm.github.io/eda/) publicado pelo professor João Arthur Brunet. Vale muito a pena estudar por lá também (só cuidado porque o foco é para turma de bacharelado então a pegada é bem mais profunda do que essa primeira parte do nosso material).
+:::
 
 ## Coleções Nativas das Linguagens de Programação
 Vamos relembrar alguns assuntos que aprendemos no período passado na matéria de Algoritmos e Abstração de Dados.
@@ -66,7 +67,7 @@ for (int i = 0; i < 3; i++)
 ```
 Se tentarmos acessar um valor fora do index de um array com uma posição não aceita, vamos receber um erro chamado **Index out of Range Exception**.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Aqui o professor propõe um exercício onde fazemos o input de um nome de aluno e a nota dele. A partir disso, o sistema calcula a média da turma e mostra a lista dos alunos que estão acima de média da turma. Fica ai o desafio para o leitor.
 :::
 
@@ -194,7 +195,7 @@ foreach(object o in lista)
 }
 
 ```
-:::tip[Comentário] 
+:::note[Comentário] 
 O comando dentro da condicional `(int)o` é uma das várias maneiras de se converter um item de uma lista em um inteiro. Chamamos essa maneira de `TypeCasting`[^3] Além dela poderíamos usar `int.Parse()` ou `Convert.ToInt32()`. Aqui tem um [texto falando mais sobre isso](https://www.delftstack.com/howto/csharp/convert-to-int-in-csharp/) e a [aqui](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions) temos a própria documentação da Microsoft.
 :::
 
@@ -205,7 +206,7 @@ Além da lista vamos aprender outros conceitos de estrutura de dados muito usado
 
 Uma **Pilha** ou **Stack** é um TAD que possui a característica que o **primeiro elemento que entra é o último elemento que sai**. A essa característica damos o nome de First In, Last Out (FILO).
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Pense em uma pilha de pratos sujos na pia. O prato que foi colocado primeiro é o último prato que será limpo pois está na base da pilha de louça suja.
 :::
 
@@ -249,7 +250,7 @@ A terceira estrutura de dados que vamos aprender é chamada **Hashtable**. Essa 
 
 Table é simplesmente uma alusão à tabela. O que temos de novidade aqui é o termo **hash**.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Esse material é, em tese, um resumo dos conteúdos dados na graduação da PUC-MG, entretanto, quando eu sinto que o tópico está demasiadamente superficial, eu simplesmente não consigo evitar de expandir o conteúdo originalmente dado. Essa parte eu tirei do livro "Data Structures and Algorithms with Python".
 :::
 
@@ -295,7 +296,7 @@ Começamos a ver esse assunto em programação modular e agora vamos adentrar um
 
 Uma grande diferença entre as coleções anteriores e às genéricas é que nas últimas temos que declarar os tipos no momento da criação **sem possibilidade de misturar tipos** dentro do objeto. Enquanto as classes padrões permitiam qualquer tipo de dados misturados.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 O `<T>` na escrita dessas classes é justamente para indicar que somos obrigados a indicar o **tipo** do dado no momento da criação do objeto.
 :::
 
@@ -566,7 +567,7 @@ static void Main (string[] args) {
     }
 }
 ```
-:::tip[Comentário] 
+:::note[Comentário] 
 Aqui o professor não teve pena. E eu também não vou ter. **Não siga adiante** se você não for capaz de entender o que esse programa faz. Analise o código até fazer sentido.
 :::
 
@@ -575,7 +576,7 @@ A partir de agora, vamos estudar o funcionamento básico de algumas estruturas m
 
 Na seção anterior, nós aprendemos como usar algumas implementações desses conceitos em c\#. Agora, vamos estudar um pouco da teoria por trás dessas classes.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 A partir de agora, vamos ver muito código. Sério. Se prepare, pegue uma boa dose de café e vamos embarcar nessa tonelada de código c\#.
 :::
 
@@ -659,7 +660,7 @@ if(n >= array.Length || pos < 0 || os > n) {
 ```
 Esses 3 métodos de inserção são tranquilos de entendermos. No caso do primeiro, ele move todo mundo pra direita e acrescenta o valor novo no index 0. No caso do inserir no final, ele simplesmente olha o contador e insere um elemento no index dele. Por fim, no caso do inserir genérico, ele primeiro move todos os elementos para a direita do index da posição indicada para depois inserir o elemento nela.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Bem legal vermos como um simples método de adição pode dar uma dor de cabeça para se pensar em como implementar a melhor maneira. Nas próximas vezes que usar um simples insert em uma lista, podemos pensar o que tá acontecendo por trás das bibliotecas que usamos.
 :::
 
@@ -704,7 +705,7 @@ int Remover(int pos) {
 }
 
 ```
-:::tip[Comentário] 
+:::note[Comentário] 
 Novamente, se você está com dificuldade em entender esse código. **Pare agora e revise o conteúdo**. Não basta pegar o código e rodar no seu computador. Você é que deve ser capaz de ler e entender o código.
 :::
 
@@ -723,7 +724,7 @@ void Mostrar() {
 }
 
 ```
-:::tip[Comentário] 
+:::note[Comentário] 
 Aqui vai um pequeno teste. Imagine que eu crie uma lista com essa classe instanciada. Qual será o output obtido caso a gente use o método `Mostrar()`?
 :::
 
@@ -757,7 +758,7 @@ class Celula {
 ```
 A vantagem dessa abordagem é que podemos criar elementos em cadeia. No exemplo acima, cada instanciação da classe pode ser relacionada a outra de maneira recursiva.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 A gente viu um pouco sobre recursão lá no microfundamento de programação modular mas no contexto de uma função.
 :::
 
@@ -909,7 +910,7 @@ Para entendermos melhor sobre essa estrutura de dados, é muito útil ter uma re
 
 Podemos ver que usamos dois elementos para representar essa estrutura. As bolas são chamados de nós (ou vértices) e as linhas (ou setas) são chamadas de arestas.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Se você ficou com algum feeling que a relação entre esses pontos lembrou um pouco a `LinkedList<T>`, você tá no caminho certo.
 :::
 
@@ -1087,7 +1088,7 @@ Agora que temos uma ideia do que é o rotacionamento, podemos aprofundar um pouc
     - Direita-Esquerda
     - Esquerda-Direita
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Isso mesmo, a imagem anterior é uma rotação simples à direita.
 :::
 
@@ -1328,7 +1329,7 @@ Eu sei, ainda tá punk. Mas olha só. Nós conhecemos um condicional. E aqui em 
 
 Ignorando o primeiro, vamos prestar atenção no de dentro. Ele parece fazer um teste se o hash do nosso elemento que foi inserido possui alguma colisão `.hash_coll >= 0`. Se isso é verdade, ele está usando o token composto `|=` do operador de atribuição `=` com o lógico `||`. A gente viu algo parecido [aqui](../02-primeiro-periodo/02-algoritmo-logica.md) e [aqui](../02-primeiro-periodo/02-algoritmo-logica.md).
 
-:::tip[Comentário] 
+:::note[Comentário] 
 `a |= b` é a mesma coisa que `a = a | b`. Ou seja, temos uma operação lógica entre `_buckets[bucketNumber].hash_coll | unchecked((int)0x80000000)`. Sendo que esse treco `0x80000000` é o número hexadecimal para o número negativo mais baixo em um inteiro de 32 bits. Eu **acho** que ele usa esse fundo como indicativo de uso do slot no array de index.
 :::
 

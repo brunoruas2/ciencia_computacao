@@ -28,9 +28,9 @@ Meu objetivo com esse projeto é construir um tipo de **segundo cérebro** para 
 
 Se você está começando do zero. Recomendo seguir a grade do tecnólogo antes de focar nas partes mais práticas.
 
-:::danger[Aviso]
+:::note[Comentário]
 Mesmo gostando de escrever, eu percebi que todo programador maduro é capaz de ler diretamente da **documentação oficial** e **pesquisar por conta própria** sempre que necessário. Por causa disso, em matérias mais práticas, vamos tocar um mini projeto onde eu vou mostrar os commits feitos e fazer uma breve explicação em cada commit[^1].
 
-[^1]: Você **tem** que ser capaz de ler as alterações em cada commit. Pare, leia e se esforce para entender cada alteração.
+[^1]: Você **tem** que ser capaz de ler as alterações em cada commit. Pare, leia e se esforce para entender cada passo dos projetos.
 :::
 

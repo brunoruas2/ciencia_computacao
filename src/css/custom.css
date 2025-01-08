@@ -8,6 +8,14 @@ body {
   text-align: justify;
 }
 
+header, h1, h2, h3 {
+  text-align: left !important;
+}
+
+.theme-doc-sidebar-container {
+  text-align: left !important;
+}
+
 .table-of-contents {
   text-align: left !important;
 }

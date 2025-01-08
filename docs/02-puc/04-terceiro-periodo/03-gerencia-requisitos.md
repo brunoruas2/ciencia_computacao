@@ -6,8 +6,6 @@ description: ""
 
 # Gerência de Requisitos
 
-## Aviso
-
 Para tirarmos o máximo proveito dessa matéria, é **muito** indicado que os conteúdos vistos na parte de requisitos da disciplina de [introdução à engenharia de software](../02-primeiro-periodo/06-fundamentos-engenharia-software.md) lá no primeiro período e, também, todo o microfundamento de [engenharia de requisitos](../03-segundo-periodo/02-engenharia-requisitos.md).
 
 ## Administração e Rastreabilidade de Requisitos
@@ -54,7 +52,7 @@ Dentre os atributos, podemos destacar alguns muitos importantes:
 - Referência Cruzada com outros requisitos
 - Observações
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Pois é, quem achava que gerir requisito era só anotar em post-it tá muito enganado. Tudo isso deve ser, idealmente, coletado para que o processo de desenvolvimento seja feito de maneira produtiva e que o produto final atenda as expectativas do clientes.
 :::
 

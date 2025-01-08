@@ -11,7 +11,7 @@ Ao longo desse microfundamento, teremos o objetivo de responder a seguinte pergu
 
 A base desse trabalho é compreender o usuário, os sistemas interativos e a relação entre usuário e sistemas. Vamos aprender a projetar essas interações bem como avaliar se os objetivos determinados foram alcançados.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Essa matéria tem abordagem bem teórica. Então esse material vai ser o mais resumido possível sobre os temas abordados. Quem tiver interesse em se aprofundar, pode buscar esse diferencial na bibliografia.
 :::
 
@@ -88,7 +88,7 @@ Os problemas descritos acima são originários da diferença entre como o design
   - Modelo do Usuário - É o modelo construído internamente pelo usuário ao longo das interações com o sistema.
 
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Cada conceito que vimos até agora levam anos de pesquisa até se ter algum domínio. Nosso foco por agora é apenas conhecer a existência desses conceitos bem como uma versão resumida do que são.
 :::
 
@@ -100,7 +100,7 @@ Cada conceito que vimos até agora levam anos de pesquisa até se ter algum dom�
 
 
 #### A interação pela Lente Semiótica 
-:::tip[Comentário] 
+:::note[Comentário] 
 Eu não sei vocês, mas, pra mim, a palavra semiótica é o tipo de palavra que apenas eruditos e intelectuais costumam usar. Então, finalmente, chegou a nossa hora de aprender o que significa isso.
 :::
 
@@ -159,7 +159,7 @@ Existem algumas maneiras de se considerar o usuário na hora de construirmos a i
 
 
 #### Desing é Técnica ou Arte?
-:::tip[Comentário] 
+:::note[Comentário] 
 Eu, particularmente, acho esse tipo de discussão pouco relevante. Então vou apenas resumir e indicar as bibliografias.
 :::
 
@@ -413,7 +413,7 @@ Nessa seção vamos aprender duas abordagens de avaliação da comunicabilidade 
 
 O **Método de Inspeção Semiótica (MIS)** é um tipo de avaliação que busca analisar a comunicabilidade do sistema por meio da emissão da metacomunicação. Metacomunicação é o estudo da capacidade de comunicar a própria dinâmica da comunicação entre interlocutores, ou seja, é o estudo da informação sobre a informação.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Bem filosófico né?! Eu, sinceramente, acho que não vale a pena entrar muito profundamente em cada tópico desse por agora. Vamos ficar apenas na superfície por enquanto.
 :::
 
@@ -457,7 +457,7 @@ A maneira de investigação é baseada em 13 etiquetas com frases que simulam o 
   - Desisto
 
 
-:::tip[Comentário] 
+:::note[Comentário] 
 De todos os assuntos, esse ai foi o que eu achei mais estranho. Talvez precisaremos expandir mais essa seção mas por hora, é o que temos.
 :::
 

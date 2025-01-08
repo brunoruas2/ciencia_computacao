@@ -4,8 +4,7 @@ title: Abrindo Chrome em Modo Debugg
 authors:
   - ruasbr
 tags:
-  - hola
-  - docusaurus
+  - tip
 ---
 
 Code snippet para abrir chrome em modo debugg

@@ -49,7 +49,7 @@ class Calculo {
 }
 
 ```
-:::tip[Comentário] 
+:::note[Comentário] 
 Tudo que usamos nesse programa acima foi aprendido na parte 1 desse material com apenas 1 exceção. Pode ser que para algumas pessoas seja estranho que na definição da função fatorial se faça uso da própria função que está sendo criada. Chamamos esse recurso de **recursão** e é usado bastante como ferramenta de solução de problemas matemáticos formais. Aqui tem um [link](https://panda.ime.usp.br/pensepy/static/pensepy/12-Recursao/recursionsimple-ptbr.html) sobre essa técnica em linguagem de programação.
 :::
 
@@ -102,7 +102,7 @@ Desse modo, podemos pensar em um **Módulo**[^2] como um tipo abstrato de dados 
 
 A vantagem de se encapsular a lógica é permitir que os arquivos de código se tornem mais legíveis porque toda a lógica das funções usadas está guardada nos arquivos de referência de cada módulo que foi carregado no começo do script, além disso, podemos desejar que certas partes do nosso código não estejam disponíveis para manipulação por parte do usuário. 
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Já vimos um pouco sobre escopo quando trabalhos tipos abstratos de dados.
 :::
 
@@ -155,7 +155,7 @@ public class MainClass {
 
 ```
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Se alguns de vocês tiveram dúvidas na linha onde o objeto `ContaDoZe` é criado pela passagem de dois parâmetros `Conta(1200,DateTime.Now)` é porque vocês se esqueceram do que aprendemos sobre **construtores**.
 :::
 
@@ -295,7 +295,7 @@ Na parte `Produto produto` estamos fazendo apenas a **referência** à classe ma
 
 Logo após a referência usamos o token `new` para, ai sim, criar um endereço na memória que onde o objeto será criado.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Se você ainda está com dúvidas sobre o que esse objeto criado fará, recomendamos fortemente os fundamentos da etapa 1.
 :::
 
@@ -358,7 +358,7 @@ class Produto {
 }
 
 ```
-:::tip[Comentário] 
+:::note[Comentário] 
 O objeto `this` é um token que faz referência ao escopo onde se encontra. No caso em tela, ele se refere ao objeto sendo criado e não ao método onde está sendo usado. Essa parte de tokens de referência de escopo é um pouco confusa a primeira vista mas com o tempo é possível entender melhor.
 :::
 
@@ -485,7 +485,7 @@ class Produto {
 }
 
 ```
-:::tip[Comentário] 
+:::note[Comentário] 
 Reflita sobre esse código acima. Não devemos ter nenhuma dúvida sobre todos os elementos da construção dessa classe chamada `Produto`. Sempre retorne e revise os tópicos anteriores até que tudo tenha sentido.
 :::
 
@@ -522,7 +522,7 @@ A interface pode ser divida em duas partes:
 - Especificação - Descrição sobre o significado e funcionamento dessas funções
 
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Essa seção será expandida em tempo oportuno porque esse assunto é muito vasto para pararmos apenas nesses conceitos básicos.
 :::
 
@@ -564,7 +564,7 @@ Em c\# existem 3 níveis de acesso aos atributos e métodos que podemos usar na 
 - `public` - Acesso em qualquer parte do programa
 
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Por default, o c\# atribui o nível privado quando nenhum modificador de acesso é atribuído explicitamente. Mas é sempre uma boa prática tornar os acessos sempre explicitamente visíveis no código, mesmo quando eles são privados.
 :::
 
@@ -624,7 +624,7 @@ Para facilitar a internalização do princípio da ocultação da informação. 
 
 [^6]:Ou seja, atributo ou método da classe.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Os pontos 1 e 2 são praticamente a mesma coisa na minha visão. A lógica do ponto 3 é que quanto mais membros de classe públicos, maior é a chance que outros módulos façam uso deles, desse modo, o risco de um alto acoplamento se torna cada vez maior.
 :::
 
@@ -633,7 +633,7 @@ O princípio da ocultação da informação não nos impede de ter acesso aos at
 
 Chamamos de **métodos de acesso** os meios criados para permitir que os usuários tenham capacidade de acessar da maneira desejada as informações contidas nos atributos dos nossos objetos. Desse modo, temos a confiança que os valores atribuídos aos atributos dos nossos objetos sempre obedecerão às regras definidas nos seus métodos públicos.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Já iniciamos esse assunto anteriormente no nosso material.
 :::
 
@@ -887,13 +887,13 @@ class BemDuravel : Produto
 }
 
 ```
-:::tip[Comentário] 
+:::note[Comentário] 
 Não se assustem pela mudança na maneira de escrever as propriedades `get` e `set`. Esse token `=>` é interpretado do mesmo jeito que o par de chaves vistos anteriormente.
 :::
 
 Ao usarmos essas subclasses no nosso programa, elas terão os mesmo atributos e métodos que a superclasse `Produto` que elaboramos durante todo esse capítulo.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Existe um princípio da programação orientada à objetos que prioria composição ao invés da herança. A ideia é que é melhor fazer as conexões entre classes de mesma hierarquia do que criar uma vasta linha entre superclasses e subclasses. Em tempo oportuno retomaremos essa discussão. Por enquanto segue esse [link](https://acervolima.com/favorecendo-a-composicao-em-vez-da-heranca-em-java-com-exemplos/#:~:text=Favorecer%20a%20composi%C3%A7%C3%A3o%20em%20vez,uma%20classe%20base%20ou%20pai.) com esse assunto.
 :::
 
@@ -946,7 +946,7 @@ Da mesma maneira que temos um token na classe pai, temos que usar o token `overr
 
 Outra requisição obrigatória no processo de sobreposição é o uso do token `new` na hora da criação de um método ou atributo de mesmo nome na classe original. Abaixo temos um exemplo de como podemos expandir um método criado na classe origina por meio da sobreposição.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Até agora usamos várias vezes o token `void` e ainda não tivemos a satisfação de uma definição do que ele faz. O token `void` é usado na construção de **métodos sem retorno**, ou seja, funções que não possuem uma linha com o comando `return`. 
 :::
 
@@ -1000,7 +1000,7 @@ Para a existência do polimorfismos são necessários três requisitos:
 
 Vamos a um exemplo de polimorfismo mas com o devido contexto. É natural pensar que um objeto contenha um método cuja saída seja uma string com as informações a respeito dele. Em c\# existem métodos nativos, ou seja, que existe por padrão em todos os objetos, cujo um deles é chamado `toString()` que retorna uma string com informações sobre o objeto.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Mais sobre esse assunto pode ser encontrado nessa [documentação oficial](https://docs.microsoft.com/pt-br/dotnet/api/system.object?view=net-6.0).
 :::
 
@@ -1027,7 +1027,7 @@ class Produto {
 }
 
 ```
-:::tip[Comentário] 
+:::note[Comentário] 
 Mas espere um segundo. Temos um `override` em uma classe pai?! É isso mesmo! A razão disso é que **todas as classes** em c\# são, de certa maneira, classes filhas de uma classe mestre que contém todos os métodos padrões. Mesmo as classes pai.
 :::
 
@@ -1057,7 +1057,7 @@ class BemDeConsumo : Produto {
 
 ```
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Essa seção é bem densa e importante. Pare e reflita sobre os códigos que foram vistos aqui. Revise sempre que necessário.
 :::
 
@@ -1220,7 +1220,7 @@ class MainClass {
 }
 
 ```
-:::tip[Comentário] 
+:::note[Comentário] 
 Se ficou na dúvida, lembre-se do que aprendemos sobre **vetores** na disciplina de abstração de dados.
 :::
 
@@ -1362,7 +1362,7 @@ Abaixo temos um exemplo de construção de um programa que julga se dois conjunt
 
 [^10]:Ou seja, se não possuem nenhum elemento em comum.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Não se preocupe se não entender o algoritmo de primeira. Eu tentei ser bem generoso nos comentários mas esse programa é, na minha opinião, desafiador de ser compreendido por quem não tem um background de matemática e programação um pouco desenvolvido. Leia quantas vezes for necessário e, se a dúvida persistir, entra em contato comigo pela issue do github.
 :::
 
@@ -1418,7 +1418,7 @@ Uma **coleção** ou **collection** é um objeto que agrupa múltiplos objetos. 
 
 Mas paremos pra pensar 1 minuto. Nós já não tínhamos definido um conjunto de objetos como um **namespace**? Sim! Uma coleção é um namespace nativo que nos fornecem métodos otimizados para o tratamento de dados de maneira a tornar nossos programas o mais eficiente possível.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Eu gosto de pensar nas coleções como um "kit de ferramentas" que já nos fornecem maneiras de lidar com problemas comuns. Mais vale aprender bem quais ferramentas o .NET nos dá nativamente do que perder horas e horas reinventando a roda.
 :::
 
@@ -1692,7 +1692,7 @@ class Program {
 }
 
 ```
-:::tip[Comentário] 
+:::note[Comentário] 
 De todas as seções desse microfundamento, essa é provavelmente a que mais contém conceitos que diferenciam os programadores .NET iniciantes dos mais experientes. O uso dessas três categorias de polimorfismo paramétrico fazem muita diferença na qualidade do seu código e devem ser entendidas muito profundamente.
 :::
 
@@ -1701,7 +1701,7 @@ O objetivo de qualquer programador profissional é produzir códigos de qualidad
 
 Os princípios que vamos aprender aqui são uma maneira de se produzir código fácil de ler, fácil de modificar e fácil de testar. De modo a permitir que um time de desenvolvedores atue de forma colaborativa.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Uma boa maneira de saber se estamos indo bem é sempre olhar os nossos códigos se perguntando "Outra pessoa poderia continuar o meu trabalho se eu sair desse projeto?" ou "Caso eu precise trabalhar com alguém, essa pessoa conseguirá entender o meu código apenas olhando diretamente para ele?".
 :::
 
@@ -1817,7 +1817,7 @@ Padrões **Estruturais** tratam do desacoplamento entre interface e implmentaç�
 
 Padrões **Comportamentais** são focados na definição de mecanismos de colaboração entre objetos. Mais relacionados à distribuição de responsabilidades e padronização de comunicações. Exemplos de padrões desse tipos são: Chain of Responsability, Comand Iterator, Mediator, Memento, Observer, State, Strategy, Visitor.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Essa parte final é só uma introdução geral aos conceitos de padrões de projeto. Existe um mundo a ser explorado nesse tópico mas agora estamos cientes da existência dele e já temos algumas referências iniciais para aprofundarmos o conhecimento.
 :::
 

@@ -6,7 +6,6 @@ description: ""
 
 # Estatística Descritiva
 
-## Aviso
 Como minha primeira formação foi em ciências econômicas eu já vi todos os conteúdos contidos nesse microfundamento. Além disso, o tempo anda muito escasso para focar em matérias que eu já estudei em outros contextos.
 
 Diante disso, infelizmente, faz mais sentido para mim apenas indicar que façam leitura da bibliografia indicada porque meu foco é no core das disciplinas de Análise de Desenvolvimento de Sistemas.

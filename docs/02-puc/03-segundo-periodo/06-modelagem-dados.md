@@ -17,7 +17,9 @@ Infelizmente eu ainda não terminei esse material. Você pode aproveitar para ir
 #### Abordagem de Arquivos x Banco de Dados
 
 Podemos definir um **banco de dados** como:
-> Uma coleção de dados relacionados \[...\] que tem por objetivo atender uma comunidade de usuários.
+> Uma coleção de dados relacionados, persistentes[^1] \[...\] que tem por objetivo atender uma comunidade de usuários.
+
+[^1]: Ou seja, que continuam salvos mesmo depois do computador desligar.
 
 Dessa feita, podemos ver que *antes* de modelar e projetar nosso banco, temos que ter em mentos o propósito de uso e sua real necessidade.
 
@@ -26,7 +28,14 @@ Outro conceito muito próximo é o de **Sistema Gerenciador de Banco de Dados (S
 
 Ou seja, **Banco de dados** é um conceito com foco no **conteúdo**. Enquanto, **SGBD** é um conceito com foco na **tecnologia** que vai manipular o conteúdo armazenado (ex: MySQL, MSSQL, Firebird e etc).
 
-Mas nem sempre foi assim. No passado, o modo de persistir dados era com **enfoque de arquivos**. Onde meio que tudo era salvo em plain text ou algum formato de texto estruturado como um `csv` da vida e os sistemas tinham que trabalhar com isso.
+##### O Passado
+Mas nem sempre existiu a abordagem de banco de dados. Antigamente, cada programa precisava ser responsável pelos próprios arquivos que persistiam as informações. 
+
+O modo de persistir dados era com **enfoque de arquivos**. Onde meio que tudo era salvo em plain text ou algum formato de texto estruturado como um `csv` da vida e os sistemas tinham que trabalhar com isso.
+
+Desse modo, era praticamente impossível intercambiar informações entre aplicações porque não se tinha um template geral para consulta e persistência dos dados.
+
+Isso gerava a necessidade de cada aplicação ter sua própria base (mesmo que a informação fosse comum à vários setores). Agora, imagine que existam 3 tabelas `produto` e que o valor de venda dele foi alterado. Existe uma chance real que algum time simplesmente esqueça de atualizar em uma das réplicas o que poderia causa graves prejuízos à empresa.
 
 #### Tipos de Linguagens e Tipos de Profissionais
 

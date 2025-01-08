@@ -16,7 +16,7 @@ A construção de TADs passa pela identificação das entidades de um problema c
 
 Primeiramente, vamos aprender sobre os tipos de dados normalmente existente nas linguagens de programação mais comuns do mercado. Podemos dividir os tipos de dados em dois grandes grupos: Homogêneos e Heterogêneos.
 
-:::tip[Comentário]
+:::note[Comentário]
 Esse microfundamento deve ser estudado somente após o microfundamento de **Algoritmo e Lógica de Programação**. Como esse material é de referência, ele não deve ser lido, necessariamente, como se fosse um livro.
 :::
 
@@ -42,7 +42,7 @@ string[] Nomes = new string[10]; // Vetor de string com 10
 
 No exemplo acima, podemos ver que criamos um vetor denominado Idades que receberá apenas valores do tipo inteiro. Um vetor de doubles (que é um float com mais casas de precisão) chamado salario. E, por fim, um vetor de strings chamado Nomes.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Existe uma classe que permite a criação de um tipo de vetor genérico sem tamanho definido em c\# chamado Lista. O curso não entrou nesse assunto mas eu vou deixar esse exemplo de lista aqui.
 :::
 
@@ -656,7 +656,7 @@ namespace WorkSpace
 }
 ```
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Eu não sei você, mas eu fiquei com dúvidas sobre essa parte do `area:F2`. Isso é muito simples. Como o valor `area` é do tipo double, ele possui várias casas após a vírgula. Esse parâmetro é a definição da quantidade de casas após a vírgula. Nesse caso, o resultado terá 2 casas após a vírgula.
 :::
 
@@ -770,7 +770,7 @@ A técnica da omissão da informação nos ajuda a garantir o cumprimento desses
 
 Um construtor de classe é usado para criação de um objeto e pela inicialização dos seus atributos. Sempre que instanciamos um objeto, o seu construtor entra em ação.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Não entraremos a fundo no conceito de Common Language Runtime (CLR) agora. Talvez mais pra frente a gente veja isso.
 :::
 

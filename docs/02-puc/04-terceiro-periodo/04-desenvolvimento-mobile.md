@@ -27,7 +27,7 @@ A primeira parte que a gente aprendeu sobre arquitetura pode ser encontrada na m
 
 O modelo mais usado de arquitetura de aplicações móveis é o modelo cliente e servidor. Nesse modelo, Temos a figura do banco de dados E da aplicação que se comunicam por meio da internet.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Isso mesmo lembra bastante a maneira como um site funciona. A principal diferença é que ao invés do navegador aqui temos o aplicativo.
 :::
 
@@ -57,14 +57,14 @@ A segunda maneira é o desenvolvimento híbrido. Nesse caso, desenvolvemos uma a
 
 Nessa matéria, usaremos a abordagem do desenvolvimento híbrido utilizando a tecnologia [React Native](https://reactnative.dev/) que é inteiramente baseada em JavaScript.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Se você precisar de um reforço de JavaScript, nós temos uma parte da disciplina de [desenvolvimento web front end](../03-segundo-periodo/05-desenvolvimento-web-backend.md) que ensina o básico sobre ela.
 :::
 
 #### React Native
 O nome React Native não é atoa. Podemos separar esse conceito em 2. O primeiro, [**React**](https://reactjs.org/), se refere a um framework em JavaScript para construção de interfaces de usuário. O segundo, **native**, é uma alusão ao fato que, uma vez que a aplicação é construída, ela pode ser traduzida para código nativo de cada plataforma.
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Não podemos achar que o React possibilita desenvolvimento fullstack de aplicações em JavaScript. Ela é uma biblioteca para criação de interfaces de usuário. Nada mais do que isso.
 :::
 
@@ -105,7 +105,7 @@ Ao criar um snack no Expo a gente consegue perceber a estrutura básica de um pr
 - README.md
 ```
 
-:::tip[Comentário] 
+:::note[Comentário] 
 Podemos rodar a aplicação que estamos desenvolvendo também no nosso próprio smartphone baixando o aplicativo do Expo no nosso celular. O app que temos que baixar é o [Expo Go](https://expo.dev/client).
 :::
 
@@ -140,7 +140,7 @@ Abaixo temos um tutorial do [Rocketseat](https://react-native.rocketseat.dev/) e
 ## Desenvolvimento de Aplicações Móveis
 Agora que sabemos o básico da teoria, vamos colocar em prática no desenvolvimento de uma aplicação. Nosso objetivo é desenvolver uma aplicação focada na gestão de combustível utilizando react native e o react native paper.
 
-:::danger[Aviso] 
+:::note[Comentário] 
 Eu não gostei da maneira como a parte prática foi ministrada nesse microfundamento da PUC. O professor focou demais em mostrar como o ecossistema possui funcionalidades então foi um showcase de componentes desnecessariamente. Em virtude disso, eu vou ter que ir atrás de um projeto coeso que tenha começo, meio e fim. Então os que tiverem pressa no assunto desse material, pode ir direto na bibliografia abaixo ou os materiais da primeira parte.
 :::
 
