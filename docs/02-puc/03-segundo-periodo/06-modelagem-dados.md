@@ -39,6 +39,67 @@ Isso gerava a necessidade de cada aplicação ter sua própria base (mesmo que a
 
 #### Tipos de Linguagens e Tipos de Profissionais
 
+##### Linguagens DDL E DML
+
+Já vimos que um banco de dados é relacionado ao conteúdo que será persistido para consulta posterior. Dessa feita, como tudo em tecnologia, precisamos de uma `linguagem` para interagir com o SGBD afim de criarmos as definições dos dados e manipular o que tivermos salvo.
+
+Existem 2 tipos de linguagens que usamos para essa tarefa:
+- **DDL (Data Definition Language)**: Usada para criar tabelas, criar visões, definir relações entre elas e as características de cada valor.
+- **DML (Data Manipulation Language)**: Muito mais usada na prática diária. É responsável por manipular (select, insert, delete, update) os dados persistidos. Pode ser de 2 tipos.
+	- **Procedural**: Onde o user define qual dado será acessado e como chegar nele. Mais usados em triggers e rotinas automáticas.
+	- **Não Procedural**: Onde define apenas qual dado acessar.
+
+:::note[Comentário]
+Ao longo dos estudos vamos nos deparar com um conceito chamado `stored procedure` e é exatamente isso que acabamos de ver acima.
+:::
+
+Para aprofundar um pouco mais, vamos ver esses 2 códigos de consultas.
+
+```sql
+/* DML Procedural */
+BEGIN
+  DECLARE @EmployeeName VARCHAR(50);
+  DECLARE @EmployeeId INT = 101;
+  
+  SELECT @EmployeeName = Name
+  FROM Employees
+  WHERE EmployeeID = @EmployeeId;
+  
+  PRINT @EmployeeName;
+END;
+```
+
+```sql
+/* DML Não Procedural */
+SELECT Name
+FROM Employees
+WHERE EmployeeID = 101;
+```
+
+Podemos ver que na DML não procedural, deixamos a cargo do motor da linguagem julgar qual melhor rota para acessar as informações que solicitamos[^2].
+
+[^2]: Na esperança que ele sempre tome uma decisão otimizada de como acessar o dado. Mas fique tranquilo, quase sempre ele escolhe o melhor caminho.
+
+##### Principais atuantes em um projeto de BD
+
+Como papéis principais em um projeto de banco de dados, podemos destacar:
+- Administrador de Dados
+	- Arquiteta a estrutura de informação da empresa
+	- Administra a descrição da base de dados[^3]
+	- Define padrões de codificação (template de nome de tabela, campos e etc)
+	- Profundo conhecedor das regras de negócio
+- Administrador de Banco de Dados
+	- Foco na otimização e performance
+	- Gerencia o SGBD
+	- É responsável pela estrutura de armazenamento (migrations, carga de dados e etc)
+- Analista de Sistemas/Engenheiro de Software/Desenvolvedor
+	- Constrói soluções que consomem o SGBD
+	- Deve procurar otimizar suas `queries` de modo a sempre custar pouco para o processamento do SGBD
+- Usuário Final
+	- Podem ser tanto no nível operacional quanto gerencial
+
+[^3]: Também conhecido como dicionário de dados.
+
 #### Níveis do SGBD e Etapas do Projeto de BD
 
 ### Modelagem de Entidades e Relacionamentos (MER)
@@ -81,7 +142,7 @@ Isso gerava a necessidade de cada aplicação ter sua própria base (mesmo que a
 
 ## Bibliografia
 :::note[Comentário]
-Eu achei simplesmente bizarro um curso inteiro com apenas um livro como referência bibliográfica. Mas como se trata de um tecnólogo, acho que podemos relevar. Agora nos cabe ver nesse livro quais foram as outras fontes usadas.
+Me causou muita estranheza o curso ter apenas um livro como referência bibliográfica. Mas como se trata de um tecnólogo, acho que podemos relevar. Agora nos cabe ver nesse livro quais foram as outras fontes usadas.
 :::
 
 - ELMASRI, Ramez; NAVATHE, Shamkant B. **Sistemas de banco de dados.** 7 ed. São Paulo: Person, 2018. 
