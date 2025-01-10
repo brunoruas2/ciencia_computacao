@@ -53,7 +53,7 @@ Existem 2 tipos de linguagens que usamos para essa tarefa:
 Ao longo dos estudos vamos nos deparar com um conceito chamado `stored procedure` e é exatamente isso que acabamos de ver acima.
 :::
 
-Para aprofundar um pouco mais, vamos ver esses 2 códigos de consultas.
+Para aprofundar um pouco mais, abaixo temos dois exemplos de DML.
 
 ```sql
 /* DML Procedural */
@@ -83,12 +83,12 @@ Podemos ver que na DML não procedural, deixamos a cargo do motor da linguagem j
 ##### Principais atuantes em um projeto de BD
 
 Como papéis principais em um projeto de banco de dados, podemos destacar:
-- Administrador de Dados
+- Administrador de Dados (AD)
 	- Arquiteta a estrutura de informação da empresa
 	- Administra a descrição da base de dados[^3]
 	- Define padrões de codificação (template de nome de tabela, campos e etc)
 	- Profundo conhecedor das regras de negócio
-- Administrador de Banco de Dados
+- Administrador de Banco de Dados (DBA)
 	- Foco na otimização e performance
 	- Gerencia o SGBD
 	- É responsável pela estrutura de armazenamento (migrations, carga de dados e etc)
@@ -101,6 +101,44 @@ Como papéis principais em um projeto de banco de dados, podemos destacar:
 [^3]: Também conhecido como dicionário de dados.
 
 #### Níveis do SGBD e Etapas do Projeto de BD
+
+#### Níveis do SGBD
+
+Um SGBD pode ser divido em 3 níveis de abstração:
+
+1. **Nível Interno/Físico**
+	- Atuação do DBA com foco no **como** os dados são armazenados em disco e como melhorar a **performance** de acesso aos mesmos.
+2. **Nível Conceitual/Lógico**
+	- Atuação do DA com foco em **quais** dados são salvos no BD e seus relacionamentos.
+3. **Nível Externo/Visão**
+	- Atuação de Devs e Users com objetivo de **acessar** os dados disponíveis. Sempre sendo necessário apenas uma parte do todo.
+
+:::info[Info]
+Existem dois conceitos derivados desses que acabamos de ver. Podem parecer simples mas, no passado, a separação entre camadas físicas e lógicas eram bem menor do que hoje em dia.
+
+**Independência Física**: Quando alterações na camada física não impactam a camada lógica.[^4]
+
+**Independência Lógica**: Quando alterações na camada lógica não impactam a camada física.
+
+[^4]: Por exemplo, trocar o SGBD do MSSQL para MySQL. Em tese, é possível realizar essa migração sem alterar a estrutura das tabelas visto que ambos são do tipo SQL.
+:::
+
+##### Etapas de um Projeto de BD
+
+Tal qual as etapas, durante a elaboração de um projeto de BD temos um estudo para cada camada, ou seja:
+
+1. **Projeto Conceitual**
+	- Foco na informação, independente da implementação do SGBD.
+	- Definição dos tipos e das relações.
+	- Criação dos Modelos de Entidade-Relacionamento (MER).
+1. **Projeto Lógico**
+	- Adaptação do projeto conceitual ao SGBD.
+	- Conversão dos modelos de dados ao tipo específico de SGBD (SQL, NoSQL, Redes e etc).
+	- É nessa etapa que temos a definição das tabelas, relações de campos e chaves.
+1. **Projeto Físico**
+	- Implementação real no hardware.
+	- Quanto de recursos precisarão ser alocados bem como as políticas de backup.
+	- Criação dos Perfis de acesso.
 
 ### Modelagem de Entidades e Relacionamentos (MER)
 
