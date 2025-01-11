@@ -4,6 +4,10 @@
  * work well for content-centric websites.
  */
 
+.hero__title, .hero__subtitle {
+  text-align: center !important; 
+}
+ 
 body {
   text-align: justify;
 }

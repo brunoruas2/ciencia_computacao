@@ -14,7 +14,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/desk-lamp-svgrepo-com.svg').default,
     description: (
       <>
-        Esse é meu repositório público de conteúdos estudados ao longo da minha jornada de estudos. Nunca siga os conteúdos aqui como se fosse uma receita garantida. Sinta-se livre para estudar e compartilhar o que você aprendeu.
+        Esse é meu repositório público de conteúdos estudados ao longo da minha jornada. Não siga esse conteúdo como uma receita e sim como mais uma fonte para o seu aprendizado. Sinta-se livre para estudar e compartilhar o que você aprendeu.
       </>
     ),
   },
@@ -45,7 +45,7 @@ function Feature({title, Svg, description}: FeatureItem) {
         <Svg className={styles.featureSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <Heading className={styles.headerFrontPageFooter} as="h3">{title}</Heading>
         <p>{description}</p>
       </div>
     </div>

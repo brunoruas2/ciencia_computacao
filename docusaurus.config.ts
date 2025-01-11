@@ -79,8 +79,11 @@ const config: Config = {
   plugins: [require.resolve('docusaurus-lunr-search')],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/siteIcon.png',
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 3,
+    },
     navbar: {
       title: 'Ciência da Computação',
       logo: {
@@ -89,10 +92,7 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Matérias',
+          type: 'docSidebar', sidebarId: 'materiasSidebar', position: 'left', label: 'Matérias',
         },
         {
           to: '/blog', label: 'Notas Rápidas', position: 'left'
