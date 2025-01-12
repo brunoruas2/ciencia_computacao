@@ -2,23 +2,34 @@
 sidebar_position: 1
 ---
 
-# Home
+# Bem Vindo(a)!
 
-Olá, seja muito bem-vindo(a)!
+:::info[Informação]
+Os materiais de estudo estão disponíveis na barra lateral à esquerda ou, se você estiver no mobile, na opção de menu do site.
+:::
+
+## Quem sou eu
 
 Eu me chamo Bruno de Melo Ruas. 
 
-Sou formado em Análise e Desenvolvimento de Sistemas pela Pontifícia Universidade Católica de Minas Gerais (PUC-MG). Bacharel em Economia pela Universidade do Estado do Amazonas (UEA). Especialista em Gestão Financeira pela Fundação Getúlio Vargas (FGV). 
+Sou formado em Análise e Desenvolvimento de Sistemas pela Pontifícia Universidade Católica de Minas Gerais (PUC-MG). Bacharel em Economia pela Universidade do Estado do Amazonas (UEA). Especialista em Gestão Financeira pela Fundação Getúlio Vargas (FGV).
 
-Eu comecei a programar em meados de 2017. Na época aprendendo Econometria usando uma linguagem de programação chamada R. Ao longo do tempo, fui aprendendo novas técnicas como Robot Process Automation (RPA), Web Scraping e fui tomando cada vez mais gosto pela área de tecnologia. Em julho de 2023 eu migrei definitivamente a carreira de Economista para Desenvolvedor de Software. 
+Eu comecei a programar em meados de 2017. Na época aprendendo Econometria usando uma linguagem de programação chamada R. Ao longo do tempo, fui aprendendo novas técnicas como Robot Process Automation (RPA), Web Scraping e fui tomando cada vez mais gosto pela área de tecnologia. Em julho de 2023 eu migrei definitivamente a carreira de Economista para Desenvolvedor de Software.
 
 Atualmente sou desenvolvedor com foco em Backend na [GFT Technologies](https://www.gft.com/br/pt) onde estou alocado em um dos maiores bancos da América Latina. Esse material me serviu para chegar até aqui. Espero que também ajude você!
 
-Minhas Redes:
+Se quiser, pode me seguir nas minhas redes: [Linkedin](https://www.linkedin.com/in/brunoruas2/), [Twitter](https://twitter.com/bruno_ruas2), [Github](https://github.com/brunoruas2)
 
- - [Linkedin](https://www.linkedin.com/in/brunoruas2/)
- - [Twitter](https://twitter.com/bruno_ruas2)
- - [Github](https://github.com/brunoruas2)
+## Projetos e Conteúdos
+
+Atualmente tenho 3 conteúdos aqui no site:
+1. [Notas de estudo da formação de Tecnólogo em Análise e Desenvolvimento de Sistemas](./02-puc/01-intro.md)
+2. Notas de estudos em Cursos Livres
+	1. [Certificação AWS Cloud Pratictioner](category/aws-skill-builder)
+	2. [Roadmap de AI Engineering](category/roadmapsh)
+3. [Tutorial Docusaurus com algumas alterações minhas](category/tutorial-docusaurus)
+
+## Fontes e Avisos
 
 Meu objetivo com esse projeto é construir um tipo de **segundo cérebro** para consultas pontuais sempre que eu precisar revisar um conteúdo já estudado e também ajudar as outras pessoas (principalmente os iniciantes na área). Ao longo do projeto eu coleto conteúdos sobre Programação e Desenvolvimento de Software seguindo fontes como:
 
@@ -33,4 +44,3 @@ Mesmo gostando de escrever, eu percebi que todo programador maduro é capaz de l
 
 [^1]: Você **tem** que ser capaz de ler as alterações em cada commit. Pare, leia e se esforce para entender cada passo dos projetos.
 :::
-
