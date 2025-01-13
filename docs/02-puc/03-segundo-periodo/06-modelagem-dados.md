@@ -114,7 +114,7 @@ Um SGBD pode ser divido em 3 níveis de abstração:
 	- Atuação de Devs e Users com objetivo de **acessar** os dados disponíveis. Sempre sendo necessário apenas uma parte do todo.
 
 :::info[Info]
-Existem dois conceitos derivados desses que acabamos de ver. Podem parecer simples mas, no passado, a separação entre camadas físicas e lógicas eram bem menor do que hoje em dia.
+Existem dois conceitos derivados desses que acabamos de ver. Hoje em dia, podem parecer simples mas, no passado, a separação entre camadas físicas e lógicas eram bem menor do que hoje em dia.
 
 **Independência Física**: Quando alterações na camada física não impactam a camada lógica.[^4]
 
@@ -143,6 +143,39 @@ Tal qual as etapas, durante a elaboração de um projeto de BD temos um estudo p
 ### Modelagem de Entidades e Relacionamentos (MER)
 
 #### Modelagem de Entidades e Atributos
+
+Agora que sabemos os profissionais e os tipos de projetos de banco de dados, vamos entrar na teoria sobre a modelagem de dados propriamente dita.
+
+> Podemos conceituar a **Modelagem de Dados** como a conversão de fatos relevantes em *estruturas bem definidas* com *regras de dependência* expressas em um *modelo gráfico e descritivo*.
+
+O foco aqui é em **quais** dados existirão no banco de dados, independente de **como** eles serão armazenados no SGBD.
+
+Um dos modelos conceituais[^5] mais usados é o **Modelo Entidade-Relacionamento (MER)**. Essa técnica permite demonstrar facilmente a relação descrita acima por meio de representações gráficas simples entre as entidades.
+
+[^5]: Ou seja, estamos ainda na etapa de um projeto conceitual.
+
+##### Entidades e Atributos no MER
+
+> **Entidades** são objetos do mundo real ou abstrações de informação. Representadas por um **retângulo** nomeado.
+
+> **Atributos** são elementos que identificam as entidades e descrevem suas características. Representados por uma **elipse** nomeada.
+
+Atributos podem ser de vários tipo, para nomear alguns:
+ - Simples: CPF, Altura, Preço.
+ - Compostos: Compostos por partes, como Telefone = País + DDD + Numero.
+ - Monovalorados: Recebem 1 valor por entidade.
+ - Multivalorados: Vários valores por entidade. Representados por **elipse dupla**.
+ - Derivados: IMC que é uma função da altura e peso. Representados por uma **elipse pontilhada**.
+ - Chave: Valores distintos que podem ser usados para identificar as entidades. Representados por uma **grifo** em baixo do nome.
+
+:::info[Informação]
+Durante o curso vamos usar a notação de Peter Chen mas existem outras. O importante é entender a lógica geral.
+:::
+
+:::tip[Dica]
+Existem várias ferramentas para escrever mas uma das mais difundidas hoje são os diagramas `Mermaid`. [Link](https://mermaid.js.org/syntax/entityRelationshipDiagram.html)
+:::
+
 
 #### Modelagem de Relacionamentos
 
@@ -179,9 +212,8 @@ Tal qual as etapas, durante a elaboração de um projeto de BD temos um estudo p
 #### Segurança de Banco de Dados
 
 ## Bibliografia
-:::note[Comentário]
-Me causou muita estranheza o curso ter apenas um livro como referência bibliográfica. Mas como se trata de um tecnólogo, acho que podemos relevar. Agora nos cabe ver nesse livro quais foram as outras fontes usadas.
-:::
 
 - ELMASRI, Ramez; NAVATHE, Shamkant B. **Sistemas de banco de dados.** 7 ed. São Paulo: Person, 2018. 
+- MARTIN, James. **Principles of Data Base Management**.
+- CHEN, Peter. **Modelagem de dados: A abordagem para Projeto Lógico**.
 
