@@ -168,14 +168,17 @@ Atributos podem ser de vários tipo, para nomear alguns:
  - Derivados: IMC que é uma função da altura e peso. Representados por uma **elipse pontilhada**.
  - Chave: Valores distintos que podem ser usados para identificar as entidades. Representados por uma **grifo** em baixo do nome.
 
-:::info[Informação]
-Durante o curso vamos usar a notação de Peter Chen mas existem outras. O importante é entender a lógica geral.
-:::
+##### Notação de Pete Chen
+
+Durante essa disciplina nós vamos usar a notação de Peter Chen mas existem outras. O importante é entender a lógica geral.
+
+Para termos um apanhado geral, aqui vai uma imagem com todos os componentes e seus significados
+
+![Peter Chain Diagram](../img/93-peter-chain.png)
 
 :::tip[Dica]
-Existem várias ferramentas para escrever mas uma das mais difundidas hoje são os diagramas `Mermaid`. [Link](https://mermaid.js.org/syntax/entityRelationshipDiagram.html)
+Existem várias ferramentas para escrever esses tipos de diagramas. Vale a pena conhecer a `Mermaid` [Link da documentação](https://mermaid.js.org/syntax/entityRelationshipDiagram.html). Porque ela é a principal ferramenta de desenho de fluxos e diagramas usadas em conjunto com markdown. 
 :::
-
 
 #### Modelagem de Relacionamentos
 
