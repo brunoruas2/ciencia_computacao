@@ -168,19 +168,45 @@ Atributos podem ser de vários tipo, para nomear alguns:
  - Derivados: IMC que é uma função da altura e peso. Representados por uma **elipse pontilhada**.
  - Chave: Valores distintos que podem ser usados para identificar as entidades. Representados por uma **grifo** em baixo do nome.
 
-##### Notação de Pete Chen
+##### Notação de Peter Chen e James Martin
 
-Durante essa disciplina nós vamos usar a notação de Peter Chen mas existem outras. O importante é entender a lógica geral.
+Essa disciplina usa a notação de Peter Chen como base. Entretanto, eu tenho um motor de geração de diagramas nativo na biblioteca que uso para construir esse site que segue a notação de James Martin.
 
-Para termos um apanhado geral, aqui vai uma imagem com todos os componentes e seus significados
+Então, quando o conteúdo for mais teórico e direto do material didático, eu vou estar usando Peter Chen. Por sua vez, quando eu estiver escrevendo um exemplo ou transcrevendo algo, vou acabar usando o de James Martin. O importante é entender a lógica geral.
+
+Para termos um apanhado geral da notação de Peter Chain, aqui vai uma imagem com todos os componentes e seus significados
 
 ![Peter Chain Diagram](../img/93-peter-chain.png)
 
 :::tip[Dica]
-Existem várias ferramentas para escrever esses tipos de diagramas. Vale a pena conhecer a `Mermaid` [Link da documentação](https://mermaid.js.org/syntax/entityRelationshipDiagram.html). Porque ela é a principal ferramenta de desenho de fluxos e diagramas usadas em conjunto com markdown. 
+Existem várias ferramentas para escrever esses tipos de diagramas. Aqui, eu vou usar a `Mermaid` [Link da documentação](https://mermaid.js.org/syntax/entityRelationshipDiagram.html). Porque ela é a principal ferramenta de desenho de fluxos e diagramas usadas em conjunto com markdown. 
 :::
 
 #### Modelagem de Relacionamentos
+
+Alguns conceitos importantes para a modelagem de relacionamentos:
+
+> **Relacionamento** é qualquer associação com significado entre uma ou várias entidades
+
+
+> **Cardinalidade** é a propriedade do relacionamento que expressa a quantidade de ocorrências. Por exemplo, 1-1, 1-n, n-n e etc.
+
+
+> **Totalidade** é a especificação da condição de existência entre classes de modo que uma só pode existir se o relacionamento com outra existe. Pode ser **parcial/opcional** ou **total/obrigatória**[^6].
+
+:::note[Comentário]
+Não sei você, mas, pra mim "totalidade total" é um nome bem ruim pra um conceito. Dessa feita, vou usar o termo "totalidade obrigatória" sempre que for me referir a essa propriedade.
+:::
+
+```mermaid
+erDiagram
+    DEPARTAMENTO 
+    EMPREGADO 
+    DEPARTAMENTO 1--1 LOTACAO : possui
+    EMPREGADO 1--1+ LOTACAO : pertence
+```
+
+[^6]: Pense no exemplo de um colégio infantil. O cadastro `responsavel_aluno` só pode existir se o cadastro anterior `aluno` já existir. Agora se for uma instituição superior de ensino, que possui alunos maiores de 18 anos, esse campo pode ser opcional apenas para alunos menores de idade.
 
 #### Modelo de Entidades e Relacionamentos Estendido
 

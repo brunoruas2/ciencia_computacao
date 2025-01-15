@@ -24,7 +24,7 @@ Se quiser, pode me seguir nas minhas redes: [Linkedin](https://www.linkedin.com/
 
 Atualmente tenho 3 conteúdos aqui no site:
 1. [Notas de estudo da formação de Tecnólogo em Análise e Desenvolvimento de Sistemas](./02-puc/01-intro.md)
-2. Notas de estudos em Cursos Livres
+2. [Notas de estudos em Cursos Livres](category/cursos-livres)
 	1. [Certificação AWS Cloud Pratictioner](category/aws-skill-builder)
 	2. [Roadmap de AI Engineering](category/roadmapsh)
 3. [Tutorial Docusaurus com algumas alterações minhas](category/tutorial-docusaurus)
