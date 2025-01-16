@@ -114,14 +114,14 @@ Um SGBD pode ser divido em 3 níveis de abstração:
 	- Atuação de Devs e Users com objetivo de **acessar** os dados disponíveis. Sempre sendo necessário apenas uma parte do todo.
 
 :::info[Info]
-Existem dois conceitos derivados desses que acabamos de ver. Hoje em dia, podem parecer simples mas, no passado, a separação entre camadas físicas e lógicas eram bem menor do que hoje em dia.
+Abaixo temos dois conceitos derivados desses que acabamos de ver. Hoje em dia, podem parecer simples mas, no passado, a separação entre camadas físicas e lógicas eram bem menor do que hoje em dia.
+:::
 
-**Independência Física**: Quando alterações na camada física não impactam a camada lógica.[^4]
+> **Independência Física**: Quando alterações na camada física não impactam a camada lógica.[^4]
 
-**Independência Lógica**: Quando alterações na camada lógica não impactam a camada física.
+> **Independência Lógica**: Quando alterações na camada lógica não impactam a camada física.
 
 [^4]: Por exemplo, trocar o SGBD do MSSQL para MySQL. Em tese, é possível realizar essa migração sem alterar a estrutura das tabelas visto que ambos são do tipo SQL.
-:::
 
 ##### Etapas de um Projeto de BD
 
@@ -168,15 +168,19 @@ Atributos podem ser de vários tipo, para nomear alguns:
  - Derivados: IMC que é uma função da altura e peso. Representados por uma **elipse pontilhada**.
  - Chave: Valores distintos que podem ser usados para identificar as entidades. Representados por uma **grifo** em baixo do nome.
 
-##### Notação de Peter Chen e James Martin
+##### Diferentes tipos de notação
 
-Essa disciplina usa a notação de Peter Chen como base. Entretanto, eu tenho um motor de geração de diagramas nativo na biblioteca que uso para construir esse site que segue a notação de James Martin.
+No material didático dessa disciplina usamos a notação de Peter Chen como base. Entretanto, eu tenho um motor de geração de diagramas nativo na biblioteca que uso para construir esse site que segue a notação de [James Martin](https://www.conceptdraw.com/examples/the-crow%E2%80%99s-foot-erd).
 
-Então, quando o conteúdo for mais teórico e direto do material didático, eu vou estar usando Peter Chen. Por sua vez, quando eu estiver escrevendo um exemplo ou transcrevendo algo, vou acabar usando o de James Martin. O importante é entender a lógica geral.
+:::warning[Atenção]
+A notação de James Martin tem alguns apelidos como "IE Notation" ou ainda "Crow's Foot Notation".
+:::
 
-Para termos um apanhado geral da notação de Peter Chain, aqui vai uma imagem com todos os componentes e seus significados
+Então, quando o conteúdo for mais teórico e direto do material didático, eu vou estar usando Peter Chen. Por sua vez, quando eu estiver escrevendo um exemplo ou transcrevendo algo, vou acabar usando o de James Martin. 
 
-![Peter Chain Diagram](../img/93-peter-chain.png)
+O importante é sempre entender a lógica geral. Nesse [artigo da wikipédia](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) temos um exemplo de como podemos mostrar uma mesma relação de diferentes modos.
+
+![diferentes-ER](../img/94-modelos-er.png)
 
 :::tip[Dica]
 Existem várias ferramentas para escrever esses tipos de diagramas. Aqui, eu vou usar a `Mermaid` [Link da documentação](https://mermaid.js.org/syntax/entityRelationshipDiagram.html). Porque ela é a principal ferramenta de desenho de fluxos e diagramas usadas em conjunto com markdown. 
@@ -194,19 +198,29 @@ Alguns conceitos importantes para a modelagem de relacionamentos:
 
 > **Totalidade** é a especificação da condição de existência entre classes de modo que uma só pode existir se o relacionamento com outra existe. Pode ser **parcial/opcional** ou **total/obrigatória**[^6].
 
+[^6]: Pense no exemplo de um colégio infantil. O cadastro `responsavel_aluno` só pode existir se o cadastro anterior `aluno` já existir. Agora se for uma instituição superior de ensino, que possui alunos maiores de 18 anos, esse campo pode ser opcional apenas para alunos menores de idade.
+
 :::note[Comentário]
 Não sei você, mas, pra mim "totalidade total" é um nome bem ruim pra um conceito. Dessa feita, vou usar o termo "totalidade obrigatória" sempre que for me referir a essa propriedade.
 :::
 
 ```mermaid
 erDiagram
-    DEPARTAMENTO 
-    EMPREGADO 
-    DEPARTAMENTO 1--1 LOTACAO : possui
-    EMPREGADO 1--1+ LOTACAO : pertence
+    DEPARTAMENTO 1--0+ EMPREGADO : ""
 ```
 
-[^6]: Pense no exemplo de um colégio infantil. O cadastro `responsavel_aluno` só pode existir se o cadastro anterior `aluno` já existir. Agora se for uma instituição superior de ensino, que possui alunos maiores de 18 anos, esse campo pode ser opcional apenas para alunos menores de idade.
+Nós lemos esse diagrama acima da seguinte forma: Um departamento pode possuir entre 0 a N empregados. Similarmente, qualquer empregado só pode pertencer a um único departamento.
+
+Mais um exemplo dado no curso:
+
+```mermaid
+erDiagram
+    DEPARTAMENTO 1--0+ MATERIA : ""
+    MATERIA 0+--0+ CURSO : ""
+    CURSO 1--0+ ALUNO : ""
+```
+
+Nesse segundo exemplo nós temos um esquema básico de uma faculdade. Podemos ver que um `departamento` pode ofertar N `materias` e essas matérias podem fazer parte de N `cursos`. Um aluno, por sua vez, só pode pertencer a 1 único curso.
 
 #### Modelo de Entidades e Relacionamentos Estendido
 

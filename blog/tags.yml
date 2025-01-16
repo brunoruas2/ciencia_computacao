@@ -1,7 +1,12 @@
 tip:
   label: 'Tip'
   permalink: '/tip'
-  description: 'Content related to product releases.'
+  description: 'Some developer tips to make our lives better.'
+
+dotnet:
+  label: 'DotNet'
+  permalink: '/dotnet'
+  description: 'Content related to DotNet dev.'
 
 facebook:
   label: Facebook
