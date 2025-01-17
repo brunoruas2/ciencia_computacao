@@ -176,15 +176,14 @@ No material didático dessa disciplina usamos a notação de Peter Chen como bas
 A notação de James Martin tem alguns apelidos como "IE Notation" ou ainda "Crow's Foot Notation".
 :::
 
-Então, quando o conteúdo for mais teórico e direto do material didático, eu vou estar usando Peter Chen. Por sua vez, quando eu estiver escrevendo um exemplo ou transcrevendo algo, vou acabar usando o de James Martin. 
-
 O importante é sempre entender a lógica geral. Nesse [artigo da wikipédia](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) temos um exemplo de como podemos mostrar uma mesma relação de diferentes modos.
 
 ![diferentes-ER](../img/94-modelos-er.png)
 
 :::tip[Dica]
-Existem várias ferramentas para escrever esses tipos de diagramas. Aqui, eu vou usar a `Mermaid` [Link da documentação](https://mermaid.js.org/syntax/entityRelationshipDiagram.html). Porque ela é a principal ferramenta de desenho de fluxos e diagramas usadas em conjunto com markdown. 
+Existem várias ferramentas para escrever esses tipos de diagramas. Aqui, eu vou usar a `Mermaid` [Link da documentação](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).
 :::
+
 
 #### Modelagem de Relacionamentos
 
