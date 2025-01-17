@@ -154,20 +154,6 @@ Um dos modelos conceituais[^5] mais usados é o **Modelo Entidade-Relacionamento
 
 [^5]: Ou seja, estamos ainda na etapa de um projeto conceitual.
 
-##### Entidades e Atributos no MER
-
-> **Entidades** são objetos do mundo real ou abstrações de informação. Representadas por um **retângulo** nomeado.
-
-> **Atributos** são elementos que identificam as entidades e descrevem suas características. Representados por uma **elipse** nomeada.
-
-Atributos podem ser de vários tipo, para nomear alguns:
- - Simples: CPF, Altura, Preço.
- - Compostos: Compostos por partes, como Telefone = País + DDD + Numero.
- - Monovalorados: Recebem 1 valor por entidade.
- - Multivalorados: Vários valores por entidade. Representados por **elipse dupla**.
- - Derivados: IMC que é uma função da altura e peso. Representados por uma **elipse pontilhada**.
- - Chave: Valores distintos que podem ser usados para identificar as entidades. Representados por uma **grifo** em baixo do nome.
-
 ##### Diferentes tipos de notação
 
 No material didático dessa disciplina usamos a notação de Peter Chen como base. Entretanto, eu tenho um motor de geração de diagramas nativo na biblioteca que uso para construir esse site que segue a notação de [James Martin](https://www.conceptdraw.com/examples/the-crow%E2%80%99s-foot-erd).
@@ -184,6 +170,34 @@ O importante é sempre entender a lógica geral. Nesse [artigo da wikipédia](ht
 Existem várias ferramentas para escrever esses tipos de diagramas. Aqui, eu vou usar a `Mermaid` [Link da documentação](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).
 :::
 
+##### Entidades e Atributos no MER
+
+> **Entidades** são objetos do mundo real ou abstrações de informação.
+
+> **Atributos** são elementos que identificam as entidades e descrevem suas características.
+
+Atributos podem ser de vários tipo, para nomear alguns:
+ - Simples: CPF, Altura, Preço.
+ - Compostos: Compostos por partes, como Telefone = País + DDD + Numero.
+ - Monovalorados: Recebem 1 valor por entidade.
+ - Multivalorados: Vários valores por entidade.
+ - Derivados: IMC que é uma função da altura e peso.
+ - Chave: Valores distintos que podem ser usados para identificar as entidades.
+
+Abaixo eu coloco um exemplo de entidade no modelo Crow's foot onde podemos ver que os atributos são definidos por tipo, nome e se é primary key no próprio retângulo da entidade. Na notação de Chen eles são elipses ligadas à entidade.
+
+```mermaid
+erDiagram
+	CLIENTE {
+		int id PK
+		string nome
+		float altura
+		float peso
+	}
+	
+```
+
+Para simplificar nosso material, eu vou omitir nas entidades os atributos sempre que possível assim cada entidade vai ser representada apenas por um retângulo com o nome. Mas lembre-se que na hora de fazer um MER de verdade as entidades devem estar sempre com seus atributos.
 
 #### Modelagem de Relacionamentos
 
@@ -191,9 +205,7 @@ Alguns conceitos importantes para a modelagem de relacionamentos:
 
 > **Relacionamento** é qualquer associação com significado entre uma ou várias entidades
 
-
 > **Cardinalidade** é a propriedade do relacionamento que expressa a quantidade de ocorrências. Por exemplo, 1-1, 1-n, n-n e etc.
-
 
 > **Totalidade** é a especificação da condição de existência entre classes de modo que uma só pode existir se o relacionamento com outra existe. Pode ser **parcial/opcional** ou **total/obrigatória**[^6].
 
@@ -215,13 +227,74 @@ Mais um exemplo dado no curso:
 ```mermaid
 erDiagram
     DEPARTAMENTO 1--0+ MATERIA : ""
-    MATERIA 0+--0+ CURSO : ""
-    CURSO 1--0+ ALUNO : ""
+    MATERIA 1--0+ TURMA : ""
+    TURMA 1--0+ ALUNO : ""
 ```
 
-Nesse segundo exemplo nós temos um esquema básico de uma faculdade. Podemos ver que um `departamento` pode ofertar N `materias` e essas matérias podem fazer parte de N `cursos`. Um aluno, por sua vez, só pode pertencer a 1 único curso.
+Nesse segundo exemplo nós temos um esquema básico de uma faculdade. Podemos ver que um `departamento` pode ofertar N `materias` e essas matérias podem ser ofertada em N `turmas`. Um aluno, por sua vez, só pode pertencer a 1 único curso.
 
 #### Modelo de Entidades e Relacionamentos Estendido
+
+#### Entidades Fracas e Relacionamentos Múltiplos
+
+Até agora já sabemos mostrar entidades, suas propriedades e suas relações com outras entidades. Agora vamos aprimorar mais um pouco nosso modelo representativo adicionando hierarquia entre entidades.
+
+> **Entidade Fraca**: É toda entidade que não tem chave própria, ou seja, precisa ser identificada por meio de um relacionamento com outra entidade (que é forte pois possui chave) e por um identificador fraco (chave parcial).
+
+> **Relacionamentos Estendidos**: São os relacionamentos entre mais de duas entidades (chamados de relacionamentos binários).
+
+Abaixo temos um exemplo de entidade fraca chamada `transacao`. Chamamos ela de entidade fraca porque ela precisa das chaves estrangeiras das contas para fazer sentido.
+
+```mermaid
+erDiagram
+    CONTA {
+        int numero_conta PK
+    }
+    TRANSACAO {
+        int numero_conta_entrada FK
+        int numero_conta_saida FK
+        date data
+        float quantia
+    }
+    CONTA 1--1+ TRANSACAO : ""
+```
+
+Agora vamos ver um exemplo mais complexo onde temos relacionamentos não binários.
+
+```mermaid
+erDiagram
+	FUNCIONARIO {
+		int matricula PK
+		string nome
+	}
+	DEPARTAMENTO {
+		int codigo PK
+		string nome
+	}
+	CIDADE {
+		string CEP PK
+		int numero PK
+		int capacidade
+	}
+	FUNCIONARIO 0+--1 CIDADE : ""
+	FUNCIONARIO 0+--1 DEPARTAMENTO : ""
+```
+
+Aqui podemos ver que um registro de funcionário precisa indicar tanto a cidade quanto o departamento para que seja possível saber sua lotação.
+
+##### Atributos de Relacionamentos
+
+> **Atributos de Relacionamentos**: São atributos derivados da associação entre entidades e não são oriundos das entidades per se.
+
+:::danger[Aviso]
+Atributos de relacionamentos são úteis apenas na modelagem dos dados e não no modelo de banco de dados. Por isso, o modelo de Chen está sendo preterido por outros mais simples que ignoram essa parte de atributos de relacionamento.
+:::
+
+Um exemplo de atributo de relacionamento pode ser encontrado na imagem abaixo.
+
+![atributo-relacionamento](../img/95-atributo-relacionamento.png)
+
+Veja que o relacionamento `OPOS` tem um atributo diretamente nele.
 
 #### Modelagem de Supertipos e Subtipos
 
