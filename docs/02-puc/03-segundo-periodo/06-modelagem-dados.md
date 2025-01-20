@@ -284,19 +284,46 @@ Aqui podemos ver que um registro de funcionário precisa indicar tanto a cidade 
 
 ##### Atributos de Relacionamentos
 
+Na notação de Peter Chen também é possível derivar atributos dos relacionamentos igual fazemos com as entidades. A ideia é evidenciar quais dados surgem a partir da relação entre entidades.
+
 > **Atributos de Relacionamentos**: São atributos derivados da associação entre entidades e não são oriundos das entidades per se.
 
 :::danger[Aviso]
-Atributos de relacionamentos são úteis apenas na modelagem dos dados e não no modelo de banco de dados. Por isso, o modelo de Chen está sendo preterido por outros mais simples que ignoram essa parte de atributos de relacionamento.
+Essa derivação de atributos para relacionamentos só é encontrada no modelo de Chen. Dessa feita, vemos que a tendência  do mercado é alocar esses atributos diretamente a uma classe.
 :::
 
 Um exemplo de atributo de relacionamento pode ser encontrado na imagem abaixo.
 
 ![atributo-relacionamento](../img/95-atributo-relacionamento.png)
 
-Veja que o relacionamento `OPOS` tem um atributo diretamente nele.
+Veja que o relacionamento `OPOS` tem um atributo diretamente nele. Mas isso causa uma certa dificuldade quando vamos pensar nas tabelas do SGBD pois temos que definir **onde** esse atributo do relacionamento será salvo.
 
 #### Modelagem de Supertipos e Subtipos
+
+Algo comum de se deparar na construção de um modelo de banco de dados é relações de **hierarquia** entre as entidades. Desse modo, precisamos evoluir nosso modelo representativo para indicar classes gerais e classes específicas.
+
+:::note[Comentário]
+Essa é justamente a discussão que vimos na matéria de [Programação Modular](./04-programacao-modular.md).
+:::
+
+> **Generalização**: Atributos de uma classe genérica/superclasse/supertipo que indica atributos comuns a uma gama de outras entidades.
+
+> **Especialização**: Processo de definir em detalhes uma classe genérica adaptando-a em casos mais concretos.
+
+Na declaração de subtipos, devemos investigar como os tipos derivados podem ser classificados entre si.
+
+> Para os casos onde uma entidade só pode ser de um subtipo[^7] usamos o termo **disjunção**. 
+> 
+> Para os casos onde podem haver mais de uma relação[^8] usamos o termo **sobreposição**.
+
+[^7]: Por exemplo, se um atleta de futebol é goleiro, ele não pode ser atacante.
+[^8]: Por exemplo, um funcionário de um banco pode ser, também, um cliente do mesmo banco.
+
+Outra relação importante de se definir é se a superclasse **precisa** ser definida em termos de subclasse. 
+
+> Se a classe geral tiver uso sem uma especialização, usamos o conceito de **subtipo total**. 
+> 
+> Caso ela tenha uso mesmo sendo classe geral mas permita uma especialização, dizemos que ela é **subtipo parcial**.
 
 ## Projeto de Banco de Dados Relacionais e Não Relacionais
 
@@ -332,3 +359,4 @@ Veja que o relacionamento `OPOS` tem um atributo diretamente nele.
 - MARTIN, James. **Principles of Data Base Management**.
 - CHEN, Peter. **Modelagem de dados: A abordagem para Projeto Lógico**.
 
+;
