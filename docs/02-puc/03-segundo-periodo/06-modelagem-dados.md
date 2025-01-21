@@ -313,7 +313,7 @@ Essa é justamente a discussão que vimos na matéria de [Programação Modular]
 Na declaração de subtipos, devemos investigar como os tipos derivados podem ser classificados entre si.
 
 > Para os casos onde uma entidade só pode ser de um subtipo[^7] usamos o termo **disjunção**. 
-> 
+
 > Para os casos onde podem haver mais de uma relação[^8] usamos o termo **sobreposição**.
 
 [^7]: Por exemplo, se um atleta de futebol é goleiro, ele não pode ser atacante.
@@ -322,8 +322,67 @@ Na declaração de subtipos, devemos investigar como os tipos derivados podem se
 Outra relação importante de se definir é se a superclasse **precisa** ser definida em termos de subclasse. 
 
 > Se a classe geral tiver uso sem uma especialização, usamos o conceito de **subtipo total**. 
-> 
+
 > Caso ela tenha uso mesmo sendo classe geral mas permita uma especialização, dizemos que ela é **subtipo parcial**.
+
+:::danger[Aviso]
+Essa parte de subtipo e supertipo com classes total ou parcialmente separadas também só existe no modelo de Chen. Com o tempo, o mercado foi percebendo que "menos é mais" e tendeu para modelos que são mais fáceis de ler e entregam um resultado parecido em termos de compreensão.
+:::
+
+Vou indicar o pertencimento e a especificação por meio de anotações nas relações entre as entidades só para efeito didático.
+
+```mermaid
+erDiagram
+	FUNCIONARIO {
+		string cpf PK
+		string nome
+		datetime data_nascimento
+		string endereco
+		int tipo_emprego
+		int cod_lotacao
+	}
+	SECRETARIA {
+		int anos_de_estudo
+	}
+	TECNICO {
+		int anos_na_empresa
+		int falhas_mapeadas
+	}
+	ENGENHEIRO {
+		int area_formacao
+		int projetos_aprovados
+	}
+	FUNCIONARIO 1--0+ DISJUNCAO : "Completude Parcial"
+	DISJUNCAO 1--0+ SECRETARIA : ""
+	DISJUNCAO 1--0+ TECNICO : ""
+	DISJUNCAO 1--0+ ENGENHEIRO : ""
+```
+
+O diagrama acima é uma aproximação de como o modelo de Chen trata a especificação das classes. A ideia é evidenciar que, dado um funcionário, ele só pode ser de um único subtipo ou do tipo genérico. 
+
+```mermaid
+erDiagram
+	VEICULO {
+		int ID PK
+		float preco
+		string placa
+	}
+	CARRO {
+		string marca
+		int numero_passageiros
+	}
+	CAMINHAO {
+		string marca
+		int eixos
+		float capacidade
+	}
+
+	VEICULO 1--1+ DISJUNCAO : "Completude Total"
+	DISJUNCAO 1--1+ CARRO : ""
+	DISJUNCAO 1--1+ CAMINHAO : ""
+```
+
+Nesse exemplo de uma concessionária de veículos, vemos que, dado um veículo, ele tem que pertencer obrigatoriamente há uma subcategoria.
 
 ## Projeto de Banco de Dados Relacionais e Não Relacionais
 
