@@ -29,7 +29,7 @@ public async Task Test_Should_Do_Something()
 	var autoMocker = new AutoMocker();
 	var fixture = new Fixture();
 	fixture.Behaviors.Add(new OmitOnRecursionBehavior());
-	fixture.Behaviors.Remove(new ThrowingRecursionBehaviors());
+	fixture.Behaviors.Remove(new ThrowingRecursionBehavior());
 	fixture.Inject(_configuration)
 
 	// create the SUT class with all injection config mocked allready

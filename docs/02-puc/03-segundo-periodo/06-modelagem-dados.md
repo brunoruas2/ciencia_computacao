@@ -329,7 +329,7 @@ Outra relação importante de se definir é se a superclasse **precisa** ser def
 Essa parte de subtipo e supertipo com classes total ou parcialmente separadas também só existe no modelo de Chen. Com o tempo, o mercado foi percebendo que "menos é mais" e tendeu para modelos que são mais fáceis de ler e entregam um resultado parecido em termos de compreensão.
 :::
 
-Vou indicar o pertencimento e a especificação por meio de anotações nas relações entre as entidades só para efeito didático.
+Abaixo temos um diagrama que reflete a mesma ideia do pertencimento parcial usando o diagrama de Crow's foot mas lembre-se que isso é apenas para efeito didático.
 
 ```mermaid
 erDiagram
@@ -358,7 +358,11 @@ erDiagram
 	DISJUNCAO 1--0+ ENGENHEIRO : ""
 ```
 
-O diagrama acima é uma aproximação de como o modelo de Chen trata a especificação das classes. A ideia é evidenciar que, dado um funcionário, ele só pode ser de um único subtipo ou do tipo genérico. 
+O diagrama acima é uma aproximação de como o modelo de Chen trata a especificação das classes. A ideia é evidenciar que, dado um funcionário, ele só pode ser de um único subtipo ou do tipo genérico.
+
+Em outras palavras, podemos ter um registro de funcionário genérico mas, também, especificado entre as outras 3 categorias.
+
+Agora vamos ver um exemplo de completude total onde a especificação se torna obrigatória.
 
 ```mermaid
 erDiagram
@@ -378,17 +382,89 @@ erDiagram
 	}
 
 	VEICULO 1--1+ DISJUNCAO : "Completude Total"
-	DISJUNCAO 1--1+ CARRO : ""
-	DISJUNCAO 1--1+ CAMINHAO : ""
+	DISJUNCAO 1--0+ CARRO : ""
+	DISJUNCAO 1--0+ CAMINHAO : ""
 ```
 
 Nesse exemplo de uma concessionária de veículos, vemos que, dado um veículo, ele tem que pertencer obrigatoriamente há uma subcategoria.
+
+Para encerrar essa parte, vamos ver um exemplo usando sobreposição ao invés de disjunção. No caso, modelamos o cenário de uma indústria que precisa controlar um insumo produtivo que pode vir tanto do seu estoque quanto do fornecedor.
+
+```mermaid
+erDiagram
+	INSUMO {
+		int ID
+		string NOME
+	}
+	ESTOQUE {
+		int ID
+		float QTD
+		float PRECO_MEDIO
+	}
+	FORNECEDOR {
+		int ID
+		float PRECO
+		string EMAIL
+	}
+	
+	INSUMO 1--1+ SOBREPOSICAO : "Completude Total"	
+	SOBREPOSICAO 1--0+ ESTOQUE : ""
+	SOBREPOSICAO 1--0+ FORNECEDOR : ""
+```
+
+
 
 ## Projeto de Banco de Dados Relacionais e Não Relacionais
 
 ### Modelo Relacional de Banco de Dados
 
+Surgiu em meados da década de 70 por E.F. Codd como uma definição puramente derivada da teoria de conjuntos da matemática.
+
+Em 1974, a IBM tentou implementar através do [Sistema R](https://people.eecs.berkeley.edu/~brewer/cs262/SystemR.pdf) o primeiro SGBD capaz de usar a, então novidade, **Linguagem de Consulta Estruturada** ou **Structured Query Language (SQL)** para recuperação de dados.
+
 #### Conceitos do Modelo Relacional e Chave Primária
+
+Agora vamos levantar alguns conceitos chaves do modelo relacional.
+
+> **Relação** é qualquer tabela de valores onde cada linha representa uma relação de valores relacionados a uma mesma entidade. Por isso o nome do modelo é Modelo Relacional.
+
+> **Tupla** são as linhas de uma relação (linhas na tabela) que são obrigatoriamente distintas entre si.
+
+> **Atributo** são o cabeçalho de cada coluna, também chamado de **campo da tabela**. A quantidade de atributos[^9] define o grau da relação.
+
+[^9]: Por exemplo, uma tabela `pessoa` com 2 colunas: `nome` e `idade`. É dita como sendo uma relação de grau 2.
+
+> Chamamos de **Domínio** qualquer conjunto de valores válidos[^10] para um atributo.
+
+[^10]: Para explicar melhor esse conceito, podemos pensar em uma tabela que tenha a coluna `grau_de_instrucao`. Ela só pode aceitar um valor string dentro da lista \[`fundamental`, `medio`, `superior`\]. Essa lista de opções é o **domínio** do atributo `grau_de_instrucao`.
+
+:::warning[Atenção]
+Não podemos confundir **Domínio** com **Tipo Físico** do atributo. Tipo físico é relacionado ao modo como a variável é salva no hardware (ex: `string`, `int`, `float` e etc). Domínio é a lista de valores aceitos no atributo.
+:::
+
+Aqui temos um exemplo de implementação de domínio na prática
+
+```sql
+CREATE TABLE Funcionarios (
+	Nome VARCHAR(100) NOT NULL, 
+	Idade INT NOT NULL CHECK (Idade BETWEEN 18 AND 65), 
+	Departamento VARCHAR(50) NOT NULL CHECK (Departamento IN ('RH', 'TI', 'Financeiro')) 
+);
+```
+
+
+Além dos conceitos acima, existem algumas regras que o modelo relacional adota implicitamente que são importante de se ter em mente:
+- Os valores dos atributos são **atômicos** ou seja, só existe 1 endereço para cada intersecção linha-coluna.
+-  No modelo relacional se admite o valor **nulo** que não é igual à string vazia ou zero.
+
+Para encerrar, podemos definir uma dada relação $R(A_1, A_2, ..., A_n)$ onde $R$ é o nome da relação, $A_i$ é o nome do atributo, $n$ é o grau da relação.
+
+Os dados dentro da relação são as tuplas definidas por $r(R)$ de modo que $r = \{t_1, t_2, ..., t_n\}$.
+
+##### Chave Primária
+
+> A **Chave Primária** é a coluna (ou combinação delas) que define de maneira cabal a distinção entre entidades em uma dada tabela.
+
 
 #### Integridade Referencial e Chave Estrangeira
 
@@ -417,5 +493,4 @@ Nesse exemplo de uma concessionária de veículos, vemos que, dado um veículo, 
 - ELMASRI, Ramez; NAVATHE, Shamkant B. **Sistemas de banco de dados.** 7 ed. São Paulo: Person, 2018. 
 - MARTIN, James. **Principles of Data Base Management**.
 - CHEN, Peter. **Modelagem de dados: A abordagem para Projeto Lógico**.
-
-;
+- E.F. Codd. **A Relational Model of Data For Large Shared Data Banks**. Comm. ACM 13, 6 (June 1970), 377-387.
