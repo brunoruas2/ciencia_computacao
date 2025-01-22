@@ -465,6 +465,15 @@ Os dados dentro da relação são as tuplas definidas por $r(R)$ de modo que $r 
 
 > A **Chave Primária** é a coluna (ou combinação delas) que define de maneira cabal a distinção entre entidades em uma dada tabela.
 
+Para identificarmos uma chave primária basta nos perguntarmos se existe algum atributo que identifique toda a tupla de modo inequívoco.
+
+> **Chave Primária Composta** é a identificação criada a partir de mais de um atributo da relação (aka tabela).
+
+:::warning[Atenção]
+Não podemos dizer algo como "chaves primárias" para o caso da chave composta porque o conceito de chave primária só admite singular. Mesmo que nossa chave seja feita através de múltiplas colunas.
+:::
+
+> **Chave Alternativa** é outra coluna que também pode ser usada como chave primária mas que foi preterida por outra.
 
 #### Integridade Referencial e Chave Estrangeira
 
