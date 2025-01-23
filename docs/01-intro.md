@@ -4,9 +4,27 @@ sidebar_position: 1
 
 # Bem Vindo(a)!
 
-:::info[Informação]
-Os materiais de estudo estão disponíveis na barra lateral à esquerda ou, se você estiver no mobile, na opção de menu do site.
-:::
+## Materiais
+<center>
+```mermaid
+flowchart
+	A([Tecnólogo PUC-MG])
+	B([Cursos Rápidos])
+	C([Docusaurus])
+	B1([Certificação AWS])
+	B2([AI Engenering])
+
+	B --- B1
+	B --- B2
+
+
+	click A "puc/intro"
+	click B "category/cursos-livres"
+	click C "category/tutorial-docusaurus"
+	click B1 "category/aws-skill-builder"
+	click B2 "category/roadmapsh"
+```
+</center>
 
 ## Quem sou eu
 
@@ -19,15 +37,6 @@ Eu comecei a programar em meados de 2017. Na época aprendendo Econometria usand
 Atualmente sou desenvolvedor com foco em Backend na [GFT Technologies](https://www.gft.com/br/pt) onde estou alocado em um dos maiores bancos da América Latina. Esse material me serviu para chegar até aqui. Espero que também ajude você!
 
 Se quiser, pode me seguir nas minhas redes: [Linkedin](https://www.linkedin.com/in/brunoruas2/), [Twitter](https://twitter.com/bruno_ruas2), [Github](https://github.com/brunoruas2)
-
-## Projetos e Conteúdos
-
-Atualmente tenho 3 conteúdos aqui no site:
-1. [Notas de estudo da formação de Tecnólogo em Análise e Desenvolvimento de Sistemas](./02-puc/01-intro.md)
-2. [Notas de estudos em Cursos Livres](category/cursos-livres)
-	1. [Certificação AWS Cloud Pratictioner](category/aws-skill-builder)
-	2. [Roadmap de AI Engineering](category/roadmapsh)
-3. [Tutorial Docusaurus com algumas alterações minhas](category/tutorial-docusaurus)
 
 ## Fontes e Avisos
 
