@@ -477,6 +477,27 @@ Não podemos dizer algo como "chaves primárias" para o caso da chave composta p
 
 #### Integridade Referencial e Chave Estrangeira
 
+A chave estrangeira nada mais é do que a implementação real de um relacionamento.
+
+> **Chave Estrangeira** ou **Foreign Key (FK) ** é a referência de uma chave primária em outra tabela de modo que contém o mesmo domínio de dados.
+
+Para se garantir a integridade da relação, temos algumas regras que devem ser seguidas:
+- **Integridade de Domínio**: O domínio da FK deve ser o mesmo que o da PK a qual faz referência.
+- **Integridade de Entidade**: Se existe uma FK, deve existir uma entidade na tabela de referência.
+- **Integridade de Chave**: Não se admite duplicidade de PK.
+- **Integridade Referencial**: A FK ou é um valor nulo ou um valor que obedece a relação $PK(t_1[FK] = t_2[PK])$.
+
+Essas restrições acima são verificadas sempre que uma nova tupla (ou linha na tabela) é inserida.
+
+No caso de exclusão ou atualização,  podem haver situações que a manipulação da tupla que contenha uma PK referenciada em FK não é permitida forçando a adoção de algum saneamento. Temos três cenários possíveis:
+1. `ON DELETE/UPDATE SET NULL` - Todas as FK serão mudadas para nulo.
+2. `ON DELETE/UPDATE SET DEFAULT` - Todas as FK adotam um valor default definido na DDL.
+3. `ON DELETE/UPDATE CASCADE` - Autoriza a propagação do delete em todas as referências.
+
+:::danger[Aviso]
+Só use `CASCADE` junto com commit das mudanças na query porque você deve sempre ser capaz de reverter esse impacto gerado em caso de algo sair errado.
+:::
+
 ### Mapeamento do Modelo de Entidades e Relacionamentos para Modelo Relacional
 
 #### Mapeamento de Entidades e Atributos
