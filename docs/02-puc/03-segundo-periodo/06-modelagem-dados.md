@@ -132,11 +132,11 @@ Tal qual as etapas, durante a elaboração de um projeto de BD temos um estudo p
 	- Definição dos tipos e das relações.
 	- Criação dos Modelos de Entidade-Relacionamento (MER).
 1. **Projeto Lógico**
-	- Adaptação do projeto conceitual ao SGBD.
-	- Conversão dos modelos de dados ao tipo específico de SGBD (SQL, NoSQL, Redes e etc).
 	- É nessa etapa que temos a definição das tabelas, relações de campos e chaves.
+	- Etapa onde é escolhido a classe do SGBD (Relacional, NoSQL, Redes e etc).
 1. **Projeto Físico**
 	- Implementação real no hardware.
+	- Definição do SGBD propriamente dito (Oracle, MySQL, MSSQL, MariaDB e etc)
 	- Quanto de recursos precisarão ser alocados bem como as políticas de backup.
 	- Criação dos Perfis de acesso.
 
@@ -199,6 +199,12 @@ erDiagram
 
 Para simplificar nosso material, eu vou omitir nas entidades os atributos sempre que possível assim cada entidade vai ser representada apenas por um retângulo com o nome. Mas lembre-se que na hora de fazer um MER de verdade as entidades devem estar sempre com seus atributos.
 
+:::warning[Atenção]
+O conceito de atributo composto só se aplica ao modelo de Chen. No modelo de James nós somos obrigados a simplificar a notação para atributos simples (o que facilita a etapa de mapeamento em tabelas).
+
+O conceito de atributo multivalorado também se aplica somente ao modelo de Chen. No modelo de James nós somos obrigados a converter atributos multivalorados em uma nova entidade e criar uma ligação entre elas.
+:::
+
 #### Modelagem de Relacionamentos
 
 Alguns conceitos importantes para a modelagem de relacionamentos:
@@ -239,7 +245,9 @@ Nesse segundo exemplo nós temos um esquema básico de uma faculdade. Podemos ve
 
 Até agora já sabemos mostrar entidades, suas propriedades e suas relações com outras entidades. Agora vamos aprimorar mais um pouco nosso modelo representativo adicionando hierarquia entre entidades.
 
-> **Entidade Fraca**: É toda entidade que não tem chave própria, ou seja, precisa ser identificada por meio de um relacionamento com outra entidade (que é forte pois possui chave) e por um identificador fraco (chave parcial).
+> **Entidade Forte**: É qualquer entidade que existe por ela mesma e possui uma PK.
+
+> **Entidade Fraca**: É toda entidade que não tem chave própria, ou seja, precisa ser identificada por meio de um relacionamento com outra entidade e por um identificador fraco (chave parcial).
 
 > **Relacionamentos Estendidos**: São os relacionamentos entre mais de duas entidades (chamados de relacionamentos binários).
 
@@ -481,6 +489,8 @@ A chave estrangeira nada mais é do que a implementação real de um relacioname
 
 > **Chave Estrangeira** ou **Foreign Key (FK) ** é a referência de uma chave primária em outra tabela de modo que contém o mesmo domínio de dados.
 
+Com esse conceito, já podemos evoluir nosso entendimento de entidades em mais uma maneira de classificação das mesmas.
+
 Para se garantir a integridade da relação, temos algumas regras que devem ser seguidas:
 - **Integridade de Domínio**: O domínio da FK deve ser o mesmo que o da PK a qual faz referência.
 - **Integridade de Entidade**: Se existe uma FK, deve existir uma entidade na tabela de referência.
@@ -501,6 +511,19 @@ Só use `CASCADE` junto com commit das mudanças na query porque você deve semp
 ### Mapeamento do Modelo de Entidades e Relacionamentos para Modelo Relacional
 
 #### Mapeamento de Entidades e Atributos
+
+Até agora, nós estávamos focados em aprender  os diagramas do modelo MER que mostram as entidades, seus atributos e seus relacionamentos. Mas no final desse trabalho, é necessário converter (ou mapear) essas entidades em tabelas.
+
+Na hora de mapear nossas entidades, existem algumas técnicas que podemos fazer uso para cumprirmos essa tarefa.
+
+Técnicas de Mapeamento de Entidades:
+- **Mapeamento de Entidade Regular**: Toda entidade forte se torna uma tabela e cada atributo se torna uma coluna[^11].
+- **Mapeamento de Atributos Multivariados**: Todo atributo multivalorado[^12] será convertido em uma tabela com a FK apontando para a entidade forte.
+- **Mapeamento de Entidade Fraca**:  Criamos uma tabela para a entidade fraca com a FK de alguma entidade forte.
+
+[^11]: Atributos compostos no modelo de Chen simplesmente se tornam colunas ignorando o nome do atributo. Por exemplo, se a classe `pessoa` tem um atributo composto `endereco` que contém outros atributos como `rua` e `numero`. Nós vamos colocar as colunas `rua` e `numero` como colunas da tabela `pessoa`. No modelo de James, a gente nem precisa bater cabeça com isso porque a notação dele não permite atributos compostos.
+
+[^12]: Já vimos lá em cima no conteúdo que atributos multivalorados só existem no modelo de Chen. No de James nós somos obrigados a converter esse conceito em uma entidade fraca.
 
 #### Mapeamento de Relacionamentos
 
