@@ -249,7 +249,7 @@ Até agora já sabemos mostrar entidades, suas propriedades e suas relações co
 
 > **Entidade Fraca**: É toda entidade que não tem chave própria, ou seja, precisa ser identificada por meio de um relacionamento com outra entidade e por um identificador fraco (chave parcial).
 
-> **Relacionamentos Estendidos**: São os relacionamentos entre mais de duas entidades (chamados de relacionamentos binários).
+> **Relacionamentos Estendidos**: São os relacionamentos entre mais de duas entidades (chamados de relacionamentos não binários).
 
 Abaixo temos um exemplo de entidade fraca chamada `transacao`. Chamamos ela de entidade fraca porque ela precisa das chaves estrangeiras das contas para fazer sentido.
 
@@ -526,6 +526,125 @@ Técnicas de Mapeamento de Entidades:
 [^12]: Já vimos lá em cima no conteúdo que atributos multivalorados só existem no modelo de Chen. No de James nós somos obrigados a converter esse conceito em uma entidade fraca.
 
 #### Mapeamento de Relacionamentos
+
+Na hora de mapear os relacionamentos, nosso foco tem que ficar na definição das FK nas tabelas de referências aos objetos de completude parcial ou total.
+
+##### Casos de Relacionamentos 1:1 ou 1:N
+
+Para definir onde nossa FK será implementada, basta se perguntar qual a entidade dependente da outra. Um exemplo clássico é o de conta em um banco.
+
+```mermaid
+erDiagram
+	CLIENTE {
+		INT ID PK
+		STR NOME
+	}
+	CONTA {
+		INT NUMERO PK
+		INT AGENCIA PK
+		INT ID_CLIENTE FK
+	}
+	HIPOTECA {
+		INT APOLICE PK
+		FLOAT VALOR
+		INT ID_CLIENTE FK
+	}
+	
+	CLIENTE 1--0+ CONTA : ""
+	CLIENTE 1--zero or one HIPOTECA : ""
+```
+
+Só pode haver uma conta se anteriormente existir um cliente. Um cliente pode ter mais de uma conta mas todas elas precisam se remeter ao id do cliente para fazer algum sentido. Similarmente, uma hipoteca só pode existir se o cadastro do cliente existir antes, a diferença é que cada cliente só pode ter uma única hipoteca por vez.
+
+##### Caso de Relacionamento N:N
+
+Esse caso é mais complexo porque cada entidade por se referenciar mais de uma vez a outra. A melhor saída desse caso é a criação de uma tabela nova que usa FK de cada entidade para criar uma linha na tabela de relacionamento.
+
+```mermaid
+erDiagram
+	EMPREGADO {
+		INT ID PK
+		STR NOME
+	}
+	PROJETO {
+		INT ID PK
+		STR NOME
+	}
+	ALOCACAO {
+		INT ID_EMPREGADO FK, PK
+		INT ID_PROJETO FK, PK
+		FLOAT HORAS
+	}
+
+	EMPREGADO 1--0+ ALOCACAO : ""
+	PROJETO 1--0+ ALOCACAO : ""
+```
+
+##### Caso de Relacionamento N-ário
+
+Esse caso é mais raro e indica uma relação múltipla entre mais de duas entidades. No geral, podemos quebrar em relacionamentos binários mas por agora vamos aprender também esse meio de mapeamento.
+
+```mermaid
+erDiagram
+	FORNECEDOR {
+		INT ID PK
+	}
+	PROJETO {
+		INT ID PK
+	}
+	PECA {
+		INT ID PK
+	}
+	FORNECIMENTO {
+		INT ID_PECA FK, PK
+		INT ID_FORNECEDOR FK, PK
+		INT ID_PROJETO FK, PK
+	}
+
+	FORNECEDOR 1--0+ FORNECIMENTO : ""
+	PROJETO 1--0+ FORNECIMENTO : ""
+	PECA 1--0+ FORNECIMENTO : ""
+
+```
+
+Similar ao caso 1-N, tivemos que nos valer de uma tabela de relacionamento. A diferença é que a chave primária composta aumentou de 2 (caso 1-N) para N valores.
+
+##### Casos de Generalização-Especificação
+
+Bancos de dados não implementação herança. Dessa feita, nós temos que converter os relacionamentos de completude parcial e total em tabelas.
+
+Voltando no exemplo dos veículos. Nós temos 3 opções do que fazer.
+
+```mermaid
+erDiagram
+	VEICULO {
+		int ID PK
+		float preco
+		string placa
+	}
+	CARRO {
+		string marca
+		int numero_passageiros
+	}
+	CAMINHAO {
+		string marca
+		int eixos
+		float capacidade
+	}
+
+	VEICULO 1--1+ DISJUNCAO : "Completude Total"
+	DISJUNCAO 1--0+ CARRO : ""
+	DISJUNCAO 1--0+ CAMINHAO : ""
+```
+
+Maneiras de mapear:
+1. Criar uma tabela `veiculo` com colunas adicionais que só serão preenchidas no casos específicos de `carro` e `caminhao` sinalizando na coluna `tipo` colocando null quando não relevante.
+2. Criar tabelas `carro` e `caminhao` com as colunas pertencentes à tabela `veiculo`. Desse modo, teremos duas classes independentes entre si mas com algumas colunas de sentido compartilhado.
+3. Criar uma tabela para cada entidade, passando a FK do relacionamento `veiculo` como indicativo.
+
+:::note[Comentário]
+Cada uma das abordagens tem prós e contras mas, na minha experiência, o terceiro caso é o mais comum.
+:::
 
 ### Normalização de Banco de Dados
 
