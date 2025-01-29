@@ -514,6 +514,10 @@ Só use `CASCADE` junto com commit das mudanças na query porque você deve semp
 
 Até agora, nós estávamos focados em aprender  os diagramas do modelo MER que mostram as entidades, seus atributos e seus relacionamentos. Mas no final desse trabalho, é necessário converter (ou mapear) essas entidades em tabelas.
 
+:::warning[Atenção]
+A etapa de desenho das entidades, atributos e relacionamentos é chamada de **Modelo Entidade Relacionamento (MER)**. Por sua vez, quando implementamos esse desenho em um SGBD nós temos um **Modelo Relacional**.
+:::
+
 Na hora de mapear nossas entidades, existem algumas técnicas que podemos fazer uso para cumprirmos essa tarefa.
 
 Técnicas de Mapeamento de Entidades:
@@ -648,7 +652,41 @@ Cada uma das abordagens tem prós e contras mas, na minha experiência, o tercei
 
 ### Normalização de Banco de Dados
 
+:::info[Informação]
+Aqui tem uma aula ótima para aprofundar mais no assunto.
+
+<details>
+<summary>Aula</summary>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GFQaEYEc8_8?si=_lX7T10bG9wq4sx9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</details>
+:::
+
+> Chamamos de **Normalização do Banco de Dados** o conjunto de testes feitos nos modelos relacionais para assegurar que os campos estão de acordo com as especificações do banco de dados.
+
+A normalização tem como objetivo reduzir a probabilidade de anomalias por meio de exame dos atributos de cada entidade no momento de inclusão, exclusão ou alteração de dados.
+
+> Chamamos de **Dependência Funcional (DF)** entre atributos (ou conjunto de atributos) $X$ e $Y$ de um esquema relacional (ou tabela) $R$, que pode ser escrita por $X \rightarrow Y$[^13]. Se, e somente se, para todos valores de tuplas $t_1, t_2$ de uma instância (ou linha da tabela) da relação $R$ for verdade que: $t_1[X] = t_2[X] \land t_1[Y] = t_2[Y]$.
+
+Esse conceito usa a notação matemática para ser definido mas é simples: Se X e Y são atributos que possuem dependência funcional, então, para qualquer valor de X, podemos saber o valor de Y.
+
+> O conceito de **Forma Normal** está relacionado ao conhecimento das dependências funcionais dos atributos da relação pois, se eu conheço bem meus atributos e suas dependências, eu consigo reduzir o risco que anomalias nas operações DDL.
+
+> Os **Graus das Formas Normais** indicam quais etapas no processo de gestão das DFs foram implementadas para se garantir a integridade dos dados.
+
+[^13]: Lemos "X depende de Y".
+
 #### Primeira e Segunda Formas Normais
+
+##### Primeira Forma Normal
+> Chamamos de **Primeira Forma Normal** se todos os seus atributos são atômicos.
+
+Ou seja, só podemos considerar um banco na primeira forma normal se nenhum atributo das tabelas tiver mais de uma informação. Atente para a palavra *informação* que não quer dizer registro.
+
+Um exemplo de quebra da primeira forma normal é salvar registros de telefone na mesma linha do cadastro do cliente. Caso o cliente tenha mais de um número (e queiramos salvar) será necessário criar uma tabela de telefones para permitir a atomicidade da informação.
+
+A primeira forma normal impede a existência de **atributos multivalorados**.
 
 #### Terceira Forma Normal
 
@@ -666,3 +704,4 @@ Cada uma das abordagens tem prós e contras mas, na minha experiência, o tercei
 - MARTIN, James. **Principles of Data Base Management**.
 - CHEN, Peter. **Modelagem de dados: A abordagem para Projeto Lógico**.
 - E.F. Codd. **A Relational Model of Data For Large Shared Data Banks**. Comm. ACM 13, 6 (June 1970), 377-387.
+- ROB e Coronel. **Database Systems: Design**. Implementation and Management Wadworth Series (1993).
