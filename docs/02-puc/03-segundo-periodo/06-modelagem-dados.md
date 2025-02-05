@@ -650,10 +650,10 @@ Maneiras de mapear:
 Cada uma das abordagens tem prós e contras mas, na minha experiência, o terceiro caso é o mais comum.
 :::
 
-### Normalização de Banco de Dados
+### Normalização
 
 :::info[Informação]
-Aqui tem uma aula ótima para aprofundar mais no assunto. Outra fonte recomendada (em inglês) é o capítulo 14 parte 2 do NAVATHE.
+Aqui tem uma aula ótima para aprofundar mais no assunto. Outra fonte recomendada (em inglês) é o capítulo 14 do NAVATHE.
 
 <details>
 <summary>Aula no Youtube</summary>
@@ -665,25 +665,23 @@ Aqui tem uma aula ótima para aprofundar mais no assunto. Outra fonte recomendad
 
 Nós já aprendemos a planejar os modelos de um banco de dados e, na sua implementação, precisamos de ferramentas para medir a qualidade do nosso design. A ferramenta formal para isso é o conceito de **Dependência Funcional**.
 
+#### Conceito de Dependência Funcional
+
+Até agora, sempre representamos nosso banco de dados em termos de tabelas, entretanto, nada nos impede de abstrair um desenho[^14] de banco de dados relacional como um conjunto de $n$ atributos $A_i$ de modo que $i \in \{1,2,...,n\}$. Ou seja, nosso banco de dados pode ser definido como $R = \{A_1, A_2, ..., A_n\}$.
+
+[^14]: Isso não quer dizer que é uma boa ideia representar um banco de dados como uma tabela única. Significa apenas que podemos **pensar** num banco de dados como um conjunto de atributos (independente de qual tabela cada atributo está).
+
 :::danger[Aviso]
 Preste muita atenção nesse conceito porque o Navathe se refere a ele como "O conceito mais importante na teoria do design de esquemas relacionais".
 
 Quem sentir dificuldade com a linguagem usada, vale a pena conferir a parte de [matemática](../02-primeiro-periodo/04-matematica-basica.md)
 :::
 
-#### Conceito de Dependência Funcional
-
-Até agora, sempre representamos nosso banco de dados em termos de tabelas. Mas nada nos impede de abstrair um desenho de banco de dados relacional como um conjunto de $n$ atributos $A_i$ de modo que $i \in \{1,2,...,n\}$. Ou seja, nosso banco de dados pode ser definido como $R = \{A_1, A_2, ..., A_n\}$.
-
-:::warning[Atenção]
-Isso não quer dizer que é uma boa ideia representar um banco de dados como uma tabela única. Apenas quer dizer que podemos pensar num banco de dados como um conjunto de atributos (independente de qual tabela cada atributo está).
-:::
-
 > Uma **Dependência Funcional (DF)**, escrita por $X \rightarrow Y$[^13], sendo $X$ e $Y \subset R$, define uma **limitação** para as tuplas possíveis que podem expressar uma relação $r$ de $R$.
 >  
-> Essa relação entre tuplas quaisquer $t_1$ e $t_2$ deve satisfazer a seguinte regra: Para qualquer $t_1$ e $t_2$ em $r$, deve ser verdade que se, e somente se, $t_1[X] = t_2[X]$, então, $t_1[Y] = t_2[Y]$,
+> Essa relação entre tuplas quaisquer $t_1$ e $t_2$ deve satisfazer a seguinte regra: Para qualquer $t_1$ e $t_2$ em $r$, deve ser verdade que se $t_1[X] = t_2[X]$, então, $t_1[Y] = t_2[Y]$,
 
-[^13]: Lê-se algo como "Y é dependente de X".
+[^13]: Lê-se algo como "Y é dependente funcional de X".
 
 :::info[Informação]
 <details>
@@ -697,9 +695,17 @@ Por isso, podemos dizer que `nome` depente de `cpf`. Ou, na linguagem formal, `c
 </details>
 :::
 
-# parei aqui
+Agora que sabemos o que é uma dependência funcional, estamos prontos para usar esse  conceito na definição de uma metodologia formal para melhoria e teste do nosso desenho de banco dados relacional.
 
-> Chamamos de **Normalização do Banco de Dados** o conjunto de testes feitos nos modelos relacionais para assegurar que os campos estão de acordo com as especificações do banco de dados.
+#### Formas Normais baseadas em Chaves Primárias
+
+Para construir nossa metodologia de avaliação de esquemas relacionais, nós vamos supor que:
+1. Para cada relação, existe um conjunto de dependências funcionais.
+2. Para cada relação, existe uma definição de chave primária.
+
+> Chamamos de **Normalização do Banco de Dados** o conjunto de testes (baseados nas duas condições acima) feitos nos modelos relacionais para mensurar a **forma funcional** que o esquema pode ser avaliado.
+
+# TODO: Cap 14.3.1 pg 506
 
 A normalização tem como objetivo reduzir a probabilidade de anomalias por meio de exame dos atributos de cada entidade no momento de inclusão, exclusão ou alteração de dados.
 
@@ -741,3 +747,5 @@ A primeira forma normal impede a existência de **atributos multivalorados**.
 - CHEN, Peter. **Modelagem de dados: A abordagem para Projeto Lógico**.
 - E.F. Codd. **A Relational Model of Data For Large Shared Data Banks**. Comm. ACM 13, 6 (June 1970), 377-387.
 - ROB e Coronel. **Database Systems: Design**. Implementation and Management Wadworth Series (1993).
+
+[^14]: 
