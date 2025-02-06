@@ -652,8 +652,12 @@ Cada uma das abordagens tem prós e contras mas, na minha experiência, o tercei
 
 ### Normalização
 
+Nós já aprendemos a planejar o modelo de um banco de dados e, na sua implementação, precisamos de ferramentas para medir a qualidade do nosso design. Esse esforço de avaliar o modelo é chamado **normalização** mas vamos dar uma definição mais precisa logo à frente.
+
+Para conseguirmos entender bem o que é **normalização** precisaremos de um conceito que é a base na qual construiremos nossa análiase.
+
 :::info[Informação]
-Aqui tem uma aula ótima para aprofundar mais no assunto. Outra fonte recomendada (em inglês) é o capítulo 14 do NAVATHE.
+Como sempre, vale destacar que só vamos ter uma introdução geral ao assunto. Quem tiver interesse em aprofundar mais, pode conferir a aula que eu anexei aqui em baixo. Outra fonte recomendada (em inglês) é o capítulo 14 do NAVATHE.
 
 <details>
 <summary>Aula no Youtube</summary>
@@ -663,13 +667,7 @@ Aqui tem uma aula ótima para aprofundar mais no assunto. Outra fonte recomendad
 </details>
 :::
 
-Nós já aprendemos a planejar os modelos de um banco de dados e, na sua implementação, precisamos de ferramentas para medir a qualidade do nosso design. A ferramenta formal para isso é o conceito de **Dependência Funcional**.
-
-#### Conceito de Dependência Funcional
-
-Até agora, sempre representamos nosso banco de dados em termos de tabelas, entretanto, nada nos impede de abstrair um desenho[^14] de banco de dados relacional como um conjunto de $n$ atributos $A_i$ de modo que $i \in \{1,2,...,n\}$. Ou seja, nosso banco de dados pode ser definido como $R = \{A_1, A_2, ..., A_n\}$.
-
-[^14]: Isso não quer dizer que é uma boa ideia representar um banco de dados como uma tabela única. Significa apenas que podemos **pensar** num banco de dados como um conjunto de atributos (independente de qual tabela cada atributo está).
+#### Dependência Funcional
 
 :::danger[Aviso]
 Preste muita atenção nesse conceito porque o Navathe se refere a ele como "O conceito mais importante na teoria do design de esquemas relacionais".
@@ -677,17 +675,25 @@ Preste muita atenção nesse conceito porque o Navathe se refere a ele como "O c
 Quem sentir dificuldade com a linguagem usada, vale a pena conferir a parte de [matemática](../02-primeiro-periodo/04-matematica-basica.md)
 :::
 
+Até agora, sempre representamos nosso banco de dados em termos de tabelas, entretanto, nada nos impede de abstrair um desenho[^14] de banco de dados relacional como um conjunto de $n$ atributos $A_i$ de modo que $i \in \{1,2,...,n\}$. Ou seja, nosso banco de dados pode ser definido como $R = \{A_1, A_2, ..., A_n\}$.
+
+[^14]: Isso não quer dizer que é uma boa ideia representar um banco de dados como uma tabela única. Significa apenas que podemos **pensar** num banco de dados como um conjunto de atributos (independente de qual tabela cada atributo está).
+
 > Uma **Dependência Funcional (DF)**, escrita por $X \rightarrow Y$[^13], sendo $X$ e $Y \subset R$, define uma **limitação** para as tuplas possíveis que podem expressar uma relação $r$ de $R$.
 >  
-> Essa relação entre tuplas quaisquer $t_1$ e $t_2$ deve satisfazer a seguinte regra: Para qualquer $t_1$ e $t_2$ em $r$, deve ser verdade que se $t_1[X] = t_2[X]$, então, $t_1[Y] = t_2[Y]$,
+> Essa relação entre tuplas quaisquer $t_1$ e $t_2$ deve satisfazer a seguinte regra: Para qualquer $t_1$ e $t_2$ em $r$, deve ser verdade que se $t_1[X] = t_2[X]$, então, $t_1[Y] = t_2[Y]$.
+
+Se for definido em $R$ que não é possível existir duas tuplas de modo que $t_1[X] = t_2[X]$ temos, então, uma **chave candidata** visto que é um valor (ou conjunto de valores) que exprime uma relação atômica.
 
 [^13]: Lê-se algo como "Y é dependente funcional de X".
 
 :::info[Informação]
 <details>
-<summary>Exemplo prático</summary>
+<summary>Exemplo</summary>
 
 Calma, nem é tão complexo quanto parece. A primeira coisa é lembrar que **tupla** pode ser entendido nesse contexto como linhas das tabelas. Nesse caso em especial, estamos dizendo algo como "Se duas linhas dos atributos X são iguais, com certeza absoluta, essas linhas também serão iguais nos atributos Y".
+
+Temos essa certeza porque sabemos que Y depende de X. Então, se X diz que algo é igual, Y também dirá a mesma coisa.
 
 Para simplificar, podemos pensar X e Y como um atributo só. Por exemplo, X = `cpf` e Y = `nome`. Nós sabemos que, se 2 cpfs são iguais, eles **precisam** estar se referenciando à uma mesma pessoa. Como os `cpf` iguais implicam em estarmos falando de uma mesma pessoa, os campos `nome` referentes a cada entrada do `cpf` também serão iguais.
 
@@ -703,32 +709,11 @@ Para construir nossa metodologia de avaliação de esquemas relacionais, nós va
 1. Para cada relação, existe um conjunto de dependências funcionais.
 2. Para cada relação, existe uma definição de chave primária.
 
-> Chamamos de **Normalização do Banco de Dados** o conjunto de testes (baseados nas duas condições acima) feitos nos modelos relacionais para mensurar a **forma funcional** que o esquema pode ser avaliado.
+> Chamamos de **Processo de Normalização** o conjunto de testes (baseados nas duas condições acima) feitos nos modelos relacionais para mensurar a **forma normal** que o esquema (ou modelo) pode ser avaliado.
 
-# TODO: Cap 14.3.1 pg 506
+> Chamamos de **Forma Normal** a referência ao mais alto grau de condições (que vamos explicar mais à frente) que uma relação contém.
 
-A normalização tem como objetivo reduzir a probabilidade de anomalias por meio de exame dos atributos de cada entidade no momento de inclusão, exclusão ou alteração de dados.
-
-Quando falamos de normalização de banco de dados é comum aparecer os conceitos de **forma normal** associados a ele. Entretanto, para entendermos o que seria uma forma normal, precisamos entender o que é dependência funcional.
-
-
-Esse conceito usa a notação matemática para ser definido mas a ideia por trás é simples: Se X e Y são atributos que possuem dependência funcional, então, para qualquer valor de X, podemos saber o valor de Y.
-
-> O conceito de **Forma Normal** está relacionado ao conhecimento das dependências funcionais dos atributos da relação pois, se eu conheço bem meus atributos e suas dependências, eu consigo reduzir o risco que anomalias nas operações DDL.
-
-> Os **Graus das Formas Normais** indicam quais etapas no processo de gestão das DFs foram implementadas para se garantir a integridade dos dados.
-
-
-#### Primeira e Segunda Formas Normais
-
-##### Primeira Forma Normal
-> Chamamos de **Primeira Forma Normal** se todos os seus atributos são atômicos.
-
-Ou seja, só podemos considerar um banco na primeira forma normal se nenhum atributo das tabelas tiver mais de uma informação. Atente para a palavra *informação* que não quer dizer registro.
-
-Um exemplo de quebra da primeira forma normal é salvar registros de telefone na mesma linha do cadastro do cliente. Caso o cliente tenha mais de um número (e queiramos salvar) será necessário criar uma tabela de telefones para permitir a atomicidade da informação.
-
-A primeira forma normal impede a existência de **atributos multivalorados**.
+# cap 14.3.1 pg 506
 
 #### Terceira Forma Normal
 
