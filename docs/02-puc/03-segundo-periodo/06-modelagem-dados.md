@@ -650,6 +650,19 @@ Maneiras de mapear:
 Cada uma das abordagens tem prós e contras mas, na minha experiência, o terceiro caso é o mais comum.
 :::
 
+### Problemas de Desenho em Bancos Relacionais
+
+Se aplicarmos tudo que aprendemos até o momento, ainda seremos passíveis de cometer erros que podem comprometer o desempenho e, por fim, a utilidade do nosso modelo.
+
+Aqui vamos elencar alguns dos casos mais comuns que levaram ao desenvolvimento de uma metodologia de avaliação de desenho de modelos relacionais.
+
+# cap 14.1 pg 492 (parei aqui)
+
+#### Sentido Semântico dos Atributos Obtuso
+#### Informação Redundante em Tuplas
+#### Valores `NULL` em Tuplas Desnecessários
+#### Tuplas Espúrias
+
 ### Normalização
 
 Nós já aprendemos a planejar o modelo de um banco de dados e, na sua implementação, precisamos de ferramentas para medir a qualidade do nosso design. Esse esforço de avaliar o modelo é chamado **normalização** mas vamos dar uma definição mais precisa logo à frente.
@@ -675,7 +688,7 @@ Preste muita atenção nesse conceito porque o Navathe se refere a ele como "O c
 Quem sentir dificuldade com a linguagem usada, vale a pena conferir a parte de [matemática](../02-primeiro-periodo/04-matematica-basica.md)
 :::
 
-Até agora, sempre representamos nosso banco de dados em termos de tabelas, entretanto, nada nos impede de abstrair um desenho[^14] de banco de dados relacional como um conjunto de $n$ atributos $A_i$ de modo que $i \in \{1,2,...,n\}$. Ou seja, nosso banco de dados pode ser definido como $R = \{A_1, A_2, ..., A_n\}$.
+Até agora, sempre representamos nosso banco de dados em termos de tabelas e entidades, entretanto, nada nos impede de abstrair um desenho[^14] de banco de dados relacional como um conjunto de $n$ atributos $A_i$ de modo que $i \in \{1,2,...,n\}$. Ou seja, nosso banco de dados pode ser definido como $R = \{A_1, A_2, ..., A_n\}$.
 
 [^14]: Isso não quer dizer que é uma boa ideia representar um banco de dados como uma tabela única. Significa apenas que podemos **pensar** num banco de dados como um conjunto de atributos (independente de qual tabela cada atributo está).
 
@@ -701,17 +714,37 @@ Por isso, podemos dizer que `nome` depente de `cpf`. Ou, na linguagem formal, `c
 </details>
 :::
 
-Agora que sabemos o que é uma dependência funcional, estamos prontos para usar esse  conceito na definição de uma metodologia formal para melhoria e teste do nosso desenho de banco dados relacional.
+Agora que sabemos o que é uma dependência funcional, estamos prontos para usar esse conceito na definição de uma metodologia formal para melhoria e teste do nosso desenho de banco dados relacional.
 
 #### Formas Normais baseadas em Chaves Primárias
 
+:::info[Contexto Histórico]
+<details>
+<summary>Um pouco de história</summary>
+
+A primeira pessoa a propor o processo de normalização foi Codd no artigo “Further Normalization of the Data Base Relational Model,” in Rustin [1972]. Onde ele propôs uma série de testes que certificariam se determinada relação satisfaz uma certa forma normal.
+
+Originalmente, foram propostas 3 formas normais sendo que a definição mais formal da terceira forma foi dada posteriormente por Boyce e Codd.
+
+Com o passar dos anos, foram definidas mais 2 formas normais que são baseadas nos conceitos de dependências multivaloradas e dependências conjuntas.
+</details>
+:::
+
 Para construir nossa metodologia de avaliação de esquemas relacionais, nós vamos supor que:
-1. Para cada relação, existe um conjunto de dependências funcionais.
-2. Para cada relação, existe uma definição de chave primária.
+- Para cada relação, existe um conjunto de dependências funcionais.
+- Para cada relação, existe uma definição de chave primária.
 
 > Chamamos de **Processo de Normalização** o conjunto de testes (baseados nas duas condições acima) feitos nos modelos relacionais para mensurar a **forma normal** que o esquema (ou modelo) pode ser avaliado.
 
-> Chamamos de **Forma Normal** a referência ao mais alto grau de condições (que vamos explicar mais à frente) que uma relação contém.
+Se bem executado, o processo de normalização acarreta a redução de 2 problemas:
+1. Reduzir redundância
+2. Redução de anomalias nos processos de DML que alteram dados.
+
+> Chamamos de **Forma Normal** a referência ao mais alto grau de condições que uma relação[^15] contém. A definição de cada forma normal é derivada exclusivamente do conceito de dependência funcional sobre os atributos de uma relação.
+
+[^15]: Que também podemos chamar de tabela.
+
+Se uma determinada relação não passar no teste para uma forma normal, será necessário fazer uma decomposição em relações menores até se obter a adequação à forma.
 
 # cap 14.3.1 pg 506
 
