@@ -10,19 +10,17 @@ sidebar_position: 1
 flowchart
 	A([Tecnólogo PUC-MG])
 	B([Cursos Rápidos])
-	C([Docusaurus])
 	B1([Certificação AWS])
-	B2([AI Engenering])
+	C([Docusaurus])
+	D([Archive])
 
 	B --- B1
-	B --- B2
-
 
 	click A "puc/intro"
 	click B "category/cursos-livres"
 	click C "category/tutorial-docusaurus"
 	click B1 "category/aws-skill-builder"
-	click B2 "category/roadmapsh"
+	click D "category/archive"
 ```
 </center>
 

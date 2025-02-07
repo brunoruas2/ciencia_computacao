@@ -6,7 +6,7 @@ sidebar_position: 1 # ../img/
 
 ## Conceitos
 
-Já vimos os conceitos de [AI](02-Terminologia.md#artificial-intelligence---ai) e [ML](./02-Terminologia.md#machine-learning---ml). De modo que, já sabemos que AI é um conjunto maior que contém o subconjunto ML. Dessa feita, não é estranho supor que as atividades desses dois tipos de engenheiros se sobreponham mas que também tenham escopos diferentes.
+Já vimos os conceitos de [AI](99-archive/01-roadmapsh/01-ai-engineer/02-intro/02-Terminologia.md#artificial-intelligence---ai) e [ML](99-archive/01-roadmapsh/01-ai-engineer/02-intro/02-Terminologia.md#machine-learning---ml). De modo que, já sabemos que AI é um conjunto maior que contém o subconjunto ML. Dessa feita, não é estranho supor que as atividades desses dois tipos de engenheiros se sobreponham mas que também tenham escopos diferentes.
 
 ## AI Engineer
 

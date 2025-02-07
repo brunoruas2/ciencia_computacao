@@ -1,8 +1,0 @@
-{
-  "label": "Tutorial Docusaurus",
-  "position": 99,
-  "link": {
-    "type": "generated-index",
-    "description": "Essa versão do meu site é construída usando o projeto Docusaurus da Meta. Aqui está a documentação oficial que vem no próprio template do projeto. Vou manter aqui para referência rápida."
-  }
-}

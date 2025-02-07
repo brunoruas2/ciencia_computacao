@@ -23,8 +23,8 @@ Eu só estou usando esse material porque o Akita usou o de backend na série de 
 ## Roadmap do projeto
 
 - [x] **Introduction**
-  - [x] [AI Engineer vs ML Engineer](./02-intro/01-ai-ml.md)
-  - [x] [Common Terminology](./02-intro/02-Terminologia.md)
+  - [x] [AI Engineer vs ML Engineer](99-archive/01-roadmapsh/01-ai-engineer/02-intro/01-ai-ml.md)
+  - [x] [Common Terminology](99-archive/01-roadmapsh/01-ai-engineer/02-intro/02-Terminologia.md)
 - [ ] **Pre-trained Models**
   - [ ] Open AI Models
   - [ ] Anthropic's Claude
