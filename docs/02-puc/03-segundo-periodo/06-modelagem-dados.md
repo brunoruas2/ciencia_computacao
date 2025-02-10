@@ -656,9 +656,56 @@ Se aplicarmos tudo que aprendemos até o momento, ainda seremos passíveis de co
 
 Aqui vamos elencar alguns dos casos mais comuns que levaram ao desenvolvimento de uma metodologia de avaliação de desenho de modelos relacionais.
 
-# cap 14.1 pg 492 (parei aqui)
-
 #### Sentido Semântico dos Atributos Obtuso
+
+Explicar esse problema é simples: Sempre desenhe um esquema relacional de modo que seja fácil explicar o seu sentido.
+
+No geral, essa regra é quebrada quando combinamos múltiplos atributos a partir de múltiplas entidades e relacionamentos para uma dada relação.
+
+<details>
+<summary>Exemplo</summary>
+
+Abaixo temos um exemplo de um erro. Acabamos misturando informações relativas ao departamento que são relacionadas exclusivamente à outra entidade separada da entidade `EMPREGADO_DEPARTAMENTO`. Para corrigir isso, devemos indicar separar completamente o relacionamento entre essas entidades de modo atômico.
+
+```mermaid
+erDiagram
+	 EMPREGADO_DEPARTAMENTO {
+		STRING CPF PK,FK
+		STRING NAME
+		INT DEPARTAMENTO_ID
+		STRING DEPARTAMENTO_NOME
+	}
+	DEPARTAMENTO {
+		INT ID PK
+		STRING NAME
+	}
+
+	EMPREGADO_DEPARTAMENTO 0+--1 DEPARTAMENTO : ""
+```
+
+Agora, vamos ver como deveria ser:
+
+```mermaid
+erDiagram
+	 LOTACAO {
+		STRING CPF PK,FK
+		INT DEPARTAMENTO_ID PK,FK
+	}
+	 EMPREGADO {
+		STRING CPF PK
+		STRING NAME
+	}
+	DEPARTAMENTO {
+		INT ID PK
+		STRING NAME
+	}
+
+	EMPREGADO 0+--1 LOTACAO : ""
+	LOTACAO 0+--1 DEPARTAMENTO : ""
+```
+</details>
+
+
 #### Informação Redundante em Tuplas
 #### Valores `NULL` em Tuplas Desnecessários
 #### Tuplas Espúrias
