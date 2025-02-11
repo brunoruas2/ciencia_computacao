@@ -654,7 +654,7 @@ Cada uma das abordagens tem prós e contras mas, na minha experiência, o tercei
 
 Se aplicarmos tudo que aprendemos até o momento, ainda seremos passíveis de cometer erros que podem comprometer o desempenho e, por fim, a utilidade do nosso modelo.
 
-Aqui vamos elencar alguns dos casos mais comuns que levaram ao desenvolvimento de uma metodologia de avaliação de desenho de modelos relacionais.
+Aqui vamos elencar alguns dos casos mais comuns que levaram ao desenvolvimento de uma metodologia de avaliação de desenho de modelos relacionais que veremos na seção de **Normalização**.
 
 #### Sentido Semântico dos Atributos Obtuso
 
@@ -665,22 +665,19 @@ No geral, essa regra é quebrada quando combinamos múltiplos atributos a partir
 <details>
 <summary>Exemplo</summary>
 
-Abaixo temos um exemplo de um erro. Acabamos misturando informações relativas ao departamento que são relacionadas exclusivamente à outra entidade separada da entidade `EMPREGADO_DEPARTAMENTO`. Para corrigir isso, devemos indicar separar completamente o relacionamento entre essas entidades de modo atômico.
+Abaixo temos um exemplo do que não fazer pois acabamos misturando informações relativas ao departamento que são relacionadas exclusivamente à outra entidade separada da entidade `EMPREGADO_DEPARTAMENTO` (que por sua vez, é basicamente a entidade `empregado` com informações adicionais de departamento). 
+
+Para corrigir isso, devemos indicar separar completamente o relacionamento entre essas entidades de modo atômico.
 
 ```mermaid
 erDiagram
 	 EMPREGADO_DEPARTAMENTO {
-		STRING CPF PK,FK
+		STRING CPF PK
 		STRING NAME
 		INT DEPARTAMENTO_ID
 		STRING DEPARTAMENTO_NOME
+		 INT QTD_MAX_FUNC
 	}
-	DEPARTAMENTO {
-		INT ID PK
-		STRING NAME
-	}
-
-	EMPREGADO_DEPARTAMENTO 0+--1 DEPARTAMENTO : ""
 ```
 
 Agora, vamos ver como deveria ser:
@@ -700,13 +697,31 @@ erDiagram
 		STRING NAME
 	}
 
-	EMPREGADO 0+--1 LOTACAO : ""
+	EMPREGADO 0+--1+ LOTACAO : ""
 	LOTACAO 0+--1 DEPARTAMENTO : ""
 ```
+
+Para entender intuitivamente onde estava o problema, basta se colocar no papel de alguém que ia explicar a tabela `EMPREGADO_DEPARTAMENTO`. Veja que você ia precisar explicar quais colunas se referiam ao funcionário e quais se referiam ao departamento.
+
+No exemplo corrigido, tudo fica super simples porque só correlacionamos as entidades sem misturar nenhum dos seus atributos.
 </details>
 
+#### Informação Redundante em Tuplas e Anomalias de Atualização
 
-#### Informação Redundante em Tuplas
+Seguindo o exemplo do caso anterior, podemos ver que a tabela `empregado_departamento` sempre irá repetir as informações do departamento para cada empregado. Isso tem impacto no custo de storage do servidor de banco de dados e, como se não fosse suficiente, pode levar a anomalias vários tipos de anomalias.
+
+Essa junção entre informações de diferentes entidades em uma nova relação chamamos de **Natural Join**.
+
+Somente por termos um mal design nas tabelas, nos expomos a várias anomalias que podemos elencar abaixo.
+
+1. Anomalias de Inserção
+	1. Para criar uma nova entrada de empregado, sempre será necessário consultas as informações do departamento e duplicar essas mesmas informações em cada linha de empregados que estão lotados no mesmo departamento. Caso o empregado não tenha departamento ainda, teremos que inserir `NULL` em todas as colunas de departamento.
+	2. Nós não seremos capazes de inserir um novo departamento que ainda não tem nenhum funcionário porque o `cpf` é PK.
+2. Anomalias de Deleção
+	1. Caso um departamento perca todos os seus empregados, nós simplesmente perderemos a informação do departamento definitivamente porque ela só existe na tabela `empregado_departamento`.
+3. Anomalias de Modificação
+	1. Se mudarmos o nome de um departamento, termos que fazer update em **todas** as linhas de empregados lotados no mesmo. Qualquer erro nesse update e teremos dados conflitantes na base de dados.
+
 #### Valores `NULL` em Tuplas Desnecessários
 #### Tuplas Espúrias
 
@@ -729,12 +744,6 @@ Como sempre, vale destacar que só vamos ter uma introdução geral ao assunto. 
 
 #### Dependência Funcional
 
-:::danger[Aviso]
-Preste muita atenção nesse conceito porque o Navathe se refere a ele como "O conceito mais importante na teoria do design de esquemas relacionais".
-
-Quem sentir dificuldade com a linguagem usada, vale a pena conferir a parte de [matemática](../02-primeiro-periodo/04-matematica-basica.md)
-:::
-
 Até agora, sempre representamos nosso banco de dados em termos de tabelas e entidades, entretanto, nada nos impede de abstrair um desenho[^14] de banco de dados relacional como um conjunto de $n$ atributos $A_i$ de modo que $i \in \{1,2,...,n\}$. Ou seja, nosso banco de dados pode ser definido como $R = \{A_1, A_2, ..., A_n\}$.
 
 [^14]: Isso não quer dizer que é uma boa ideia representar um banco de dados como uma tabela única. Significa apenas que podemos **pensar** num banco de dados como um conjunto de atributos (independente de qual tabela cada atributo está).
@@ -747,7 +756,14 @@ Se for definido em $R$ que não é possível existir duas tuplas de modo que $t_
 
 [^13]: Lê-se algo como "Y é dependente funcional de X".
 
-:::info[Informação]
+:::danger[Aviso]
+Preste muita atenção nesse conceito porque o Navathe se refere a ele como "O conceito mais importante na teoria do design de esquemas relacionais".
+
+Quem sentir dificuldade com a linguagem usada, vale a pena conferir a parte de [matemática](../02-primeiro-periodo/04-matematica-basica.md)
+:::
+
+
+:::info[informação]
 <details>
 <summary>Exemplo</summary>
 
@@ -784,8 +800,8 @@ Para construir nossa metodologia de avaliação de esquemas relacionais, nós va
 > Chamamos de **Processo de Normalização** o conjunto de testes (baseados nas duas condições acima) feitos nos modelos relacionais para mensurar a **forma normal** que o esquema (ou modelo) pode ser avaliado.
 
 Se bem executado, o processo de normalização acarreta a redução de 2 problemas:
-1. Reduzir redundância
-2. Redução de anomalias nos processos de DML que alteram dados.
+4. Reduzir redundância
+5. Redução de anomalias nos processos de DML que alteram dados.
 
 > Chamamos de **Forma Normal** a referência ao mais alto grau de condições que uma relação[^15] contém. A definição de cada forma normal é derivada exclusivamente do conceito de dependência funcional sobre os atributos de uma relação.
 

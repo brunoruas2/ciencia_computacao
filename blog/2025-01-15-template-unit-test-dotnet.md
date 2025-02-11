@@ -13,6 +13,14 @@ Melhor template de teste unitário que eu conheço para projeto .NET
 <!-- truncate -->
 
 ```csharp
+using Microsoft.Extensions.Configuration;
+using Moq.AutoMock;
+using Xunit;
+using AutoFixture;
+using Moq;
+
+private readonly IConfiguration _configuration = GetIConfiguration();
+
 public static IConfiguration GetIConfiguration()
 {
 	return (IConfiguration)new ConfigurationBuilder()
@@ -21,9 +29,7 @@ public static IConfiguration GetIConfiguration()
 	.Build();
 }
 
-private readonly IConfiguration _configuration = GetIConfiguration();
-
-public async Task Test_Should_Do_Something()
+public void Test_Should_Do_Something()
 {
 	// Arrange
 	var autoMocker = new AutoMocker();
@@ -37,7 +43,7 @@ public async Task Test_Should_Do_Something()
 	
 	// if you need mock some injection configured behavior
 	var someInjectedDependence = autoMocker.GetMock<ClassOfInjectedDependecy>();
-	someInjectedDependence.Setup().Return();
+	someInjectedDependence.Setup().Returns();
 	
 	// to create some object
 	var someObject = fixture.Build<ObjectClass>()
