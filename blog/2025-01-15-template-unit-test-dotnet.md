@@ -29,14 +29,14 @@ public static IConfiguration GetIConfiguration()
 	.Build();
 }
 
-public void Test_Should_Do_Something()
+public void First_template()
 {
 	// Arrange
 	var autoMocker = new AutoMocker();
 	var fixture = new Fixture();
 	fixture.Behaviors.Add(new OmitOnRecursionBehavior());
 	fixture.Behaviors.Remove(new ThrowingRecursionBehavior());
-	fixture.Inject(_configuration)
+	fixture.Inject(_configuration);
 
 	// create the SUT class with all injection config mocked allready
 	var SUT = autoMocker.CreateInstance<ClassOfSut>();
@@ -50,6 +50,31 @@ public void Test_Should_Do_Something()
 		.With(x => x.SomePropertie, AsignedValue)
 		.Create();
 
+	// to create a list of objects
+	int qtdToCreate = 10;
+	var listObjects = fixture.CreateMany<classObjects>(qtd)
+		.Cast<anotherClassIfNeeded>()
+		.ToList();
+
 	// rest of the test
 }
+
+public void Second_template()
+{
+	// Arrange
+	var autoMocker = new AutoMocker();
+	var fixture = new Fixture();
+	fixture.Behaviors.Add(new OmitOnRecursionBehavior());
+	fixture.Behaviors.Remove(new ThrowingRecursionBehavior());
+	fixture.Inject(_configuration);
+
+	// create mocks for each param in this fashion
+	var param1Mock = autoMocker.GetMock<param1>().Object;
+
+	// create the SUT class with params mocked
+	var SUT = new ClassToSut(param1Mock);
+
+	// rest of the test
+}
+
 ```

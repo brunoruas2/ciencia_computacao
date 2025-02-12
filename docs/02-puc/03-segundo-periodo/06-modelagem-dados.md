@@ -654,13 +654,13 @@ Cada uma das abordagens tem prós e contras mas, na minha experiência, o tercei
 
 Se aplicarmos tudo que aprendemos até o momento, ainda seremos passíveis de cometer erros que podem comprometer o desempenho e, por fim, a utilidade do nosso modelo.
 
-Aqui vamos elencar alguns dos casos mais comuns que levaram ao desenvolvimento de uma metodologia de avaliação de desenho de modelos relacionais que veremos na seção de **Normalização**.
+Nessa seção, vamos elencar alguns dos casos mais comuns que levaram ao desenvolvimento de uma metodologia de avaliação de desenho de modelos relacionais que veremos na seção de **Normalização**.
 
 #### Sentido Semântico dos Atributos Obtuso
 
-Explicar esse problema é simples: Sempre desenhe um esquema relacional de modo que seja fácil explicar o seu sentido.
+> Sempre desenhe um esquema relacional de modo que seja fácil explicar o seu sentido, para isso, **não** misture atributos de entidades diferentes e de relacionamentos em uma mesma tabela (relação).
 
-No geral, essa regra é quebrada quando combinamos múltiplos atributos a partir de múltiplas entidades e relacionamentos para uma dada relação.
+No geral, essa regra se baseia no fato que devemos pensar em cada relação como representante de uma entidade ou de um relacionamento. Desse modo, se misturarmos atributos de mais de uma entidade ou relacionamento, estaremos aumentando desnecessariamente a complexidade do sentido semântico do nosso modelo.
 
 <details>
 <summary>Exemplo</summary>
@@ -708,6 +708,8 @@ No exemplo corrigido, tudo fica super simples porque só correlacionamos as enti
 
 #### Informação Redundante em Tuplas e Anomalias de Atualização
 
+> Devemos desenhar um esquema relacional de modo a não produzir anomalias de insert, deletion ou update. Caso seja impossível evitar, devemos nos assegurar que os programas sempre levarão as anomalias em consideração na hora de interagir com o banco.
+
 Seguindo o exemplo do caso anterior, podemos ver que a tabela `empregado_departamento` sempre irá repetir as informações do departamento para cada empregado. Isso tem impacto no custo de storage do servidor de banco de dados e, como se não fosse suficiente, pode levar a anomalias vários tipos de anomalias.
 
 Essa junção entre informações de diferentes entidades em uma nova relação chamamos de **Natural Join**.
@@ -715,14 +717,35 @@ Essa junção entre informações de diferentes entidades em uma nova relação 
 Somente por termos um mal design nas tabelas, nos expomos a várias anomalias que podemos elencar abaixo.
 
 1. Anomalias de Inserção
-	1. Para criar uma nova entrada de empregado, sempre será necessário consultas as informações do departamento e duplicar essas mesmas informações em cada linha de empregados que estão lotados no mesmo departamento. Caso o empregado não tenha departamento ainda, teremos que inserir `NULL` em todas as colunas de departamento.
-	2. Nós não seremos capazes de inserir um novo departamento que ainda não tem nenhum funcionário porque o `cpf` é PK.
+	1. Para criar uma nova entrada de empregado, sempre será necessário consultas as informações do departamento e duplicar essas mesmas informações em cada linha de empregados que estão lotados no mesmo departamento. Caso o empregado não tenha departamento ainda, teremos que inserir `NULL` em todas as colunas referentes ao departamento.
+	2. Nós simplesmente não seremos capazes de inserir um novo departamento que ainda não tem nenhum funcionário porque o `cpf` é PK.
 2. Anomalias de Deleção
-	1. Caso um departamento perca todos os seus empregados, nós simplesmente perderemos a informação do departamento definitivamente porque ela só existe na tabela `empregado_departamento`.
+	1. Caso um departamento perca todos os seus empregados, nós perderemos a informação do departamento definitivamente porque ela só existe na tabela `empregado_departamento`.
 3. Anomalias de Modificação
 	1. Se mudarmos o nome de um departamento, termos que fazer update em **todas** as linhas de empregados lotados no mesmo. Qualquer erro nesse update e teremos dados conflitantes na base de dados.
 
+:::info[informação]
+Em alguns casos, teremos que pensar nos relatórios ou consultas frequentes que serão demandas. Caso haja necessidade de se consultar entidades com relacionamentos de maneira misturada, devemos usar `views` ao invés de jogar essa responsabilidade para o banco de dados.
+
+Em casos que demandam muita performance, podemos usar `stored procedures` junto com `triggers` para garantir que sempre teremos dados livres de anomalias na tabela que precisa conter atributos misturados. O conceito dado para uma tabela desse tipo é **view materializada**.
+:::
+
 #### Valores `NULL` em Tuplas Desnecessários
+
+> Evite a todo custo adicionar atributos em relações de base (ou seja, entidades básicas) que terão valores `NULL` frequentemente. A regra geral é `NULL` ser sempre uma exceção.
+
+Ao invés de termos relações (ou tabelas) grandes com vários campos opcionais, devemos dar preferência à quebra desses campos em relacionamentos com outras tabelas usando FK. A explicação disso é que `NULL` é um dado, e por ser um dado, ele ocupa espaço no storage e pode causar problemas de operação de queries dado que trabalhar com dados nulos não é sempre trivial.
+
+# TODO colocar exemplo da seção 5.5.1
+
+Outro problema sério é que o sentido semântico de um campo nulo é notadamente ambíguo. Por exemplo, podemos pensar que uma coluna (ou atributo) nulo signifique:
+1. Que o valor na tupla é "não aplicável".
+2. Que o valor na tuple é "desconhecido".
+3. Que o sabemos que o valor existe mas, naquele momento, é incerto ou resta pendente.
+
+Como saber com certeza o que cada campo anulável (ou nullable) realmente quer dizer? Claramente, estamos aumentando o risco de falha no entendimento do nosso modelo de dados.
+
+
 #### Tuplas Espúrias
 
 ### Normalização
