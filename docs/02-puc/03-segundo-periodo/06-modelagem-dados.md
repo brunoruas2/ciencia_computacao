@@ -736,8 +736,6 @@ Em casos que demandam muita performance, podemos usar `stored procedures` junto 
 
 Ao invés de termos relações (ou tabelas) grandes com vários campos opcionais, devemos dar preferência à quebra desses campos em relacionamentos com outras tabelas usando FK. A explicação disso é que `NULL` é um dado, e por ser um dado, ele ocupa espaço no storage e pode causar problemas de operação de queries dado que trabalhar com dados nulos não é sempre trivial.
 
-# TODO colocar exemplo da seção 5.5.1
-
 Outro problema sério é que o sentido semântico de um campo nulo é notadamente ambíguo. Por exemplo, podemos pensar que uma coluna (ou atributo) nulo signifique:
 1. Que o valor na tupla é "não aplicável".
 2. Que o valor na tuple é "desconhecido".
@@ -745,14 +743,55 @@ Outro problema sério é que o sentido semântico de um campo nulo é notadament
 
 Como saber com certeza o que cada campo anulável (ou nullable) realmente quer dizer? Claramente, estamos aumentando o risco de falha no entendimento do nosso modelo de dados.
 
-
 #### Tuplas Espúrias
+
+> Devemos evitar relações que contenham atributos comparáveis com atributos PK e FK de outras relações.
+
+A ideia desse problema surge quando temos que fazer JOIN por atributos que não são PK (e se não mapeados, também não serão FK) de nenhuma relação. O impacto disso é que a tabelar resultante do JOIN poderá ter tuplas (ou linhas) que não fazem sentido (por isso chamadas de espúrias).
+
+<details>
+<summary>Exemplo</summary>
+
+```mermaid
+erDiagram
+	 LOTACAO {
+		STRING NOME_COMPLERTO PK
+		STRING CIDADE_PROJETO PK
+	}
+	 EMPREGADOS_PROJETO {
+		STRING CPF PK
+		INT PROJETO_ID PK
+		STRING PROJETO_NOME
+		STRING CIDADE_PROJETO
+	}
+```
+Se quisermos uma consulta que nos diga todos os empregados por projeto com o nome completo do empregado, teremos problemas pois só temos a coluna `CIDADE_PROJETO` como possibilidade de JOIN.
+
+Isso causaria linhas que não fazem sentido onde um nome completo de um funcionário estaria ligado a um cpf de outro.
+
+</details>
 
 ### Normalização
 
-Nós já aprendemos a planejar o modelo de um banco de dados e, na sua implementação, precisamos de ferramentas para medir a qualidade do nosso design. Esse esforço de avaliar o modelo é chamado **normalização** mas vamos dar uma definição mais precisa logo à frente.
+Vamos recapitular o que já aprendemos até agora:
+1. Sabemos criar modelos relacionais representativos de uma implementação real de entidades e relações.
+2. Já sabemos os erros mais comuns que um desenho ruim pode causa.
 
-Para conseguirmos entender bem o que é **normalização** precisaremos de um conceito que é a base na qual construiremos nossa análiase.
+Agora, precisamos de ferramentas para medir a **qualidade** do nosso design. Esse esforço de avaliar o modelo é chamado **normalização** mas vamos dar uma definição mais precisa logo à frente.
+
+:::info[Contexto Histórico]
+<details>
+<summary>Um pouco de história</summary>
+
+A primeira pessoa a propor o processo de normalização foi Codd no artigo “Further Normalization of the Data Base Relational Model,” in Rustin [1972]. Onde ele propôs uma série de testes que certificariam se determinada relação satisfaz uma certa forma normal.
+
+Originalmente, foram propostas 3 formas normais sendo que a definição mais formal da terceira forma foi dada posteriormente por Boyce e Codd.
+
+Com o passar dos anos, foram definidas mais 2 formas normais que são baseadas nos conceitos de dependências multivaloradas e dependências conjuntas.
+</details>
+:::
+
+Para conseguirmos entender bem o que é **normalização** precisaremos de um conceito que é a base na qual construiremos nossa análise.
 
 :::info[Informação]
 Como sempre, vale destacar que só vamos ter uma introdução geral ao assunto. Quem tiver interesse em aprofundar mais, pode conferir a aula que eu anexei aqui em baixo. Outra fonte recomendada (em inglês) é o capítulo 14 do NAVATHE.
@@ -804,18 +843,6 @@ Agora que sabemos o que é uma dependência funcional, estamos prontos para usar
 
 #### Formas Normais baseadas em Chaves Primárias
 
-:::info[Contexto Histórico]
-<details>
-<summary>Um pouco de história</summary>
-
-A primeira pessoa a propor o processo de normalização foi Codd no artigo “Further Normalization of the Data Base Relational Model,” in Rustin [1972]. Onde ele propôs uma série de testes que certificariam se determinada relação satisfaz uma certa forma normal.
-
-Originalmente, foram propostas 3 formas normais sendo que a definição mais formal da terceira forma foi dada posteriormente por Boyce e Codd.
-
-Com o passar dos anos, foram definidas mais 2 formas normais que são baseadas nos conceitos de dependências multivaloradas e dependências conjuntas.
-</details>
-:::
-
 Para construir nossa metodologia de avaliação de esquemas relacionais, nós vamos supor que:
 - Para cada relação, existe um conjunto de dependências funcionais.
 - Para cada relação, existe uma definição de chave primária.
@@ -823,8 +850,8 @@ Para construir nossa metodologia de avaliação de esquemas relacionais, nós va
 > Chamamos de **Processo de Normalização** o conjunto de testes (baseados nas duas condições acima) feitos nos modelos relacionais para mensurar a **forma normal** que o esquema (ou modelo) pode ser avaliado.
 
 Se bem executado, o processo de normalização acarreta a redução de 2 problemas:
-4. Reduzir redundância
-5. Redução de anomalias nos processos de DML que alteram dados.
+3. Reduzir redundância
+4. Redução de anomalias nos processos de DML que alteram dados.
 
 > Chamamos de **Forma Normal** a referência ao mais alto grau de condições que uma relação[^15] contém. A definição de cada forma normal é derivada exclusivamente do conceito de dependência funcional sobre os atributos de uma relação.
 

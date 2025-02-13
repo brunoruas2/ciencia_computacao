@@ -219,7 +219,9 @@ Agora, queremos salvar as informações de maneira persistente. Para isso, vamos
 
 ![error](../img/91-error-database.jpg)
 
-**Atenção**: Aprendam a ler logs de erro! Sério, um programador passa mais tempo lendo logs de erro e interpretando eles do que escrevendo código. Então vejam que eu apontei na `stacktrace` onde o nosso código quebrou. Vejam que tem um monte de coisa antes mas o que importa é saber onde no nosso código precisamos resolver. 
+:::danger[Anteção]
+Aprendam a ler logs de erro! Sério, um programador passa mais tempo lendo logs de erro e interpretando eles do que escrevendo código. Então vejam que eu apontei na `stacktrace` onde o nosso código quebrou. Vejam que tem um monte de coisa antes mas o que importa é saber onde no nosso código precisamos resolver. 
+:::
 
 #### Commit 6 - Database local parte 2 - Done
 
