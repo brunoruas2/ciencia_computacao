@@ -730,7 +730,7 @@ Em alguns casos, teremos que pensar nos relatórios ou consultas frequentes que 
 Em casos que demandam muita performance, podemos usar `stored procedures` junto com `triggers` para garantir que sempre teremos dados livres de anomalias na tabela que precisa conter atributos misturados. O conceito dado para uma tabela desse tipo é **view materializada**.
 :::
 
-#### Valores `NULL` em Tuplas Desnecessários
+#### Valores `NULL` Desnecessários em Tuplas
 
 > Evite a todo custo adicionar atributos em relações de base (ou seja, entidades básicas) que terão valores `NULL` frequentemente. A regra geral é `NULL` ser sempre uma exceção.
 
@@ -850,8 +850,8 @@ Para construir nossa metodologia de avaliação de esquemas relacionais, nós va
 > Chamamos de **Processo de Normalização** o conjunto de testes (baseados nas duas condições acima) feitos nos modelos relacionais para mensurar a **forma normal** que o esquema (ou modelo) pode ser avaliado.
 
 Se bem executado, o processo de normalização acarreta a redução de 2 problemas:
-3. Reduzir redundância
-4. Redução de anomalias nos processos de DML que alteram dados.
+1. Reduzir redundância
+2. Redução de anomalias nos processos de DML que alteram dados.
 
 > Chamamos de **Forma Normal** a referência ao mais alto grau de condições que uma relação[^15] contém. A definição de cada forma normal é derivada exclusivamente do conceito de dependência funcional sobre os atributos de uma relação.
 
@@ -859,7 +859,7 @@ Se bem executado, o processo de normalização acarreta a redução de 2 problem
 
 Se uma determinada relação não passar no teste para uma forma normal, será necessário fazer uma decomposição em relações menores até se obter a adequação à forma.
 
-# cap 14.3.1 pg 506
+# TODO pagina 507 na lista de 2 props
 
 #### Terceira Forma Normal
 
