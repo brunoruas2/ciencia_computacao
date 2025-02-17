@@ -794,7 +794,7 @@ Com o passar dos anos, foram definidas mais 2 formas normais que são baseadas n
 Para conseguirmos entender bem o que é **normalização** precisaremos de um conceito que é a base na qual construiremos nossa análise.
 
 :::info[Informação]
-Como sempre, vale destacar que só vamos ter uma introdução geral ao assunto. Quem tiver interesse em aprofundar mais, pode conferir a aula que eu anexei aqui em baixo. Outra fonte recomendada (em inglês) é o capítulo 14 do NAVATHE.
+Quem quiser uma abordagem de vídeo desse mesmo assunto, pode conferir na aula abaixo.
 
 <details>
 <summary>Aula no Youtube</summary>
@@ -818,18 +818,10 @@ Se for definido em $R$ que não é possível existir duas tuplas de modo que $t_
 
 [^13]: Lê-se algo como "Y é dependente funcional de X".
 
-:::danger[Aviso]
-Preste muita atenção nesse conceito porque o Navathe se refere a ele como "O conceito mais importante na teoria do design de esquemas relacionais".
-
-Quem sentir dificuldade com a linguagem usada, vale a pena conferir a parte de [matemática](../02-primeiro-periodo/04-matematica-basica.md)
-:::
-
-
-:::info[informação]
 <details>
 <summary>Exemplo</summary>
 
-Calma, nem é tão complexo quanto parece. A primeira coisa é lembrar que **tupla** pode ser entendido nesse contexto como linhas das tabelas. Nesse caso em especial, estamos dizendo algo como "Se duas linhas dos atributos X são iguais, com certeza absoluta, essas linhas também serão iguais nos atributos Y".
+Calma, nem é tão complexo quanto parece. A primeira coisa é lembrar que **tupla** pode ser entendido nesse contexto como linhas das tabelas. Nesse caso em especial, estamos dizendo algo como: "Se duas linhas dos atributos X são iguais, com certeza absoluta, essas linhas também serão iguais nos atributos Y, se Y tiver uma dependência funcional de X".
 
 Temos essa certeza porque sabemos que Y depende de X. Então, se X diz que algo é igual, Y também dirá a mesma coisa.
 
@@ -837,6 +829,11 @@ Para simplificar, podemos pensar X e Y como um atributo só. Por exemplo, X = `c
 
 Por isso, podemos dizer que `nome` depente de `cpf`. Ou, na linguagem formal, `cpf` $\rightarrow$ `nome`.
 </details>
+
+:::danger[Aviso]
+Preste muita atenção nesse conceito porque o Navathe se refere a ele como "O conceito mais importante na teoria do design de esquemas relacionais".
+
+Quem sentir dificuldade com a linguagem usada, vale a pena conferir a parte de [matemática](../02-primeiro-periodo/04-matematica-basica.md)
 :::
 
 Agora que sabemos o que é uma dependência funcional, estamos prontos para usar esse conceito na definição de uma metodologia formal para melhoria e teste do nosso desenho de banco dados relacional.
@@ -859,9 +856,25 @@ Se bem executado, o processo de normalização acarreta a redução de 2 problem
 
 Se uma determinada relação não passar no teste para uma forma normal, será necessário fazer uma decomposição em relações menores até se obter a adequação à forma.
 
-# TODO pagina 507 na lista de 2 props
+##### Definição de Chaves e Atributos participantes em chaves
+
+# TODO pg 507
+
+#### Primeira Forma Normal
+
+#### Segunda Forma Normal
 
 #### Terceira Forma Normal
+
+#### Quarta e Quinta Formas Normais
+
+Embora, como dito anteriormente, se tenham desenvolvido testes para além da terceira forma normal, Navathe adverte que a praticidade das quarta e quinta formas normais é debatível porque são "baseadas em condições raras e difíceis para planejadores de bancos de dados e usuários compreender e detectar".
+
+Outro ponto importante é que existe uma escolha entre performance vs normalização. Onde, quanto maior a normalização do esquema, menor será seu desempenho (porque teremos cada vez mais condições para controle).
+
+> **Denormalização** é o processo de contrariar as regras de uma dada forma normal e persistir um JOIN entre entidades ou relacionamentos como uma relação-base.
+
+As vezes, precisamos denormalizar para ganhar performance (sempre tendo em mente o risco que isso trará).
 
 ### Banco de Dados Não-Relacionais
 
