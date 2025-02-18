@@ -872,6 +872,49 @@ Mas por motivo de desenvolvimento histórico, vamos ver as formas em sequência.
 
 #### Primeira Forma Normal
 
+A primeira forma normal está condita no artigo original de Cobb que introduziu o modelo relacional. Naquele contexto, todo o processo de normalização estava contido nessa única regra.
+
+Basicamente, a primeira forma normal rege a criação de relações proibindo a existência de:
+1. Atributos multivalorados
+2. Atributos compostos
+3. Combinação entre os 2 pontos anteriores
+
+Todo domínio de um atributo deve ser composto de valores **atômicos** .
+
+:::note[Comentário]
+A primeira forma normal não tem uma definição matemática precisa porque ela está atrelada ao cerne do próprio modelo relacional. Entender os benefícios dessa forma normal é, em suma, entender o benefício do modelo relacional como um todo.
+:::
+
+<details>
+<summary>Exemplo</summary>
+
+Imagine uma tabela DEPARTAMENTO abaixo:
+
+|ID|ESTADO|CIDADE|
+|--|--|--|
+|1|SP|SÃO PAULO|
+|2|MG|(BELO HORIZONTE, BETIM)|
+|3|PA|(SANTAREM, BELEM, ALTAMIRA)|
+
+A primeira forma normal **proíbe** que uma relação como essa seja criada porque o atributo `cidade` não é atômico.
+
+O processo de normalização [^16] nesse caso entregaria uma tabela assim
+
+| ID  | ESTADO | CIDADE        |
+|----|--------|----------------|
+| 1  | SP     | SÃO PAULO      |
+| 2  | MG     | BELO HORIZONTE |
+| 2  | MG     | BETIM          |
+| 3  | PA     | SANTARÉM       |
+| 3  | PA     | BELÉM          |
+| 3  | PA     | ALTAMIRA       |
+
+onde a PK é o `ID` e `CIDADE`.
+
+</details>
+
+[^16]: Hoje em dia ta tão fácil aprender que eu nem precisei fazer a tabela ajustada na mão, só pedi pro chat gpt fazer isso. Mais do que nunca, o que importa agora é **saber o que deve ser feito** ao invés de perder tempo implementando.
+
 #### Segunda Forma Normal
 
 #### Terceira Forma Normal
@@ -901,5 +944,8 @@ As vezes, precisamos denormalizar para ganhar performance (sempre tendo em mente
 - CHEN, Peter. **Modelagem de dados: A abordagem para Projeto Lógico**.
 - E.F. Codd. **A Relational Model of Data For Large Shared Data Banks**. Comm. ACM 13, 6 (June 1970), 377-387.
 - ROB e Coronel. **Database Systems: Design**. Implementation and Management Wadworth Series (1993).
+- E.F. Codd. [A Relational Model of Data For Large Share Data Banks](https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf).
+- E.F. Codd. [Further Normalization of the Data Base Relational Model](https://forum.thethirdmanifesto.com/wp-content/uploads/asgarosforum/987737/00-efc-further-normalization.pdf).
+
 
 [^14]: 
