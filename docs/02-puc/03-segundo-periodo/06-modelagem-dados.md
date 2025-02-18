@@ -465,11 +465,13 @@ Além dos conceitos acima, existem algumas regras que o modelo relacional adota 
 - Os valores dos atributos são **atômicos** ou seja, só existe 1 endereço para cada intersecção linha-coluna.
 -  No modelo relacional se admite o valor **nulo** que não é igual à string vazia ou zero.
 
-Para encerrar, podemos definir uma dada relação $R(A_1, A_2, ..., A_n)$ onde $R$ é o nome da relação, $A_i$ é o nome do atributo, $n$ é o grau da relação.
+##### Definições de chaves e Atributos Participante de chaves
 
-Os dados dentro da relação são as tuplas definidas por $r(R)$ de modo que $r = \{t_1, t_2, ..., t_n\}$.
+Podemos definir, usando notação de conjuntos, o conceito de **superchave** e **chave** em um esquema relacional.
 
-##### Chave Primária
+> Uma **Superchave** de um esquema relacional $R = \{ A_1, A_2, ..., A_n \}$ é um conjunto de atributos $S \subseteq R$ que possui a propriedade que não existem duas tuplas $t_1$ e $t_2$ em qualquer relação autorizada $r$ de $R$ em que seja verdade que $t_1[S] = t_2[S]$.
+
+> Uma **Chave** $K$ é uma superchave com a propriedade adicional que, caso seja removido qualquer atributos de $K$, ela deixará de ser uma superchave.
 
 > A **Chave Primária** é a coluna (ou combinação delas) que define de maneira cabal a distinção entre entidades em uma dada tabela.
 
@@ -482,6 +484,8 @@ Não podemos dizer algo como "chaves primárias" para o caso da chave composta p
 :::
 
 > **Chave Alternativa** é outra coluna que também pode ser usada como chave primária mas que foi preterida por outra.
+
+> Um **atributo primário (prime attribute)** é qualquer atributo que faça parte de alguma chave candidata.
 
 #### Integridade Referencial e Chave Estrangeira
 
@@ -783,7 +787,11 @@ Agora, precisamos de ferramentas para medir a **qualidade** do nosso design. Ess
 <details>
 <summary>Um pouco de história</summary>
 
-A primeira pessoa a propor o processo de normalização foi Codd no artigo “Further Normalization of the Data Base Relational Model,” in Rustin [1972]. Onde ele propôs uma série de testes que certificariam se determinada relação satisfaz uma certa forma normal.
+A primeira pessoa a propor o processo de normalização foi Codd em 2 artigos super relevantes pra nossa área.
+
+No artigo [A Relational Model of Data For Large Share Data Banks](https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf) temos a definição inicial de todo o esquema de bancos relacionais e da primeira forma normal.
+
+No artigo [“Further Normalization of the Data Base Relational Model”](https://forum.thethirdmanifesto.com/wp-content/uploads/asgarosforum/987737/00-efc-further-normalization.pdf) in Rustin [1972], fora proposto as outras duas formas normais e o processo de normalização.
 
 Originalmente, foram propostas 3 formas normais sendo que a definição mais formal da terceira forma foi dada posteriormente por Boyce e Codd.
 
@@ -856,9 +864,11 @@ Se bem executado, o processo de normalização acarreta a redução de 2 problem
 
 Se uma determinada relação não passar no teste para uma forma normal, será necessário fazer uma decomposição em relações menores até se obter a adequação à forma.
 
-##### Definição de Chaves e Atributos participantes em chaves
+:::note[Comentário]
+Tecnicamente, a única condição para se ter a terceira forma normal é a segunda. Visto que, como vamos ver, a primeira não é condição para a segunda, é, tecnicamente, possível se ter a terceira forma normal apenas com o alcance da segunda.
 
-# TODO pg 507
+Mas por motivo de desenvolvimento histórico, vamos ver as formas em sequência.
+:::
 
 #### Primeira Forma Normal
 
