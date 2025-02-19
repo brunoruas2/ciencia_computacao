@@ -870,23 +870,22 @@ Tecnicamente, a única condição para se ter a terceira forma normal é a segun
 Mas por motivo de desenvolvimento histórico, vamos ver as formas em sequência.
 :::
 
-#### Primeira Forma Normal
+#### Primeira Forma Normal (1NF)
 
 A primeira forma normal está condita no artigo original de Cobb que introduziu o modelo relacional. Naquele contexto, todo o processo de normalização estava contido nessa única regra.
 
 Basicamente, a primeira forma normal rege a criação de relações proibindo a existência de:
 1. Atributos multivalorados
 2. Atributos compostos
-3. Combinação entre os 2 pontos anteriores
 
 Todo domínio de um atributo deve ser composto de valores **atômicos** .
 
 :::note[Comentário]
-A primeira forma normal não tem uma definição matemática precisa porque ela está atrelada ao cerne do próprio modelo relacional. Entender os benefícios dessa forma normal é, em suma, entender o benefício do modelo relacional como um todo.
+A primeira forma normal não tem uma definição matemática precisa porque ela está atrelada ao cerne do próprio modelo relacional. Entender os benefícios dessa forma normal é, em suma, entender os benefícios do modelo relacional como um todo.
 :::
 
 <details>
-<summary>Exemplo</summary>
+<summary>Exemplo Atributo Multivalorado</summary>
 
 Imagine uma tabela DEPARTAMENTO abaixo:
 
@@ -913,11 +912,42 @@ onde a PK é o `ID` e `CIDADE`.
 
 </details>
 
+<details>
+<summary>Exemplo de Atributo Composto</summary>
+
+Pensemos num caso onde temos a tabela EMPREGADO_PROJETO que relaciona dados do empregado e quais projetos ele está atuando.
+
+Poderíamos pensar que projeto é um atributo composto que contém, nele mesmo, dados do ID_PROJETO e HORAS que o empregado está atuando.
+
+Desse modo, podemos chegar, erradamente, ao desenho abaixo:
+
+|CPF|NOME|ID_PROJETO|HORAS|
+|--|--|--|--|
+|1234|ZE DA SILVA|1 <br/> 2|10 <br/> 20|
+
+Esse tipo de relação não é permitida porque, novamente, temos a quebra da atomicidade no atributo da tupla.
+</details>
+
 [^16]: Hoje em dia ta tão fácil aprender que eu nem precisei fazer a tabela ajustada na mão, só pedi pro chat gpt fazer isso. Mais do que nunca, o que importa agora é **saber o que deve ser feito** ao invés de perder tempo implementando.
 
-#### Segunda Forma Normal
+#### Segunda Forma Normal (2NF)
 
-#### Terceira Forma Normal
+> Dado um esquema de relação $R$, é dito que ele é 2NF se todos os atributos não primários $A_i \in R_i | i \in \{1,...,n\}$ possuem uma dependência funcional completa com a chave primária de $R$.
+
+Dessa definição podemos derivar o seguinte fato:
+> Se $X \rightarrow Y$ tiver uma dependência funcional total, então, se removermos qualquer atributo $A_i \in X$, qualquer outra combinação de atributos do tipo $(X - A_i)$ **não** terá uma dependência funcional com $Y$.
+
+Se a regra acima não for cumprida, dizemos que $X \rightarrow Y$ é uma **dependência funcional parcial**.
+
+:::note[Comentário]
+Para entender melhor essa passagem mais formal (embora isso não seja nem de longe complexo), basta pensar que se estamos falando de dependência funcional total a partir de uma chave primária, nós não podemos remover nenhum atributo da PK porque ela já é a **menor quantidade** de atributos que é uma **superkey**.[^17]
+
+[^17]: Se você não entendeu a explicação, volte na parte que a gente define chaves e revisa os conceitos.
+:::
+
+# pg 512
+
+#### Terceira Forma Normal (3NF)
 
 #### Quarta e Quinta Formas Normais
 
