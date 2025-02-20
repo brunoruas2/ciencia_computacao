@@ -475,6 +475,10 @@ Podemos definir, usando notação de conjuntos, o conceito de **superchave** e *
 
 > A **Chave Primária** é a coluna (ou combinação delas) que define de maneira cabal a distinção entre entidades em uma dada tabela.
 
+:::note[Comentário]
+Aprofundaremos mais esse conceito quando vermos a parte de **dependência funcional**.
+:::
+
 Para identificarmos uma chave primária basta nos perguntarmos se existe algum atributo que identifique toda a tupla de modo inequívoco.
 
 > **Chave Primária Composta** é a identificação criada a partir de mais de um atributo da relação (aka tabela).
@@ -485,7 +489,7 @@ Não podemos dizer algo como "chaves primárias" para o caso da chave composta p
 
 > **Chave Alternativa** é outra coluna que também pode ser usada como chave primária mas que foi preterida por outra.
 
-> Um **atributo primário (prime attribute)** é qualquer atributo que faça parte de alguma chave candidata.
+> Um **Atributo Primário (Prime Attribute)** é qualquer atributo que faça parte de alguma chave candidata.
 
 #### Integridade Referencial e Chave Estrangeira
 
@@ -899,7 +903,7 @@ A primeira forma normal **proíbe** que uma relação como essa seja criada porq
 
 O processo de normalização [^16] nesse caso entregaria uma tabela assim
 
-| ID  | ESTADO | CIDADE        |
+| _ID_  | ESTADO | _CIDADE_        |
 |----|--------|----------------|
 | 1  | SP     | SÃO PAULO      |
 | 2  | MG     | BELO HORIZONTE |
@@ -935,19 +939,48 @@ Esse tipo de relação não é permitida porque, novamente, temos a quebra da at
 > Dado um esquema de relação $R$, é dito que ele é 2NF se todos os atributos não primários $A_i \in R_i | i \in \{1,...,n\}$ possuem uma dependência funcional completa com a chave primária de $R$.
 
 Dessa definição podemos derivar o seguinte fato:
-> Se $X \rightarrow Y$ tiver uma dependência funcional total, então, se removermos qualquer atributo $A_i \in X$, qualquer outra combinação de atributos do tipo $(X - A_i)$ **não** terá uma dependência funcional com $Y$.
+> Se $X \rightarrow Y$ tiver uma dependência funcional total, então, se removermos qualquer atributo $A_i \in X_i$, qualquer outra combinação de atributos do tipo $(X - A_i)$ **não** terá uma dependência funcional com $Y$.
 
 Se a regra acima não for cumprida, dizemos que $X \rightarrow Y$ é uma **dependência funcional parcial**.
 
 :::note[Comentário]
-Para entender melhor essa passagem mais formal (embora isso não seja nem de longe complexo), basta pensar que se estamos falando de dependência funcional total a partir de uma chave primária, nós não podemos remover nenhum atributo da PK porque ela já é a **menor quantidade** de atributos que é uma **superkey**.[^17]
+Para entender melhor essa passagem (embora isso não seja nem de longe complexo), basta pensar que se estamos falando de dependência funcional total a partir de uma chave primária, nós não podemos remover nenhum atributo da PK porque ela já é a **menor quantidade** de atributos que é uma **superkey**.[^17]
 
 [^17]: Se você não entendeu a explicação, volte na parte que a gente define chaves e revisa os conceitos.
 :::
 
-# pg 512
+<details>
+<summary>Exemplo</summary>
+
+Observe a tabela abaixo:
+
+|_CPF_|_PROJETO_ID_|HORA|E_NOME|P_SIGLA|P_CIDADE|
+|--|--|--|--|--|--|
+
+Mesmo que escolhamos `CPF` e `PROJETO_ID` como chaves primárias, ainda estaríamos violando a 2NF porque a regra de dependência de atributos não primários não seria satisfeita.
+
+Embora, de fato, `CPF` e `PROJETO_ID` sejam atributos primários (que não possuem dependência funcional), a 2NF nos cobra que todos os atributos não primários sejam **totalmente** dependentes funcionais da nossa PK.
+
+Por exemplo, `P_SIGLA` e `P_CIDADE` são dependentes funcionais exclusivamente de `PROJETO_ID`. `E_NOME` é dependente exclusivamente de `CPF`. Por fim, `HORA` é o único atributo que realmente é dependente de `CPF` e `PROJETO_ID` ao mesmo tempo.
+
+O defeito dessa tabela é que nós apenas juntamos coisas que não indicam a subordinação correta à chave primária.
+
+Para resolver, basta decompor essa relação em relações que de fato exprimem a dependência funcional total entre os atributos não primários e a chave primária.
+
+|_CPF_|_PROJETO_ID_|HORA|
+|--|--|--|
+
+|_CPF_|E_NOME|
+|--|--|
+
+|_PROJETO_ID_|P_SIGLA|P_CIDADE|
+|--|--|--|
+
+</details>
 
 #### Terceira Forma Normal (3NF)
+
+# pagina 514
 
 #### Quarta e Quinta Formas Normais
 
