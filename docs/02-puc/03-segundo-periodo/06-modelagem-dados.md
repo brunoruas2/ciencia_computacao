@@ -936,12 +936,13 @@ Esse tipo de relação não é permitida porque, novamente, temos a quebra da at
 
 #### Segunda Forma Normal (2NF)
 
-> Dado um esquema de relação $R$, é dito que ele é 2NF se todos os atributos não primários $A_i \in R_i | i \in \{1,...,n\}$ possuem uma dependência funcional completa com a chave primária de $R$.
+Para definirmos a 2NF precisamos expandir um pouco o nosso entendimento de dependência funcional para os tipos total e parcial.
 
-Dessa definição podemos derivar o seguinte fato:
 > Se $X \rightarrow Y$ tiver uma dependência funcional total, então, se removermos qualquer atributo $A_i \in X_i$, qualquer outra combinação de atributos do tipo $(X - A_i)$ **não** terá uma dependência funcional com $Y$.
 
 Se a regra acima não for cumprida, dizemos que $X \rightarrow Y$ é uma **dependência funcional parcial**.
+
+> Dado um esquema de relação $R$, é dito que ele é 2NF se todos os atributos não primários $A_i \in R_i | i \in \{1,...,n\}$ possuem uma dependência funcional completa com a chave primária de $R$.
 
 :::note[Comentário]
 Para entender melhor essa passagem (embora isso não seja nem de longe complexo), basta pensar que se estamos falando de dependência funcional total a partir de uma chave primária, nós não podemos remover nenhum atributo da PK porque ela já é a **menor quantidade** de atributos que é uma **superkey**.[^17]
@@ -980,7 +981,29 @@ Para resolver, basta decompor essa relação em relações que de fato exprimem 
 
 #### Terceira Forma Normal (3NF)
 
-# pagina 514
+Para definirmos a 3NF, precisamos expandir um pouco mais o conceito de dependência funcional para o tipo transitivo.
+
+> Chamamos de **dependência funcional transitiva** se existir um conjunto de atributos $Z \subset R$ que não é nem candidato à chave nem um subconjunto de nenhuma chave de $R$ e, também, é verdade que $X \rightarrow Z$ e $Z \rightarrow Y$.
+
+<details>
+<summary>Exemplo</summary>
+
+Vamos entender melhor esse conceito com um exemplo. Pensemos numa tabela com os seguintes campos:
+
+|NOME|CPF|DTNASCIMENTO|DEP_ID|DEP_NOME|
+|--|--|--|--|--|
+
+Se nossa PK for exclusivamente o atributo `CPF`. Teremos um caso de dependência transitiva entre `CPF` $\rightarrow$ `DEP_NOME` porque o nome do departamento é dependente do `DEP_ID` que, por sua vez, é dependente da PK nessa relação.
+
+:::note[Comentário]
+Veja como, além da dependência funcional transitiva, essa tabela também fere a 2NF.  Agora veja o conceito da 3NF e entenda como elas se relacionam.
+:::
+
+</details>
+
+> Dizemos que um esquema relacional está na 3NF se estiver na 2NF e, também, nenhum atributo não primário de $R$ possuir dependência transitiva em relação à PK de $R$.
+
+# pg 514 ultimo paragrafo
 
 #### Quarta e Quinta Formas Normais
 
