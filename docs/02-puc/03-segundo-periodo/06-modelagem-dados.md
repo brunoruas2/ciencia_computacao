@@ -469,7 +469,7 @@ Além dos conceitos acima, existem algumas regras que o modelo relacional adota 
 
 Podemos definir, usando notação de conjuntos, o conceito de **superchave** e **chave** em um esquema relacional.
 
-> Uma **Superchave** de um esquema relacional $R = \{ A_1, A_2, ..., A_n \}$ é um conjunto de atributos $S \subseteq R$ que possui a propriedade que não existem duas tuplas $t_1$ e $t_2$ em qualquer relação autorizada $r$ de $R$ em que seja verdade que $t_1[S] = t_2[S]$.
+> Uma **Superchave (superkey)** de um esquema relacional $R = \{ A_1, A_2, ..., A_n \}$ é um conjunto de atributos $S \subseteq R$ que possui a propriedade que não existem duas tuplas $t_1$ e $t_2$ em qualquer relação autorizada $r$ de $R$ em que seja verdade que $t_1[S] = t_2[S]$.
 
 > Uma **Chave** $K$ é uma superchave com a propriedade adicional que, caso seja removido qualquer atributos de $K$, ela deixará de ser uma superchave.
 
@@ -942,10 +942,10 @@ Para definirmos a 2NF precisamos expandir um pouco o nosso entendimento de depen
 
 Se a regra acima não for cumprida, dizemos que $X \rightarrow Y$ é uma **dependência funcional parcial**.
 
-> Dado um esquema de relação $R$, é dito que ele é 2NF se todos os atributos não primários $A_i \in R_i | i \in \{1,...,n\}$ possuem uma dependência funcional completa com a chave primária de $R$.
+> Dado um esquema de relação $R$, é dito que ele é **2NF** se todos os atributos não primários $A_i \in R$ possuem uma dependência funcional completa em relação a qualquer chave de $R$.
 
 :::note[Comentário]
-Para entender melhor essa passagem (embora isso não seja nem de longe complexo), basta pensar que se estamos falando de dependência funcional total a partir de uma chave primária, nós não podemos remover nenhum atributo da PK porque ela já é a **menor quantidade** de atributos que é uma **superkey**.[^17]
+Para entender melhor essa passagem, basta pensar que, se estamos falando de dependência funcional total a partir de qualquer chave. Isso força que todas as colunas dependentes de valor (do lado direito da dependência funcional) sejam inteiramente dependentes à todas as chaves da tabela.[^17]
 
 [^17]: Se você não entendeu a explicação, volte na parte que a gente define chaves e revisa os conceitos.
 :::
@@ -983,7 +983,7 @@ Para resolver, basta decompor essa relação em relações que de fato exprimem 
 
 Para definirmos a 3NF, precisamos expandir um pouco mais o conceito de dependência funcional para o tipo transitivo.
 
-> Chamamos de **dependência funcional transitiva** se existir um conjunto de atributos $Z \subset R$ que não é nem candidato à chave nem um subconjunto de nenhuma chave de $R$ e, também, é verdade que $X \rightarrow Z$ e $Z \rightarrow Y$.
+> Chamamos de **dependência funcional transitiva** se existir um conjunto de atributos $Z \subset R$ que não é nem candidato à chave nem um subconjunto de nenhuma chave de $R$ e, também, for verdade que $X \rightarrow Z$ e $Z \rightarrow Y$.
 
 <details>
 <summary>Exemplo</summary>
@@ -996,14 +996,22 @@ Vamos entender melhor esse conceito com um exemplo. Pensemos numa tabela com os 
 Se nossa PK for exclusivamente o atributo `CPF`. Teremos um caso de dependência transitiva entre `CPF` $\rightarrow$ `DEP_NOME` porque o nome do departamento é dependente do `DEP_ID` que, por sua vez, é dependente da PK nessa relação.
 
 :::note[Comentário]
-Veja como, além da dependência funcional transitiva, essa tabela também fere a 2NF.  Agora veja o conceito da 3NF e entenda como elas se relacionam.
+Veja como, além da dependência funcional transitiva, essa tabela também fere a 2NF.  Agora, veja o conceito da 3NF e entenda como elas se relacionam.
 :::
 
 </details>
 
-> Dizemos que um esquema relacional está na 3NF se estiver na 2NF e, também, nenhum atributo não primário de $R$ possuir dependência transitiva em relação à PK de $R$.
+> Dizemos que um esquema relacional está na **3NF** se estiver na 2NF e, também, nenhum atributo não primário de $R$ possuir dependência transitiva em relação à PK de $R$.
 
-# pg 514 ultimo paragrafo
+Outra maneira, mais geral, de definir a 3NF é:
+
+> Uma relação está na **3NF** se, para qualquer dependência funcional não trivial $X \rightarrow Y$, for verdade que, em $R$, qualquer $X$ é uma superkey ou $Y$ for um atributo primário de $R$.
+
+:::danger[Aviso]
+A essa altura, já podemos definir uma regra de bolso que nos ajudará a construirmos uma boa modelagem para nossos bancos de dados:
+
+> Não podemos ter dependências funcionais transitivas ou parciais nas nossas tabela.
+:::
 
 #### Quarta e Quinta Formas Normais
 
