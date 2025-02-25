@@ -24,6 +24,8 @@
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-icons": "^5.5.0",
+    "react-vertical-timeline-component": "^3.5.3",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0"
   },

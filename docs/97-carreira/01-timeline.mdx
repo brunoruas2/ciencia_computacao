@@ -1,0 +1,32 @@
+---
+sidebar_position: 1 # ../img/
+# id: my-doc-id  
+title: Timeline
+description: Relação de feitos ao longo da minha jornada como Desenvolvedor.
+# slug: /my-custom-url
+---
+
+# Timeline
+
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import { DiCode } from "react-icons/di";
+
+<VerticalTimeline>
+  <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+    date="2011 - present"
+    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+    icon={<DiCode/>}
+  >
+    <h3 className="vertical-timeline-element-title">Em desenvolvimento</h3>
+    <p>
+      Timeline em elaboração
+    </p>
+  </VerticalTimelineElement>
+  <VerticalTimelineElement
+    iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+  />
+</VerticalTimeline>

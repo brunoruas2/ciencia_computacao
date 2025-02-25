@@ -3,6 +3,11 @@ tip:
   permalink: '/tip'
   description: 'Some developer tips to make our lives better.'
 
+mermaid:
+  label: 'Mermaid'
+  permalink: '/mermaid'
+  description: 'Content related to Mermaid graph generator.'
+
 dotnet:
   label: 'DotNet'
   permalink: '/dotnet'
