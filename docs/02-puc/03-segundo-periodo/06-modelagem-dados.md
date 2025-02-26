@@ -1007,11 +1007,19 @@ Outra maneira, mais geral, de definir a 3NF é:
 
 > Uma relação está na **3NF** se, para qualquer dependência funcional não trivial $X \rightarrow Y$, for verdade que, em $R$, qualquer $X$ é uma superkey ou $Y$ for um atributo primário de $R$.
 
-:::danger[Aviso]
-A essa altura, já podemos definir uma regra de bolso que nos ajudará a construirmos uma boa modelagem para nossos bancos de dados:
+Dessa definição mais formal, podem ver que, para uma relação estar na 3NF é necessário que:
+1. Todo atributo não primário seja totalmente dependente de todas as chaves
+2. Todo atributo não primário não possua dependência transitiva relativa à nenhuma chave
 
-> Não podemos ter dependências funcionais transitivas ou parciais nas nossas tabela.
-:::
+#### Boyce-Codd Normal Form (BCNF)
+
+Surpresa! Temos uma "nova" forma normal que não é necessariamente "nova". A 3NF foi refinada com o passar do tempo para casos mais específicos que ainda poderiam contemplar a 3NF mas que gerariam problemas.
+
+> Dizemos que uma relação está na **BCNF** se, para cada dependência funcional não trivial $X \rightarrow A$, for verdade que $X$ é uma superkey de $R$.
+
+A diferença está no fato 2 que vimos logo acima. A 3NF só cobra que atributos não primários não tenham dependência transitiva mas não que eles estejam em uma superkey.
+
+O toda relação que contempla a BCNF está, por definição, contemplando a 3NF. Mas a recíproca não é verdadeira.
 
 #### Quarta e Quinta Formas Normais
 
