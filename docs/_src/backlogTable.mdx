@@ -1,0 +1,79 @@
+import React, { useState } from 'react';
+
+export default function TableWithFilter() {
+  const [search, setSearch] = useState('');
+
+  const data = [
+    { data: '12/2024', problema: 'Projeto', entrega: 'Evolução relevante em serviço GoLang', comentario: 'SNS, SQS, Policies AWS, Cloudformation, GoLang, Observabilidade, Métricas, Paralelismo' },
+    { data: '02/2024-11/2024', problema: 'Projeto', entrega: 'Evolução relevante em serviço Angular\React + ASP.NET', comentario: 'Auth Angular, permissionamento e Azure AD' },
+    { data: '01/2024', problema: 'Feat de integração SQS', entrega: 'Evolução de projeto para integração SQS', comentario: 'CI/CD azure pipe, RDS, SQS, SNS e Gestão de custo AWS' },
+    { data: '12/2023', problema: 'Erro em save no banco', entrega: 'Fix nas telas do front com maxlength de string', comentario: 'Fluent validation' },
+    { data: '12/2023', problema: 'Erro em save no banco', entrega: 'Fix no critério de update/save no backend', comentario: '' },
+    { data: '12/2023', problema: 'Erro de front Angular+React', entrega: 'Fix no app', comentario: 'Aqui eu percebi que precisava me aprofundar nas regras de negócio' },
+    { data: '11/2023', problema: 'Erro em rotina de batch', entrega: 'Fix no caso impactado', comentario: '' },
+    { data: '11/2023', problema: 'Erro em busca', entrega: 'Fix no critério de bypass', comentario: '' },
+    { data: '11/2023', problema: 'Erro no comportamento de cronjob', entrega: 'Fix em rotina impactada', comentario: '' },
+    { data: '10/2023', problema: 'Saneamento de dados', entrega: 'Rotina de RPA para update em endpoint', comentario: '' },
+    { data: '09/2023', problema: 'Erro de concorrência', entrega: 'Fix para reconsulta de contrato nos steps', comentario: 'Esse tipo de problema é bem complexo de debugar e encontrar' },
+    { data: '09/2023', problema: 'Erro na info de um dashboard', entrega: 'Fix consulta SQL', comentario: 'Meu primeiro contato com Presto' },
+    { data: '08/2023', problema: 'Erro no retorno de uma pesquisa', entrega: 'Fix consulta elasticsearch', comentario: '' },
+    { data: '08/2023', problema: 'Erro no retorno do GraphQL', entrega: 'Fix query GraphQL', comentario: '' },
+    { data: '07/2023', problema: 'Consulta num lake de dados Athena', entrega: 'Endpoint, Service, Respository e update em um projeto Python', comentario: 'Tive que atuar tanto FastAPI quanto ASP.NET' },
+  ];
+
+  const filteredData = data.filter((item) =>
+    item.problema.toLowerCase().includes(search.toLowerCase()) ||
+    item.comentario.toLowerCase().includes(search.toLowerCase())
+  );
+
+  return (
+    <>
+        <div style={{ width: '100%', textAlign: 'center' }}>
+        <input
+            type="text"
+            placeholder="Filtrar por problema ou comentário..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            style={{
+            width: '100%',
+            padding: '8px',
+            marginBottom: '10px',
+            borderRadius: '5px',
+            border: '1px solid #444',
+            backgroundColor: '#222',
+            color: '#fff',
+            }}
+        />
+        <table
+            style={{
+            width: '100%',
+            borderCollapse: 'collapse',
+            backgroundColor: '#222',
+            color: '#fff',
+            borderRadius: '8px',
+            overflow: 'hidden',
+            }}
+        >
+            <thead>
+            <tr style={{ backgroundColor: '#333' }}>
+                <td style={{ padding: '10px', textAlign: 'center', width: '10%' }}>DATA</td>
+                <td style={{ padding: '10px', textAlign: 'center', width: '30%' }}>PROBLEMA/MELHORIA</td>
+                <td style={{ padding: '10px', textAlign: 'center', width: '30%' }}>ENTREGA</td>
+                <td style={{ padding: '10px', textAlign: 'center', width: '30%' }}>COMENTÁRIO</td>
+            </tr>
+            </thead>
+            <tbody>
+            {filteredData.map((item) => (
+                <tr style={{ borderBottom: '1px solid #444' }}>
+                <td style={{ padding: '10px', textAlign: 'center', width: '10%' }}>{item.data}</td>
+                <td style={{ padding: '10px', textAlign: 'center', width: '30%' }}>{item.problema}</td>
+                <td style={{ padding: '10px', textAlign: 'center', width: '30%' }}>{item.entrega}</td>
+                <td style={{ padding: '10px', textAlign: 'center', width: '30%' }}>{item.comentario}</td>
+                </tr>
+            ))}
+            </tbody>
+        </table>
+    </div>
+    </>
+  );
+}
