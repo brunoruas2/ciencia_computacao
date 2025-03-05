@@ -9,3 +9,66 @@ description: Meu registro de esforços dispendidos ao longo dos anos.
 # Backlog de Tickets Resolvidos
 
 Página em construção. Pretendo usar a lib de componentes do shadcn ui pra isso.
+
+import React, { useState } from 'react';
+
+export default function TableWithFilter() {
+  const [search, setSearch] = useState('');
+
+  const data = [
+    { id: 1, data: '01/01/2025', problema: 'Teste input', solucao: 'teste input', comentario: 'aprendi xpto' },
+  ];
+
+  const filteredData = data.filter((item) =>
+    item.problema.toLowerCase().includes(search.toLowerCase())
+  );
+
+  return (
+    <div style={{ width: '100%', textAlign: 'center' }}>
+      <input
+        type="text"
+        placeholder="Filtrar por problema..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        style={{
+          width: '100%',
+          padding: '8px',
+          marginBottom: '10px',
+          borderRadius: '5px',
+          border: '1px solid #444',
+          backgroundColor: '#222',
+          color: '#fff',
+        }}
+      />
+      <table
+        style={{
+          width: '100%',
+          borderCollapse: 'collapse',
+          backgroundColor: '#222',
+          color: '#fff',
+          borderRadius: '8px',
+          overflow: 'hidden',
+        }}
+      >
+        <thead>
+          <tr style={{ backgroundColor: '#333' }}>
+              <td style={{ padding: '10px', textAlign: 'center', width: '10%' }}>DATA</td>
+              <td style={{ padding: '10px', textAlign: 'center', width: '30%' }}>PROBLEMA</td>
+              <td style={{ padding: '10px', textAlign: 'center', width: '30%' }}>SOLUÇÃO</td>
+              <td style={{ padding: '10px', textAlign: 'center', width: '30%' }}>COMENTÁRIO</td>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredData.map((item) => (
+            <tr key={item.id} style={{ borderBottom: '1px solid #444' }}>
+              <td style={{ padding: '10px', textAlign: 'center', width: '10%' }}>{item.data}</td>
+              <td style={{ padding: '10px', textAlign: 'center', width: '30%' }}>{item.problema}</td>
+              <td style={{ padding: '10px', textAlign: 'center', width: '30%' }}>{item.solucao}</td>
+              <td style={{ padding: '10px', textAlign: 'center', width: '30%' }}>{item.comentario}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
