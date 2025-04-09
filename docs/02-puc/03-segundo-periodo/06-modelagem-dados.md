@@ -21,7 +21,7 @@ Podemos definir um **banco de dados** como:
 
 [^1]: Ou seja, que continuam salvos mesmo depois do computador desligar.
 
-Dessa feita, podemos ver que *antes* de modelar e projetar nosso banco, temos que ter em mentos o propósito de uso e sua real necessidade.
+Dessa feita, podemos ver que *antes* de modelar e projetar nosso banco, temos que ter em mente o propósito de uso e sua real necessidade.
 
 Outro conceito muito próximo é o de **Sistema Gerenciador de Banco de Dados (SGBD):**
 > Um software que incorpora as funções de definições, recuperação e alteração de dados em um BD
