@@ -927,7 +927,7 @@ Desse modo, podemos chegar, erradamente, ao desenho abaixo:
 
 |CPF|NOME|ID_PROJETO|HORAS|
 |--|--|--|--|
-|1234|ZE DA SILVA|1 <br/> 2|10 <br/> 20|
+|1234|ZE DA SILVA| 1 <br/> 2| 10 <br/> 20|
 
 Esse tipo de relação não é permitida porque, novamente, temos a quebra da atomicidade no atributo da tupla.
 </details>
@@ -1012,6 +1012,8 @@ Dessa definição mais formal, podem ver que, para uma relação estar na 3NF é
 2. Todo atributo não primário não possua dependência transitiva relativa à nenhuma chave
 
 #### Boyce-Codd Normal Form (BCNF)
+
+Pg 517.
 
 Surpresa! Temos uma "nova" forma normal que não é necessariamente "nova". A 3NF foi refinada com o passar do tempo para casos mais específicos que ainda poderiam contemplar a 3NF mas que gerariam problemas.
 
