@@ -40,6 +40,6 @@ timeline
 ```
 
 
-[^1]: Como o material de [Tecnólogo em ADS](category/arquitetura-de-software) aqui do site.
+[^1]: Como o material do Tecnólogo em ADS aqui do site ☺️.
 
 [^2]: Seja trabalhando ou fazendo freelance.
