@@ -5,13 +5,17 @@ position: 1
 
 ## O que é Arquitetura de Software?
 
-Podemos usar essa resposta do [stack overflow](https://pt.stackoverflow.com/questions/25403/qual-a-diferen%c3%a7a-de-arquitetura-e-engenharia-de-software) Como um ponto de partida para nossa discussão.
+Podemos usar essa resposta do [stack overflow](https://pt.stackoverflow.com/questions/25403/qual-a-diferen%c3%a7a-de-arquitetura-e-engenharia-de-software) como um ponto de partida para nossa discussão.
 
 Como regra de bolso, podemos pensar que a **Engenharia de Software** é o grande conjunto das habilidades de construção de programas e sistemas desde sua concepção até a entrega e manutenção. Por sua vez, a **Arquitetura de Software** é uma sub-área da engenharia que lida com o desenho e definição dos componentes que farão parte da solução entregue.
 
+Pela ISO/IEEE 42010-2011, podemos conceituar Arquitetura como:
+
+> A organização fundamental de um sistema incorporada em seus **componentes**, **relacionamentos** com o ambiente e os **princípios** que conduzem o seu design e evolução.
+
 ## Qual o momento ideal para aprender sobre Arquitetura?
 
-Na minha opinião, o momento ideal para aprender a arte de planejar soluções de software é após a fase em que você é capaz de construir software minimamente útil e funcional.
+Na minha opinião, o momento ideal para aprender a arte de planejar soluções de software é após a fase em que você é capaz de construir software minimamente útil e funcional. Mais especificamente, na fronteira entre júnior e pleno.
 
 Para ser mais claro, depois que você tiver terminado de estudar pelo menos o ciclo básico[^1] e **também** tenha alguma vivência do mundo real[^2].
 
@@ -34,12 +38,20 @@ timeline
 	: Microserviços e APIs
 	: Containers e Cloud Hibrida
 	Futuro : NoOps
-	: Serverless
+	: Serverless Service
 	: Serverless Computing
 	
 ```
 
+Não se engane. A depender de onde você vai trabalhar, é plenamente possível encontrar demandas que ainda envolvam aplicações monolíticas em servidores físicos[^3].
+
+## Bibliografia
+
+1. The Open Group Architecture Framework (TOGAF). [link aqui](https://archive.org/details/togaf9.2/mode/2up). É o manual mais completo e complexo sobre todo o processo de arquitetura.
+2. ISO 42010/2011. [link aqui](https://cdn.standards.iteh.ai/samples/50508/ec3d9367f48e4b28a7ac8dddaeca5a3f/ISO-IEC-IEEE-42010-2011.pdf)
 
 [^1]: Como o material do Tecnólogo em ADS aqui do site ☺️.
 
 [^2]: Seja trabalhando ou fazendo freelance.
+
+[^3]: E você deve ficar contente com a oportunidade de "tocar" no passado para ver como o modelo atual é melhor.
