@@ -45,10 +45,24 @@ timeline
 
 Não se engane. A depender de onde você vai trabalhar, é plenamente possível encontrar demandas que ainda envolvam aplicações monolíticas em servidores físicos[^3].
 
+## Perfil de Arquiteto
+
+No geral, um arquiteto tem que ser capaz de pensar acima do simples fato de produzir código executável para uma camada de abstração de **como** criar soluções.
+
+Existem alguns tipos de enfoques possíveis a depender da responsabilidade que a pessoa irá executar. A ISA elenca os seguintes tipos no seu site:
+1. [Solution Architect]((https://www.iasaglobal.org/solution-architecture/))
+2. [Business Architect](https://www.iasaglobal.org/business-architecture/)
+3. [Software Architect](https://www.iasaglobal.org/software-architecture/)
+4. [AI Architect](https://www.iasaglobal.org/ai-architecture/)
+5. [Integration Architect](https://www.iasaglobal.org/integration-architecture/)
+6. [Agile Architect](https://www.iasaglobal.org/agile-architecture/)
+7. [Hybrid Infrastructure Architect](https://www.iasaglobal.org/hybrid-infrastructure/)
+
 ## Bibliografia
 
 1. The Open Group Architecture Framework (TOGAF). [link aqui](https://archive.org/details/togaf9.2/mode/2up). É o manual mais completo e complexo sobre todo o processo de arquitetura.
 2. ISO 42010/2011. [link aqui](https://cdn.standards.iteh.ai/samples/50508/ec3d9367f48e4b28a7ac8dddaeca5a3f/ISO-IEC-IEEE-42010-2011.pdf)
+3. [Site da Global IT Architects Association](https://iasaglobal.org/)
 
 [^1]: Como o material do Tecnólogo em ADS aqui do site ☺️.
 
