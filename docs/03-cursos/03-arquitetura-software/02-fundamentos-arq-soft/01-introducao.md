@@ -50,7 +50,7 @@ Não se engane. A depender de onde você vai trabalhar, é plenamente possível 
 No geral, um arquiteto tem que ser capaz de pensar acima do simples fato de produzir código executável para uma camada de abstração de **como** criar soluções.
 
 Existem alguns tipos de enfoques possíveis a depender da responsabilidade que a pessoa irá executar. A ISA elenca os seguintes tipos no seu site:
-1. [Solution Architect]((https://www.iasaglobal.org/solution-architecture/))
+1. [Solution Architect](https://www.iasaglobal.org/solution-architecture/)
 2. [Business Architect](https://www.iasaglobal.org/business-architecture/)
 3. [Software Architect](https://www.iasaglobal.org/software-architecture/)
 4. [AI Architect](https://www.iasaglobal.org/ai-architecture/)
