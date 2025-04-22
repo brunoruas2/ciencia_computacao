@@ -58,6 +58,14 @@ Existem alguns tipos de enfoques possíveis a depender da responsabilidade que a
 6. [Agile Architect](https://www.iasaglobal.org/agile-architecture/)
 7. [Hybrid Infrastructure Architect](https://www.iasaglobal.org/hybrid-infrastructure/)
 
+Nas nossas aulas, vamos focar no papel desempenhado pelo **Arquiteto de Software**.
+
+### Arquiteto de Software
+
+Esse perfil de Arquiteto tem como objetivo a projeção de aplicações baseada em boas práticas de desenvolvimento. Tem como artefatos os modelos de referência para produção de soluções dentro da empresa.
+
+Está fortemente alinhado com a área de negócio e a gestão estratégica da empresa visto que existem restrições de negócio que podem [^4] impactar no desenho da solução necessária.
+
 ## Bibliografia
 
 1. The Open Group Architecture Framework (TOGAF). [link aqui](https://archive.org/details/togaf9.2/mode/2up). É o manual mais completo e complexo sobre todo o processo de arquitetura.
@@ -69,3 +77,5 @@ Existem alguns tipos de enfoques possíveis a depender da responsabilidade que a
 [^2]: Seja trabalhando ou fazendo freelance.
 
 [^3]: E você deve ficar contente com a oportunidade de "tocar" no passado para ver como o modelo atual é melhor.
+
+[^4]: E provavelmente, vão.
