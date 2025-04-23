@@ -66,6 +66,12 @@ Esse perfil de Arquiteto tem como objetivo a projeção de aplicações baseada 
 
 Está fortemente alinhado com a área de negócio e a gestão estratégica da empresa visto que existem restrições de negócio que podem [^4] impactar no desenho da solução necessária.
 
+Como Hard Skills, podemos elencar:
+1. Profundo conhecimento em programação e, principalmente, **componentização**
+2. Domínio de alguma plataforma de desenvolvimento[^5], frameworks, IDEs, ferramentas e etc
+3. Conhecer os tipos de arquitetura e padrões de problem solving
+4. Domínio de design de código e qualidade
+
 ## Bibliografia
 
 1. The Open Group Architecture Framework (TOGAF). [link aqui](https://archive.org/details/togaf9.2/mode/2up). É o manual mais completo e complexo sobre todo o processo de arquitetura.
@@ -79,3 +85,5 @@ Está fortemente alinhado com a área de negócio e a gestão estratégica da em
 [^3]: E você deve ficar contente com a oportunidade de "tocar" no passado para ver como o modelo atual é melhor.
 
 [^4]: E provavelmente, vão.
+
+[^5]: Exemplo ASP.NET, NodeJs e etc
