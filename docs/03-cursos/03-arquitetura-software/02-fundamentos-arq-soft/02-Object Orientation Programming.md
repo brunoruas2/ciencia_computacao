@@ -38,10 +38,14 @@ namespace AulaConceitos
 		public int Comportamento1(int param1, int param2)
 		{
 			int result;
-			
 			// logica do comportamento
-	
 			return result;
+		}
+
+		// Aqui temos um exemplo de um Comportamento que altera um Estado
+		public void AtualizaEstado1(string novoValor)
+		{
+			Estado1 = novoValor;
 		}
 	}
 }
