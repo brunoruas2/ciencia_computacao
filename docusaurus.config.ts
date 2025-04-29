@@ -101,7 +101,7 @@ const config: Config = {
           type: 'docSidebar', sidebarId: 'materiasSidebar', position: 'left', label: 'Matérias',
         },
         {
-          to: '/blog', label: 'Notas Rápidas', position: 'left'
+          to: '/blog', label: 'Blog', position: 'left'
         },
         {
           href: 'https://github.com/brunoruas2/ciencia_computacao',
