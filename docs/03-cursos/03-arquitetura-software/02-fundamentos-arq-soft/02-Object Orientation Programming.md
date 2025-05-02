@@ -20,14 +20,11 @@ A principal meta de qualquer implementação OOP é, basicamente, "reduzir acopl
 
 > Chamamos de **Classe** a declaração de um objeto  com propriedades. Por sua vez, um **objeto** é a instanciação da classe alocada na memória que será utilizada em tempo de execução.
 
-> Chamamos de **Cstado** as propriedades contidas em um determinado objeto. Por sua vez, chamamos de **comportamento** as funções e procedimentos contidos em um objeto
+> Chamamos de **Estado** as propriedades contidas em um determinado objeto. Por sua vez, chamamos de **comportamento** as funções e procedimentos contidos em um objeto
 
 <details>
 <summary>Exemplo de Estado e Comportamento</summary>
 ```cs
-// Exemplo de estado e comportamento em OOP
-using System
-
 namespace AulaConceitos
 {
 	public class Objeto
@@ -58,9 +55,6 @@ namespace AulaConceitos
 <summary>Exemplo de Herança</summary>
 
 ``` cs showLineNumbers
-
-using System;
-
 namespace AulaConceitos
 {
 	public class ObjetoPai
@@ -100,4 +94,36 @@ namespace AulaConceitos
 No exemplo acima, o comando `ObjetoFilho.Estado1` seria válido porque o estado da superclasse é herdado pela classe filha.
 </details>
 
+> Chamamos de **Abstração** a capacidade de planejarmos (principalmente super classes) estados e comportamentos de modo que criamos as classes sem necessariamente implementar seus comportamentos.
+
+:::warning
+Classes abstratas **não** podem ser instanciadas. Elas sempre precisam ser herdadas para que seja feito o **polimorfismo**[^2].
+:::
+<details>
+<summary>Exemplo de Abstração</summary>
+
+``` cs
+namespace AulaConceitos
+{
+	public abstract class ClasseAbstrata
+	{
+		private readonly int _param1;
+
+		public ClasseAbstrata(int param)
+		{
+			_param1 = param;
+		}
+
+		// Aqui eu defino que a classe do tipo ClasseAbstrata 
+		// sempre vai ter os comportamentos 1 e 2 mesmo sem
+		// definir o que esses caras fazem (isso vai ser posto na classe filha)
+		public abstract Comportamento1();
+		public abstract Comportamento2();
+	}
+}
+```
+</details>
+
 [^1]: Provavelmente o conceito mais importante da OOP.
+
+[^2]: Nós vimos esse conceito na aula de Programação Modular.
