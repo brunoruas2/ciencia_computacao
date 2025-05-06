@@ -124,6 +124,77 @@ namespace AulaConceitos
 ```
 </details>
 
+> Chamamos de **Polimorfismo** a capacidade de mudança que uma classe filha pode ter em relação à classe herdada. Existem 2 tipos: De Inclusão e Paramétrico.
+
+<details>
+<summary>Exemplos de Polimorfismo</summary>
+
+```cs
+public abstract class ClassePolimorfismoDeInclusao
+{
+	public ClassePolimorfismo() {}
+
+	// Esse método obrigatoriamente precisa receber override (polimorfismo de inclusao)
+	public abstract void ComportamentoAbstrato()
+
+	// Esse método possui uma lógica padrão mas permite override 
+	// (outro tipo de polimorfismo de inclusão)
+	public virtual void ComportamentoVirtual()
+	{
+		// lógica do void
+	}
+
+}
+```
+```cs
+using System;
+
+namespace ExemploPolimorfismoParametrico {
+    // criacao da classe generica
+    // o termo "paramétrico" vem justamente do fato que essa classe recebe 
+    // qualquer tipo de objeto no parâmetro <T> 
+    public class Conjuntos <T> { 
+        // criacao de uma funcao como membro estatico
+        // que retorna um booleano para os vetores "s" e "w"
+        // do tipo de dado definido por "<T>"
+        public static bool disjuntos(T[] s, T[] w)
+        {
+        // loop em todos os elementos do vetor "s"
+        for (int i = 0; i < s.Length; i++)
+        {
+            // loop em todos so elementos do vetor "w"
+            for (int j = 0; j < w.Length; j++)
+            {
+                // Teste: O elemento s[i] é igual ao w[j]?
+                // se sim, eles possuem algum elemento em comum
+                // logo, nao sao conjuntos disjuntos!
+                if (s[i].Equals(w[j]))
+                    return false;
+            }
+        }
+        // se nenhum dos elementos dos dois conjuntos
+        // for igual ao do outro, entao sao conjuntos
+        // disjuntos!
+        return true;
+        }
+    }
+    // Programa Principal
+    class MainClass {
+        public static void Main(string[] args) {
+            if (Conjuntos<int>.disjuntos(new int[] {1,3,5}, new int[] {2,4,6}))
+            {
+                Console.WriteLine("Conjuntos Disjuntos!");
+            } else
+            {
+                Console.WriteLine("conjuntos não Disjuntos!");
+            }
+        }
+    }
+}
+```
+</details>
+
+
 [^1]: Provavelmente o conceito mais importante da OOP.
 
 [^2]: Nós vimos esse conceito na aula de Programação Modular.
