@@ -18,9 +18,9 @@ A principal meta de qualquer implementação OOP é, basicamente, "reduzir acopl
 
 > Chamamos de **Coesão** o oposto do acoplamento. Onde objetos podem trabalhar livremente lado a lado de modo que os componentes do sistema sejam livres para mudar e evoluir enquanto "servem" seus métodos e procedimentos uns para os outros.
 
-> Chamamos de **Classe** a declaração de um objeto  com propriedades. Por sua vez, um **objeto** é a instanciação da classe alocada na memória que será utilizada em tempo de execução.
+> Chamamos de **Classe** a declaração de um objeto  com propriedades. Por sua vez, um **Objeto** é a instanciação da classe alocada na memória que será utilizada em tempo de execução.
 
-> Chamamos de **Estado** as propriedades contidas em um determinado objeto. Por sua vez, chamamos de **comportamento** as funções e procedimentos contidos em um objeto
+> Chamamos de **Estado** as propriedades contidas em um determinado objeto. Por sua vez, chamamos de **Comportamento** as funções e procedimentos contidos em um objeto
 
 <details>
 <summary>Exemplo de Estado e Comportamento</summary>
@@ -96,11 +96,12 @@ No exemplo acima, o comando `ObjetoFilho.Estado1` seria válido porque o estado 
 
 > Chamamos de **Abstração** a capacidade de planejarmos (principalmente super classes) estados e comportamentos de modo que criamos as classes sem necessariamente implementar seus comportamentos.
 
+<details>
+<summary>Exemplo de Abstração</summary>
+
 :::warning
 Classes abstratas **não** podem ser instanciadas. Elas sempre precisam ser herdadas para que seja feito o **polimorfismo**[^2].
 :::
-<details>
-<summary>Exemplo de Abstração</summary>
 
 ``` cs
 namespace AulaConceitos
@@ -146,6 +147,7 @@ public abstract class ClassePolimorfismoDeInclusao
 
 }
 ```
+
 ```cs
 using System;
 
@@ -194,6 +196,28 @@ namespace ExemploPolimorfismoParametrico {
 ```
 </details>
 
+> Chamamos de **Encapsulamento** a gestão da exposição dos métodos das classes (sendo públicos ou privados) através dos [modificadores de acesso](../../../../blog/modificadores-acesso-csharp).
+
+<details>
+<summary>Exemplo de Encapsulamento</summary>
+
+```cs
+public class ExemploEncapsulamento
+{
+  private string EstadoPrivado1 { get; set; }
+  
+  public SetEstadoPrivado1(string valor)
+  {
+    EstadoPrivado1 = valor; // define valor privado
+  }
+  
+  public string GetEstadoPrivado1()
+  {
+    return EstadoPrivado1; // retorna valor privado
+  }
+}
+```
+</details>
 
 [^1]: Provavelmente o conceito mais importante da OOP.
 
