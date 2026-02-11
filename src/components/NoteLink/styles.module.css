@@ -1,0 +1,26 @@
+.noteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.noteLink:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.noteId {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.noteTitle {
+  color: var(--ifm-color-primary);
+}

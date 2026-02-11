@@ -82,7 +82,20 @@ const config: Config = {
     ],
   ],
 
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [
+    require.resolve('docusaurus-lunr-search'),
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'zettel',
+        path: 'zettel',
+        routeBasePath: 'zettel',
+        sidebarPath: './sidebarsZettel.ts',
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+      },
+    ],
+  ],
 
   themeConfig: {
     image: 'img/siteIcon.png',
@@ -104,6 +117,11 @@ const config: Config = {
           to: '/blog', label: 'Blog', position: 'left'
         },
         {
+          to: '/zettel',
+          label: 'Zettelkasten',
+          position: 'left',
+        },
+        {
           href: 'https://github.com/brunoruas2/ciencia_computacao',
           label: 'GitHub',
           position: 'right',
@@ -119,6 +137,10 @@ const config: Config = {
             {
               label: 'Matérias',
               to: '/docs/intro',
+            },
+            {
+              label: 'Zettelkasten',
+              to: '/zettel',
             },
           ],
         },
