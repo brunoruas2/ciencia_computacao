@@ -4,9 +4,11 @@ export default function TableWithFilter() {
   const [search, setSearch] = useState('');
 
   const data = [
-    {data: '01/2025', problema: 'Projeto Regulatório', entrega: 'Projeto de Auditoria de cadastros', comentario: 'RabbitMQ, sidecars, muito conhecimento de negócio, mapeamento de processos'},
-    { data: '12/2024', problema: 'Projeto', entrega: 'Evolução relevante em serviço GoLang', comentario: 'SNS, SQS, Policies AWS, Cloudformation, GoLang, Observabilidade, Métricas, Paralelismo' },
-    { data: '02/2024-11/2024', problema: 'Projeto', entrega: 'Evolução relevante em serviço Angular\React + ASP.NET', comentario: 'Auth Angular, permissionamento e Azure AD' },
+    { data: '02/2026', problema: 'Arquitetura', entrega: 'Revisão da arquitetura de um conjunto de lambdas', comentario: 'O time de arquitetura apontou a necessidade de ajuste em uma solução. Tivemos de reavaliar a implementação das lambdas aws para conseguir otimizar os recursos.' },
+    { data: '01/2026', problema: 'Burndown Sprint', entrega: 'Controle de produtividade da squad', comentario: 'Me dediquei a entender porquê nosso burndown não descia. Para isso, explorei o AzureDevOps com queries que me ajudaram a identificar onde os problemas estavam.' },
+    { data: '01/2025-12/2025', problema: 'Squad Regulatório', entrega: 'Implementação de um fluxo de auditoria de dados para FATCA', comentario: 'Esforço grande de refino de requisitos. Atuei perto de áreas como Compliance, Regulatório, Governança e Negócio. Também tive de atuar como referencial técnico para outros devs do time.' },
+    { data: '12/2024', problema: 'Projeto', entrega: 'Serviço GoLang integrando com Bucket S3', comentario: 'SNS, SQS, Policies AWS, Cloudformation, GoLang, Observabilidade, Métricas, Paralelismo' },
+    { data: '02/2024-11/2024', problema: 'Squad Evolução Tecnológica', entrega: 'Evolução relevante em serviço Angular\React + ASP.NET', comentario: 'Auth Angular, permissionamento e Azure AD' },
     { data: '01/2024', problema: 'Feat de integração SQS', entrega: 'Evolução de projeto para integração SQS', comentario: 'CI/CD azure pipe, RDS, SQS, SNS e Gestão de custo AWS' },
     { data: '12/2023', problema: 'Erro em save no banco', entrega: 'Fix nas telas do front com maxlength de string', comentario: 'Fluent validation' },
     { data: '12/2023', problema: 'Erro em save no banco', entrega: 'Fix no critério de update/save no backend', comentario: '' },
