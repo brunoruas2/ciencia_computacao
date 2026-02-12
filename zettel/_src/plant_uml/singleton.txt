@@ -1,0 +1,12 @@
+@startuml
+skinparam linetype ortho
+
+Class Singleton {
+    static uniqueInstance
+    singletonData
+    static Instance()
+    SingletonOperation()
+    GetSingletonData()
+}
+
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+Class1 <|-- Class2: Extension
+Class3 <|.. Class4: Implementation
+Class5 *-- Class6: Composition
+Class7 o-- Class8: Aggregation
+Class9 --> Class10: Dependency
+Class11 ..> Class12: Weak Dependecy
+@enduml

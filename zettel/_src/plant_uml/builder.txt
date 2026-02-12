@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+
+abstract class Builder {
+    BuildPart()
+}
+class Director {
+    Construct()
+}
+class ConcreteBuilder {
+    BuildPart()
+    GetResult()
+}
+class Product
+
+Builder <-left-o Director
+Builder <|-down- ConcreteBuilder
+ConcreteBuilder -right-> Product
+@enduml

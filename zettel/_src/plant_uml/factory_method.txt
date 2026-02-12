@@ -1,0 +1,19 @@
+@startuml
+skinparam linetype ortho
+
+Abstract Class Creator {
+  abstract FactoryMethod()
+  AnOperation()
+}
+
+Class ConcreteCreator {
+  override FactoryMethod()
+}
+
+Interface Product
+
+Creator <|-down- ConcreteCreator
+ConcreteProduct <.right. ConcreteCreator
+Product <|-down- ConcreteProduct
+Product <-right-o Creator
+@enduml

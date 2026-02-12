@@ -1,0 +1,44 @@
+@startuml
+skinparam linetype ortho
+
+Class Client
+Interface AbstractFacotry {
+ CreateProductA()
+ CreateProductB()
+}
+Interface AbstractProductA
+Interface AbstractProductB
+
+Class ConcreteFactory1 {
+ CreateProductA()
+ CreateProductB()
+}
+
+Class ConcreteFactory2 {
+ CreateProductA()
+ CreateProductB()
+}
+
+
+Class ProductA1
+Class ProductA2
+Class ProductB1
+Class ProductB2
+
+Client-left->AbstractFacotry
+Client-down->AbstractProductA
+Client-down->AbstractProductB
+
+ProductA1-up-|>AbstractProductA
+ProductA2-up-|>AbstractProductA
+ProductB1-up-|>AbstractProductB
+ProductB2-up-|>AbstractProductB
+
+ConcreteFactory1 -up-|> AbstractFacotry
+ConcreteFactory2 -up-|> AbstractFacotry
+
+ConcreteFactory1 .right.> ProductA1
+ConcreteFactory1 .r.> ProductB1
+ConcreteFactory2 .r.> ProductA2
+ConcreteFactory2 .r.> ProductB2
+@enduml
