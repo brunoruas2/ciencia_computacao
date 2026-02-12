@@ -1,0 +1,879 @@
+{
+  "nodes": [
+    {
+      "id": "202509290648",
+      "title": "Zettelkasten",
+      "tags": [
+        "GerenciamentoConhecimento",
+        "Zettelkasten"
+      ],
+      "connections": 3,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202509300618",
+      "title": "Anatomia de um Zettel",
+      "tags": [
+        "GerenciamentoConhecimento",
+        "Zettelkasten"
+      ],
+      "connections": 1,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202509300642",
+      "title": "Conectando Zettels",
+      "tags": [
+        "Zettelkasten",
+        "GerenciamentoConhecimento"
+      ],
+      "connections": 2,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202509300709",
+      "title": "Notas de Estrutura",
+      "tags": [
+        "Zettelkasten",
+        "GerenciamentoConhecimento"
+      ],
+      "connections": 2,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202510010627",
+      "title": "Fundamentos do CSharp",
+      "tags": [
+        "Csharp",
+        "Dotnet"
+      ],
+      "connections": 9,
+      "color": "#6ea8fe"
+    },
+    {
+      "id": "202510010649",
+      "title": "Framework",
+      "tags": [
+        "Programação"
+      ],
+      "connections": 2,
+      "color": "#6ea8fe"
+    },
+    {
+      "id": "202510010651",
+      "title": ".NET Framework",
+      "tags": [
+        "Csharp",
+        "Dotnet"
+      ],
+      "connections": 3,
+      "color": "#6ea8fe"
+    },
+    {
+      "id": "202510010705",
+      "title": ".NET Standard",
+      "tags": [
+        "Csharp",
+        "Dotnet"
+      ],
+      "connections": 2,
+      "color": "#6ea8fe"
+    },
+    {
+      "id": "202510010714",
+      "title": "Executando csharp",
+      "tags": [
+        "Csharp",
+        "Dotnet"
+      ],
+      "connections": 1,
+      "color": "#6ea8fe"
+    },
+    {
+      "id": "202510020618",
+      "title": ".NET CLI",
+      "tags": [
+        "Dotnet",
+        "Csharp"
+      ],
+      "connections": 1,
+      "color": "#6ea8fe"
+    },
+    {
+      "id": "202510020623",
+      "title": "Tipos de Projeto .NET",
+      "tags": [
+        "Dotnet",
+        "Csharp"
+      ],
+      "connections": 1,
+      "color": "#6ea8fe"
+    },
+    {
+      "id": "202510020643",
+      "title": "Estrutura do App .NET",
+      "tags": [
+        "Dotnet",
+        "Csharp"
+      ],
+      "connections": 1,
+      "color": "#6ea8fe"
+    },
+    {
+      "id": "202510020649",
+      "title": "Debug .NET",
+      "tags": [
+        "Dotnet",
+        "Csharp"
+      ],
+      "connections": 1,
+      "color": "#6ea8fe"
+    },
+    {
+      "id": "202510020710",
+      "title": "Boas Práticas Csharp",
+      "tags": [
+        "Csharp",
+        "Dotnet"
+      ],
+      "connections": 2,
+      "color": "#6ea8fe"
+    },
+    {
+      "id": "202510030623",
+      "title": "Arquitetura de Software",
+      "tags": [
+        "ArquiteturaSoftware"
+      ],
+      "connections": 3,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510030654",
+      "title": "OOP",
+      "tags": [
+        "ArquiteturaSoftware",
+        "OOP"
+      ],
+      "connections": 14,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510030700",
+      "title": "Paradigmas de Programação",
+      "tags": [
+        "Programação"
+      ],
+      "connections": 1,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510060607",
+      "title": "OOP - Estado e Comportamento",
+      "tags": [
+        "OOP",
+        "Programação"
+      ],
+      "connections": 1,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510060615",
+      "title": "OOP - Classe e Objeto",
+      "tags": [
+        "OOP",
+        "Programação"
+      ],
+      "connections": 1,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510060629",
+      "title": "História OOP",
+      "tags": [
+        "OOP"
+      ],
+      "connections": 1,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510060649",
+      "title": "OOP - Herança",
+      "tags": [
+        "OOP"
+      ],
+      "connections": 2,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510060701",
+      "title": "OOP - Abstração",
+      "tags": [
+        "OOP"
+      ],
+      "connections": 1,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510070613",
+      "title": "OOP - Polimorfismo",
+      "tags": [
+        "OOP"
+      ],
+      "connections": 2,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510070631",
+      "title": "OOP - Encapsulamento",
+      "tags": [
+        "OOP"
+      ],
+      "connections": 2,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510070636",
+      "title": "OOP - Modificadores de Acesso",
+      "tags": [
+        "OOP"
+      ],
+      "connections": 2,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510070652",
+      "title": "OOP - Interface e Implementação",
+      "tags": [
+        "OOP"
+      ],
+      "connections": 5,
+      "color": "#b07df0"
+    },
+    {
+      "id": "202510070712",
+      "title": "OOP - Herança e Composição",
+      "tags": [
+        "OOP"
+      ],
+      "connections": 5,
+      "color": "#22d3ee"
+    },
+    {
+      "id": "202510070720",
+      "title": "OOP - Exemplo Composição",
+      "tags": [
+        "OOP"
+      ],
+      "connections": 3,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510080627",
+      "title": "OOP - Vias de acesso à métodos",
+      "tags": [
+        "OOP"
+      ],
+      "connections": 3,
+      "color": "#63e6be"
+    },
+    {
+      "id": "202510090642",
+      "title": "SOLID",
+      "tags": [
+        "SOLID"
+      ],
+      "connections": 6,
+      "color": "#ffa94d"
+    },
+    {
+      "id": "202510090651",
+      "title": "SOLID - Single Responsibility Principle (SRP)",
+      "tags": [
+        "SOLID"
+      ],
+      "connections": 1,
+      "color": "#ffa94d"
+    },
+    {
+      "id": "202510140612",
+      "title": "SOLID - Open Closed Principle (OCP)",
+      "tags": [
+        "SOLID"
+      ],
+      "connections": 2,
+      "color": "#ffa94d"
+    },
+    {
+      "id": "202510140621",
+      "title": "Csharp - Extension Methods",
+      "tags": [
+        "Csharp"
+      ],
+      "connections": 2,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202510150620",
+      "title": "SOLID - Liskov Substitution Principle (LSP)",
+      "tags": [
+        "SOLID"
+      ],
+      "connections": 2,
+      "color": "#ffa94d"
+    },
+    {
+      "id": "202510170631",
+      "title": "SOLID - Interface Segregation Principle (ISP)",
+      "tags": [
+        "SOLID"
+      ],
+      "connections": 3,
+      "color": "#ffa94d"
+    },
+    {
+      "id": "202510170652",
+      "title": "SOLID - Dependency Inversion Principle (DIP)",
+      "tags": [
+        "SOLID"
+      ],
+      "connections": 3,
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "202510181406",
+      "title": "DI - Injeção de Dependência",
+      "tags": [
+        "InjecaoDeDependencia"
+      ],
+      "connections": 10,
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "202510200611",
+      "title": "DI - Exemplo Real",
+      "tags": [
+        "InjecaoDeDependencia"
+      ],
+      "connections": 1,
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "202510200648",
+      "title": "DI - Ciclos de Vida",
+      "tags": [
+        "InjecaoDeDependencia"
+      ],
+      "connections": 1,
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "202510210622",
+      "title": "DI - Registro de Generics",
+      "tags": [
+        "InjecaoDeDependencia"
+      ],
+      "connections": 2,
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "202510210635",
+      "title": "DI - Property Injection",
+      "tags": [
+        "InjecaoDeDependencia"
+      ],
+      "connections": 1,
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "202510210641",
+      "title": "DI - Service Locator",
+      "tags": [
+        "InjecaoDeDependencia"
+      ],
+      "connections": 1,
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "202510210651",
+      "title": "DI - N Classes 1 Interface",
+      "tags": [
+        "InjecaoDeDependencia"
+      ],
+      "connections": 3,
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "202510220620",
+      "title": "Clean Code",
+      "tags": [
+        "CleanCode"
+      ],
+      "connections": 5,
+      "color": "#ffe066"
+    },
+    {
+      "id": "202510220628",
+      "title": "Clean Code - Desculpas e Verdades",
+      "tags": [
+        "CleanCode"
+      ],
+      "connections": 1,
+      "color": "#ffe066"
+    },
+    {
+      "id": "202510220646",
+      "title": "Clean Code - Como medir um bom código",
+      "tags": [
+        "CleanCode"
+      ],
+      "connections": 1,
+      "color": "#ffe066"
+    },
+    {
+      "id": "202510220657",
+      "title": "Clean Code - Como escrever bons nomes",
+      "tags": [
+        "CleanCode"
+      ],
+      "connections": 1,
+      "color": "#ffe066"
+    },
+    {
+      "id": "202510220658",
+      "title": "Clean Code - Boas práticas",
+      "tags": [
+        "CleanCode"
+      ],
+      "connections": 1,
+      "color": "#ffe066"
+    },
+    {
+      "id": "202510220706",
+      "title": "Clean Code - Comentários no Código",
+      "tags": [
+        "CleanCode"
+      ],
+      "connections": 1,
+      "color": "#ffe066"
+    },
+    {
+      "id": "202510230627",
+      "title": "Design Patterns",
+      "tags": [
+        "DesignPattern"
+      ],
+      "connections": 4,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202510240635",
+      "title": "Patterns - Abstract Factory",
+      "tags": [
+        "DesignPattern"
+      ],
+      "connections": 4,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202510251523",
+      "title": "UML - Padrão de Notação",
+      "tags": [
+        "UML"
+      ],
+      "connections": 0,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202510280654",
+      "title": "Exemplo de Abstract Factory",
+      "tags": [
+        "DesignPattern"
+      ],
+      "connections": 1,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202510290617",
+      "title": "Patterns - Factory Method",
+      "tags": [
+        "DesignPattern"
+      ],
+      "connections": 4,
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "202511030704",
+      "title": "Exemplo de Factory Method",
+      "tags": [
+        "DesignPattern"
+      ],
+      "connections": 2,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202511070629",
+      "title": "Patterns - Singleton",
+      "tags": [
+        "DesignPattern"
+      ],
+      "connections": 2,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202601172300",
+      "title": "Como gerar diagramas PlantUML",
+      "tags": [
+        "PlantUml"
+      ],
+      "connections": 0,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202601260926",
+      "title": "Exemplo de Singleton",
+      "tags": [
+        "DesignPattern"
+      ],
+      "connections": 1,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202601262328",
+      "title": "Patterns - Builder",
+      "tags": [
+        "DesignPattern"
+      ],
+      "connections": 2,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202601262341",
+      "title": "Exemplo de Builder",
+      "tags": [],
+      "connections": 1,
+      "color": "#7f8c9b"
+    }
+  ],
+  "links": [
+    {
+      "source": "202509290648",
+      "target": "202509300618"
+    },
+    {
+      "source": "202509290648",
+      "target": "202509300642"
+    },
+    {
+      "source": "202509290648",
+      "target": "202509300709"
+    },
+    {
+      "source": "202509300709",
+      "target": "202509300642"
+    },
+    {
+      "source": "202510010627",
+      "target": "202510010649"
+    },
+    {
+      "source": "202510010627",
+      "target": "202510010651"
+    },
+    {
+      "source": "202510010627",
+      "target": "202510010705"
+    },
+    {
+      "source": "202510010627",
+      "target": "202510010714"
+    },
+    {
+      "source": "202510010627",
+      "target": "202510020618"
+    },
+    {
+      "source": "202510010627",
+      "target": "202510020623"
+    },
+    {
+      "source": "202510010627",
+      "target": "202510020643"
+    },
+    {
+      "source": "202510010627",
+      "target": "202510020649"
+    },
+    {
+      "source": "202510010627",
+      "target": "202510020710"
+    },
+    {
+      "source": "202510010651",
+      "target": "202510010649"
+    },
+    {
+      "source": "202510010705",
+      "target": "202510010651"
+    },
+    {
+      "source": "202510020710",
+      "target": "202510140621"
+    },
+    {
+      "source": "202510030623",
+      "target": "202510030654"
+    },
+    {
+      "source": "202510030623",
+      "target": "202510090642"
+    },
+    {
+      "source": "202510030623",
+      "target": "202510181406"
+    },
+    {
+      "source": "202510030654",
+      "target": "202510030700"
+    },
+    {
+      "source": "202510030654",
+      "target": "202510060629"
+    },
+    {
+      "source": "202510030654",
+      "target": "202510060615"
+    },
+    {
+      "source": "202510030654",
+      "target": "202510060607"
+    },
+    {
+      "source": "202510030654",
+      "target": "202510060649"
+    },
+    {
+      "source": "202510030654",
+      "target": "202510060701"
+    },
+    {
+      "source": "202510030654",
+      "target": "202510070613"
+    },
+    {
+      "source": "202510030654",
+      "target": "202510070631"
+    },
+    {
+      "source": "202510030654",
+      "target": "202510070652"
+    },
+    {
+      "source": "202510030654",
+      "target": "202510070712"
+    },
+    {
+      "source": "202510030654",
+      "target": "202510080627"
+    },
+    {
+      "source": "202510060649",
+      "target": "202510070712"
+    },
+    {
+      "source": "202510070631",
+      "target": "202510070636"
+    },
+    {
+      "source": "202510070636",
+      "target": "202510030654"
+    },
+    {
+      "source": "202510070652",
+      "target": "202510170631"
+    },
+    {
+      "source": "202510070652",
+      "target": "202510170652"
+    },
+    {
+      "source": "202510070652",
+      "target": "202510181406"
+    },
+    {
+      "source": "202510070712",
+      "target": "202510070652"
+    },
+    {
+      "source": "202510070712",
+      "target": "202510070720"
+    },
+    {
+      "source": "202510070720",
+      "target": "202510030654"
+    },
+    {
+      "source": "202510080627",
+      "target": "202510070712"
+    },
+    {
+      "source": "202510080627",
+      "target": "202510070720"
+    },
+    {
+      "source": "202510090642",
+      "target": "202510090651"
+    },
+    {
+      "source": "202510090642",
+      "target": "202510140612"
+    },
+    {
+      "source": "202510090642",
+      "target": "202510150620"
+    },
+    {
+      "source": "202510090642",
+      "target": "202510170631"
+    },
+    {
+      "source": "202510090642",
+      "target": "202510170652"
+    },
+    {
+      "source": "202510140612",
+      "target": "202510140621"
+    },
+    {
+      "source": "202510181406",
+      "target": "202510170652"
+    },
+    {
+      "source": "202510181406",
+      "target": "202510200611"
+    },
+    {
+      "source": "202510181406",
+      "target": "202510200648"
+    },
+    {
+      "source": "202510181406",
+      "target": "202510210622"
+    },
+    {
+      "source": "202510181406",
+      "target": "202510210635"
+    },
+    {
+      "source": "202510181406",
+      "target": "202510210641"
+    },
+    {
+      "source": "202510181406",
+      "target": "202510210651"
+    },
+    {
+      "source": "202510210622",
+      "target": "202510070613"
+    },
+    {
+      "source": "202510210651",
+      "target": "202510170631"
+    },
+    {
+      "source": "202510210651",
+      "target": "202510150620"
+    },
+    {
+      "source": "202510220620",
+      "target": "202510220628"
+    },
+    {
+      "source": "202510220620",
+      "target": "202510220646"
+    },
+    {
+      "source": "202510220620",
+      "target": "202510220657"
+    },
+    {
+      "source": "202510220620",
+      "target": "202510220658"
+    },
+    {
+      "source": "202510220620",
+      "target": "202510220706"
+    },
+    {
+      "source": "202510230627",
+      "target": "202510240635"
+    },
+    {
+      "source": "202510230627",
+      "target": "202601262328"
+    },
+    {
+      "source": "202510230627",
+      "target": "202510290617"
+    },
+    {
+      "source": "202510230627",
+      "target": "202511070629"
+    },
+    {
+      "source": "202510240635",
+      "target": "202510280654"
+    },
+    {
+      "source": "202510290617",
+      "target": "202510240635"
+    },
+    {
+      "source": "202510290617",
+      "target": "202510181406"
+    },
+    {
+      "source": "202510290617",
+      "target": "202511030704"
+    },
+    {
+      "source": "202511030704",
+      "target": "202510240635"
+    },
+    {
+      "source": "202511070629",
+      "target": "202601260926"
+    },
+    {
+      "source": "202601262328",
+      "target": "202601262341"
+    }
+  ],
+  "legend": [
+    {
+      "tag": "OOP",
+      "color": "#63e6be",
+      "count": 14
+    },
+    {
+      "tag": "DI - Injeção de Dependência",
+      "color": "#ff6b6b",
+      "count": 10
+    },
+    {
+      "tag": "Fundamentos do CSharp",
+      "color": "#6ea8fe",
+      "count": 9
+    },
+    {
+      "tag": "SOLID",
+      "color": "#ffa94d",
+      "count": 6
+    },
+    {
+      "tag": "OOP - Interface e Implementação",
+      "color": "#b07df0",
+      "count": 5
+    }
+  ]
+}
