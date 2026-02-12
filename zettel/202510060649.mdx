@@ -1,0 +1,42 @@
+---
+title: "OOP - Herança"
+sidebar_label: "202510060649 - OOP - Herança"
+tags: [OOP]
+date: 2025-10-06
+---
+
+# OOP - Herança
+
+[OOP](/zettel/202510030654)
+
+É a capacidade de passagem de estados e comportamentos de uma classe para a outra. De modo que a classe filha contém as capacidades da classe pai.
+
+Atualmente, está em discussão se o uso de composição não é melhor que herança. Mais sobre isso aqui [OOP - Herança e Composição](/zettel/202510070712).
+
+```csharp
+
+public class Pessoa
+{
+	public string Nome {get;set;}
+}
+
+public class Cliente : Pessoa
+{
+	public int Matricula {get;set;}
+}
+
+public class Program
+{
+	public void ProgramMain()
+	{
+		var ObjetoCliente = new Cliente()
+		{
+			Nome = "Nome do Cliente"; // cliente acessa o param Nome diretamente
+			Matricula = 12345;
+		}
+	}
+}
+```
+
+## Referências
+- [Desenvolvedor.io - Curso Arquitetura](https://desenvolvedor.io/formacao/arquiteto-de-software)

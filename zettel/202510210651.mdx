@@ -1,0 +1,71 @@
+---
+title: "DI - N Classes 1 Interface"
+sidebar_label: "202510210651 - DI - N Classes 1 Interface"
+tags: [InjecaoDeDependencia]
+date: 2025-10-21
+---
+
+# DI - N Classes 1 Interface
+
+[DI - Injeção de Dependência](/zettel/202510181406)
+
+Obviamente, isso não é indicado pois viola o [SOLID - Interface Segregation Principle (ISP)](/zettel/202510170631) e também da [SOLID - Liskov Substitution Principle (LSP)](/zettel/202510150620).
+
+```csharp
+public interface IRepository
+{
+	public void Save();
+}
+public class RepositoryA : IRepository
+{
+	public void Save()  { /* codigo */ }
+}
+public class RepositoryB : IRepository
+{
+	public void Save() { /* codigo */ }
+}
+```
+
+No registro do container a gente vai criar uma função lambda que recebe um param e instancia um serviço que a gente indicar. Para resolver esse caso vamos fazer uso do service locator (que sabemos que é um anti-paternD.)
+
+```csharp
+builder.Services.AddTransient<RepositoryA>();
+builder.Services.AddTransient<RepositoryB>();
+builder.Services.AddTransient<RepositoryC>();
+builder.Services.AddTransient<Func<string, IRepository>>(serviceProvider => key =>
+{
+    switch (key)
+    {
+        case "A":
+            return serviceProvider.GetRequiredService<RepositoryA>();
+        case "B":
+            return serviceProvider.GetRequiredService<RepositoryB>();
+        default:
+            return null;
+    }
+}
+);
+```
+
+Para acessar o repositório vamos usar uma function.
+
+```csharp
+public class Controller
+{
+    private readonly Func<string, IRepository> _serviceAccessor;
+
+    public Controller(Func<string, IRepository> serviceAccessor)
+    {
+        _serviceAccessor = serviceAccessor;
+    }
+
+    public void Metodo()
+    {
+        var repo = _serviceAccessor("A");// retornar RepositoryA
+        repo.Save();
+    }
+}
+```
+
+## Referências
+- [Desenvolvedor.io - Curso Arquitetura](https://desenvolvedor.io/formacao/arquiteto-de-software)

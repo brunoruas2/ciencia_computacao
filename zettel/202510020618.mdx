@@ -1,0 +1,32 @@
+---
+title: ".NET CLI"
+sidebar_label: "202510020618 - .NET CLI"
+tags: [Dotnet, Csharp]
+date: 2025-10-02
+---
+
+# .NET CLI
+
+Comandos:
+```terminal
+-- Gerais
+dotnet --help
+dotnet --list-sdks
+dotnet --list-runtimes
+
+-- Criacao de projetos
+dotnet new console/classlib/web/mvc/webapi/mstest e outros
+dotnet new ... -o path_da_pasta <- se preferir definir o path
+
+-- Execucao
+dotnet restore <- busca os pacotes necessarios para um projeto rodar
+dotnet clean <- limpa os arquivos de cache (windows reaproveita entre projetos)
+dotnet build <- compila a aplicacao
+dotnet run <- executa a aplicacao
+
+-- Variaveis de ambiente
+dotnet run --environment=dev/uat/prod
+```
+
+## Referências
+- [Balta.io](https://balta.io/)

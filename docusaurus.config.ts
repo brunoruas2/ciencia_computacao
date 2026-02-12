@@ -93,6 +93,10 @@ const config: Config = {
         sidebarPath: './sidebarsZettel.ts',
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
+        async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
+          const items = await defaultSidebarItemsGenerator(args);
+          return items.reverse();
+        },
       },
     ],
   ],

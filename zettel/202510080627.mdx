@@ -1,0 +1,70 @@
+---
+title: "OOP - Vias de acesso à métodos"
+sidebar_label: "202510080627 - OOP - Vias de acesso à métodos"
+tags: [OOP]
+date: 2025-10-08
+---
+
+# OOP - Vias de acesso à métodos
+
+[OOP](/zettel/202510030654)
+[OOP - Herança e Composição](/zettel/202510070712)
+[OOP - Exemplo Composição](/zettel/202510070720)
+
+Existem 4 conceitos que se relacionam ao acesso à métodos de classes.
+
+1. Herança 
+2. Composição
+	1. Por Interface ← Melhor abordagem
+	2. Por Objeto Concreto
+3. Implementação direta 
+
+Esses conceitos se complementam e formam a base do polimorfismo e da reutilização de código.
+
+```csharp
+public interface IClassePai { void MetodoPai(); }
+
+public class ClassePai : IClassePai
+{
+    public void MetodoPai() { }
+}
+
+// Implementacao direta
+public class Implementacao
+{
+    public void Implementa()
+    {
+        var classePai = new ClassePai();
+        classePai.MetodoPai();
+    }
+}
+
+// Heranca
+public class Heranca : ClassePai
+{
+    public void HerancaMetodo() { MetodoPai(); }
+}
+
+// Composicao via objeto concreto
+public class Composicao
+{
+    public ClassePai? ClassePai { get; set; }
+    public void UsandoComposicao()
+    {
+        var classeComposicao = new Composicao();
+        classeComposicao.ClassePai?.MetodoPai();
+    }
+}
+
+// Composicao via interface (melhor abordagem)
+public class Interface
+{
+    private readonly IClassePai _classePai;
+    public Interface(IClassePai classePai) { _classePai = classePai; }
+    public void MetodoInterface() { _classePai.MetodoPai(); }
+}
+```
+
+## Referências
+- [Desenvolvedor.io - Curso Arquitetura](https://desenvolvedor.io/formacao/arquiteto-de-software)
+- *Bruno Ruas*

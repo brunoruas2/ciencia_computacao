@@ -1,0 +1,80 @@
+---
+title: "Exemplo de Singleton"
+sidebar_label: "202601260926 - Exemplo de Singleton"
+tags: [DesignPattern]
+date: 2026-01-26
+---
+
+# Exemplo de Singleton
+
+Código
+```csharp
+// prograrm da aplicacao usando multithread
+class Program
+{
+	static void Main(string[] args)
+	{
+		// The client code.
+		
+		Console.WriteLine(
+			"{0}\n{1}\n\n{2}\n",
+			"If you see the same value, then singleton was reused (yay!)",
+			"If you see different values, then 2 singletons were created (booo!!)",
+			"RESULT:"
+		);
+		
+		Thread process1 = new Thread(() =>
+		{
+			TestSingleton("FOO");
+		});
+		Thread process2 = new Thread(() =>
+		{
+			TestSingleton("BAR");
+		});
+		
+		process1.Start();
+		process2.Start();
+		
+		process1.Join();
+		process2.Join();
+	}
+	
+	public static void TestSingleton(string value)
+	{
+		Singleton singleton = Singleton.GetInstance(value);
+		Console.WriteLine(singleton.Value);
+	} 
+}
+
+// classe singleton capaz de avaliar se ja existe uma instancia criada para retornar sempre a mesma
+class Singleton
+{
+	private Singleton() { } // construtor privado
+
+	private static Singleton _instance; // objeto static que sera retornado
+
+	private static readonly object _lock = new object(); // lock para sincronizar threads em paralelo
+
+	// metodo responsavel pelo retorno do objeto assegurando que so teremos um caso sempre
+	public static Singleton GetInstance(string value)
+	{
+		if (_instance == null)
+		{
+			lock (_lock) // essa trava garante que a primeira thread vai criar o obj e as outras vao esperar o lock
+			{
+				if (_instance == null) // segundo check no obj porque as outras threads ficaram esperando a primeira terminar
+				{
+					_instance = new Singleton();
+					_instance.Value = value;
+				}
+			}
+		}
+		return _instance;
+	}
+
+	public string Value { get; set; }
+}
+```
+
+## Referências
+- https://refactoring.guru/design-patterns/singleton/csharp/example#example-1

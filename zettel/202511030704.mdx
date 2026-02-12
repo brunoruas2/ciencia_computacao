@@ -1,0 +1,148 @@
+---
+title: "Exemplo de Factory Method"
+sidebar_label: "202511030704 - Exemplo de Factory Method"
+tags: [DesignPattern]
+date: 2025-11-03
+---
+
+# Exemplo de Factory Method
+
+[Patterns - Abstract Factory](/zettel/202510240635)
+
+**Contexto**
+Um sistema recebe arquivos de parceiros diferentes:
+- Laboratórios
+- Convênios
+- ERPs externos
+
+Cada parceiro manda em **um formato diferente**, mas o fluxo é sempre:
+1. Abrir arquivo
+2. Validar
+3. Processar
+4. Persistir
+
+**De-Para das classes**
+
+| GoF             | Exemplo                                                           |
+| --------------- | ----------------------------------------------------------------- |
+| Product         | `ImportProcessor`                                                 |
+| ConcreteProduct | `CsvImportProcessor`, `XmlImportProcessor`, `JsonImportProcessor` |
+| Creator         | `ImportService`                                                   |
+| ConcreteCreator | `CsvImportService`, `XmlImportService`                            |
+
+**Código**
+```csharp
+// produto abstrato
+public abstract class ImportProcessor
+{
+    public abstract void Validate(string filePath);
+    public abstract void Process(string filePath);
+}
+```
+
+```csharp
+// produtos concretos
+public class CsvImportProcessor : ImportProcessor
+{
+    public override void Validate(string filePath)
+    {
+        Console.WriteLine("Validating CSV file");
+    }
+
+    public override void Process(string filePath)
+    {
+        Console.WriteLine("Processing CSV file");
+    }
+}
+
+public class XmlImportProcessor : ImportProcessor
+{
+    public override void Validate(string filePath)
+    {
+        Console.WriteLine("Validating XML file");
+    }
+
+    public override void Process(string filePath)
+    {
+        Console.WriteLine("Processing XML file");
+    }
+}
+
+public class JsonImportProcessor : ImportProcessor
+{
+    public override void Validate(string filePath)
+    {
+        Console.WriteLine("Validating JSON file");
+    }
+
+    public override void Process(string filePath)
+    {
+        Console.WriteLine("Processing JSON file");
+    }
+}
+```
+
+```csharp
+// Creator
+public abstract class ImportService
+{
+	// o processamento sempre segue igual
+    public void Import(string filePath)
+    {
+        var processor = CreateProcessor();
+
+        processor.Validate(filePath);
+        processor.Process(filePath);
+
+        Console.WriteLine("Import finished");
+    }
+
+    // 🔥 FACTORY METHOD
+    protected abstract ImportProcessor CreateProcessor();
+}
+```
+
+```csharp
+// concrete creators
+public class CsvImportService : ImportService
+{
+    protected override ImportProcessor CreateProcessor()
+    {
+        return new CsvImportProcessor();
+    }
+}
+
+public class XmlImportService : ImportService
+{
+    protected override ImportProcessor CreateProcessor()
+    {
+        return new XmlImportProcessor();
+    }
+}
+
+public class JsonImportService : ImportService
+{
+    protected override ImportProcessor CreateProcessor()
+    {
+        return new JsonImportProcessor();
+    }
+}
+```
+
+```csharp
+// Controller
+
+// [...]
+// concrete creator para csv
+ImportService service = new CsvImportService();
+service.Import("file.csv");
+
+// concrete creator mas agora para json
+service = new JsonImportService();
+service.Import("file.json");
+
+// [...]
+```
+
+## Referências
+- Chat GPT

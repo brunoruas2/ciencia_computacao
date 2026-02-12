@@ -1,0 +1,45 @@
+---
+title: "OOP - Abstração"
+sidebar_label: "202510060701 - OOP - Abstração"
+tags: [OOP]
+date: 2025-10-06
+---
+
+# OOP - Abstração
+
+[OOP](/zettel/202510030654)
+
+É a capacidade de definir comportamentos e estados sem necessariamente estar preso à uma implementação. Desse modo conseguimos criar uma obrigação de implementação nas classes que vão herdar da classe abstrata.
+
+```csharp
+public abstract class Pessoa
+{
+	private readonly string _nome;
+	public string Nome => _nome;
+	
+	protected Pessoa(string nome)
+	{
+		_nome = nome;
+	}
+	
+	public abstract void PrintNome(); // comportamento abstrato
+}
+
+public class Cliente : Pessoa
+{
+	private readonly int _matricula;
+	
+	public Cliente(string nome, int matricula) : base(nome)
+	{
+		_matricula = matricula;
+	}
+	
+	public override void PrintNome()
+	{
+		Console.WriteLine($"Nome: {Nome}, Matricula {_matricula}");
+	}
+}
+```
+
+## Referências
+- [Desenvolvedor.io - Curso Arquitetura](https://desenvolvedor.io/formacao/arquiteto-de-software)

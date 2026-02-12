@@ -1,0 +1,109 @@
+---
+title: "Exemplo de Abstract Factory"
+sidebar_label: "202510280654 - Exemplo de Abstract Factory"
+tags: [DesignPattern]
+date: 2025-10-28
+---
+
+# Exemplo de Abstract Factory
+
+[Patterns - Abstract Factory](/zettel/202510240635)
+
+**Código**
+```csharp
+// entry point da aplicacao. Aqui temos 3 tipos de transporte
+class Program
+{
+	static void Main(string[] args)
+	{
+		if (args.Length == 0)
+		{
+			Console.WriteLine("Usage: dotnet run <transport-type>");
+			Console.WriteLine("Available types: road, sea, air");
+			return;
+		}
+
+		string transportType = args[0].ToLower();
+		Logistics logistics = transportType switch
+		{
+			"road" => new RoadLogistics(),
+			"sea" => new SeaLogistics(),
+			"air" => new AirLogistics(),
+			_ => throw new ArgumentException($"Unknown transport type: {transportType}. Use 'road', 'sea', or 'air'.")
+		};
+
+		Console.WriteLine($"App: Launched with {transportType.ToUpper()} logistics.");
+		Console.WriteLine(logistics.PlanDelivery());
+	}
+}
+
+// classe abstrata de logistica que define que cada um dos tipos vai fazer a criacao de um transporte e para todos eles temos um plano de entrega default que so retorna uma string com o modal definido
+abstract class Logistics
+{
+	public abstract ITransport CreateTransport();
+
+	public string PlanDelivery()
+	{
+		var transport = CreateTransport();
+		var result = "Logistics: Delivery planned using " + transport.Deliver();
+		return result;
+	}
+}
+
+// implementacoes da abstracao
+class RoadLogistics : Logistics
+{
+	public override ITransport CreateTransport()
+	{
+		return new Truck();
+	}
+}
+
+class SeaLogistics : Logistics
+{
+	public override ITransport CreateTransport()
+	{
+		return new Ship();
+	}
+}
+
+class AirLogistics : Logistics
+{
+	public override ITransport CreateTransport()
+	{
+		return new Plane();
+	}
+}
+
+public interface ITransport
+{
+	string Deliver();
+}
+
+class Truck : ITransport
+{
+	public string Deliver()
+	{
+		return "Truck - Delivering by land in a container";
+	}
+}
+
+class Ship : ITransport
+{
+	public string Deliver()
+	{
+		return "Ship - Delivering by sea in a cargo hold";
+	}
+}
+
+class Plane : ITransport
+{
+	public string Deliver()
+	{
+		return "Plane - Delivering by air with express service";
+	}
+}
+```
+
+## Referências
+- https://refactoring.guru/design-patterns/factory-method/csharp/example

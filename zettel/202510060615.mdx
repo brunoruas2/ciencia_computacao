@@ -1,0 +1,41 @@
+---
+title: "OOP - Classe e Objeto"
+sidebar_label: "202510060615 - OOP - Classe e Objeto"
+tags: [OOP, Programação]
+date: 2025-10-06
+---
+
+# OOP - Classe e Objeto
+
+[OOP](/zettel/202510030654)
+
+Classe é uma representação de uma entidade que possui estados e comportamentos nela. 
+
+Objeto é a instanciação (ou seja, alocação em memória) de uma classe.
+
+Em outras palavras, classes são descrições de objetos que serão criados e usados em tempo de execução.
+
+```csharp
+
+// classe
+public class Classe()
+{
+	public int param1 { get; set; } 
+}
+
+// objeto
+public class Objeto()
+{
+	public Objeto()
+	{
+		// criacao do objeto
+		var objetoCriado = new Classe()
+		{
+			param1 = 100
+		};
+	}
+}
+```
+
+## Referências
+- [Desenvolvedor.io - Curso Arquitetura](https://desenvolvedor.io/formacao/arquiteto-de-software)

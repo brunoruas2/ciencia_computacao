@@ -1,0 +1,44 @@
+---
+title: "DI - Registro de Generics"
+sidebar_label: "202510210622 - DI - Registro de Generics"
+tags: [InjecaoDeDependencia]
+date: 2025-10-21
+---
+
+# DI - Registro de Generics
+
+[DI - Injeção de Dependência](/zettel/202510181406)
+
+Caso seja mais interessante a criação de classes genéricas (que usam polimorfismo paramétrico) ainda assim podemos fazer uso da injeção de dependência por meio de um container.
+
+```csharp
+public interface IRepositoryGeneric<T> where T : class
+{
+    public void Save();
+}
+public class RepositoryGeneric<T> : IRepositoryGeneric<T> where T : class
+{
+    public void Save() 
+    { /* codigo */ }
+}
+```
+
+No Program.cs vamos colocar desse modo.
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddScoped(
+	typeof(IRepositoryGeneric<>), typeof(RepositoryGeneric<>)
+);
+
+var app = builder.Build();
+```
+
+O resto segue igual.
+
+## Referências
+- [Desenvolvedor.io - Curso Arquitetura](https://desenvolvedor.io/formacao/arquiteto-de-software)
+- [OOP - Polimorfismo](/zettel/202510070613)

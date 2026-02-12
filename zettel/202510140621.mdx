@@ -1,0 +1,38 @@
+---
+title: "Csharp - Extension Methods"
+sidebar_label: "202510140621 - Csharp - Extension Methods"
+tags: [Csharp]
+date: 2025-10-14
+---
+
+# Csharp - Extension Methods
+
+[SOLID - Open Closed Principle (OCP)](/zettel/202510140612)
+
+Em C# podemos usar técnicas para expandir a capacidade de uma classe inserindo métodos de maneira indireta por meio de uma **sintaxe açucarada** e não composição nem herança.
+
+```csharp
+namespace CustomExtensionMethods;
+
+// antes do c# 14
+public static class MyExtensions
+{
+    public static int WordCount(this string str) =>
+        str.Split([' ', '.', '?'], StringSplitOptions.RemoveEmptyEntries).Length;
+
+// depois do c# 14 temos um token para isso
+    extension(string str)
+    {
+        public int WordCount() =>
+            str.Split([' ', '.','?'],StringSplitOptions.RemoveEmptyEntries).Length;
+    }
+}
+
+// em ambos os casos o uso e igual
+string s = "Hello Extension Methods";
+int i = s.WordCount(); // veja que parece que string agora possui esse metodo
+```
+
+## Referências
+- https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods
+- [Desenvolvedor.io - Curso Arquitetura](https://desenvolvedor.io/formacao/arquiteto-de-software)

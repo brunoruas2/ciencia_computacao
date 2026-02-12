@@ -1,0 +1,42 @@
+---
+title: "DI - Property Injection"
+sidebar_label: "202510210635 - DI - Property Injection"
+tags: [InjecaoDeDependencia]
+date: 2025-10-21
+---
+
+# DI - Property Injection
+
+[DI - Injeção de Dependência](/zettel/202510181406)
+
+Existe a possibilidade de usar DI diretamente na passagem de params em uma function. Mas isso não é indicado porque é ruim de testar. Estou salvando aqui porque pode haver alguma situação onde eu não vou conseguir fazer DI via construtor.
+
+```csharp
+// Repository.cs
+public interface IRepository
+{
+	public void Save();
+}
+public class Repository : IRepository
+{
+	public void Save() 
+	{ /* codigo */ }
+}
+
+// Program.cs
+builder.Services.AddRazorPages();
+builder.Services.AddScoped<IRepository, Repository>();
+
+// Controller.cs
+public class Controller
+{
+	// aqui estamos recebendo direto do services da app
+	public void Metodo([FromServices] IRepository repository)
+	{
+		repository.Save();
+	}
+}
+```
+
+## Referências
+- [Desenvolvedor.io - Curso Arquitetura](https://desenvolvedor.io/formacao/arquiteto-de-software)

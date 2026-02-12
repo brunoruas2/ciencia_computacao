@@ -1,0 +1,28 @@
+---
+title: "OOP - Estado e Comportamento"
+sidebar_label: "202510060607 - OOP - Estado e Comportamento"
+tags: [OOP, Programação]
+date: 2025-10-06
+---
+
+# OOP - Estado e Comportamento
+
+[OOP](/zettel/202510030654)
+
+Em OOP, chamamos de **Estado** as propriedades da classe. **Comportamento** por sua vez são as partes que processam informação como funções ou procedimentos.
+
+```csharp
+public class Classe
+{
+	public int estado1 {get;set;}
+	
+	public int Comportamento1(int valor)
+	{
+		estado1 = valor; // comportamento modificando o estado original
+		return estado1
+	}
+}
+```
+
+## Referências
+- [Desenvolvedor.io - Curso Arquitetura](https://desenvolvedor.io/formacao/arquiteto-de-software)
