@@ -26,7 +26,7 @@ async function buildGraph() {
     const content = await readFile(join(ZETTEL_DIR, file), 'utf-8');
 
     // Parse frontmatter
-    const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
+    const fmMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     if (!fmMatch) continue;
 
     const fm = fmMatch[1];

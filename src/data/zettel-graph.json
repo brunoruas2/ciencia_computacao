@@ -47,8 +47,8 @@
         "Csharp",
         "Dotnet"
       ],
-      "connections": 9,
-      "color": "#6ea8fe"
+      "connections": 6,
+      "color": "#ff6b6b"
     },
     {
       "id": "202510010649",
@@ -57,7 +57,7 @@
         "Programação"
       ],
       "connections": 2,
-      "color": "#6ea8fe"
+      "color": "#ff6b6b"
     },
     {
       "id": "202510010651",
@@ -67,7 +67,7 @@
         "Dotnet"
       ],
       "connections": 3,
-      "color": "#6ea8fe"
+      "color": "#ff6b6b"
     },
     {
       "id": "202510010705",
@@ -77,7 +77,7 @@
         "Dotnet"
       ],
       "connections": 2,
-      "color": "#6ea8fe"
+      "color": "#ff6b6b"
     },
     {
       "id": "202510010714",
@@ -87,7 +87,7 @@
         "Dotnet"
       ],
       "connections": 1,
-      "color": "#6ea8fe"
+      "color": "#ff6b6b"
     },
     {
       "id": "202510020618",
@@ -97,7 +97,7 @@
         "Csharp"
       ],
       "connections": 1,
-      "color": "#6ea8fe"
+      "color": "#ff6b6b"
     },
     {
       "id": "202510020623",
@@ -107,37 +107,7 @@
         "Csharp"
       ],
       "connections": 1,
-      "color": "#6ea8fe"
-    },
-    {
-      "id": "202510020643",
-      "title": "Estrutura do App .NET",
-      "tags": [
-        "Dotnet",
-        "Csharp"
-      ],
-      "connections": 1,
-      "color": "#6ea8fe"
-    },
-    {
-      "id": "202510020649",
-      "title": "Debug .NET",
-      "tags": [
-        "Dotnet",
-        "Csharp"
-      ],
-      "connections": 1,
-      "color": "#6ea8fe"
-    },
-    {
-      "id": "202510020710",
-      "title": "Boas Práticas Csharp",
-      "tags": [
-        "Csharp",
-        "Dotnet"
-      ],
-      "connections": 2,
-      "color": "#6ea8fe"
+      "color": "#ff6b6b"
     },
     {
       "id": "202510030623",
@@ -155,16 +125,7 @@
         "ArquiteturaSoftware",
         "OOP"
       ],
-      "connections": 14,
-      "color": "#63e6be"
-    },
-    {
-      "id": "202510030700",
-      "title": "Paradigmas de Programação",
-      "tags": [
-        "Programação"
-      ],
-      "connections": 1,
+      "connections": 8,
       "color": "#63e6be"
     },
     {
@@ -202,15 +163,6 @@
       "tags": [
         "OOP"
       ],
-      "connections": 2,
-      "color": "#63e6be"
-    },
-    {
-      "id": "202510060701",
-      "title": "OOP - Abstração",
-      "tags": [
-        "OOP"
-      ],
       "connections": 1,
       "color": "#63e6be"
     },
@@ -220,44 +172,8 @@
       "tags": [
         "OOP"
       ],
-      "connections": 2,
+      "connections": 1,
       "color": "#63e6be"
-    },
-    {
-      "id": "202510070631",
-      "title": "OOP - Encapsulamento",
-      "tags": [
-        "OOP"
-      ],
-      "connections": 2,
-      "color": "#63e6be"
-    },
-    {
-      "id": "202510070636",
-      "title": "OOP - Modificadores de Acesso",
-      "tags": [
-        "OOP"
-      ],
-      "connections": 2,
-      "color": "#63e6be"
-    },
-    {
-      "id": "202510070652",
-      "title": "OOP - Interface e Implementação",
-      "tags": [
-        "OOP"
-      ],
-      "connections": 5,
-      "color": "#b07df0"
-    },
-    {
-      "id": "202510070712",
-      "title": "OOP - Herança e Composição",
-      "tags": [
-        "OOP"
-      ],
-      "connections": 5,
-      "color": "#22d3ee"
     },
     {
       "id": "202510070720",
@@ -265,7 +181,7 @@
       "tags": [
         "OOP"
       ],
-      "connections": 3,
+      "connections": 2,
       "color": "#63e6be"
     },
     {
@@ -274,7 +190,7 @@
       "tags": [
         "OOP"
       ],
-      "connections": 3,
+      "connections": 2,
       "color": "#63e6be"
     },
     {
@@ -283,8 +199,8 @@
       "tags": [
         "SOLID"
       ],
-      "connections": 6,
-      "color": "#ffa94d"
+      "connections": 5,
+      "color": "#6ea8fe"
     },
     {
       "id": "202510090651",
@@ -293,7 +209,7 @@
         "SOLID"
       ],
       "connections": 1,
-      "color": "#ffa94d"
+      "color": "#6ea8fe"
     },
     {
       "id": "202510140612",
@@ -302,7 +218,7 @@
         "SOLID"
       ],
       "connections": 2,
-      "color": "#ffa94d"
+      "color": "#6ea8fe"
     },
     {
       "id": "202510140621",
@@ -310,7 +226,7 @@
       "tags": [
         "Csharp"
       ],
-      "connections": 2,
+      "connections": 1,
       "color": "#7f8c9b"
     },
     {
@@ -320,7 +236,7 @@
         "SOLID"
       ],
       "connections": 2,
-      "color": "#ffa94d"
+      "color": "#6ea8fe"
     },
     {
       "id": "202510170631",
@@ -328,17 +244,8 @@
       "tags": [
         "SOLID"
       ],
-      "connections": 3,
-      "color": "#ffa94d"
-    },
-    {
-      "id": "202510170652",
-      "title": "SOLID - Dependency Inversion Principle (DIP)",
-      "tags": [
-        "SOLID"
-      ],
-      "connections": 3,
-      "color": "#ff6b6b"
+      "connections": 2,
+      "color": "#6ea8fe"
     },
     {
       "id": "202510181406",
@@ -346,35 +253,8 @@
       "tags": [
         "InjecaoDeDependencia"
       ],
-      "connections": 10,
-      "color": "#ff6b6b"
-    },
-    {
-      "id": "202510200611",
-      "title": "DI - Exemplo Real",
-      "tags": [
-        "InjecaoDeDependencia"
-      ],
-      "connections": 1,
-      "color": "#ff6b6b"
-    },
-    {
-      "id": "202510200648",
-      "title": "DI - Ciclos de Vida",
-      "tags": [
-        "InjecaoDeDependencia"
-      ],
-      "connections": 1,
-      "color": "#ff6b6b"
-    },
-    {
-      "id": "202510210622",
-      "title": "DI - Registro de Generics",
-      "tags": [
-        "InjecaoDeDependencia"
-      ],
-      "connections": 2,
-      "color": "#ff6b6b"
+      "connections": 5,
+      "color": "#ffa94d"
     },
     {
       "id": "202510210635",
@@ -383,7 +263,7 @@
         "InjecaoDeDependencia"
       ],
       "connections": 1,
-      "color": "#ff6b6b"
+      "color": "#ffa94d"
     },
     {
       "id": "202510210641",
@@ -392,7 +272,7 @@
         "InjecaoDeDependencia"
       ],
       "connections": 1,
-      "color": "#ff6b6b"
+      "color": "#ffa94d"
     },
     {
       "id": "202510210651",
@@ -401,16 +281,7 @@
         "InjecaoDeDependencia"
       ],
       "connections": 3,
-      "color": "#ff6b6b"
-    },
-    {
-      "id": "202510220620",
-      "title": "Clean Code",
-      "tags": [
-        "CleanCode"
-      ],
-      "connections": 5,
-      "color": "#ffe066"
+      "color": "#ffa94d"
     },
     {
       "id": "202510220628",
@@ -418,8 +289,8 @@
       "tags": [
         "CleanCode"
       ],
-      "connections": 1,
-      "color": "#ffe066"
+      "connections": 0,
+      "color": "#7f8c9b"
     },
     {
       "id": "202510220646",
@@ -427,8 +298,8 @@
       "tags": [
         "CleanCode"
       ],
-      "connections": 1,
-      "color": "#ffe066"
+      "connections": 0,
+      "color": "#7f8c9b"
     },
     {
       "id": "202510220657",
@@ -436,8 +307,8 @@
       "tags": [
         "CleanCode"
       ],
-      "connections": 1,
-      "color": "#ffe066"
+      "connections": 0,
+      "color": "#7f8c9b"
     },
     {
       "id": "202510220658",
@@ -445,8 +316,8 @@
       "tags": [
         "CleanCode"
       ],
-      "connections": 1,
-      "color": "#ffe066"
+      "connections": 0,
+      "color": "#7f8c9b"
     },
     {
       "id": "202510220706",
@@ -454,8 +325,17 @@
       "tags": [
         "CleanCode"
       ],
-      "connections": 1,
-      "color": "#ffe066"
+      "connections": 0,
+      "color": "#7f8c9b"
+    },
+    {
+      "id": "202510220710",
+      "title": "Clean Code - Tratamento de Erros",
+      "tags": [
+        "CleanCode"
+      ],
+      "connections": 0,
+      "color": "#7f8c9b"
     },
     {
       "id": "202510230627",
@@ -463,7 +343,7 @@
       "tags": [
         "DesignPattern"
       ],
-      "connections": 4,
+      "connections": 3,
       "color": "#7f8c9b"
     },
     {
@@ -495,12 +375,12 @@
     },
     {
       "id": "202510290617",
-      "title": "Patterns - Factory Method",
+      "title": "Factory Method",
       "tags": [
         "DesignPattern"
       ],
       "connections": 4,
-      "color": "#ff6b6b"
+      "color": "#ffa94d"
     },
     {
       "id": "202511030704",
@@ -517,41 +397,14 @@
       "tags": [
         "DesignPattern"
       ],
-      "connections": 2,
-      "color": "#7f8c9b"
-    },
-    {
-      "id": "202601172300",
-      "title": "Como gerar diagramas PlantUML",
-      "tags": [
-        "PlantUml"
-      ],
-      "connections": 0,
-      "color": "#7f8c9b"
-    },
-    {
-      "id": "202601260926",
-      "title": "Exemplo de Singleton",
-      "tags": [
-        "DesignPattern"
-      ],
       "connections": 1,
-      "color": "#7f8c9b"
-    },
-    {
-      "id": "202601262328",
-      "title": "Patterns - Builder",
-      "tags": [
-        "DesignPattern"
-      ],
-      "connections": 2,
       "color": "#7f8c9b"
     },
     {
       "id": "202601262341",
       "title": "Exemplo de Builder",
       "tags": [],
-      "connections": 1,
+      "connections": 0,
       "color": "#7f8c9b"
     }
   ],
@@ -597,28 +450,12 @@
       "target": "202510020623"
     },
     {
-      "source": "202510010627",
-      "target": "202510020643"
-    },
-    {
-      "source": "202510010627",
-      "target": "202510020649"
-    },
-    {
-      "source": "202510010627",
-      "target": "202510020710"
-    },
-    {
       "source": "202510010651",
       "target": "202510010649"
     },
     {
       "source": "202510010705",
       "target": "202510010651"
-    },
-    {
-      "source": "202510020710",
-      "target": "202510140621"
     },
     {
       "source": "202510030623",
@@ -631,10 +468,6 @@
     {
       "source": "202510030623",
       "target": "202510181406"
-    },
-    {
-      "source": "202510030654",
-      "target": "202510030700"
     },
     {
       "source": "202510030654",
@@ -654,67 +487,15 @@
     },
     {
       "source": "202510030654",
-      "target": "202510060701"
-    },
-    {
-      "source": "202510030654",
       "target": "202510070613"
-    },
-    {
-      "source": "202510030654",
-      "target": "202510070631"
-    },
-    {
-      "source": "202510030654",
-      "target": "202510070652"
-    },
-    {
-      "source": "202510030654",
-      "target": "202510070712"
     },
     {
       "source": "202510030654",
       "target": "202510080627"
     },
     {
-      "source": "202510060649",
-      "target": "202510070712"
-    },
-    {
-      "source": "202510070631",
-      "target": "202510070636"
-    },
-    {
-      "source": "202510070636",
-      "target": "202510030654"
-    },
-    {
-      "source": "202510070652",
-      "target": "202510170631"
-    },
-    {
-      "source": "202510070652",
-      "target": "202510170652"
-    },
-    {
-      "source": "202510070652",
-      "target": "202510181406"
-    },
-    {
-      "source": "202510070712",
-      "target": "202510070652"
-    },
-    {
-      "source": "202510070712",
-      "target": "202510070720"
-    },
-    {
       "source": "202510070720",
       "target": "202510030654"
-    },
-    {
-      "source": "202510080627",
-      "target": "202510070712"
     },
     {
       "source": "202510080627",
@@ -737,28 +518,8 @@
       "target": "202510170631"
     },
     {
-      "source": "202510090642",
-      "target": "202510170652"
-    },
-    {
       "source": "202510140612",
       "target": "202510140621"
-    },
-    {
-      "source": "202510181406",
-      "target": "202510170652"
-    },
-    {
-      "source": "202510181406",
-      "target": "202510200611"
-    },
-    {
-      "source": "202510181406",
-      "target": "202510200648"
-    },
-    {
-      "source": "202510181406",
-      "target": "202510210622"
     },
     {
       "source": "202510181406",
@@ -773,10 +534,6 @@
       "target": "202510210651"
     },
     {
-      "source": "202510210622",
-      "target": "202510070613"
-    },
-    {
       "source": "202510210651",
       "target": "202510170631"
     },
@@ -785,32 +542,8 @@
       "target": "202510150620"
     },
     {
-      "source": "202510220620",
-      "target": "202510220628"
-    },
-    {
-      "source": "202510220620",
-      "target": "202510220646"
-    },
-    {
-      "source": "202510220620",
-      "target": "202510220657"
-    },
-    {
-      "source": "202510220620",
-      "target": "202510220658"
-    },
-    {
-      "source": "202510220620",
-      "target": "202510220706"
-    },
-    {
       "source": "202510230627",
       "target": "202510240635"
-    },
-    {
-      "source": "202510230627",
-      "target": "202601262328"
     },
     {
       "source": "202510230627",
@@ -839,40 +572,27 @@
     {
       "source": "202511030704",
       "target": "202510240635"
-    },
-    {
-      "source": "202511070629",
-      "target": "202601260926"
-    },
-    {
-      "source": "202601262328",
-      "target": "202601262341"
     }
   ],
   "legend": [
     {
       "tag": "OOP",
       "color": "#63e6be",
-      "count": 14
-    },
-    {
-      "tag": "DI - Injeção de Dependência",
-      "color": "#ff6b6b",
-      "count": 10
+      "count": 8
     },
     {
       "tag": "Fundamentos do CSharp",
-      "color": "#6ea8fe",
-      "count": 9
-    },
-    {
-      "tag": "SOLID",
-      "color": "#ffa94d",
+      "color": "#ff6b6b",
       "count": 6
     },
     {
-      "tag": "OOP - Interface e Implementação",
-      "color": "#b07df0",
+      "tag": "SOLID",
+      "color": "#6ea8fe",
+      "count": 5
+    },
+    {
+      "tag": "DI - Injeção de Dependência",
+      "color": "#ffa94d",
       "count": 5
     }
   ]
